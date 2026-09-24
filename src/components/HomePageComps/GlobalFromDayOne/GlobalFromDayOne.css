@@ -1,0 +1,229 @@
+.sectionWrapperGlobalFromDayOne {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerGlobalFromDayOne {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.leftColumnGlobalFromDayOne {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.imageWrapperGlobalFromDayOne {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+}
+
+.globeImageGlobalFromDayOne {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.1) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.1) 100%);
+}
+
+.floatingCardGlobalFromDayOne {
+  position: absolute;
+  bottom: 15%;
+  left: -5%;
+  background-color: rgba(14, 18, 24, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-sm, 16px);
+  padding: 1.75rem;
+  width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cardTitleGlobalFromDayOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 0.5rem;
+}
+
+.cardDescGlobalFromDayOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.flagsRowGlobalFromDayOne {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.flagIconGlobalFromDayOne {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  background-color: #ffffff;
+}
+
+.rightColumnGlobalFromDayOne {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeGlobalFromDayOne {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotGlobalFromDayOne {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingGlobalFromDayOne {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionGlobalFromDayOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 95%;
+}
+
+.featuresGridGlobalFromDayOne {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+  width: 100%;
+}
+
+.featureItemGlobalFromDayOne {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.featureIconBoxGlobalFromDayOne {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  border-radius: 12px; 
+  background-color: rgba(0, 230, 153, 0.05);
+}
+
+.featureIconGlobalFromDayOne {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.featureTextContentGlobalFromDayOne {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.featureTitleGlobalFromDayOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.featureDescGlobalFromDayOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .containerGlobalFromDayOne {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .leftColumnGlobalFromDayOne {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .floatingCardGlobalFromDayOne {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2rem;
+    width: 90%;
+    max-width: 380px;
+  }
+
+  .rightColumnGlobalFromDayOne {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .descriptionGlobalFromDayOne {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featuresGridGlobalFromDayOne {
+    text-align: left;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuresGridGlobalFromDayOne {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

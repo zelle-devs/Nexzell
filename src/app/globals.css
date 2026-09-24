@@ -1,49 +1,216 @@
+/*
+  ========================================
+    NEXZELL - GLOBAL CSS SYSTEM
+  ========================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --- Colors: Nexzell Brand --- */
+  --nexzell-primary: #00E699;       /* Bright Teal / Mint Green Accent */
+  --nexzell-primary-hover: #00C782; 
+  --nexzell-gradient-start: #00E699;
+  --nexzell-gradient-end: #00B3FF;  /* Blueish end for gradient texts */
+  
+  /* --- Colors: Backgrounds --- */
+  --nexzell-bg-base: #06080C;       /* Deep dark background */
+  --nexzell-bg-surface: #0E1218;    /* Elevated surface (Cards, Dropdowns) */
+  --nexzell-bg-surface-hover: #161B24;
+  --nexzell-bg-panel: rgba(14, 18, 24, 0.6); /* Transparent panels */
+  
+  /* --- Colors: Text --- */
+  --nexzell-text-white: #FFFFFF;
+  --nexzell-text-gray-100: #E2E8F0;
+  --nexzell-text-gray-300: #94A3B8;
+  --nexzell-text-gray-500: #64748B;
+
+  /* --- Colors: Borders & Dividers --- */
+  --nexzell-border-subtle: #1E293B;
+  --nexzell-border-highlight: #334155;
+
+  /* --- Typography --- */
+  --nexzell-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --nexzell-font-size-base: 16px;
+  
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --nexzell-container-width: 1500px;
+  --nexzell-padding-x: 2rem;
+  --nexzell-section-gap: 5rem;
+  --nexzell-radius-sm: 8px;
+  --nexzell-radius-md: 12px;
+  --nexzell-radius-lg: 24px;
+  --nexzell-radius-pill: 9999px;
+  
+  --transition-fast: 0.2s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  height: 100%;
+  font-size: var(--nexzell-font-size-base);
+  scroll-behavior: smooth;
 }
 
-html,
 body {
-  max-width: 100vw;
+  font-family: var(--nexzell-font-family);
+  background-color: var(--nexzell-bg-base);
+  color: var(--nexzell-text-gray-100);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--nexzell-text-white);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  margin:0;
+  padding: 0;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: 1.25rem; }
+
+p {
+  color: var(--nexzell-text-gray-300); 
+}
+
+.nexzell-text-primary { color: var(--nexzell-primary); }
+.nexzell-text-gradient {
+  background: linear-gradient(90deg, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+
+.nexzell-container {
+  max-width: var(--nexzell-container-width);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x);
+}
+
+.nexzell-section {
+  padding: var(--nexzell-section-gap) 0;
+}
+
+.nexzell-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: var(--fw-semibold);
+  border-radius: var(--nexzell-radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+  font-size: 0.95rem;
+}
+
+.nexzell-btn-primary {
+  background-color: var(--nexzell-primary);
+  color: var(--nexzell-bg-base);
+}
+
+.nexzell-btn-primary:hover {
+  background-color: var(--nexzell-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.nexzell-btn-outline {
+  background-color: transparent;
+  color: var(--nexzell-text-white);
+  border: 1px solid var(--nexzell-border-highlight);
+}
+
+.nexzell-btn-outline:hover {
+  border-color: var(--nexzell-text-white);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Cards */
+.nexzell-card {
+  background-color: var(--nexzell-bg-surface);
+  border: 1px solid var(--nexzell-border-subtle);
+  border-radius: var(--nexzell-radius-md);
+  padding: 2rem;
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.nexzell-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--nexzell-border-highlight);
+  background-color: var(--nexzell-bg-surface-hover);
+}
+
+/* Badges / Labels */
+.nexzell-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(0, 230, 153, 0.1);
+  color: var(--nexzell-primary);
+  border: 1px solid rgba(0, 230, 153, 0.2);
+  border-radius: var(--nexzell-radius-pill);
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Grid Utilities */
+.nexzell-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.nexzell-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.nexzell-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.nexzell-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nexzell-grid-2, 
+  .nexzell-grid-3, 
+  .nexzell-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  :root {
+    --nexzell-section-gap: 3rem;
   }
 }

@@ -1,0 +1,177 @@
+.sectionWrapperBuildWithoutLimitsHome {
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../../../public/BuildWithoutLimitsBackground.png);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerBuildWithoutLimitsHome {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  min-height: 450px;
+}
+
+.leftContentBuildWithoutLimitsHome {
+  flex: 0 0 42%;
+  padding: var(--nexzell-section-gap, 5rem) var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  /* background-color: var(--nexzell-bg-base, #06080c30); */
+}
+
+.headingBuildWithoutLimitsHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionBuildWithoutLimitsHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnGroupBuildWithoutLimitsHome {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.btnPrimaryBuildWithoutLimitsHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryBuildWithoutLimitsHome:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconBuildWithoutLimitsHome {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryBuildWithoutLimitsHome:hover .btnIconBuildWithoutLimitsHome {
+  transform: translateX(4px);
+}
+
+.btnSecondaryBuildWithoutLimitsHome {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryBuildWithoutLimitsHome:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightContentBuildWithoutLimitsHome {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcaseImageBuildWithoutLimitsHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imageGradientOverlayBuildWithoutLimitsHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0.5) 20%, transparent 50%); */
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .containerBuildWithoutLimitsHome {
+    flex-direction: column;
+  }
+  
+  .leftContentBuildWithoutLimitsHome {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  
+  .descriptionBuildWithoutLimitsHome {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btnGroupBuildWithoutLimitsHome {
+    justify-content: center;
+  }
+  
+  .rightContentBuildWithoutLimitsHome {
+    min-height: 400px;
+    width: 100%;
+  }
+  
+  .imageGradientOverlayBuildWithoutLimitsHome {
+    background: linear-gradient(to bottom, var(--nexzell-bg-base, #06080C) 0%, transparent 40%, transparent 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .btnGroupBuildWithoutLimitsHome {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .btnPrimaryBuildWithoutLimitsHome,
+  .btnSecondaryBuildWithoutLimitsHome {
+    justify-content: center;
+    width: 100%;
+  }
+}

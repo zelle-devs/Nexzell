@@ -1,0 +1,183 @@
+.headerWrapperNexzellHeaderMain {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 80px;
+  /* background-color: #06080cb6; */
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: 0px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+ 
+  transform-origin: bottom center;
+
+  transition:
+    top 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+} 
+.headerWrapperNexzellHeaderMain.isScrolledNexzellHeaderMain {
+  top: 0px; 
+  width: clamp(320px, 92vw, 1280px);
+  border-radius: 28px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-bottom: 1px solid var(--nexzell-border-highlight, #334155);
+  background-color: #06080c8e;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.containerNexzellHeaderMain {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.logoAreaNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.logoImgNexzellHeaderMain {
+  /* height: 30px; */
+  width: 150px;
+  object-fit: contain;
+}
+
+.brandDividerNexzellHeaderMain {
+  width: 1px;
+  height: 32px;
+  background-color: var(--nexzell-border-highlight, #334155);
+}
+
+.taglineTextNexzellHeaderMain {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-family: var(--font-poppins), sans-serif;
+}
+ 
+.centerNavNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+}
+
+.navListNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItemNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.navItemNexzellHeaderMain:hover {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+ 
+.chevronIconNexzellHeaderMain {
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navItemNexzellHeaderMain:hover .chevronIconNexzellHeaderMain {
+  transform: rotate(180deg);
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+ 
+.rightActionsNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.searchBtnNexzellHeaderMain {
+  background: none;
+  border: none;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0;
+}
+
+.searchBtnNexzellHeaderMain:hover {
+  color: var(--nexzell-text-white, #FFFFFF);
+  transform: scale(1.1);
+}
+
+.loginBtnNexzellHeaderMain {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.loginBtnNexzellHeaderMain:hover {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+/* CTA Button Styles */
+.ctaBtnNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: var( --nexzell-radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.ctaBtnNexzellHeaderMain:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  /* transform: translateY(-2px); */
+  /* box-shadow: 0 4px 15px rgba(0, 230, 153, 0.25); */
+}
+
+.arrowIconNexzellHeaderMain {
+  transition: transform 0.3s ease;
+}
+
+.ctaBtnNexzellHeaderMain:hover .arrowIconNexzellHeaderMain {
+  transform: translateX(4px);
+}

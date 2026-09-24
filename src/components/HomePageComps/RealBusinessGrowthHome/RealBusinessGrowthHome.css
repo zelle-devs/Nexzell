@@ -1,0 +1,182 @@
+.sectionWrapperRealBusinessGrowthHome {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerRealBusinessGrowthHome {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.leftColumnRealBusinessGrowthHome {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headingRealBusinessGrowthHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionRealBusinessGrowthHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.navButtonsRealBusinessGrowthHome {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBtnRealBusinessGrowthHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  color: var(--nexzell-text-white, #FFFFFF);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtnRealBusinessGrowthHome:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightColumnRealBusinessGrowthHome {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrackRealBusinessGrowthHome {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carouselTrackRealBusinessGrowthHome::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonialCardRealBusinessGrowthHome {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonialCardRealBusinessGrowthHome:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+}
+
+.quoteTextRealBusinessGrowthHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.quoteIconWrapperRealBusinessGrowthHome {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.userInfoRealBusinessGrowthHome {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarRealBusinessGrowthHome {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nexzell-border-highlight, #334155);
+}
+
+.userDetailsRealBusinessGrowthHome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.userNameRealBusinessGrowthHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.userTitleRealBusinessGrowthHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  margin: 0;
+}
+
+.starsRealBusinessGrowthHome {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1024px) {
+  .containerRealBusinessGrowthHome {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  
+  .leftColumnRealBusinessGrowthHome {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .rightColumnRealBusinessGrowthHome {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonialCardRealBusinessGrowthHome {
+    flex: 0 0 85vw;
+  }
+}

@@ -1,0 +1,205 @@
+/* Section Wrapper */
+.sectionWrapperMainSliderHome {
+  padding: 8rem 0 6rem; /* Top padding accounts for fixed header */
+  background-color: var(--nexzell-bg-base, #06080C);
+  position: relative;
+  overflow: hidden;
+    background-image: url('../../../../public/MainSliderImageHome.png');
+  background-position: right;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+    width: 100%;
+}
+
+.containerMainSliderHome {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+}
+
+/* Content Container & Animation */
+.contentMainSliderHome {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes fadeUpAnimMainSliderHome {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedFadeUpMainSliderHome {
+  animation: fadeUpAnimMainSliderHome 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.badgeMainSliderHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderHome {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+/* Heading */
+.headingMainSliderHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderHome {
+  color: var(--nexzell-primary, #00E699);
+  /* background: linear-gradient(90deg, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+ 
+.descriptionMainSliderHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+ 
+.btnGroupMainSliderHome {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.btnPrimaryMainSliderHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryMainSliderHome:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+
+}
+
+.btnIconMainSliderHome {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryMainSliderHome:hover .btnIconMainSliderHome {
+  transform: translateX(4px);
+}
+
+.btnSecondaryMainSliderHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryMainSliderHome:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.playIconMainSliderHome {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+ 
+.featuresListMainSliderHome {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.featureItemMainSliderHome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featureIconMainSliderHome {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.featureTextMainSliderHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-weight: 500;
+}
+ 
+@media (max-width: 768px) {
+  .headingMainSliderHome {
+    font-size: 2.5rem;
+  }
+  
+  .btnGroupMainSliderHome {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .btnPrimaryMainSliderHome,
+  .btnSecondaryMainSliderHome {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .featuresListMainSliderHome {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}

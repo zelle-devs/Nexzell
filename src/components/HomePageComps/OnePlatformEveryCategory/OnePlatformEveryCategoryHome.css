@@ -1,0 +1,193 @@
+/* Section & Container */
+.sectionWrapperOnePlatformEveryCategoryHome {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+}
+
+.containerOnePlatformEveryCategoryHome {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Left Content */
+.leftContentOnePlatformEveryCategoryHome {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headingOnePlatformEveryCategoryHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionOnePlatformEveryCategoryHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+
+/* Outline Button */
+.btnOutlineOnePlatformEveryCategoryHome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnOutlineOnePlatformEveryCategoryHome:hover {
+  border-color: var(--nexzell-text-white, #FFFFFF);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btnIconOnePlatformEveryCategoryHome {
+  transition: transform 0.3s ease;
+}
+
+.btnOutlineOnePlatformEveryCategoryHome:hover .btnIconOnePlatformEveryCategoryHome {
+  transform: translateX(4px);
+}
+
+/* Right Content - Grid */
+.gridOnePlatformEveryCategoryHome {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+/* Category Card */
+.cardOnePlatformEveryCategoryHome {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardOnePlatformEveryCategoryHome:hover {
+  transform: translateY(-5px);
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image & Gradient Wrapper */
+.cardImageWrapperOnePlatformEveryCategoryHome {
+  position: relative;
+  width: 100%;
+  height: 120px; /* Adjust based on your actual images */
+  background-color: #121A20; /* Subtle background color matching the design */
+}
+
+.cardImagePlaceholderOnePlatformEveryCategoryHome {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  /* Adds a scale effect on hover */
+  transition: transform 0.5s ease;
+}
+
+.cardOnePlatformEveryCategoryHome:hover .cardImagePlaceholderOnePlatformEveryCategoryHome {
+  transform: scale(1.05);
+}
+
+/* Gradient overlay to smoothly blend the image bottom into the card background */
+.cardGradientOverlayOnePlatformEveryCategoryHome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, rgba(14, 18, 24, 0.4) 50%, rgba(14, 18, 24, 1));
+}
+
+/* Card Text */
+.cardTextOnePlatformEveryCategoryHome {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.cardTitleOnePlatformEveryCategoryHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.cardDescOnePlatformEveryCategoryHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .gridOnePlatformEveryCategoryHome {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .containerOnePlatformEveryCategoryHome {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .leftContentOnePlatformEveryCategoryHome {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .descriptionOnePlatformEveryCategoryHome {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .gridOnePlatformEveryCategoryHome {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

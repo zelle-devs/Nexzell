@@ -1,0 +1,278 @@
+.sectionWrapperMainSliderAbout {
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../../../../public/AboutSliderMainImage2.jpg);
+  background-position: left;
+ background-size: cover;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+ 
+.bgImageWrapperMainSliderAbout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;  
+  height: 100%;
+  z-index: 0;
+}
+
+.bgImageMainSliderAbout {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+ 
+.bgGradientMainSliderAbout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.containerMainSliderAbout {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0.95) 40%, transparent 100%);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  
+  height: 100vh;
+  align-items: center;
+  position: relative;
+  
+  z-index: 1;
+}
+
+.contentMainSliderAbout {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Base Animation Keyframes */
+@keyframes fadeUpStaggerMainSliderAbout {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Delay Classes for Elements */
+.animDelay1 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+.animDelay2 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+.animDelay3 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+.animDelay4 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+.animDelay5 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.badgeMainSliderAbout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderAbout {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingMainSliderAbout {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(3rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderAbout {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionMainSliderAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnGroupMainSliderAbout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.btnPrimaryMainSliderAbout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryMainSliderAbout:hover {
+  background-color: var(--nexzell-primary-hover, #00C782); 
+}
+
+.btnIconMainSliderAbout {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryMainSliderAbout:hover .btnIconMainSliderAbout {
+  transform: translateX(4px);
+}
+
+.btnSecondaryMainSliderAbout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryMainSliderAbout:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.playIconMainSliderAbout {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.statsListMainSliderAbout {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statItemMainSliderAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNumberMainSliderAbout {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.statTextMainSliderAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+}
+
+.statDividerMainSliderAbout {
+  width: 1px;
+  height: 40px;
+  background-color: var(--nexzell-border-highlight, #334155);
+  opacity: 0.4;
+}
+
+@media (max-width: 992px) {
+  .bgImageWrapperMainSliderAbout {
+    width: 100%;
+  }
+  
+  .bgGradientMainSliderAbout {
+    background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 20%, rgba(6, 8, 12, 0.9) 60%, rgba(6, 8, 12, 0.5) 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .headingMainSliderAbout {
+    font-size: 2.75rem;
+  }
+  
+  .btnGroupMainSliderAbout {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .btnPrimaryMainSliderAbout,
+  .btnSecondaryMainSliderAbout {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .statsListMainSliderAbout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .statDividerMainSliderAbout {
+    display: none;
+  }
+}

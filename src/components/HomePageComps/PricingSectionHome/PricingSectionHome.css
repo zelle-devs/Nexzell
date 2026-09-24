@@ -1,0 +1,300 @@
+.sectionWrapperPricingSectionHome {
+  padding: var(--nexzell-section-gap, 6rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionWrapperPricingSectionHome::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 230, 153, 0.05) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.containerPricingSectionHome {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUpAnimPricingSectionHome {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animatedFadeUpPricingSectionHome {
+  animation: fadeUpAnimPricingSectionHome 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animatedFadeUpDelayPricingSectionHome {
+  animation: fadeUpAnimPricingSectionHome 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.headerPricingSectionHome {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headingPricingSectionHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionPricingSectionHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+.toggleWrapperPricingSectionHome {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.toggleContainerPricingSectionHome {
+  display: flex;
+  align-items: center;
+  background-color: rgba(14, 18, 24, 0.8);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: 9999px;
+  padding: 0.25rem;
+}
+
+.toggleBtnPricingSectionHome {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeTogglePricingSectionHome {
+  background-color: var(--nexzell-border-highlight, #334155);
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.saveBadgePricingSectionHome {
+  background-color: rgba(0, 230, 153, 0.15);
+  color: var(--nexzell-primary, #00E699);
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+}
+
+.gridPricingSectionHome {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.cardPricingSectionHome {
+  border-radius: var(--nexzell-radius-sm, 16px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.standardCardPricingSectionHome {
+  background-color: rgba(14, 18, 24, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.standardCardPricingSectionHome:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+  transform: translateY(-8px);
+}
+
+.popularCardPricingSectionHome {
+  background: linear-gradient(180deg, rgba(14, 18, 24, 0.8) 0%, rgba(0, 230, 153, 0.05) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 230, 153, 0.4);
+  box-shadow: 0 10px 40px -10px rgba(0, 230, 153, 0.15);
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+.popularCardPricingSectionHome:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 20px 50px -10px rgba(0, 230, 153, 0.25);
+}
+
+.titleRowPricingSectionHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.planNamePricingSectionHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.popularBadgePricingSectionHome {
+  background-color: rgba(0, 230, 153, 0.15);
+  color: var(--nexzell-primary, #00E699);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.planDescPricingSectionHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0 0 1.5rem 0;
+}
+
+.priceWrapperPricingSectionHome {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.currencyPricingSectionHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.pricePricingSectionHome {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1;
+}
+
+.periodPricingSectionHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.featuresListPricingSectionHome {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+.featureItemPricingSectionHome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkIconPricingSectionHome {
+  color: var(--nexzell-primary, #00E699);
+  flex-shrink: 0;
+}
+
+.featureTextPricingSectionHome {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+}
+
+.btnPricingSectionHome {
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btnOutlinePricingSectionHome {
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+}
+
+.btnOutlinePricingSectionHome:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.btnPrimaryPricingSectionHome {
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  border: none;
+}
+
+.btnPrimaryPricingSectionHome:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .gridPricingSectionHome {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .popularCardPricingSectionHome {
+    transform: scale(1);
+  }
+
+  .popularCardPricingSectionHome:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .gridPricingSectionHome {
+    grid-template-columns: 1fr;
+  }
+}
