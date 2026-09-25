@@ -1,0 +1,884 @@
+.sectionWrapperContactUsCloserMapForwards {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerContactUsCloserMapForwards {
+  width: 100%;
+  /* max-width: 850px; */
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  padding-left: 0;
+  height: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimContactUsCloserMapForwards {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpContactUsCloserMapForwards {
+  animation: fadeUpAnimContactUsCloserMapForwards 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeUpDelay1ContactUsCloserMapForwards {
+  opacity: 0;
+  animation: fadeUpAnimContactUsCloserMapForwards 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.animFadeUpDelay2ContactUsCloserMapForwards {
+  opacity: 0;
+  animation: fadeUpAnimContactUsCloserMapForwards 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+/* --- Shared Badge Styles --- */
+.badgeContactUsCloserMapForwards {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.badgeDotContactUsCloserMapForwards {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+/* --- Card 1: Offices --- */
+.cardOfficesContactUsCloserMapForwards {
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  padding: 3rem;
+  width: 100%;
+}
+
+.cardHeaderContactUsCloserMapForwards {
+  margin-bottom: 2rem;
+}
+
+.headingContactUsCloserMapForwards {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+}
+
+.officeListContactUsCloserMapForwards {
+  display: flex;
+  flex-direction: column;
+}
+
+.officeItemContactUsCloserMapForwards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5); /* Subtle divider */
+  gap: 2rem;
+}
+
+.officeItemContactUsCloserMapForwards:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.officeLeftContactUsCloserMapForwards {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 0 0 45%;
+}
+
+.iconBoxContactUsCloserMapForwards {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.officeIconContactUsCloserMapForwards {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.officeTitlesContactUsCloserMapForwards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.officeNameContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.officeLocationContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+
+.officeRightContactUsCloserMapForwards {
+  flex: 1;
+}
+
+.officeAddressContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Card 2: Map Section --- */
+.cardMapContactUsCloserMapForwards {
+  background-color: rgba(14, 18, 24, 0.26);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  width: 100%;
+  min-height: 380px;
+  position: relative;
+  overflow: hidden;
+  
+  /* Placeholder for map background */
+  background-image: url('/ContactUsLocations.png'); 
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.floatingMapCardContactUsCloserMapForwards {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: rgba(6, 8, 12, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.2);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 350px;
+}
+
+.floatingIconBoxContactUsCloserMapForwards {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(0, 230, 153, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floatingIconContactUsCloserMapForwards {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.floatingTextContactUsCloserMapForwards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.floatingTitleContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.floatingDescContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- Card 3: CTA Section --- */
+.cardCtaContactUsCloserMapForwards {
+  /* background-color: rgba(14, 18, 24, 0.8); */
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  
+  /* Placeholder for abstract wave background */
+  background-image: url('/ContactUsPageCtaBackgroun.png');
+  background-size: cover;
+  background-position: right center;
+  background-blend-mode: overlay;
+}
+
+.cardCtaContactUsCloserMapForwards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(6, 8, 12, 1) 40%, rgba(6, 8, 12, 0.5) 100%);
+  z-index: 1;
+}
+
+.ctaContentContactUsCloserMapForwards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+}
+
+.headingCtaContactUsCloserMapForwards {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.descriptionCtaContactUsCloserMapForwards {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btnCtaContactUsCloserMapForwards {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnCtaIconContactUsCloserMapForwards {
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  transition: color 0.3s ease;
+}
+
+.btnCtaArrowContactUsCloserMapForwards {
+  transition: transform 0.3s ease;
+}
+
+.btnCtaContactUsCloserMapForwards:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.btnCtaContactUsCloserMapForwards:hover .btnCtaIconContactUsCloserMapForwards {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.btnCtaContactUsCloserMapForwards:hover .btnCtaArrowContactUsCloserMapForwards {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperContactUsCloserMapForwards {
+    padding: 5rem 0;
+  }
+
+  .containerContactUsCloserMapForwards {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .cardOfficesContactUsCloserMapForwards,
+  .cardMapContactUsCloserMapForwards,
+  .cardCtaContactUsCloserMapForwards {
+    width: 100%;
+  }
+
+  .cardOfficesContactUsCloserMapForwards {
+    padding: 2.5rem;
+  }
+
+  .cardHeaderContactUsCloserMapForwards {
+    margin-bottom: 1.75rem;
+  }
+
+  .headingContactUsCloserMapForwards {
+    font-size: clamp(1.45rem, 3vw, 1.9rem);
+  }
+
+  .descriptionContactUsCloserMapForwards {
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+
+  .officeItemContactUsCloserMapForwards {
+    padding: 1.75rem 0;
+    gap: 1.5rem;
+  }
+
+  .officeLeftContactUsCloserMapForwards {
+    flex: 0 0 42%;
+    gap: 0.85rem;
+  }
+
+  .iconBoxContactUsCloserMapForwards {
+    width: 38px;
+    height: 38px;
+  }
+
+  .officeNameContactUsCloserMapForwards {
+    font-size: 0.9rem;
+  }
+
+  .officeLocationContactUsCloserMapForwards {
+    font-size: 0.76rem;
+  }
+
+  .officeAddressContactUsCloserMapForwards {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .cardMapContactUsCloserMapForwards {
+    min-height: 360px;
+  }
+
+  .floatingMapCardContactUsCloserMapForwards {
+    left: 1.5rem;
+    bottom: 1.5rem;
+    max-width: 320px;
+    padding: 1.1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .floatingIconBoxContactUsCloserMapForwards {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floatingTitleContactUsCloserMapForwards {
+    font-size: 0.8rem;
+  }
+
+  .floatingDescContactUsCloserMapForwards {
+    font-size: 0.7rem;
+  }
+
+  .cardCtaContactUsCloserMapForwards {
+    padding: 2.5rem;
+    background-position: center;
+  }
+
+  .ctaContentContactUsCloserMapForwards {
+    max-width: 500px;
+  }
+
+  .headingCtaContactUsCloserMapForwards {
+    font-size: clamp(1.4rem, 3vw, 1.7rem);
+  }
+
+  .descriptionCtaContactUsCloserMapForwards {
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ==========================================================
+   SMALL TABLET
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperContactUsCloserMapForwards {
+    padding: 4rem 0;
+  }
+
+  .containerContactUsCloserMapForwards {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .cardOfficesContactUsCloserMapForwards,
+  .cardMapContactUsCloserMapForwards,
+  .cardCtaContactUsCloserMapForwards {
+    width: 100%;
+  }
+
+  .cardOfficesContactUsCloserMapForwards {
+    padding: 2rem 1.5rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderContactUsCloserMapForwards {
+    margin-bottom: 1.5rem;
+  }
+
+  .badgeContactUsCloserMapForwards {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotContactUsCloserMapForwards {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingContactUsCloserMapForwards {
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.45rem;
+  }
+
+  .descriptionContactUsCloserMapForwards {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .officeListContactUsCloserMapForwards {
+    width: 100%;
+  }
+
+  .officeItemContactUsCloserMapForwards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .officeLeftContactUsCloserMapForwards {
+    width: 100%;
+    flex: none;
+    gap: 0.75rem;
+  }
+
+  .iconBoxContactUsCloserMapForwards {
+    width: 38px;
+    height: 38px;
+  }
+
+  .officeNameContactUsCloserMapForwards {
+    font-size: 0.86rem;
+  }
+
+  .officeLocationContactUsCloserMapForwards {
+    font-size: 0.72rem;
+  }
+
+  .officeRightContactUsCloserMapForwards {
+    width: 100%;
+    padding-left: calc(38px + 0.75rem);
+  }
+
+  .officeAddressContactUsCloserMapForwards {
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+
+  .cardMapContactUsCloserMapForwards {
+    min-height: 330px;
+    border-radius: var(--nexzell-radius-md, 12px);
+    background-position: center;
+  }
+
+  .floatingMapCardContactUsCloserMapForwards {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+    padding: 1rem 1.1rem;
+    gap: 0.85rem;
+  }
+
+  .floatingIconBoxContactUsCloserMapForwards {
+    width: 42px;
+    height: 42px;
+  }
+
+  .floatingTitleContactUsCloserMapForwards {
+    font-size: 0.76rem;
+  }
+
+  .floatingDescContactUsCloserMapForwards {
+    font-size: 0.68rem;
+    line-height: 1.4;
+  }
+
+  .cardCtaContactUsCloserMapForwards {
+    padding: 2rem 1.5rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+    background-position: center;
+  }
+
+  .cardCtaContactUsCloserMapForwards::before {
+    background:
+      linear-gradient(
+        to right,
+        rgba(6, 8, 12, 0.95) 0%,
+        rgba(6, 8, 12, 0.82) 100%
+      );
+  }
+
+  .ctaContentContactUsCloserMapForwards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .headingCtaContactUsCloserMapForwards {
+    width: 100%;
+    font-size: clamp(1.3rem, 5vw, 1.65rem);
+    line-height: 1.2;
+  }
+
+  .descriptionCtaContactUsCloserMapForwards {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnCtaContactUsCloserMapForwards {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.82rem;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+  .sectionWrapperContactUsCloserMapForwards {
+    padding: 3.5rem 0;
+  }
+
+  .containerContactUsCloserMapForwards {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
+  }
+
+  .cardOfficesContactUsCloserMapForwards,
+  .cardMapContactUsCloserMapForwards,
+  .cardCtaContactUsCloserMapForwards {
+    width: 100%;
+  }
+
+  .cardOfficesContactUsCloserMapForwards {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderContactUsCloserMapForwards {
+    margin-bottom: 1.35rem;
+  }
+
+  .badgeContactUsCloserMapForwards {
+    gap: 0.4rem;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.8rem;
+  }
+
+  .headingContactUsCloserMapForwards {
+    width: 100%;
+    font-size: clamp(1.25rem, 7vw, 1.6rem);
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+
+  .descriptionContactUsCloserMapForwards {
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+
+  .officeItemContactUsCloserMapForwards {
+    width: 100%;
+    gap: 0.85rem;
+    padding: 1.3rem 0;
+  }
+
+  .officeLeftContactUsCloserMapForwards {
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .iconBoxContactUsCloserMapForwards {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+  }
+
+  .officeNameContactUsCloserMapForwards {
+    font-size: 0.82rem;
+  }
+
+  .officeLocationContactUsCloserMapForwards {
+    font-size: 0.68rem;
+  }
+
+  .officeRightContactUsCloserMapForwards {
+    width: 100%;
+    padding-left: calc(36px + 0.65rem);
+  }
+
+  .officeAddressContactUsCloserMapForwards {
+    font-size: 0.7rem;
+    line-height: 1.55;
+  }
+
+  .cardMapContactUsCloserMapForwards {
+    min-height: 280px;
+    border-radius: var(--nexzell-radius-md, 12px);
+    background-position: center;
+  }
+
+  .floatingMapCardContactUsCloserMapForwards {
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    padding: 0.85rem 0.9rem;
+    gap: 0.7rem;
+    border-radius: 10px;
+  }
+
+  .floatingIconBoxContactUsCloserMapForwards {
+    width: 38px;
+    height: 38px;
+  }
+
+  .floatingTextContactUsCloserMapForwards {
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .floatingTitleContactUsCloserMapForwards {
+    font-size: 0.7rem;
+  }
+
+  .floatingDescContactUsCloserMapForwards {
+    font-size: 0.62rem;
+    line-height: 1.4;
+  }
+
+  .cardCtaContactUsCloserMapForwards {
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+    background-position: center;
+  }
+
+  .cardCtaContactUsCloserMapForwards::before {
+    background:
+      linear-gradient(
+        to right,
+        rgba(6, 8, 12, 0.96) 0%,
+        rgba(6, 8, 12, 0.84) 100%
+      );
+  }
+
+  .ctaContentContactUsCloserMapForwards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .headingCtaContactUsCloserMapForwards {
+    width: 100%;
+    font-size: clamp(1.2rem, 7vw, 1.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+  }
+
+  .descriptionCtaContactUsCloserMapForwards {
+    width: 100%;
+    font-size: 0.74rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .btnCtaContactUsCloserMapForwards {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+  .sectionWrapperContactUsCloserMapForwards {
+    padding: 3rem 0;
+  }
+
+  .containerContactUsCloserMapForwards {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 0.9rem;
+  }
+
+  .cardOfficesContactUsCloserMapForwards {
+    padding: 1.3rem 0.95rem;
+  }
+
+  .badgeContactUsCloserMapForwards {
+    padding: 0.26rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.7rem;
+  }
+
+  .headingContactUsCloserMapForwards {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .descriptionContactUsCloserMapForwards {
+    font-size: 0.7rem;
+  }
+
+  .officeItemContactUsCloserMapForwards {
+    gap: 0.75rem;
+    padding: 1.15rem 0;
+  }
+
+  .officeLeftContactUsCloserMapForwards {
+    gap: 0.55rem;
+  }
+
+  .iconBoxContactUsCloserMapForwards {
+    width: 34px;
+    height: 34px;
+  }
+
+  .officeRightContactUsCloserMapForwards {
+    padding-left: calc(34px + 0.55rem);
+  }
+
+  .officeNameContactUsCloserMapForwards {
+    font-size: 0.78rem;
+  }
+
+  .officeLocationContactUsCloserMapForwards {
+    font-size: 0.64rem;
+  }
+
+  .officeAddressContactUsCloserMapForwards {
+    font-size: 0.66rem;
+    line-height: 1.5;
+  }
+
+  .cardMapContactUsCloserMapForwards {
+    min-height: 250px;
+  }
+
+  .floatingMapCardContactUsCloserMapForwards {
+    left: 0.65rem;
+    right: 0.65rem;
+    bottom: 0.65rem;
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .floatingIconBoxContactUsCloserMapForwards {
+    width: 34px;
+    height: 34px;
+  }
+
+  .floatingTitleContactUsCloserMapForwards {
+    font-size: 0.66rem;
+  }
+
+  .floatingDescContactUsCloserMapForwards {
+    font-size: 0.58rem;
+  }
+
+  .cardCtaContactUsCloserMapForwards {
+    padding: 1.3rem 0.95rem;
+  }
+
+  .headingCtaContactUsCloserMapForwards {
+    font-size: 1.1rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .descriptionCtaContactUsCloserMapForwards {
+    font-size: 0.68rem;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+  }
+
+  .btnCtaContactUsCloserMapForwards {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.72rem;
+  }
+}

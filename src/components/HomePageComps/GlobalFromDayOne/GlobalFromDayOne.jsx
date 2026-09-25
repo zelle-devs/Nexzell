@@ -10,7 +10,7 @@ function GlobalFromDayOne() {
         <div className="leftColumnGlobalFromDayOne">
           <div className="imageWrapperGlobalFromDayOne">
             <img 
-              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=800&auto=format&fit=crop" 
+              src="/EcommerceSimpler.png" 
               alt="Global Earth Network" 
               className="globeImageGlobalFromDayOne" 
             />

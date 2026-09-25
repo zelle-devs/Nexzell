@@ -1,9 +1,43 @@
-import React from 'react';
-import {  Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+'use client'
+
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 
+const footerLinkGroups = [
+  {
+    id: 'product',
+    heading: 'Product',
+    links: ['Features', 'Integrations', 'Pricing', 'Changelog'],
+  },
+  {
+    id: 'solutions',
+    heading: 'Solutions',
+    links: ['For Startups', 'For Growing Brands', 'For Enterprises', 'Global Commerce'],
+  },
+  {
+    id: 'resources',
+    heading: 'Resources',
+    links: ['Blog', 'Guides', 'Help Center', 'API Docs'],
+  },
+  {
+    id: 'company',
+    heading: 'Company',
+    links: ['About Us', 'Careers', 'Contact', 'Partner Program'],
+  },
+];
+
 function Footer() {
+  const [openSections, setOpenSections] = useState({});
+
+  const toggleSection = (id) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <footer className="footerWrapperNexzellMainFooter">
       <div className="containerNexzellMainFooter">
@@ -34,78 +68,47 @@ function Footer() {
         </div>
 
         <div className="linksColGroupNexzellMainFooter">
-          <div className="linkColNexzellMainFooter">
-            <h4 className="colHeadingNexzellMainFooter">Product</h4>
-            <ul className="linkListNexzellMainFooter">
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Features</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Integrations</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Pricing</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Changelog</a>
-              </li>
-            </ul>
-          </div>
+          {footerLinkGroups.map((group) => (
+            <div className="linkColNexzellMainFooter" key={group.id}>
+              <button
+                type="button"
+                className={`colHeadingNexzellMainFooter ${
+                  openSections[group.id] ? 'isOpenNexzellMainFooter' : ''
+                }`}
+                onClick={() => toggleSection(group.id)}
+              >
+                {group.heading}
+                <ChevronDown
+                  size={16}
+                  className="colHeadingIconNexzellMainFooter"
+                />
+              </button>
 
-          <div className="linkColNexzellMainFooter">
-            <h4 className="colHeadingNexzellMainFooter">Solutions</h4>
-            <ul className="linkListNexzellMainFooter">
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">For Startups</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">For Growing Brands</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">For Enterprises</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Global Commerce</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="linkColNexzellMainFooter">
-            <h4 className="colHeadingNexzellMainFooter">Resources</h4>
-            <ul className="linkListNexzellMainFooter">
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Blog</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Guides</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Help Center</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">API Docs</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="linkColNexzellMainFooter">
-            <h4 className="colHeadingNexzellMainFooter">Company</h4>
-            <ul className="linkListNexzellMainFooter">
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">About Us</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Careers</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Contact</a>
-              </li>
-              <li className="linkItemNexzellMainFooter">
-                <a href="#" className="linkNexzellMainFooter">Partner Program</a>
-              </li>
-            </ul>
-          </div>
+              <ul
+                className={`linkListNexzellMainFooter ${
+                  openSections[group.id] ? 'isOpenNexzellMainFooter' : ''
+                }`}
+              >
+                {group.links.map((link) => (
+                  <li className="linkItemNexzellMainFooter" key={link}>
+                    <a
+                      href={link === 'Contact' ? '/contact-us' : '#'}
+                      className="linkNexzellMainFooter"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="bottomBarNexzellMainFooter">
+        <p className="copyrightNexzellMainFooter">
+          © {new Date().getFullYear()} Nexzell. All rights reserved.
+        </p>
       </div>
     </footer>
   );

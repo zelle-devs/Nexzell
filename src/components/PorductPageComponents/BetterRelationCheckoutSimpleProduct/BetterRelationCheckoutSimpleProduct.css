@@ -1,0 +1,801 @@
+.sectionWrapperBetterRelationCheckoutSimpleProduct {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+}
+
+.containerBetterRelationCheckoutSimpleProduct {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@keyframes fadeUpAnimBetterRelationCheckoutSimpleProduct {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpBetterRelationCheckoutSimpleProduct {
+  animation: fadeUpAnimBetterRelationCheckoutSimpleProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeUpDelay1BetterRelationCheckoutSimpleProduct {
+  opacity: 0;
+  animation: fadeUpAnimBetterRelationCheckoutSimpleProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.cardMainBetterRelationCheckoutSimpleProduct {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0rem;
+  transition: all 0.3s ease;
+}
+
+.cardMainBetterRelationCheckoutSimpleProduct:hover {
+  background-color: rgba(14, 18, 24, 0.6);
+  border-color: var(--nexzell-border-highlight, #334155);
+}
+
+.cardLeftPanelBetterRelationCheckoutSimpleProduct {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeBetterRelationCheckoutSimpleProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotBetterRelationCheckoutSimpleProduct {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.25;
+  margin-bottom: 2rem;
+  letter-spacing: -0.01em;
+}
+
+.featureListBetterRelationCheckoutSimpleProduct {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* width: f; */
+}
+
+.featureItemBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkIconBetterRelationCheckoutSimpleProduct {
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 230, 153, 0.2);
+}
+
+.featureTextBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.4;
+}
+
+.cardRightPanelBetterRelationCheckoutSimpleProduct {
+  /* flex: 0 !important ; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+.cardRightPanelPaymentsBetterRelationCheckoutSimpleProduct {
+  /* flex: 0 0 220px; */
+  flex-direction: column;
+  justify-content: end;
+  gap: 1.5rem;
+  align-items: end;
+  align-items: stretch;
+}
+
+.mainDivRightSectionBettrealtionProductdivCheckout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* margin-bottom: -20px; */
+}
+.customerWidgetBetterRelationCheckoutSimpleProduct {
+  background-color: rgba(22, 28, 36, 0.8);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.customerWidgetHeaderBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.customerWidgetAvatarBetterRelationCheckoutSimpleProduct {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.customerWidgetInfoBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.customerWidgetNameBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.1rem 0;
+}
+
+.customerWidgetEmailBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.65rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+
+.customerWidgetStatsBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.customerWidgetStatBoxBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.customerWidgetStatLabelBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.65rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  margin: 0 0 0.2rem 0;
+}
+
+.customerWidgetStatValueBetterRelationCheckoutSimpleProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.customerWidgetBadgeBetterRelationCheckoutSimpleProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  background-color: rgba(0, 230, 153, 0.1);
+  color: var(--nexzell-primary, #00E699);
+  border-radius: 4px;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.paymentWidgetBetterRelationCheckoutSimpleProduct {
+  background-color: rgba(22, 28, 36, 0.8);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.paymentLogoStripeBetterRelationCheckoutSimpleProduct {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 700;
+ font-size: 1.65rem;
+  color: #635BFF;
+  letter-spacing: -0.5px;
+}
+
+.paymentLogoPaypalBetterRelationCheckoutSimpleProduct {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.65rem;
+}
+
+.paypalP1BetterRelationCheckoutSimpleProduct {
+  color: #003087;
+}
+
+.paypalP2BetterRelationCheckoutSimpleProduct {
+  color: #0079C1;
+}
+
+.paymentLogoAppleBetterRelationCheckoutSimpleProduct {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 1.65rem;
+  color: #FFFFFF;
+}
+
+.paymentLogoGoogleBetterRelationCheckoutSimpleProduct {
+  font-family: 'Product Sans', Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 1.65rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.googleGBetterRelationCheckoutSimpleProduct {
+  font-weight: 700;
+  color: #4285F4;
+  font-size: 1.65rem;
+}
+
+.btnPrimaryBetterRelationCheckoutSimpleProduct {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 290px;
+}
+
+.btnPrimaryBetterRelationCheckoutSimpleProduct:hover {
+  background-color: var(--nexzell-primary-hover, #00C782); 
+}
+
+.btnIconBetterRelationCheckoutSimpleProduct {
+  transition: transform 0.3s ease;
+}
+
+.CustomerRightMainDownFlexDiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnPrimaryBetterRelationCheckoutSimpleProduct:hover .btnIconBetterRelationCheckoutSimpleProduct {
+  transform: translateX(3px);
+}
+@media (max-width: 1024px) {
+  .sectionWrapperBetterRelationCheckoutSimpleProduct {
+    padding: 5rem 0;
+  }
+
+  .containerBetterRelationCheckoutSimpleProduct {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .cardMainBetterRelationCheckoutSimpleProduct {
+    padding: 2rem;
+  }
+
+  .headingBetterRelationCheckoutSimpleProduct {
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    margin-bottom: 1.75rem;
+  }
+
+  .featureListBetterRelationCheckoutSimpleProduct {
+    gap: 0.9rem;
+  }
+
+  .featureTextBetterRelationCheckoutSimpleProduct {
+    font-size: 0.84rem;
+  }
+
+  .cardRightPanelBetterRelationCheckoutSimpleProduct {
+    width: 100%; 
+    justify-content: stretch;
+  }
+
+  .cardRightPanelPaymentsBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    flex: none !important;
+    align-items: stretch;
+  }
+
+  .mainDivRightSectionBettrealtionProductdivCheckout {
+    width: 100%;
+  }
+
+  .customerWidgetBetterRelationCheckoutSimpleProduct,
+  .paymentWidgetBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+  }
+
+  .btnPrimaryBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperBetterRelationCheckoutSimpleProduct {
+    padding: 4rem 0;
+  }
+
+  .containerBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .cardMainBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding: 1.75rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .cardLeftPanelBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+  }
+
+  .badgeBetterRelationCheckoutSimpleProduct {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotBetterRelationCheckoutSimpleProduct {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    font-size: clamp(1.25rem, 5vw, 1.65rem);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureListBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .featureItemBetterRelationCheckoutSimpleProduct {
+    gap: 0.65rem;
+  }
+
+  .featureTextBetterRelationCheckoutSimpleProduct {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .cardRightPanelBetterRelationCheckoutSimpleProduct {
+    width: 100%; 
+  }
+
+  .cardRightPanelPaymentsBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .mainDivRightSectionBettrealtionProductdivCheckout {
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .customerWidgetBetterRelationCheckoutSimpleProduct {
+    padding: 1.1rem;
+  }
+
+  .customerWidgetHeaderBetterRelationCheckoutSimpleProduct {
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .customerWidgetAvatarBetterRelationCheckoutSimpleProduct {
+    width: 38px;
+    height: 38px;
+  }
+
+  .customerWidgetNameBetterRelationCheckoutSimpleProduct {
+    font-size: 0.82rem;
+  }
+
+  .customerWidgetEmailBetterRelationCheckoutSimpleProduct {
+    font-size: 0.62rem;
+  }
+
+  .customerWidgetStatsBetterRelationCheckoutSimpleProduct {
+    margin-bottom: 1rem;
+  }
+
+  .customerWidgetStatLabelBetterRelationCheckoutSimpleProduct {
+    font-size: 0.62rem;
+  }
+
+  .customerWidgetStatValueBetterRelationCheckoutSimpleProduct {
+    font-size: 0.85rem;
+  }
+
+  .customerWidgetBadgeBetterRelationCheckoutSimpleProduct {
+    font-size: 0.62rem;
+    padding: 0.23rem 0.55rem;
+  }
+
+  .paymentWidgetBetterRelationCheckoutSimpleProduct {
+    padding: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .paymentLogoStripeBetterRelationCheckoutSimpleProduct {
+    font-size: 1.05rem;
+  }
+
+  .paymentLogoPaypalBetterRelationCheckoutSimpleProduct {
+    font-size: 1rem;
+  }
+
+  .paymentLogoAppleBetterRelationCheckoutSimpleProduct,
+  .paymentLogoGoogleBetterRelationCheckoutSimpleProduct {
+    font-size: 0.9rem;
+  }
+
+  .btnPrimaryBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .CustomerRightMainDownFlexDiv {
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperBetterRelationCheckoutSimpleProduct {
+    padding: 3.5rem 0;
+  }
+
+  .containerBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .cardMainBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding: 1.5rem 1.15rem;
+    gap: 1.5rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardLeftPanelBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+  }
+
+  .badgeBetterRelationCheckoutSimpleProduct {
+    gap: 0.4rem;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotBetterRelationCheckoutSimpleProduct {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+    line-height: 1.25;
+    margin-bottom: 1.35rem;
+  }
+
+  .featureListBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .featureItemBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .checkIconBetterRelationCheckoutSimpleProduct {
+    flex-shrink: 0;
+  }
+
+  .featureTextBetterRelationCheckoutSimpleProduct {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+
+  .cardRightPanelBetterRelationCheckoutSimpleProduct {
+    width: 100%; 
+    justify-content: stretch;
+  }
+
+  .cardRightPanelPaymentsBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    flex: none !important;
+    gap: 0.9rem;
+    align-items: stretch;
+  }
+
+  .mainDivRightSectionBettrealtionProductdivCheckout {
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .customerWidgetBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .customerWidgetHeaderBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .customerWidgetAvatarBetterRelationCheckoutSimpleProduct {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+  }
+
+  .customerWidgetInfoBetterRelationCheckoutSimpleProduct {
+    min-width: 0;
+  }
+
+  .customerWidgetNameBetterRelationCheckoutSimpleProduct {
+    font-size: 0.78rem;
+  }
+
+  .customerWidgetEmailBetterRelationCheckoutSimpleProduct {
+    font-size: 0.58rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .customerWidgetStatsBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .customerWidgetStatBoxBetterRelationCheckoutSimpleProduct {
+    min-width: 0;
+  }
+
+  .customerWidgetStatLabelBetterRelationCheckoutSimpleProduct {
+    font-size: 0.58rem;
+  }
+
+  .customerWidgetStatValueBetterRelationCheckoutSimpleProduct {
+    font-size: 0.8rem;
+  }
+
+  .customerWidgetBadgeBetterRelationCheckoutSimpleProduct {
+    font-size: 0.58rem;
+    padding: 0.22rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  .paymentWidgetBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .paymentLogoStripeBetterRelationCheckoutSimpleProduct {
+    font-size: 0.95rem;
+  }
+
+  .paymentLogoPaypalBetterRelationCheckoutSimpleProduct {
+    font-size: 0.9rem;
+  }
+
+  .paymentLogoAppleBetterRelationCheckoutSimpleProduct {
+    font-size: 0.82rem;
+  }
+
+  .paymentLogoGoogleBetterRelationCheckoutSimpleProduct {
+    font-size: 0.82rem;
+  }
+
+  .googleGBetterRelationCheckoutSimpleProduct {
+    font-size: 0.95rem;
+  }
+
+  .CustomerRightMainDownFlexDiv {
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .btnPrimaryBetterRelationCheckoutSimpleProduct {
+    width: 100%;
+    min-width: 0;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperBetterRelationCheckoutSimpleProduct {
+    padding: 3rem 0;
+  }
+
+  .containerBetterRelationCheckoutSimpleProduct {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 0.9rem;
+  }
+
+  .cardMainBetterRelationCheckoutSimpleProduct {
+    padding: 1.3rem 0.95rem;
+    gap: 1.25rem;
+  }
+
+  .badgeBetterRelationCheckoutSimpleProduct {
+    padding: 0.26rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingBetterRelationCheckoutSimpleProduct {
+    font-size: 1.15rem;
+    line-height: 1.22;
+    margin-bottom: 1.15rem;
+  }
+
+  .featureListBetterRelationCheckoutSimpleProduct {
+    gap: 0.65rem;
+  }
+
+  .featureItemBetterRelationCheckoutSimpleProduct {
+    gap: 0.55rem;
+  }
+
+  .featureTextBetterRelationCheckoutSimpleProduct {
+    font-size: 0.69rem;
+    line-height: 1.45;
+  }
+
+  .customerWidgetBetterRelationCheckoutSimpleProduct {
+    padding: 0.9rem;
+  }
+
+  .customerWidgetAvatarBetterRelationCheckoutSimpleProduct {
+    width: 34px;
+    height: 34px;
+  }
+
+  .customerWidgetNameBetterRelationCheckoutSimpleProduct {
+    font-size: 0.74rem;
+  }
+
+  .customerWidgetEmailBetterRelationCheckoutSimpleProduct {
+    font-size: 0.55rem;
+  }
+
+  .customerWidgetStatsBetterRelationCheckoutSimpleProduct {
+    gap: 0.5rem;
+  }
+
+  .customerWidgetStatLabelBetterRelationCheckoutSimpleProduct {
+    font-size: 0.55rem;
+  }
+
+  .customerWidgetStatValueBetterRelationCheckoutSimpleProduct {
+    font-size: 0.76rem;
+  }
+
+  .customerWidgetBadgeBetterRelationCheckoutSimpleProduct {
+    font-size: 0.54rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .paymentWidgetBetterRelationCheckoutSimpleProduct {
+    padding: 0.85rem;
+    gap: 0.7rem;
+  }
+
+  .paymentLogoStripeBetterRelationCheckoutSimpleProduct {
+    font-size: 0.88rem;
+  }
+
+  .paymentLogoPaypalBetterRelationCheckoutSimpleProduct {
+    font-size: 0.84rem;
+  }
+
+  .paymentLogoAppleBetterRelationCheckoutSimpleProduct,
+  .paymentLogoGoogleBetterRelationCheckoutSimpleProduct {
+    font-size: 0.76rem;
+  }
+
+  .googleGBetterRelationCheckoutSimpleProduct {
+    font-size: 0.88rem;
+  }
+
+  .CustomerRightMainDownFlexDiv {
+    gap: 0.5rem;
+  }
+
+  .btnPrimaryBetterRelationCheckoutSimpleProduct {
+    padding: 0.65rem 0.8rem;
+    font-size: 0.74rem;
+  }
+}

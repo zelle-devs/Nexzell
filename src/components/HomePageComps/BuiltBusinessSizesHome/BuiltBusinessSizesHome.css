@@ -121,32 +121,233 @@
   line-height: 1.5;
   margin: 0;
 }
-
 @media (max-width: 1024px) {
+
+  .sectionWrapperBuiltBusinessSizesHome {
+    padding: 4rem 0;
+  }
+
   .containerBuiltBusinessSizesHome {
     flex-direction: column;
-    gap: 3rem;
+    gap: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
-  
+
   .leftContentBuiltBusinessSizesHome {
-    flex: 1;
+    width: 100%;
+    max-width: 750px;
+    flex: none;
     align-items: center;
     text-align: center;
+  }
+
+  .headingBuiltBusinessSizesHome {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionBuiltBusinessSizesHome {
     max-width: 700px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .btnOutlineBuiltBusinessSizesHome {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 
   .rightContentBuiltBusinessSizesHome {
     width: 100%;
+    flex: 1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardBuiltBusinessSizesHome {
+    padding: 2rem 1.4rem;
+  }
+
+  .cardIconWrapperBuiltBusinessSizesHome {
+    margin-bottom: 2rem;
+  }
+
+  .cardTitleBuiltBusinessSizesHome {
+    font-size: 1rem;
+  }
+
+  .cardDescBuiltBusinessSizesHome {
+    font-size: 0.76rem;
   }
 }
 
+
+/* Small Tablet */
 @media (max-width: 768px) {
-  .rightContentBuiltBusinessSizesHome {
-    grid-template-columns: 1fr;
+
+  .sectionWrapperBuiltBusinessSizesHome {
+    padding: 3.5rem 0;
   }
-  
+
+  .containerBuiltBusinessSizesHome {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3rem;
+  }
+
+  .leftContentBuiltBusinessSizesHome {
+    max-width: 650px;
+  }
+
+  .headingBuiltBusinessSizesHome {
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .descriptionBuiltBusinessSizesHome {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnOutlineBuiltBusinessSizesHome {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.86rem;
+  }
+
+  .rightContentBuiltBusinessSizesHome {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
   .cardBuiltBusinessSizesHome {
+    padding: 1.75rem 1.35rem;
+  }
+
+  .cardIconWrapperBuiltBusinessSizesHome {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardTitleBuiltBusinessSizesHome {
+    font-size: 0.95rem;
+  }
+
+  .cardDescBuiltBusinessSizesHome {
+    font-size: 0.74rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperBuiltBusinessSizesHome {
+    padding: 3rem 0;
+  }
+
+  .containerBuiltBusinessSizesHome {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.5rem;
+  }
+
+  .leftContentBuiltBusinessSizesHome {
+    width: 100%;
+    max-width: 100%;
     align-items: center;
     text-align: center;
+  }
+
+  .headingBuiltBusinessSizesHome {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionBuiltBusinessSizesHome {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnOutlineBuiltBusinessSizesHome {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.84rem;
+  }
+
+  .rightContentBuiltBusinessSizesHome {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardBuiltBusinessSizesHome {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardIconWrapperBuiltBusinessSizesHome {
+    margin-bottom: 1.25rem;
+  }
+
+  .cardTitleBuiltBusinessSizesHome {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .cardDescBuiltBusinessSizesHome {
+    max-width: 300px;
+    font-size: 0.72rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .sectionWrapperBuiltBusinessSizesHome {
+    padding: 2.5rem 0;
+  }
+
+  .containerBuiltBusinessSizesHome {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.25rem;
+  }
+
+  .headingBuiltBusinessSizesHome {
+    font-size: 1.65rem;
+  }
+
+  .descriptionBuiltBusinessSizesHome {
+    font-size: 0.78rem;
+  }
+
+  .btnOutlineBuiltBusinessSizesHome {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.8rem;
+  }
+
+  .cardBuiltBusinessSizesHome {
+    padding: 1.35rem 1.1rem;
+  }
+
+  .cardTitleBuiltBusinessSizesHome {
+    font-size: 0.84rem;
+  }
+
+  .cardDescBuiltBusinessSizesHome {
+    font-size: 0.7rem;
   }
 }

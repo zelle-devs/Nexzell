@@ -7,7 +7,7 @@
 
 .containerGlobalFromDayOne {
   width: 100%;
-  /* max-width: var(--nexzell-container-width, 1280px); */
+  max-width: var(--nexzell-container-width, 1280px);
   margin: 0 auto;
   padding: 0 var(--nexzell-padding-x, 2rem);
   display: flex;
@@ -32,15 +32,15 @@
 .globeImageGlobalFromDayOne {
   width: 100%;
   height: auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.1) 100%);
   -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 50%, rgba(0,0,0,0.1) 100%);
 }
 
 .floatingCardGlobalFromDayOne {
   position: absolute;
-  bottom: 15%;
-  left: -5%;
+  bottom: 18%;
+  left: 5%;
   background-color: rgba(14, 18, 24, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

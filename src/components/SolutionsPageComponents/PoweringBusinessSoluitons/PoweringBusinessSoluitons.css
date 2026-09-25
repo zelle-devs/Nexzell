@@ -1,0 +1,549 @@
+.sectionWrapperPoweringBusinessSoluitons {
+  padding: 6rem 0;
+  /* background-color: var(--nexzell-bg-base, #06080C); */
+  width: 100%;
+  overflow: hidden;
+  background-image: url('/PoweringBusinessAroundWorld.jpg');
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerPoweringBusinessSoluitons {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+@keyframes fadeUpAnimPoweringBusinessSoluitons {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRightAnimPoweringBusinessSoluitons {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animFadeUpPoweringBusinessSoluitons {
+  animation: fadeUpAnimPoweringBusinessSoluitons 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1PoweringBusinessSoluitons {
+  opacity: 0;
+  animation: fadeUpAnimPoweringBusinessSoluitons 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.animDelay2PoweringBusinessSoluitons {
+  opacity: 0;
+  animation: fadeUpAnimPoweringBusinessSoluitons 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+}
+
+.animDelay3PoweringBusinessSoluitons {
+  opacity: 0;
+  animation: fadeUpAnimPoweringBusinessSoluitons 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+.animFadeInRightPoweringBusinessSoluitons {
+  opacity: 0;
+  animation: fadeInRightAnimPoweringBusinessSoluitons 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+}
+
+.leftContentPoweringBusinessSoluitons {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitlePoweringBusinessSoluitons {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.headingPoweringBusinessSoluitons {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.descriptionPoweringBusinessSoluitons {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 3rem 0;
+  max-width: 90%;
+}
+
+.descriptionPoweringBusinessSoluitons strong {
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-weight: 600;
+}
+
+.statsRowPoweringBusinessSoluitons {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.statBlockPoweringBusinessSoluitons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNumPoweringBusinessSoluitons {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.statLabelPoweringBusinessSoluitons {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+
+.rightContentPoweringBusinessSoluitons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mapImageWrapperPoweringBusinessSoluitons {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--nexzell-radius-lg, 24px);
+}
+
+.mapImagePoweringBusinessSoluitons {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+}
+
+.floatingCardPoweringBusinessSoluitons {
+  position: absolute;
+  /* bottom: 100%; */
+  top: 100%;
+  right: 0;
+  background-color: rgba(14, 18, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 16px);
+  padding: 1.75rem;
+  width: 280px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cardTextPoweringBusinessSoluitons {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.cardBottomRowPoweringBusinessSoluitons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatarGroupPoweringBusinessSoluitons {
+  display: flex;
+  align-items: center;
+}
+
+.avatarPoweringBusinessSoluitons {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nexzell-bg-surface, #0E1218);
+  margin-left: -8px;
+}
+
+.avatarPoweringBusinessSoluitons:first-child {
+  margin-left: 0;
+}
+
+.addBtnPoweringBusinessSoluitons {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.actionBtnPoweringBusinessSoluitons {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionBtnPoweringBusinessSoluitons:hover {
+  background-color: rgba(0, 230, 153, 0.1);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .sectionWrapperPoweringBusinessSoluitons {
+    padding: 0rem 0;
+    background-position: center right;
+  }
+
+  .containerPoweringBusinessSoluitons {
+        gap: 2.75rem;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.642) 70%, rgba(16, 21, 31, 0) 100%);
+  }
+
+  .leftContentPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 750px;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subtitlePoweringBusinessSoluitons {
+    font-size: 0.7rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingPoweringBusinessSoluitons {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+
+  .statsRowPoweringBusinessSoluitons {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .statNumPoweringBusinessSoluitons {
+    font-size: 1.6rem;
+  }
+
+  .statLabelPoweringBusinessSoluitons {
+    font-size: 0.8rem;
+  }
+
+  .rightContentPoweringBusinessSoluitons {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+  }
+
+  .mapImageWrapperPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .floatingCardPoweringBusinessSoluitons {
+    width: 260px;
+    padding: 1.5rem;
+    display: none;
+  }
+
+  .cardTextPoweringBusinessSoluitons {
+    font-size: 0.84rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperPoweringBusinessSoluitons {
+    padding: 0rem 0;
+    background-position: 65% bottom;
+  }
+
+  .containerPoweringBusinessSoluitons {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3rem;
+    height: 50vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.642) 70%, rgba(16, 21, 31, 0) 100%);
+  }
+
+  .leftContentPoweringBusinessSoluitons {
+    max-width: 650px;
+  }
+
+  .subtitlePoweringBusinessSoluitons {
+    font-size: 0.68rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 0.75rem;
+  }
+
+  .headingPoweringBusinessSoluitons {
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionPoweringBusinessSoluitons {
+    max-width: 600px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+
+  .statsRowPoweringBusinessSoluitons {
+    gap: 2.5rem;
+  }
+
+  .statNumPoweringBusinessSoluitons {
+    font-size: 1.5rem;
+  }
+
+  .statLabelPoweringBusinessSoluitons {
+    font-size: 0.76rem;
+  }
+
+  .mapImageWrapperPoweringBusinessSoluitons {
+    max-width: 600px;
+  }
+
+  .floatingCardPoweringBusinessSoluitons {
+    width: 240px;
+    padding: 1.35rem;
+    bottom: 0;
+    display: none;
+    right: 0;
+  }
+
+  .cardTextPoweringBusinessSoluitons {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+  }
+
+  .actionBtnPoweringBusinessSoluitons {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperPoweringBusinessSoluitons {
+    /* padding: 3.5rem 0; */
+    background-position: 68% center;
+    
+  }
+
+  .containerPoweringBusinessSoluitons {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+    height: 40vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.642) 70%, rgba(16, 21, 31, 0) 100%);
+  }
+
+  .leftContentPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .subtitlePoweringBusinessSoluitons {
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.7rem;
+  }
+
+  .headingPoweringBusinessSoluitons {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .statsRowPoweringBusinessSoluitons {
+    width: 100%;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .statBlockPoweringBusinessSoluitons {
+    align-items: center;
+    text-align: center;
+  }
+
+  .statNumPoweringBusinessSoluitons {
+    font-size: 1.4rem;
+  }
+
+  .statLabelPoweringBusinessSoluitons {
+    font-size: 0.72rem;
+  }
+
+  .rightContentPoweringBusinessSoluitons {
+    width: 100%;
+  }
+
+  .mapImageWrapperPoweringBusinessSoluitons {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .floatingCardPoweringBusinessSoluitons {
+    position: relative;
+    width: calc(100% - 1rem);
+    max-width: 360px;
+    margin: -2rem auto 0;
+    padding: 1.25rem;
+    bottom: auto;
+    right: auto;
+    display: none;
+  }
+
+  .cardTextPoweringBusinessSoluitons {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .avatarPoweringBusinessSoluitons,
+  .addBtnPoweringBusinessSoluitons {
+    width: 26px;
+    height: 26px;
+  }
+
+  .actionBtnPoweringBusinessSoluitons {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperPoweringBusinessSoluitons {
+    padding: 3rem 0;
+    background-position: 72% center;
+  }
+
+  .containerPoweringBusinessSoluitons {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .subtitlePoweringBusinessSoluitons {
+    font-size: 0.6rem;
+    letter-spacing: 0.9px;
+  }
+
+  .headingPoweringBusinessSoluitons {
+    font-size: 1.65rem;
+    line-height: 1.18;
+  }
+
+  .descriptionPoweringBusinessSoluitons {
+    font-size: 0.75rem;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+  }
+
+  .statsRowPoweringBusinessSoluitons {
+    gap: 1.25rem;
+  }
+
+  .statNumPoweringBusinessSoluitons {
+    font-size: 1.3rem;
+  }
+
+  .statLabelPoweringBusinessSoluitons {
+    font-size: 0.68rem;
+  }
+
+  .floatingCardPoweringBusinessSoluitons {
+    width: calc(100% - 0.5rem);
+    padding: 1.1rem;
+    margin-top: -1.5rem;
+    display: none;
+  }
+
+  .cardTextPoweringBusinessSoluitons {
+    font-size: 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .avatarPoweringBusinessSoluitons,
+  .addBtnPoweringBusinessSoluitons {
+    width: 24px;
+    height: 24px;
+  }
+
+  .actionBtnPoweringBusinessSoluitons {
+    width: 30px;
+    height: 30px;
+  }
+}

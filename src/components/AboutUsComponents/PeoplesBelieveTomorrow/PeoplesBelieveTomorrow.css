@@ -1,0 +1,579 @@
+.sectionWrapperPeoplesBelieveTomorrow {
+  position: relative;
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  /* background-color: var(--nexzell-bg-base, #06080C); */
+  overflow: hidden;
+  padding: 8rem 0;
+  background-image: url(../../../../public/BeiliveTomorrowImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgContainerPeoplesBelieveTomorrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bgImagePeoplesBelieveTomorrow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.overlayLeftPeoplesBelieveTomorrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(6, 8, 12, 1) 40%, rgba(6, 8, 12, 0) 100%);
+}
+
+.overlayRightPeoplesBelieveTomorrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(6, 8, 12, 0.95) 20%, rgba(6, 8, 12, 0.6) 50%, transparent 100%);
+}
+
+.containerPeoplesBelieveTomorrow {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+@keyframes fadeUpPeoplesBelieveTomorrow {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpPeoplesBelieveTomorrow {
+  animation: fadeUpPeoplesBelieveTomorrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeUpDelay1PeoplesBelieveTomorrow {
+  opacity: 0;
+  animation: fadeUpPeoplesBelieveTomorrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.animFadeUpDelay2PeoplesBelieveTomorrow {
+  opacity: 0;
+  animation: fadeUpPeoplesBelieveTomorrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+.leftColumnPeoplesBelieveTomorrow {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.badgePeoplesBelieveTomorrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotPeoplesBelieveTomorrow {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingPeoplesBelieveTomorrow {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionPeoplesBelieveTomorrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+.btnPrimaryPeoplesBelieveTomorrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryPeoplesBelieveTomorrow:hover {
+  background-color: var(--nexzell-primary-hover, #00C782); 
+}
+
+.btnIconPeoplesBelieveTomorrow {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryPeoplesBelieveTomorrow:hover .btnIconPeoplesBelieveTomorrow {
+  transform: translateX(4px);
+}
+
+.centerColumnPeoplesBelieveTomorrow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4rem;
+}
+
+.centerFloatingTextPeoplesBelieveTomorrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.rightColumnPeoplesBelieveTomorrow {
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rightListWrapperPeoplesBelieveTomorrow {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.rightListItemPeoplesBelieveTomorrow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.rightListTextPeoplesBelieveTomorrow {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  font-weight: 400;
+}
+
+.animatedLineWrapperPeoplesBelieveTomorrow {
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+
+.animatedLineBasePeoplesBelieveTomorrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.movingPointPeoplesBelieveTomorrow {
+  position: absolute;
+  top: -1.5px;
+  left: 0;
+  width: 25px;
+  height: 5px;
+  background: var(--nexzell-primary, #00E699);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--nexzell-primary, #00E699);
+  animation: movePointAnimationPeoplesBelieveTomorrow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.delay0PeoplesBelieveTomorrow {
+  animation-delay: 0s;
+}
+
+.delay1PeoplesBelieveTomorrow {
+  animation-delay: 1s;
+}
+
+.delay2PeoplesBelieveTomorrow {
+  animation-delay: 2s;
+}
+
+@keyframes movePointAnimationPeoplesBelieveTomorrow {
+  0% {
+    left: 0;
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+  15% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    left: calc(100% - 25px);
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+}
+@media (max-width: 1024px) {
+
+  .sectionWrapperPeoplesBelieveTomorrow {
+    min-height: auto;
+    padding: 6rem 0;
+    background-position: center;
+  }
+
+  .containerPeoplesBelieveTomorrow {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 750px;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgePeoplesBelieveTomorrow {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingPeoplesBelieveTomorrow {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionPeoplesBelieveTomorrow {
+    max-width: 700px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .btnPrimaryPeoplesBelieveTomorrow {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+
+  .centerColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .centerFloatingTextPeoplesBelieveTomorrow {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .rightColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 500px;
+    flex: none;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .rightListWrapperPeoplesBelieveTomorrow {
+    gap: 2rem;
+  }
+
+  .rightListItemPeoplesBelieveTomorrow {
+    gap: 0.8rem;
+  }
+
+  .rightListTextPeoplesBelieveTomorrow {
+    font-size: 0.9rem;
+  }
+
+  .overlayLeftPeoplesBelieveTomorrow {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 1) 20%,
+      rgba(6, 8, 12, 0.75) 65%,
+      rgba(6, 8, 12, 0.5) 100%
+    );
+  }
+
+  .overlayRightPeoplesBelieveTomorrow {
+    display: none;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+
+  .sectionWrapperPeoplesBelieveTomorrow {
+    padding: 4.5rem 0;
+    background-position: center;
+  }
+
+  .containerPeoplesBelieveTomorrow {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3rem;
+  }
+
+  .badgePeoplesBelieveTomorrow {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotPeoplesBelieveTomorrow {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingPeoplesBelieveTomorrow {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.6rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 620px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnPrimaryPeoplesBelieveTomorrow {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .centerFloatingTextPeoplesBelieveTomorrow {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .rightColumnPeoplesBelieveTomorrow {
+    max-width: 450px;
+  }
+
+  .rightListWrapperPeoplesBelieveTomorrow {
+    gap: 1.75rem;
+  }
+
+  .rightListItemPeoplesBelieveTomorrow {
+    gap: 0.7rem;
+  }
+
+  .rightListTextPeoplesBelieveTomorrow {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperPeoplesBelieveTomorrow {
+    min-height: auto;
+    padding: 3.5rem 0;
+    background-position: center;
+  }
+
+  .containerPeoplesBelieveTomorrow {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+  }
+
+  .leftColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgePeoplesBelieveTomorrow {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotPeoplesBelieveTomorrow {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingPeoplesBelieveTomorrow {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnPrimaryPeoplesBelieveTomorrow {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .centerColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .centerFloatingTextPeoplesBelieveTomorrow {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .rightColumnPeoplesBelieveTomorrow {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .rightListWrapperPeoplesBelieveTomorrow {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .rightListItemPeoplesBelieveTomorrow {
+    gap: 0.65rem;
+  }
+
+  .rightListTextPeoplesBelieveTomorrow {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .animatedLineWrapperPeoplesBelieveTomorrow {
+    height: 2px;
+  }
+
+  .movingPointPeoplesBelieveTomorrow {
+    width: 22px;
+  }
+
+  .overlayLeftPeoplesBelieveTomorrow {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 0.98) 15%,
+      rgba(6, 8, 12, 0.82) 55%,
+      rgba(6, 8, 12, 0.55) 100%
+    );
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .sectionWrapperPeoplesBelieveTomorrow {
+    padding: 3rem 0;
+  }
+
+  .containerPeoplesBelieveTomorrow {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .badgePeoplesBelieveTomorrow {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.61rem;
+  }
+
+  .headingPeoplesBelieveTomorrow {
+    font-size: 1.65rem;
+  }
+
+  .descriptionPeoplesBelieveTomorrow {
+    font-size: 0.78rem;
+  }
+
+  .btnPrimaryPeoplesBelieveTomorrow {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.82rem;
+  }
+
+  .centerFloatingTextPeoplesBelieveTomorrow {
+    font-size: 1rem;
+  }
+
+  .rightListTextPeoplesBelieveTomorrow {
+    font-size: 0.74rem;
+  }
+
+  .rightListWrapperPeoplesBelieveTomorrow {
+    gap: 1.35rem;
+  }
+}

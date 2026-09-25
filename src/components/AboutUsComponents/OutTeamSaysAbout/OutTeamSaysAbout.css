@@ -1,0 +1,436 @@
+.sectionWrapperOutTeamSaysAbout {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerOutTeamSaysAbout {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.leftColumnOutTeamSaysAbout {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headingOutTeamSaysAbout {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionOutTeamSaysAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.navButtonsOutTeamSaysAbout {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBtnOutTeamSaysAbout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  color: var(--nexzell-text-white, #FFFFFF);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtnOutTeamSaysAbout:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightColumnOutTeamSaysAbout {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrackOutTeamSaysAbout {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carouselTrackOutTeamSaysAbout::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonialCardOutTeamSaysAbout {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonialCardOutTeamSaysAbout:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+}
+
+.quoteTextOutTeamSaysAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.quoteIconWrapperOutTeamSaysAbout {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.userInfoOutTeamSaysAbout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarOutTeamSaysAbout {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nexzell-border-highlight, #334155);
+}
+
+.userDetailsOutTeamSaysAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.userNameOutTeamSaysAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.userTitleOutTeamSaysAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  margin: 0;
+}
+
+.starsOutTeamSaysAbout {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+@media (max-width: 1024px) {
+
+  .sectionWrapperOutTeamSaysAbout {
+    padding: 4rem 0;
+  }
+
+  .containerOutTeamSaysAbout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftColumnOutTeamSaysAbout {
+    width: 100%;
+    max-width: 700px;
+    flex: none;
+  }
+
+  .headingOutTeamSaysAbout {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionOutTeamSaysAbout {
+    max-width: 650px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .navButtonsOutTeamSaysAbout {
+    gap: 0.85rem;
+  }
+
+  .navBtnOutTeamSaysAbout {
+    width: 42px;
+    height: 42px;
+  }
+
+  .rightColumnOutTeamSaysAbout {
+    width: 100%;
+    flex: none;
+  }
+
+  .carouselTrackOutTeamSaysAbout {
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .testimonialCardOutTeamSaysAbout {
+    flex: 0 0 310px;
+    padding: 2rem 1.75rem;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+
+  .sectionWrapperOutTeamSaysAbout {
+    padding: 3.5rem 0;
+  }
+
+  .containerOutTeamSaysAbout {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 2.75rem;
+  }
+
+  .leftColumnOutTeamSaysAbout {
+    max-width: 650px;
+  }
+
+  .headingOutTeamSaysAbout {
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionOutTeamSaysAbout {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .navButtonsOutTeamSaysAbout {
+    gap: 0.75rem;
+  }
+
+  .navBtnOutTeamSaysAbout {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carouselTrackOutTeamSaysAbout {
+    gap: 1rem;
+  }
+
+  .testimonialCardOutTeamSaysAbout {
+    flex: 0 0 300px;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .quoteIconWrapperOutTeamSaysAbout {
+    margin-bottom: 1.25rem;
+  }
+
+  .quoteTextOutTeamSaysAbout {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .avatarOutTeamSaysAbout {
+    width: 44px;
+    height: 44px;
+  }
+
+  .userInfoOutTeamSaysAbout {
+    gap: 0.85rem;
+  }
+
+  .userNameOutTeamSaysAbout {
+    font-size: 0.88rem;
+  }
+
+  .userTitleOutTeamSaysAbout {
+    font-size: 0.72rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperOutTeamSaysAbout {
+    padding: 3rem 0;
+  }
+
+  .containerOutTeamSaysAbout {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.5rem;
+  }
+
+  .leftColumnOutTeamSaysAbout {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .headingOutTeamSaysAbout {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionOutTeamSaysAbout {
+    width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .navButtonsOutTeamSaysAbout {
+    gap: 0.7rem;
+  }
+
+  .navBtnOutTeamSaysAbout {
+    width: 38px;
+    height: 38px;
+  }
+
+  .rightColumnOutTeamSaysAbout {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carouselTrackOutTeamSaysAbout {
+    width: 100%;
+    gap: 0.85rem;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonialCardOutTeamSaysAbout {
+    flex: 0 0 calc(100vw - 2rem);
+    max-width: 360px;
+    padding: 1.5rem 1.25rem;
+    scroll-snap-align: start;
+  }
+
+  .quoteIconWrapperOutTeamSaysAbout {
+    margin-bottom: 1rem;
+  }
+
+  .quoteTextOutTeamSaysAbout {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .avatarOutTeamSaysAbout {
+    width: 42px;
+    height: 42px;
+  }
+
+  .userInfoOutTeamSaysAbout {
+    gap: 0.75rem;
+  }
+
+  .userNameOutTeamSaysAbout {
+    font-size: 0.84rem;
+  }
+
+  .userTitleOutTeamSaysAbout {
+    font-size: 0.7rem;
+  }
+
+  .starsOutTeamSaysAbout {
+    gap: 0.1rem;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .sectionWrapperOutTeamSaysAbout {
+    padding: 2.5rem 0;
+  }
+
+  .containerOutTeamSaysAbout {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.25rem;
+  }
+
+  .headingOutTeamSaysAbout {
+    font-size: 1.65rem;
+  }
+
+  .descriptionOutTeamSaysAbout {
+    font-size: 0.78rem;
+  }
+
+  .navBtnOutTeamSaysAbout {
+    width: 36px;
+    height: 36px;
+  }
+
+  .testimonialCardOutTeamSaysAbout {
+    flex: 0 0 calc(100vw - 1.7rem);
+    padding: 1.35rem 1.1rem;
+  }
+
+  .quoteTextOutTeamSaysAbout {
+    font-size: 0.78rem;
+  }
+
+  .avatarOutTeamSaysAbout {
+    width: 40px;
+    height: 40px;
+  }
+
+  .userNameOutTeamSaysAbout {
+    font-size: 0.8rem;
+  }
+
+  .userTitleOutTeamSaysAbout {
+    font-size: 0.68rem;
+  }
+}

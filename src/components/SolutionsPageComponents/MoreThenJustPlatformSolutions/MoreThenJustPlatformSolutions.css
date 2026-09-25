@@ -1,0 +1,365 @@
+.sectionWrapperMoreThenJustPlatformSolutions {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerMoreThenJustPlatformSolutions {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeUpAnimMoreThenJustPlatformSolutions {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpMoreThenJustPlatformSolutions {
+  animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1MoreThenJustPlatformSolutions { opacity: 0; animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2MoreThenJustPlatformSolutions { opacity: 0; animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3MoreThenJustPlatformSolutions { opacity: 0; animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4MoreThenJustPlatformSolutions { opacity: 0; animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5MoreThenJustPlatformSolutions { opacity: 0; animation: fadeUpAnimMoreThenJustPlatformSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+.headerMoreThenJustPlatformSolutions {
+  text-align: center;
+  margin-bottom: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitleMoreThenJustPlatformSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.titleMoreThenJustPlatformSolutions {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+}
+
+.descMoreThenJustPlatformSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  max-width: 600px;
+}
+
+.gridMoreThenJustPlatformSolutions {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.featureItemMoreThenJustPlatformSolutions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.featureItemMoreThenJustPlatformSolutions:hover {
+  transform: translateY(-5px);
+}
+
+.iconBoxMoreThenJustPlatformSolutions {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(14, 18, 24, 0.8);
+  border: 1px solid rgba(0, 230, 153, 0.4);
+  box-shadow: inset 0 0 15px rgba(0, 230, 153, 0.15), 0 8px 20px rgba(0, 230, 153, 0.1);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.featureItemMoreThenJustPlatformSolutions:hover .iconBoxMoreThenJustPlatformSolutions {
+  box-shadow: inset 0 0 20px rgba(0, 230, 153, 0.25), 0 10px 25px rgba(0, 230, 153, 0.2);
+  border-color: var(--nexzell-primary, #00E699);
+}
+
+.featureIconMoreThenJustPlatformSolutions {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.featureTitleMoreThenJustPlatformSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.featureDescMoreThenJustPlatformSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .sectionWrapperMoreThenJustPlatformSolutions {
+    padding: 5rem 0;
+  }
+
+  .containerMoreThenJustPlatformSolutions {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .headerMoreThenJustPlatformSolutions {
+    margin-bottom: 3.5rem;
+  }
+
+  .subtitleMoreThenJustPlatformSolutions {
+    font-size: 0.7rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 0.85rem;
+  }
+
+  .titleMoreThenJustPlatformSolutions {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descMoreThenJustPlatformSolutions {
+    max-width: 650px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .gridMoreThenJustPlatformSolutions {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.75rem 2rem;
+  }
+
+  .iconBoxMoreThenJustPlatformSolutions {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureTitleMoreThenJustPlatformSolutions {
+    font-size: 0.95rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .featureDescMoreThenJustPlatformSolutions {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperMoreThenJustPlatformSolutions {
+    padding: 4rem 0;
+  }
+
+  .containerMoreThenJustPlatformSolutions {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .headerMoreThenJustPlatformSolutions {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .subtitleMoreThenJustPlatformSolutions {
+    font-size: 0.68rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 0.8rem;
+  }
+
+  .titleMoreThenJustPlatformSolutions {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descMoreThenJustPlatformSolutions {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+
+  .gridMoreThenJustPlatformSolutions {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+  }
+
+  .featureItemMoreThenJustPlatformSolutions {
+    width: 100%;
+  }
+
+  .iconBoxMoreThenJustPlatformSolutions {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    margin-bottom: 1.15rem;
+  }
+
+  .featureTitleMoreThenJustPlatformSolutions {
+    font-size: 0.92rem;
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+  }
+
+  .featureDescMoreThenJustPlatformSolutions {
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperMoreThenJustPlatformSolutions {
+    padding: 3.5rem 0;
+  }
+
+  .containerMoreThenJustPlatformSolutions {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .headerMoreThenJustPlatformSolutions {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .subtitleMoreThenJustPlatformSolutions {
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.7rem;
+  }
+
+  .titleMoreThenJustPlatformSolutions {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descMoreThenJustPlatformSolutions {
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .gridMoreThenJustPlatformSolutions {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .featureItemMoreThenJustPlatformSolutions {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .iconBoxMoreThenJustPlatformSolutions {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .featureTitleMoreThenJustPlatformSolutions {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .featureDescMoreThenJustPlatformSolutions {
+    max-width: 320px;
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperMoreThenJustPlatformSolutions {
+    padding: 3rem 0;
+  }
+
+  .containerMoreThenJustPlatformSolutions {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .headerMoreThenJustPlatformSolutions {
+    margin-bottom: 2.25rem;
+  }
+
+  .subtitleMoreThenJustPlatformSolutions {
+    font-size: 0.6rem;
+    letter-spacing: 0.9px;
+  }
+
+  .titleMoreThenJustPlatformSolutions {
+    font-size: 1.65rem;
+    line-height: 1.18;
+  }
+
+  .descMoreThenJustPlatformSolutions {
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+
+  .gridMoreThenJustPlatformSolutions {
+    gap: 2.25rem;
+  }
+
+  .iconBoxMoreThenJustPlatformSolutions {
+    width: 43px;
+    height: 43px;
+    border-radius: 11px;
+    margin-bottom: 0.9rem;
+  }
+
+  .featureTitleMoreThenJustPlatformSolutions {
+    font-size: 0.85rem;
+  }
+
+  .featureDescMoreThenJustPlatformSolutions {
+    max-width: 290px;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+}

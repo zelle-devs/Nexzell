@@ -5,14 +5,12 @@
   transform: translateX(-50%);
   width: 100%;
   height: 80px;
-  /* background-color: #06080cb6; */
   border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
   border-radius: 0px;
   z-index: 100;
   display: flex;
   align-items: center;
   backdrop-filter: blur(5px);
- 
   transform-origin: bottom center;
 
   transition:
@@ -23,9 +21,10 @@
     background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
+
 .headerWrapperNexzellHeaderMain.isScrolledNexzellHeaderMain {
-  top: 0px; 
+  top: 0px;
   width: clamp(320px, 92vw, 1280px);
   border-radius: 28px;
   border-top-left-radius: 0;
@@ -46,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
 }
- 
+
 .logoAreaNexzellHeaderMain {
   display: flex;
   align-items: center;
@@ -55,7 +54,6 @@
 }
 
 .logoImgNexzellHeaderMain {
-  /* height: 30px; */
   width: 150px;
   object-fit: contain;
 }
@@ -74,7 +72,7 @@
   color: var(--nexzell-text-gray-300, #94A3B8);
   font-family: var(--font-poppins), sans-serif;
 }
- 
+
 .centerNavNexzellHeaderMain {
   display: flex;
   align-items: center;
@@ -101,10 +99,18 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+.navItemNexzellHeaderMain a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+  text-decoration: none;
+}
+
 .navItemNexzellHeaderMain:hover {
   color: var(--nexzell-text-white, #FFFFFF);
 }
- 
+
 .chevronIconNexzellHeaderMain {
   color: var(--nexzell-text-gray-300, #94A3B8);
   transition: transform 0.3s ease, color 0.3s ease;
@@ -114,7 +120,7 @@
   transform: rotate(180deg);
   color: var(--nexzell-text-white, #FFFFFF);
 }
- 
+
 .rightActionsNexzellHeaderMain {
   display: flex;
   align-items: center;
@@ -151,7 +157,6 @@
   color: var(--nexzell-text-white, #FFFFFF);
 }
 
-/* CTA Button Styles */
 .ctaBtnNexzellHeaderMain {
   display: flex;
   align-items: center;
@@ -161,7 +166,7 @@
   font-size: 0.95rem;
   font-weight: 600;
   padding: 0.65rem 1.25rem;
-  border-radius: var( --nexzell-radius-sm);
+  border-radius: var(--nexzell-radius-sm);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -170,8 +175,6 @@
 
 .ctaBtnNexzellHeaderMain:hover {
   background-color: var(--nexzell-primary-hover, #00C782);
-  /* transform: translateY(-2px); */
-  /* box-shadow: 0 4px 15px rgba(0, 230, 153, 0.25); */
 }
 
 .arrowIconNexzellHeaderMain {
@@ -180,4 +183,192 @@
 
 .ctaBtnNexzellHeaderMain:hover .arrowIconNexzellHeaderMain {
   transform: translateX(4px);
+}
+
+.menuBtnNexzellHeaderMain {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nexzell-text-white, #FFFFFF);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menuBtnNexzellHeaderMain:hover {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.drawerOverlayNexzellHeaderMain {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(6, 8, 12, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.drawerOverlayNexzellHeaderMain.isOpenNexzellHeaderMain {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawerPanelNexzellHeaderMain {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(85vw, 360px);
+  background-color: var(--nexzell-bg-surface, #0E1218);
+  border-left: 1px solid var(--nexzell-border-subtle, #1E293B);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.drawerPanelNexzellHeaderMain.isOpenNexzellHeaderMain {
+  transform: translateX(0);
+}
+
+.drawerHeaderNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.drawerLogoNexzellHeaderMain {
+  width: 130px;
+  object-fit: contain;
+}
+
+.drawerCloseBtnNexzellHeaderMain {
+  background: none;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-sm, 8px);
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drawerCloseBtnNexzellHeaderMain:hover {
+  color: var(--nexzell-text-white, #FFFFFF);
+  border-color: var(--nexzell-primary, #00E699);
+}
+
+.drawerNavNexzellHeaderMain {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.drawerNavListNexzellHeaderMain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.drawerNavItemNexzellHeaderMain a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.9rem 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  text-decoration: none;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.drawerNavItemNexzellHeaderMain a:hover {
+  color: var(--nexzell-primary, #00E699);
+  padding-left: 0.5rem;
+}
+
+.drawerFooterNexzellHeaderMain {
+  padding: 1.5rem;
+  border-top: 1px solid var(--nexzell-border-subtle, #1E293B);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.drawerLoginBtnNexzellHeaderMain {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  text-decoration: none;
+  padding: 0.75rem;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-sm, 8px);
+  transition: all 0.3s ease;
+}
+
+.drawerLoginBtnNexzellHeaderMain:hover {
+  color: var(--nexzell-text-white, #FFFFFF);
+  border-color: var(--nexzell-primary, #00E699);
+}
+
+.drawerCtaBtnNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drawerCtaBtnNexzellHeaderMain:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+}
+
+@media (max-width: 1024px) {
+  .centerNavNexzellHeaderMain,
+  .rightActionsNexzellHeaderMain {
+    display: none;
+  }
+
+  .menuBtnNexzellHeaderMain {
+    display: flex;
+  }
+
+  .taglineTextNexzellHeaderMain {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerNexzellHeaderMain {
+    padding: 0 1.25rem;
+  }
+
+  .logoImgNexzellHeaderMain {
+    width: 120px;
+  }
 }

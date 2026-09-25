@@ -1,4 +1,4 @@
-import BuildWithoutLimitsHome from "@/components/BuildWithoutLimitsHome/BuildWithoutLimitsHome";
+import BuildWithoutLimitsHome from "@/components/HomePageComps/BuildWithoutLimitsHome/BuildWithoutLimitsHome";
 import BuiltBusinessSizesHome from "@/components/HomePageComps/BuiltBusinessSizesHome/BuiltBusinessSizesHome";
 import EverythingBusinessStarter from "@/components/HomePageComps/EverythingBusinessStarter/EverythingBusinessStarter";
 import GlobalFromDayOne from "@/components/HomePageComps/GlobalFromDayOne/GlobalFromDayOne";

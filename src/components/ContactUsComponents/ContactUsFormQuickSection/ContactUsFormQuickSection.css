@@ -1,0 +1,882 @@
+.sectionWrapperContactUsFormQuickSection {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerContactUsFormQuickSection {
+  width: 100%;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+ 
+@keyframes fadeUpAnimContactUsFormQuickSection {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpContactUsFormQuickSection {
+  animation: fadeUpAnimContactUsFormQuickSection 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeUpDelay1ContactUsFormQuickSection {
+  opacity: 0;
+  animation: fadeUpAnimContactUsFormQuickSection 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+ 
+.cardContactUsFormQuickSection,
+.cardFaqContactUsFormQuickSection {
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  padding: 3rem;
+  width: 100%;
+}
+
+.badgeContactUsFormQuickSection {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.badgeDotContactUsFormQuickSection {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+ 
+.cardHeaderContactUsFormQuickSection {
+  margin-bottom: 2.5rem;
+}
+
+.headingContactUsFormQuickSection {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionContactUsFormQuickSection {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+}
+
+.formGridContactUsFormQuickSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputGroupContactUsFormQuickSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fullWidthContactUsFormQuickSection {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+
+.labelContactUsFormQuickSection {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  font-weight: 500;
+}
+
+.requiredContactUsFormQuickSection {
+  color: #EF4444; 
+}
+
+.inputContactUsFormQuickSection {
+  width: 100%;
+  background-color: rgba(6, 8, 12, 0.5);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 8px);
+  padding: 0.875rem 1rem;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-white, #FFFFFF);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.inputContactUsFormQuickSection::placeholder {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.inputContactUsFormQuickSection:focus {
+  border-color: var(--nexzell-primary, #00E699);
+  background-color: rgba(0, 230, 153, 0.02);
+}
+
+.phoneInputWrapperContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  background-color: rgba(6, 8, 12, 0.5);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 8px);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.phoneInputWrapperContactUsFormQuickSection:focus-within {
+  border-color: var(--nexzell-primary, #00E699);
+}
+
+.phonePrefixContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flagContactUsFormQuickSection {
+  font-size: 1.1rem;
+}
+
+.codeContactUsFormQuickSection {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.chevronContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.phoneDividerContactUsFormQuickSection {
+  width: 1px;
+  height: 24px;
+  background-color: var(--nexzell-border-highlight, #334155);
+}
+
+.phoneFieldContactUsFormQuickSection {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+}
+
+.phoneFieldContactUsFormQuickSection:focus {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.selectWrapperContactUsFormQuickSection {
+  position: relative;
+  width: 100%;
+}
+
+.selectContactUsFormQuickSection {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.selectContactUsFormQuickSection:invalid {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.selectChevronContactUsFormQuickSection {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  pointer-events: none;
+}
+
+.textareaContactUsFormQuickSection {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btnSubmitContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1.25rem;
+}
+
+.btnSubmitContactUsFormQuickSection:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconContactUsFormQuickSection {
+  transition: transform 0.3s ease;
+}
+
+.btnSubmitContactUsFormQuickSection:hover .btnIconContactUsFormQuickSection {
+  transform: translateX(4px);
+}
+
+.formFooterContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--nexzell-primary, #00E699);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* --- FAQ Section --- */
+.faqHeaderRowContactUsFormQuickSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.headingFaqContactUsFormQuickSection {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.viewAllLinkContactUsFormQuickSection {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--nexzell-primary, #00E699);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.viewAllLinkContactUsFormQuickSection:hover {
+  opacity: 0.8;
+  transform: translateX(3px);
+}
+
+.faqListContactUsFormQuickSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faqItemContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 8px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqItemContactUsFormQuickSection:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.faqQuestionContactUsFormQuickSection {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+}
+
+.faqIconContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  transition: transform 0.3s ease;
+}
+
+.faqItemContactUsFormQuickSection:hover .faqIconContactUsFormQuickSection {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperContactUsFormQuickSection {
+    padding: 5rem 0;
+  }
+
+  .containerContactUsFormQuickSection {
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .cardContactUsFormQuickSection,
+  .cardFaqContactUsFormQuickSection {
+    padding: 2.5rem;
+  }
+
+  .cardHeaderContactUsFormQuickSection {
+    margin-bottom: 2.25rem;
+  }
+
+  .headingContactUsFormQuickSection {
+    font-size: clamp(1.6rem, 3vw, 2.15rem);
+  }
+
+  .descriptionContactUsFormQuickSection {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .formGridContactUsFormQuickSection {
+    gap: 1.25rem;
+  }
+
+  .inputContactUsFormQuickSection {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.86rem;
+  }
+
+  .phonePrefixContactUsFormQuickSection {
+    padding: 0.8rem 0.9rem;
+  }
+
+  .phoneFieldContactUsFormQuickSection {
+    min-width: 0;
+  }
+
+  .labelContactUsFormQuickSection {
+    font-size: 0.82rem;
+  }
+
+  .btnSubmitContactUsFormQuickSection {
+    padding: 0.9rem;
+    font-size: 0.92rem;
+  }
+
+  .faqHeaderRowContactUsFormQuickSection {
+    margin-bottom: 1.75rem;
+  }
+
+  .headingFaqContactUsFormQuickSection {
+    font-size: 1.4rem;
+  }
+
+  .faqItemContactUsFormQuickSection {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .faqQuestionContactUsFormQuickSection {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    padding-right: 1rem;
+  }
+}
+
+
+/* ==========================================================
+   SMALL TABLET
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperContactUsFormQuickSection {
+    padding: 4rem 0;
+  }
+
+  .containerContactUsFormQuickSection {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .cardContactUsFormQuickSection,
+  .cardFaqContactUsFormQuickSection {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderContactUsFormQuickSection {
+    margin-bottom: 2rem;
+  }
+
+  .badgeContactUsFormQuickSection {
+    gap: 0.45rem;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotContactUsFormQuickSection {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingContactUsFormQuickSection {
+    width: 100%;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 0.7rem;
+  }
+
+  .descriptionContactUsFormQuickSection {
+    width: 100%;
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+
+  .formGridContactUsFormQuickSection {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .inputGroupContactUsFormQuickSection {
+    width: 100%;
+    gap: 0.45rem;
+  }
+
+  .fullWidthContactUsFormQuickSection {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .labelContactUsFormQuickSection {
+    font-size: 0.78rem;
+  }
+
+  .inputContactUsFormQuickSection {
+    width: 100%;
+    padding: 0.78rem 0.85rem;
+    font-size: 0.84rem;
+  }
+
+  .phoneInputWrapperContactUsFormQuickSection {
+    width: 100%;
+  }
+
+  .phonePrefixContactUsFormQuickSection {
+    gap: 0.4rem;
+    padding: 0.78rem 0.8rem;
+  }
+
+  .flagContactUsFormQuickSection {
+    font-size: 1rem;
+  }
+
+  .codeContactUsFormQuickSection {
+    font-size: 0.82rem;
+  }
+
+  .phoneFieldContactUsFormQuickSection {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .selectChevronContactUsFormQuickSection {
+    right: 0.85rem;
+  }
+
+  .textareaContactUsFormQuickSection {
+    min-height: 120px;
+  }
+
+  .btnSubmitContactUsFormQuickSection {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+
+  .formFooterContactUsFormQuickSection {
+    font-size: 0.72rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .faqHeaderRowContactUsFormQuickSection {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .headingFaqContactUsFormQuickSection {
+    font-size: 1.3rem;
+  }
+
+  .viewAllLinkContactUsFormQuickSection {
+    font-size: 0.78rem;
+    margin-bottom: 0;
+  }
+
+  .faqListContactUsFormQuickSection {
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .faqItemContactUsFormQuickSection {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    gap: 1rem;
+  }
+
+  .faqQuestionContactUsFormQuickSection {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    min-width: 0;
+  }
+
+  .faqIconContactUsFormQuickSection {
+    flex-shrink: 0;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+  .sectionWrapperContactUsFormQuickSection {
+    padding: 0 0;
+  }
+
+  .containerContactUsFormQuickSection {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.25rem;
+  }
+
+  .cardContactUsFormQuickSection,
+  .cardFaqContactUsFormQuickSection {
+    width: 100%;
+    padding: 1.5rem 1.15rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderContactUsFormQuickSection {
+    margin-bottom: 1.75rem;
+  }
+
+  .badgeContactUsFormQuickSection {
+    gap: 0.4rem;
+    padding: 0.28rem 0.7rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotContactUsFormQuickSection {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingContactUsFormQuickSection {
+    width: 100%;
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+  }
+
+  .descriptionContactUsFormQuickSection {
+    width: 100%;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .formGridContactUsFormQuickSection {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputGroupContactUsFormQuickSection {
+    width: 100%;
+    gap: 0.4rem;
+  }
+
+  .fullWidthContactUsFormQuickSection {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .labelContactUsFormQuickSection {
+    font-size: 0.74rem;
+  }
+
+  .inputContactUsFormQuickSection {
+    width: 100%;
+    padding: 0.72rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: var(--nexzell-radius-md, 8px);
+  }
+
+  .phoneInputWrapperContactUsFormQuickSection {
+    width: 100%;
+  }
+
+  .phonePrefixContactUsFormQuickSection {
+    gap: 0.35rem;
+    padding: 0.72rem 0.7rem;
+  }
+
+  .flagContactUsFormQuickSection {
+    font-size: 0.95rem;
+  }
+
+  .codeContactUsFormQuickSection {
+    font-size: 0.76rem;
+  }
+
+  .phoneDividerContactUsFormQuickSection {
+    height: 22px;
+  }
+
+  .phoneFieldContactUsFormQuickSection {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .selectContactUsFormQuickSection {
+    padding-right: 2.25rem;
+  }
+
+  .selectChevronContactUsFormQuickSection {
+    right: 0.75rem;
+  }
+
+  .textareaContactUsFormQuickSection {
+    min-height: 110px;
+  }
+
+  .btnSubmitContactUsFormQuickSection {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .formFooterContactUsFormQuickSection {
+    width: 100%;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  /* FAQ */
+
+  .faqHeaderRowContactUsFormQuickSection {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingFaqContactUsFormQuickSection {
+    width: 100%;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .viewAllLinkContactUsFormQuickSection {
+    font-size: 0.72rem;
+    margin-bottom: 0;
+  }
+
+  .faqListContactUsFormQuickSection {
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .faqItemContactUsFormQuickSection {
+    width: 100%;
+    padding: 0.9rem 0.9rem;
+    gap: 0.75rem;
+  }
+
+  .faqQuestionContactUsFormQuickSection {
+    min-width: 0;
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .faqIconContactUsFormQuickSection {
+    flex-shrink: 0;
+  }
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+  .sectionWrapperContactUsFormQuickSection {
+    padding: 3rem 0;
+  }
+
+  .containerContactUsFormQuickSection {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 1rem;
+  }
+
+  .cardContactUsFormQuickSection,
+  .cardFaqContactUsFormQuickSection {
+    padding: 1.3rem 0.95rem;
+    border-radius: var(--nexzell-radius-md, 10px);
+  }
+
+  .cardHeaderContactUsFormQuickSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .badgeContactUsFormQuickSection {
+    padding: 0.26rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.8rem;
+  }
+
+  .headingContactUsFormQuickSection {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+
+  .descriptionContactUsFormQuickSection {
+    font-size: 0.72rem;
+    line-height: 1.55;
+  }
+
+  .formGridContactUsFormQuickSection {
+    gap: 0.85rem;
+  }
+
+  .inputGroupContactUsFormQuickSection {
+    gap: 0.35rem;
+  }
+
+  .labelContactUsFormQuickSection {
+    font-size: 0.7rem;
+  }
+
+  .inputContactUsFormQuickSection {
+    padding: 0.68rem 0.7rem;
+    font-size: 0.76rem;
+  }
+
+  .phonePrefixContactUsFormQuickSection {
+    padding: 0.68rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .flagContactUsFormQuickSection {
+    font-size: 0.9rem;
+  }
+
+  .codeContactUsFormQuickSection {
+    font-size: 0.7rem;
+  }
+
+  .phoneDividerContactUsFormQuickSection {
+    height: 20px;
+  }
+
+  .selectChevronContactUsFormQuickSection {
+    right: 0.65rem;
+  }
+
+  .textareaContactUsFormQuickSection {
+    min-height: 100px;
+  }
+
+  .btnSubmitContactUsFormQuickSection {
+    padding: 0.68rem 0.8rem;
+    font-size: 0.76rem;
+  }
+
+  .formFooterContactUsFormQuickSection {
+    font-size: 0.62rem;
+  }
+
+  /* FAQ */
+
+  .faqHeaderRowContactUsFormQuickSection {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .headingFaqContactUsFormQuickSection {
+    font-size: 1.05rem;
+  }
+
+  .viewAllLinkContactUsFormQuickSection {
+    font-size: 0.68rem;
+  }
+
+  .faqListContactUsFormQuickSection {
+    gap: 0.5rem;
+  }
+
+  .faqItemContactUsFormQuickSection {
+    padding: 0.8rem 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .faqQuestionContactUsFormQuickSection {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+}

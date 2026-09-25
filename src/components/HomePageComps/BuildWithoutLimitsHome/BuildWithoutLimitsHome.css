@@ -3,7 +3,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url(../../../public/BuildWithoutLimitsBackground.png);
+  background-image: url('/BuildWithoutLimitsBackground.png');
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -131,47 +131,216 @@
   pointer-events: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
+
   .containerBuildWithoutLimitsHome {
     flex-direction: column;
+    min-height: auto;
+    height:40vh;
+     background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.75) 18%,
+      transparent 950%,
+      transparent 100%
+    );
   }
-  
+
   .leftContentBuildWithoutLimitsHome {
-    flex: 1;
+    flex: none;
+    width: 100%;
+    padding: 5rem 1.5rem 4rem;
     align-items: center;
     text-align: center;
-    padding-bottom: 3rem;
   }
-  
+
+  .headingBuildWithoutLimitsHome {
+    width: 100%;
+    max-width: 750px;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.15;
+    margin-bottom: 1.15rem;
+  }
+
   .descriptionBuildWithoutLimitsHome {
+    width: 100%;
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.65;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2.25rem;
   }
-  
+
   .btnGroupBuildWithoutLimitsHome {
     justify-content: center;
+    gap: 1rem;
   }
-  
+
+  .btnPrimaryBuildWithoutLimitsHome,
+  .btnSecondaryBuildWithoutLimitsHome {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+
   .rightContentBuildWithoutLimitsHome {
-    min-height: 400px;
     width: 100%;
+    min-height: 400px;
+    flex: none;
   }
-  
+
+  .showcaseImageBuildWithoutLimitsHome {
+    object-position: center;
+  }
+
+
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+
+  .leftContentBuildWithoutLimitsHome {
+    padding: 4rem 1.25rem 3.5rem;
+  }
+
+  .headingBuildWithoutLimitsHome {
+    max-width: 650px;
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionBuildWithoutLimitsHome {
+    max-width: 620px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupBuildWithoutLimitsHome {
+    gap: 0.85rem;
+  }
+
+  .btnPrimaryBuildWithoutLimitsHome,
+  .btnSecondaryBuildWithoutLimitsHome {
+    padding: 0.8rem 1.45rem;
+    font-size: 0.9rem;
+  }
+
+  .rightContentBuildWithoutLimitsHome {
+    min-height: 350px;
+  }
+
+  .showcaseImageBuildWithoutLimitsHome {
+    object-position: center;
+  }
+
   .imageGradientOverlayBuildWithoutLimitsHome {
-    background: linear-gradient(to bottom, var(--nexzell-bg-base, #06080C) 0%, transparent 40%, transparent 100%);
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.8) 22%,
+      rgba(6, 8, 12, 0.25) 55%,
+      transparent 100%
+    );
   }
 }
 
-@media (max-width: 600px) {
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperBuildWithoutLimitsHome {
+    background-position: center;
+  }
+
+  .containerBuildWithoutLimitsHome {
+    width: 100%;
+  }
+
+  .leftContentBuildWithoutLimitsHome {
+    width: 100%;
+    padding: 3.5rem 1rem 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headingBuildWithoutLimitsHome {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionBuildWithoutLimitsHome {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
   .btnGroupBuildWithoutLimitsHome {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
+    gap: 0.8rem;
   }
-  
+
   .btnPrimaryBuildWithoutLimitsHome,
   .btnSecondaryBuildWithoutLimitsHome {
     justify-content: center;
     width: 100%;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.86rem;
+  }
+
+  .rightContentBuildWithoutLimitsHome {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .showcaseImageBuildWithoutLimitsHome {
+    object-position: center;
+  }
+
+  .imageGradientOverlayBuildWithoutLimitsHome {
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.85) 20%,
+      rgba(6, 8, 12, 0.3) 60%,
+      transparent 100%
+    );
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .leftContentBuildWithoutLimitsHome {
+    padding: 3rem 0.85rem 2.75rem;
+  }
+
+  .headingBuildWithoutLimitsHome {
+    font-size: 1.65rem;
+  }
+
+  .descriptionBuildWithoutLimitsHome {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .btnPrimaryBuildWithoutLimitsHome,
+  .btnSecondaryBuildWithoutLimitsHome {
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .rightContentBuildWithoutLimitsHome {
+    min-height: 260px;
   }
 }

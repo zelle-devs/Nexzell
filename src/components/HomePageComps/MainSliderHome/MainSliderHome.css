@@ -179,27 +179,279 @@
   color: var(--nexzell-text-gray-300, #94A3B8);
   font-weight: 500;
 }
- 
-@media (max-width: 768px) {
-  .headingMainSliderHome {
-    font-size: 2.5rem;
+ /* Tablet */
+@media (max-width: 1024px) {
+  .sectionWrapperMainSliderHome {
+    padding: 7rem 0 5rem;
+    background-position: center right;
+    
   }
-  
+
+  .containerMainSliderHome {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.75) 58%,
+      transparent 950%,
+      transparent 100%
+    );
+  }
+
+  .contentMainSliderHome {
+    max-width: 650px;
+  }
+
+  .badgeMainSliderHome {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingMainSliderHome {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderHome {
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 90%;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnGroupMainSliderHome {
+    gap: 0.9rem;
+    margin-bottom: 3rem;
+  }
+
+  .btnPrimaryMainSliderHome,
+  .btnSecondaryMainSliderHome {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.92rem;
+  }
+
+  .featuresListMainSliderHome {
+    gap: 2rem;
+  }
+
+  .featureTextMainSliderHome {
+    font-size: 0.82rem;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperMainSliderHome {
+    padding: 2.5rem 0 0rem;
+    background-position: 65% center;
+  }
+
+  .containerMainSliderHome {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.75) 58%,
+      transparent 950%,
+      transparent 100%
+    );
+    height: 70vh;
+  }
+
+  .contentMainSliderHome {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeMainSliderHome {
+    gap: 0.45rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotMainSliderHome {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderHome {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.12;
+    margin-bottom: 1.15rem;
+  }
+
+  .descriptionMainSliderHome {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 95%;
+    margin-bottom: 2rem;
+  }
+
   .btnGroupMainSliderHome {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
+    gap: 0.8rem;
+    margin-bottom: 2.75rem;
   }
-  
+
   .btnPrimaryMainSliderHome,
   .btnSecondaryMainSliderHome {
     justify-content: center;
     width: 100%;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
   }
-  
+
   .featuresListMainSliderHome {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .featureItemMainSliderHome {
+    gap: 0.65rem;
+  }
+
+  .featureTextMainSliderHome {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperMainSliderHome {
+    padding: 4.5rem 0 0rem;
+    background-position: 68% center;
+  }
+
+  .containerMainSliderHome {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+  }
+
+  .contentMainSliderHome {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderHome {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderHome {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderHome {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionMainSliderHome {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupMainSliderHome {
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnPrimaryMainSliderHome,
+  .btnSecondaryMainSliderHome {
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.84rem;
+  }
+
+  .featuresListMainSliderHome {
+    width: 100%;
+    gap: 1.1rem;
+  }
+
+  .featureItemMainSliderHome {
+    gap: 0.6rem;
+  }
+
+  .featureTextMainSliderHome {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperMainSliderHome {
+    padding: 4rem 0 3rem;
+    background-position: 72% center;
+  }
+
+  .containerMainSliderHome {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .badgeMainSliderHome {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.61rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotMainSliderHome {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderHome {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionMainSliderHome {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnGroupMainSliderHome {
+    gap: 0.65rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnPrimaryMainSliderHome,
+  .btnSecondaryMainSliderHome {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .featuresListMainSliderHome {
+    gap: 1rem;
+  }
+
+  .featureItemMainSliderHome {
+    gap: 0.55rem;
+  }
+
+  .featureTextMainSliderHome {
+    font-size: 0.72rem;
   }
 }

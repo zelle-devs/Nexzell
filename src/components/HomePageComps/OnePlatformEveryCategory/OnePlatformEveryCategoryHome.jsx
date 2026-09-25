@@ -8,31 +8,31 @@ function OnePlatformEveryCategoryHome() {
       id: 1,
       title: "Electronics",
       desc: "Phones, gadgets & more",
-      imgSrc: "/electronics-cat.png" 
+      imgSrc: "/ProductGridImageHome.png" 
     },
     {
       id: 2,
       title: "Fashion",
       desc: "Apparel, shoes & accessories",
-      imgSrc: "/fashion-cat.png"
+      imgSrc: "/ProductGridImageHome.png"
     },
     {
       id: 3,
       title: "Home & Living",
       desc: "Furniture, decor & essentials",
-      imgSrc: "/home-cat.png"
+      imgSrc: "/ProductGridImageHome.png"
     },
     {
       id: 4,
       title: "Beauty",
       desc: "Skincare, makeup & more",
-      imgSrc: "/beauty-cat.png"
+      imgSrc: "/ProductGridImageHome.png"
     },
     {
       id: 5,
       title: "Sports",
       desc: "Gear up for performance",
-      imgSrc: "/sports-cat.png"
+      imgSrc: "/ProductGridImageHome.png"
     },
     // {
     //   id: 6,

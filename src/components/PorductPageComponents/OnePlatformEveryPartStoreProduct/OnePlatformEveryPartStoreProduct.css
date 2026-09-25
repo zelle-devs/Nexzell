@@ -1,0 +1,441 @@
+.sectionWrapperOnePlatformEveryPartStoreProduct {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerOnePlatformEveryPartStoreProduct {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeUpAnimOnePlatformEveryPartStoreProduct {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpOnePlatformEveryPartStoreProduct {
+  animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+.animDelay6OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
+.animDelay7OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s; }
+.animDelay8OnePlatformEveryPartStoreProduct { opacity: 0; animation: fadeUpAnimOnePlatformEveryPartStoreProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s; }
+
+.headerOnePlatformEveryPartStoreProduct {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeOnePlatformEveryPartStoreProduct {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.titleOnePlatformEveryPartStoreProduct {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.descOnePlatformEveryPartStoreProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.gridOnePlatformEveryPartStoreProduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardOnePlatformEveryPartStoreProduct {
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardOnePlatformEveryPartStoreProduct:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 230, 153, 0.4);
+  background-color: rgba(14, 18, 24, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.iconBoxOnePlatformEveryPartStoreProduct {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.filledBoxOnePlatformEveryPartStoreProduct {
+  background-color: var(--nexzell-primary, #00E699);
+}
+
+.cardIconOnePlatformEveryPartStoreProduct {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardTextContentOnePlatformEveryPartStoreProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitleOnePlatformEveryPartStoreProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.25rem 0;
+}
+
+.cardDescOnePlatformEveryPartStoreProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.annotationWrapperOnePlatformEveryPartStoreProduct {
+  position: absolute;
+  top: -45px;
+  right: -25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.annotationTextOnePlatformEveryPartStoreProduct {
+  font-family: 'Caveat', 'Comic Sans MS', cursive;
+  font-size: 1.1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  transform: rotate(-10deg);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.annotationArrowOnePlatformEveryPartStoreProduct {
+  margin-top: -5px;
+  margin-left: 20px;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sectionWrapperOnePlatformEveryPartStoreProduct {
+    padding: 5rem 0;
+  }
+
+  .containerOnePlatformEveryPartStoreProduct {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .headerOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    margin-bottom: 3.5rem;
+  }
+
+  .badgeOnePlatformEveryPartStoreProduct {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 1.25rem;
+  }
+
+  .titleOnePlatformEveryPartStoreProduct {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .gridOnePlatformEveryPartStoreProduct {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cardOnePlatformEveryPartStoreProduct {
+    padding: 1.6rem 1.35rem;
+    gap: 0.9rem;
+  }
+
+  .iconBoxOnePlatformEveryPartStoreProduct {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+  }
+
+  .cardTitleOnePlatformEveryPartStoreProduct {
+    font-size: 0.95rem;
+  }
+
+  .cardDescOnePlatformEveryPartStoreProduct {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .annotationWrapperOnePlatformEveryPartStoreProduct {
+    top: -40px;
+    right: -20px;
+  }
+
+  .annotationTextOnePlatformEveryPartStoreProduct {
+    font-size: 1rem;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperOnePlatformEveryPartStoreProduct {
+    padding: 4rem 0;
+  }
+
+  .containerOnePlatformEveryPartStoreProduct {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .headerOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .badgeOnePlatformEveryPartStoreProduct {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 1rem;
+  }
+
+  .titleOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+
+  .gridOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardOnePlatformEveryPartStoreProduct {
+    padding: 1.5rem 1.2rem;
+    gap: 0.8rem;
+  }
+
+  .iconBoxOnePlatformEveryPartStoreProduct {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+  }
+
+  .cardTitleOnePlatformEveryPartStoreProduct {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+
+  .cardDescOnePlatformEveryPartStoreProduct {
+    font-size: 0.73rem;
+    line-height: 1.5;
+  }
+
+  .annotationWrapperOnePlatformEveryPartStoreProduct {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperOnePlatformEveryPartStoreProduct {
+    padding: 3.5rem 0;
+  }
+
+  .containerOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .headerOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeOnePlatformEveryPartStoreProduct {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+  }
+
+  .titleOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .gridOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardOnePlatformEveryPartStoreProduct {
+    width: 100%;
+    padding: 1.4rem 1.15rem;
+    gap: 0.85rem;
+  }
+
+  .iconBoxOnePlatformEveryPartStoreProduct {
+    width: 40px;
+    height: 40px;
+    border-radius: 9px;
+  }
+
+  .cardTitleOnePlatformEveryPartStoreProduct {
+    font-size: 0.88rem;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+
+  .cardDescOnePlatformEveryPartStoreProduct {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+
+  .annotationWrapperOnePlatformEveryPartStoreProduct {
+    display: none;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperOnePlatformEveryPartStoreProduct {
+    padding: 3rem 0;
+  }
+
+  .containerOnePlatformEveryPartStoreProduct {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .headerOnePlatformEveryPartStoreProduct {
+    margin-bottom: 2.25rem;
+  }
+
+  .badgeOnePlatformEveryPartStoreProduct {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.9px;
+    margin-bottom: 0.7rem;
+  }
+
+  .titleOnePlatformEveryPartStoreProduct {
+    font-size: 1.65rem;
+    line-height: 1.18;
+    margin-bottom: 0.7rem;
+  }
+
+  .descOnePlatformEveryPartStoreProduct {
+    font-size: 0.76rem;
+    line-height: 1.55;
+  }
+
+  .gridOnePlatformEveryPartStoreProduct {
+    gap: 0.9rem;
+  }
+
+  .cardOnePlatformEveryPartStoreProduct {
+    padding: 1.3rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .iconBoxOnePlatformEveryPartStoreProduct {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  .cardTitleOnePlatformEveryPartStoreProduct {
+    font-size: 0.84rem;
+  }
+
+  .cardDescOnePlatformEveryPartStoreProduct {
+    font-size: 0.69rem;
+    line-height: 1.5;
+  }
+}

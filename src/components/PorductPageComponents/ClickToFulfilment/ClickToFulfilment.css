@@ -1,0 +1,518 @@
+.sectionWrapperClickToFulfilment {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerClickToFulfilment {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+@keyframes fadeUpAnimClickToFulfilment {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRightAnimClickToFulfilment {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animFadeUpClickToFulfilment {
+  animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeInRightClickToFulfilment {
+  opacity: 0;
+  animation: fadeInRightAnimClickToFulfilment 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.animDelay1ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+.animDelay5ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
+.animDelay6ClickToFulfilment { opacity: 0; animation: fadeUpAnimClickToFulfilment 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s; }
+
+.leftContentClickToFulfilment {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeClickToFulfilment {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotClickToFulfilment {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingClickToFulfilment {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionClickToFulfilment {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 95%;
+}
+
+.featureListClickToFulfilment {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featureItemClickToFulfilment {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkIconClickToFulfilment {
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.2);
+}
+
+.featureTextClickToFulfilment {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.4;
+}
+
+.btnPrimaryClickToFulfilment {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryClickToFulfilment:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconClickToFulfilment {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryClickToFulfilment:hover .btnIconClickToFulfilment {
+  transform: translateX(4px);
+}
+
+.rightContentClickToFulfilment {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.imageWrapperClickToFulfilment {
+  position: relative;
+  width: 100%;
+  /* border-radius: var(--nexzell-radius-lg, 24px); */
+  overflow: visible;
+}
+
+.mainImageClickToFulfilment {
+  width: 100%;
+  height: auto;
+  /* border-radius: var(--nexzell-radius-lg, 16px); */
+  /* border: 1px solid var(--nexzell-border-highlight, #334155); */
+  display: block;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); */
+}
+
+.imageGlowClickToFulfilment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  /* background: radial-gradient(circle, rgba(0, 230, 153, 0.15) 0%, transparent 70%); */
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(40px);
+}
+@media (max-width: 1024px) {
+  .sectionWrapperClickToFulfilment {
+    padding: 5rem 0;
+  }
+
+  .containerClickToFulfilment {
+    flex-direction: column;
+    gap: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftContentClickToFulfilment {
+    width: 100%;
+    max-width: 750px;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeClickToFulfilment {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.9px;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingClickToFulfilment {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionClickToFulfilment {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .featureListClickToFulfilment {
+    width: 100%;
+    max-width: 600px;
+    align-items: flex-start;
+    display: none;
+    gap: 0.9rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .featureItemClickToFulfilment {
+    gap: 0.7rem;
+    text-align: left;
+  }
+
+  .featureTextClickToFulfilment {
+    font-size: 0.86rem;
+  }
+
+  .btnPrimaryClickToFulfilment {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.92rem;
+  }
+
+  .rightContentClickToFulfilment {
+    width: 100%;
+    max-width: 850px;
+    flex: none;
+    justify-content: center;
+  }
+
+  .imageWrapperClickToFulfilment {
+    width: 100%;
+  }
+
+  .mainImageClickToFulfilment {
+    width: 100%;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperClickToFulfilment {
+    padding: 4rem 0;
+  }
+
+  .containerClickToFulfilment {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3rem;
+  }
+
+  .leftContentClickToFulfilment {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeClickToFulfilment {
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotClickToFulfilment {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingClickToFulfilment {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionClickToFulfilment {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureListClickToFulfilment {
+    max-width: 550px;
+    gap: 0.8rem;
+    display: none;
+    margin-bottom: 2rem;
+  }
+
+  .featureItemClickToFulfilment {
+    gap: 0.65rem;
+  }
+
+  .featureTextClickToFulfilment {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryClickToFulfilment {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.88rem;
+  }
+
+  .rightContentClickToFulfilment {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .imageWrapperClickToFulfilment {
+    width: 100%;
+  }
+
+  .mainImageClickToFulfilment {
+    border-radius: var(--nexzell-radius-lg, 16px);
+  }
+
+  .imageGlowClickToFulfilment {
+    width: 90%;
+    height: 90%;
+    filter: blur(30px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperClickToFulfilment {
+    padding: 3.5rem 0;
+  }
+
+  .containerClickToFulfilment {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+  }
+
+  .leftContentClickToFulfilment {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeClickToFulfilment {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotClickToFulfilment {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingClickToFulfilment {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionClickToFulfilment {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureListClickToFulfilment {
+    width: 100%;
+    max-width: 100%;
+    gap: 0.75rem;
+    display: none;
+    margin-bottom: 1.75rem;
+    align-items: flex-start;
+  }
+
+  .featureItemClickToFulfilment {
+    width: 100%;
+    gap: 0.6rem;
+    text-align: left;
+  }
+
+  .featureTextClickToFulfilment {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryClickToFulfilment {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.84rem;
+  }
+
+  .rightContentClickToFulfilment {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imageWrapperClickToFulfilment {
+    width: 100%;
+  }
+
+  .mainImageClickToFulfilment {
+    width: 100%;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .imageGlowClickToFulfilment {
+    width: 85%;
+    height: 85%;
+    filter: blur(25px);
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperClickToFulfilment {
+    padding: 3rem 0;
+  }
+
+  .containerClickToFulfilment {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .badgeClickToFulfilment {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotClickToFulfilment {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingClickToFulfilment {
+    font-size: 1.65rem;
+    line-height: 1.18;
+    margin-bottom: 0.7rem;
+  }
+
+  .descriptionClickToFulfilment {
+    font-size: 0.75rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureListClickToFulfilment {
+    gap: 0.7rem;
+    display: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureItemClickToFulfilment {
+    gap: 0.55rem;
+  }
+
+  .featureTextClickToFulfilment {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryClickToFulfilment {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .mainImageClickToFulfilment {
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .imageGlowClickToFulfilment {
+    width: 80%;
+    height: 80%;
+    filter: blur(22px);
+  }
+}

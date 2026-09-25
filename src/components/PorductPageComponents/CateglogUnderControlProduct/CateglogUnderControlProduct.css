@@ -1,0 +1,520 @@
+.sectionWrapperCateglogUnderControlProduct {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerCateglogUnderControlProduct {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+@keyframes fadeUpAnimCateglogUnderControlProduct {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeftAnimCateglogUnderControlProduct {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animFadeUpCateglogUnderControlProduct {
+  animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeInLeftCateglogUnderControlProduct {
+  opacity: 0;
+  animation: fadeInLeftAnimCateglogUnderControlProduct 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+.animDelay1CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+.animDelay5CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
+.animDelay6CateglogUnderControlProduct { opacity: 0; animation: fadeUpAnimCateglogUnderControlProduct 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s; }
+
+.leftContentCateglogUnderControlProduct {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.imageWrapperCateglogUnderControlProduct {
+  position: relative;
+  width: 100%;
+  /* border-radius: var(--nexzell-radius-lg, 24px); */
+  overflow: visible;
+}
+
+.mainImageCateglogUnderControlProduct {
+  width: 100%;
+  height: auto;
+  /* border-radius: var(--nexzell-radius-lg, 16px); */
+  /* border: 1px solid var(--nexzell-border-highlight, #334155); */
+  display: block;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); */
+}
+
+.imageGlowCateglogUnderControlProduct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(0, 230, 153, 0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.rightContentCateglogUnderControlProduct {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeCateglogUnderControlProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotCateglogUnderControlProduct {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingCateglogUnderControlProduct {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionCateglogUnderControlProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 95%;
+}
+
+.featureListCateglogUnderControlProduct {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featureItemCateglogUnderControlProduct {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkIconCateglogUnderControlProduct {
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.2);
+}
+
+.featureTextCateglogUnderControlProduct {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.4;
+}
+
+.btnPrimaryCateglogUnderControlProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryCateglogUnderControlProduct:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconCateglogUnderControlProduct {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryCateglogUnderControlProduct:hover .btnIconCateglogUnderControlProduct {
+  transform: translateX(4px);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sectionWrapperCateglogUnderControlProduct {
+    padding: 5rem 0;
+  }
+
+  .containerCateglogUnderControlProduct {
+    flex-direction: column-reverse;
+    gap: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftContentCateglogUnderControlProduct,
+  .rightContentCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 750px;
+    flex: none;
+  }
+
+  .leftContentCateglogUnderControlProduct {
+    justify-content: center;
+  }
+
+  .rightContentCateglogUnderControlProduct {
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeCateglogUnderControlProduct {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.9px;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingCateglogUnderControlProduct {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .featureListCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 600px;
+    align-items: flex-start;
+    gap: 0.9rem;
+    display: none;
+    margin-bottom: 2.25rem;
+  }
+
+  .featureItemCateglogUnderControlProduct {
+    gap: 0.7rem;
+    text-align: left;
+  }
+
+  .featureTextCateglogUnderControlProduct {
+    font-size: 0.86rem;
+  }
+
+  .btnPrimaryCateglogUnderControlProduct {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.92rem;
+  }
+
+  .imageWrapperCateglogUnderControlProduct {
+    width: 100%;
+  }
+
+  .mainImageCateglogUnderControlProduct {
+    width: 100%;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperCateglogUnderControlProduct {
+    padding: 4rem 0;
+  }
+
+  .containerCateglogUnderControlProduct {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3rem;
+  }
+
+  .leftContentCateglogUnderControlProduct,
+  .rightContentCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeCateglogUnderControlProduct {
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotCateglogUnderControlProduct {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingCateglogUnderControlProduct {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureListCateglogUnderControlProduct {
+    max-width: 550px;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    display: none ;
+  }
+
+  .featureItemCateglogUnderControlProduct {
+    gap: 0.65rem;
+  }
+
+  .featureTextCateglogUnderControlProduct {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryCateglogUnderControlProduct {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.88rem;
+  }
+
+  .imageWrapperCateglogUnderControlProduct {
+    width: 100%;
+  }
+
+  .mainImageCateglogUnderControlProduct {
+    border-radius: var(--nexzell-radius-lg, 16px);
+  }
+
+  .imageGlowCateglogUnderControlProduct {
+    width: 90%;
+    height: 90%;
+    filter: blur(30px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperCateglogUnderControlProduct {
+    padding: 3.5rem 0;
+  }
+
+  .containerCateglogUnderControlProduct {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+  }
+
+  .leftContentCateglogUnderControlProduct,
+  .rightContentCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rightContentCateglogUnderControlProduct {
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeCateglogUnderControlProduct {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotCateglogUnderControlProduct {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingCateglogUnderControlProduct {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.15rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureListCateglogUnderControlProduct {
+    width: 100%;
+    max-width: 100%;
+    gap: 0.75rem;
+    display: none;
+    margin-bottom: 1.75rem;
+    align-items: flex-start;
+  }
+
+  .featureItemCateglogUnderControlProduct {
+    width: 100%;
+    gap: 0.6rem;
+    text-align: left;
+  }
+
+  .featureTextCateglogUnderControlProduct {
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryCateglogUnderControlProduct {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.84rem;
+  }
+
+  .leftContentCateglogUnderControlProduct {
+    width: 100%;
+  }
+
+  .imageWrapperCateglogUnderControlProduct {
+    width: 100%;
+  }
+
+  .mainImageCateglogUnderControlProduct {
+    width: 100%;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .imageGlowCateglogUnderControlProduct {
+    width: 85%;
+    height: 85%;
+    filter: blur(25px);
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperCateglogUnderControlProduct {
+    padding: 3rem 0;
+  }
+
+  .containerCateglogUnderControlProduct {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .badgeCateglogUnderControlProduct {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotCateglogUnderControlProduct {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingCateglogUnderControlProduct {
+    font-size: 1.65rem;
+    line-height: 1.18;
+    margin-bottom: 0.7rem;
+  }
+
+  .descriptionCateglogUnderControlProduct {
+    font-size: 0.75rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureListCateglogUnderControlProduct {
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+    display: none;
+  }
+
+  .featureItemCateglogUnderControlProduct {
+    gap: 0.55rem;
+  }
+
+  .featureTextCateglogUnderControlProduct {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryCateglogUnderControlProduct {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .mainImageCateglogUnderControlProduct {
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .imageGlowCateglogUnderControlProduct {
+    width: 80%;
+    height: 80%;
+    filter: blur(22px);
+  }
+}

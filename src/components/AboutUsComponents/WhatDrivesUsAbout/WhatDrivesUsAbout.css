@@ -1,0 +1,322 @@
+.sectionWrapperWhatDrivesUsAbout {
+  padding: var(--nexzell-section-gap, 6rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+}
+
+.containerWhatDrivesUsAbout {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.leftContentWhatDrivesUsAbout {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes fadeUpAnimWhatDrivesUsAbout {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpWhatDrivesUsAbout {
+  animation: fadeUpAnimWhatDrivesUsAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1WhatDrivesUsAbout { opacity: 0; animation: fadeUpAnimWhatDrivesUsAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2WhatDrivesUsAbout { opacity: 0; animation: fadeUpAnimWhatDrivesUsAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3WhatDrivesUsAbout { opacity: 0; animation: fadeUpAnimWhatDrivesUsAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4WhatDrivesUsAbout { opacity: 0; animation: fadeUpAnimWhatDrivesUsAbout 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+.badgeWhatDrivesUsAbout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotWhatDrivesUsAbout {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingWhatDrivesUsAbout {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionWhatDrivesUsAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.rightContentWhatDrivesUsAbout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardWhatDrivesUsAbout {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cardWhatDrivesUsAbout:hover {
+  transform: translateY(-5px);
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardIconWrapperWhatDrivesUsAbout {
+  margin-bottom: 1rem;
+}
+
+.cardIconWhatDrivesUsAbout {
+  color: var(--nexzell-primary, #00E699);
+  stroke-width: 1.5;
+}
+
+.cardTitleWhatDrivesUsAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 0.75rem;
+}
+
+.cardDescWhatDrivesUsAbout {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================
+   RESPONSIVE — What Drives Us About
+   Desktop layout above 1024px remains unchanged
+   Tablet: 641px - 1024px
+   Mobile: <= 640px
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .sectionWrapperWhatDrivesUsAbout {
+    padding: 4rem 0;
+  }
+
+  .containerWhatDrivesUsAbout {
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftContentWhatDrivesUsAbout {
+    width: 100%;
+    max-width: 700px;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeWhatDrivesUsAbout {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingWhatDrivesUsAbout {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionWhatDrivesUsAbout {
+    max-width: 650px;
+    font-size: 0.95rem;
+  }
+
+  .rightContentWhatDrivesUsAbout {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardWhatDrivesUsAbout {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .cardIconWrapperWhatDrivesUsAbout {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* Small Tablet / Large Mobile */
+@media (max-width: 768px) {
+
+  .sectionWrapperWhatDrivesUsAbout {
+    padding: 3.5rem 0;
+  }
+
+  .containerWhatDrivesUsAbout {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 2.5rem;
+  }
+
+  .headingWhatDrivesUsAbout {
+    font-size: clamp(1.85rem, 6vw, 2.3rem);
+  }
+
+  .descriptionWhatDrivesUsAbout {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .rightContentWhatDrivesUsAbout {
+    gap: 1rem;
+  }
+
+  .cardWhatDrivesUsAbout {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cardIconWrapperWhatDrivesUsAbout {
+    margin-bottom: 1.25rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperWhatDrivesUsAbout {
+    padding: 3rem 0;
+  }
+
+  .containerWhatDrivesUsAbout {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2rem;
+  }
+
+  .leftContentWhatDrivesUsAbout {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeWhatDrivesUsAbout {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotWhatDrivesUsAbout {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingWhatDrivesUsAbout {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.1rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionWhatDrivesUsAbout {
+    width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .rightContentWhatDrivesUsAbout {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardWhatDrivesUsAbout {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cardIconWrapperWhatDrivesUsAbout {
+    margin-bottom: 1rem;
+  }
+
+  .cardTitleWhatDrivesUsAbout {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cardDescWhatDrivesUsAbout {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .sectionWrapperWhatDrivesUsAbout {
+    padding: 2.5rem 0;
+  }
+
+  .containerWhatDrivesUsAbout {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 1.75rem;
+  }
+
+  .headingWhatDrivesUsAbout {
+    font-size: 1.65rem;
+  }
+
+  .descriptionWhatDrivesUsAbout {
+    font-size: 0.82rem;
+  }
+
+  .cardWhatDrivesUsAbout {
+    padding: 1.35rem 1rem;
+  }
+}

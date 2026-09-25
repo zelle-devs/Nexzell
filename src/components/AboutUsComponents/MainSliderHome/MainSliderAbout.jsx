@@ -38,14 +38,9 @@ function MainSliderAbout() {
     <section className="sectionWrapperMainSliderAbout">
       
       {/* Background Image right edge tak stretch karne ke liye */}
-      <div className="bgImageWrapperMainSliderAbout">
-        {/* <img 
-          src="/AboutSliderMainImage2.jpg" 
-          alt="Nexzell Office Setup" 
-          className="bgImageMainSliderAbout" 
-        /> */}
+      
         <div className="bgGradientMainSliderAbout"></div>
-      </div>
+     
 
       <div className="containerMainSliderAbout">
         <div className="contentMainSliderAbout">

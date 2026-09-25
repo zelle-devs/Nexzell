@@ -1,0 +1,710 @@
+.sectionWrapperMainSliderContactUs {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--nexzell-bg-base, #06080C);
+  
+  /* Background Image Setup (Add your image path here) */
+  background-image: url('/AboutSliderMainImage2.jpg');
+  background-position: right right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  padding: 8rem 0 6rem;
+  overflow: hidden;
+}
+
+/* Gradient overlay to blend image seamlessly with the dark background */
+.bgOverlayMainSliderContactUs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 40%, rgba(6, 8, 12, 0.8) 65%, transparent 100%),
+              linear-gradient(to top, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0) 30%);
+  z-index: 1;
+}
+
+.containerMainSliderContactUs {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimMainSliderContactUs {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpMainSliderContactUs {
+  animation: fadeUpAnimMainSliderContactUs 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1MainSliderContactUs { opacity: 0; animation: fadeUpAnimMainSliderContactUs 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2MainSliderContactUs { opacity: 0; animation: fadeUpAnimMainSliderContactUs 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3MainSliderContactUs { opacity: 0; animation: fadeUpAnimMainSliderContactUs 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4MainSliderContactUs { opacity: 0; animation: fadeUpAnimMainSliderContactUs 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Top Content --- */
+.topContentMainSliderContactUs {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeMainSliderContactUs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderContactUs {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingMainSliderContactUs {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderContactUs {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionMainSliderContactUs {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 95%;
+}
+
+.trustIndicatorsMainSliderContactUs {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.trustItemMainSliderContactUs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trustIconMainSliderContactUs {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.trustTextWrapperMainSliderContactUs {
+  display: flex;
+  flex-direction: column;
+}
+
+.trustTitleMainSliderContactUs {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.trustDescMainSliderContactUs {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+
+/* --- Cards Grid --- */
+.cardsGridMainSliderContactUs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.contactCardMainSliderContactUs {
+  background-color: rgba(14, 18, 24, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.contactCardMainSliderContactUs:hover {
+  transform: translateY(-5px);
+  background-color: rgba(14, 18, 24, 0.85);
+  border-color: rgba(0, 230, 153, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardHeaderMainSliderContactUs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.iconBoxMainSliderContactUs {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(0, 230, 153, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 230, 153, 0.2);
+}
+
+.cardIconMainSliderContactUs {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardTitleMainSliderContactUs {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.cardDescMainSliderContactUs {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.cardBtnMainSliderContactUs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardBtnLeftMainSliderContactUs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btnArrowMainSliderContactUs {
+  transition: transform 0.3s ease;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+}
+
+.contactCardMainSliderContactUs:hover .cardBtnMainSliderContactUs {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.contactCardMainSliderContactUs:hover .btnArrowMainSliderContactUs {
+  transform: translateX(4px);
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperMainSliderContactUs {
+    min-height: auto;
+    padding: 7rem 0 5rem;
+    background-position: 70% center;
+    background-size: cover;
+  }
+
+  .bgOverlayMainSliderContactUs {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 15%,
+        rgba(6, 8, 12, 0.88) 55%,
+        rgba(6, 8, 12, 0.65) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 35%
+      );
+  }
+
+  .containerMainSliderContactUs {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 4rem;
+  }
+
+  .topContentMainSliderContactUs {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .badgeMainSliderContactUs {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.9px;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingMainSliderContactUs {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderContactUs {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    max-width: 90%;
+    margin-bottom: 2.5rem;
+  }
+
+  .trustIndicatorsMainSliderContactUs {
+    gap: 2rem;
+  }
+
+  .trustItemMainSliderContactUs {
+    gap: 0.65rem;
+  }
+
+  .trustTitleMainSliderContactUs {
+    font-size: 0.84rem;
+  }
+
+  .trustDescMainSliderContactUs {
+    font-size: 0.7rem;
+  }
+
+  .cardsGridMainSliderContactUs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .contactCardMainSliderContactUs {
+    padding: 1.75rem;
+  }
+
+  .iconBoxMainSliderContactUs {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cardTitleMainSliderContactUs {
+    font-size: 1rem;
+  }
+
+  .cardDescMainSliderContactUs {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+  }
+
+  .cardBtnMainSliderContactUs {
+    padding: 0.8rem 1.1rem;
+    font-size: 0.84rem;
+  }
+}
+
+
+/* ==========================================================
+   SMALL TABLET
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperMainSliderContactUs {
+    min-height: auto;
+    padding: 5.5rem 0 4rem;
+    background-position: 68% center;
+  }
+
+  .bgOverlayMainSliderContactUs {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 10%,
+        rgba(6, 8, 12, 0.9) 55%,
+        rgba(6, 8, 12, 0.72) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 40%
+      );
+  }
+
+  .containerMainSliderContactUs {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3.25rem;
+  }
+
+  .topContentMainSliderContactUs {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeMainSliderContactUs {
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotMainSliderContactUs {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderContactUs {
+    width: 100%;
+    font-size: clamp(2.1rem, 6vw, 3rem);
+    line-height: 1.12;
+    margin-bottom: 1.1rem;
+  }
+
+  .descriptionMainSliderContactUs {
+    width: 100%;
+    max-width: 95%;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+
+  .trustIndicatorsMainSliderContactUs {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .trustItemMainSliderContactUs {
+    gap: 0.6rem;
+  }
+
+  .trustTitleMainSliderContactUs {
+    font-size: 0.8rem;
+  }
+
+  .trustDescMainSliderContactUs {
+    font-size: 0.68rem;
+  }
+
+  .cardsGridMainSliderContactUs {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .contactCardMainSliderContactUs {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderMainSliderContactUs {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .iconBoxMainSliderContactUs {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .cardTitleMainSliderContactUs {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .cardDescMainSliderContactUs {
+    font-size: 0.74rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .cardBtnMainSliderContactUs {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.78rem;
+  }
+
+  .cardBtnLeftMainSliderContactUs {
+    gap: 0.55rem;
+  }
+
+  .hideOnMobileMainSliderContactUs {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+  .sectionWrapperMainSliderContactUs {
+    min-height: auto;
+    padding: 4.5rem 0 3.5rem;
+    background-position: 72% center;
+  }
+
+  .bgOverlayMainSliderContactUs {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0.92) 50%,
+        rgba(6, 8, 12, 0.78) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 45%
+      );
+  }
+
+  .containerMainSliderContactUs {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+  }
+
+  .topContentMainSliderContactUs {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderContactUs {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderContactUs {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderContactUs {
+    width: 100%;
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionMainSliderContactUs {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .trustIndicatorsMainSliderContactUs {
+    width: 100%;
+    gap: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  .trustItemMainSliderContactUs {
+    width: 100%;
+    gap: 0.55rem;
+  }
+
+  .trustIconMainSliderContactUs {
+    flex-shrink: 0;
+  }
+
+  .trustTitleMainSliderContactUs {
+    font-size: 0.76rem;
+  }
+
+  .trustDescMainSliderContactUs {
+    font-size: 0.64rem;
+    line-height: 1.4;
+  }
+
+  .cardsGridMainSliderContactUs {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .contactCardMainSliderContactUs {
+    width: 100%;
+    padding: 1.35rem 1.15rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .cardHeaderMainSliderContactUs {
+    gap: 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .iconBoxMainSliderContactUs {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cardTitleMainSliderContactUs {
+    font-size: 0.86rem;
+  }
+
+  .cardDescMainSliderContactUs {
+    font-size: 0.72rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .cardBtnMainSliderContactUs {
+    padding: 0.68rem 0.85rem;
+    font-size: 0.75rem;
+  }
+
+  .cardBtnLeftMainSliderContactUs {
+    gap: 0.5rem;
+  }
+
+  .hideOnMobileMainSliderContactUs {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+  .sectionWrapperMainSliderContactUs {
+    padding: 4rem 0 3rem;
+    background-position: 76% center;
+  }
+
+  .containerMainSliderContactUs {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .badgeMainSliderContactUs {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingMainSliderContactUs {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionMainSliderContactUs {
+    font-size: 0.74rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .trustIndicatorsMainSliderContactUs {
+    gap: 1rem;
+  }
+
+  .trustTitleMainSliderContactUs {
+    font-size: 0.72rem;
+  }
+
+  .trustDescMainSliderContactUs {
+    font-size: 0.6rem;
+  }
+
+  .cardsGridMainSliderContactUs {
+    gap: 0.8rem;
+  }
+
+  .contactCardMainSliderContactUs {
+    padding: 1.2rem 1rem;
+  }
+
+  .cardHeaderMainSliderContactUs {
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .iconBoxMainSliderContactUs {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardTitleMainSliderContactUs {
+    font-size: 0.82rem;
+  }
+
+  .cardDescMainSliderContactUs {
+    font-size: 0.68rem;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+  }
+
+  .cardBtnMainSliderContactUs {
+    padding: 0.62rem 0.75rem;
+    font-size: 0.7rem;
+  }
+}

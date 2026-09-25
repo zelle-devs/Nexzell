@@ -34,6 +34,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+   background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 20%, rgba(6, 8, 12, 0.8) 65%, transparent 100%),
+              linear-gradient(to top, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0) 30%);
 }
 
 .containerMainSliderAbout {
@@ -238,41 +240,318 @@
   background-color: var(--nexzell-border-highlight, #334155);
   opacity: 0.4;
 }
+/* Tablet */
+@media (max-width: 1024px) {
 
-@media (max-width: 992px) {
+  .sectionWrapperMainSliderAbout {
+    min-height: 80vh;
+  }
+
   .bgImageWrapperMainSliderAbout {
     width: 100%;
+    height: 100%;
   }
-  
+
+  .bgImageMainSliderAbout {
+    object-position: center center;
+  }
+
   .bgGradientMainSliderAbout {
-    background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 20%, rgba(6, 8, 12, 0.9) 60%, rgba(6, 8, 12, 0.5) 100%);
+    background: linear-gradient(
+      to right,
+      var(--nexzell-bg-base, #06080C) 10%,
+      rgba(6, 8, 12, 0.92) 45%,
+      rgba(6, 8, 12, 0.55) 75%,
+      rgba(6, 8, 12, 0.35) 100%
+    );
+  }
+
+  .containerMainSliderAbout {
+    height: 80vh;
+    min-height: 650px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .contentMainSliderAbout {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .headingMainSliderAbout {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderAbout {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupMainSliderAbout {
+    gap: 0.85rem;
+    margin-bottom: 3rem;
+  }
+
+  .statsListMainSliderAbout {
+    gap: 1.5rem;
   }
 }
 
+
+/* Small Tablet */
 @media (max-width: 768px) {
-  .headingMainSliderAbout {
-    font-size: 2.75rem;
+
+  .sectionWrapperMainSliderAbout {
+    min-height: 78vh;
   }
-  
-  .btnGroupMainSliderAbout {
-    flex-direction: column;
+
+  .bgImageWrapperMainSliderAbout {
     width: 100%;
-    align-items: stretch;
+    height: 100%;
   }
-  
+
+  .bgImageMainSliderAbout {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderAbout {
+    background: linear-gradient(
+      to right,
+      rgba(6, 8, 12, 0.98) 0%,
+      rgba(6, 8, 12, 0.92) 35%,
+      rgba(6, 8, 12, 0.68) 70%,
+      rgba(6, 8, 12, 0.45) 100%
+    );
+  }
+
+  .containerMainSliderAbout {
+    height: auto;
+    min-height: 78vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .contentMainSliderAbout {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .badgeMainSliderAbout {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .badgeDotMainSliderAbout {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderAbout {
+    font-size: clamp(2.25rem, 7vw, 3rem);
+    line-height: 1.12;
+    margin-bottom: 1.1rem;
+  }
+
+  .descriptionMainSliderAbout {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupMainSliderAbout {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-bottom: 2.75rem;
+  }
+
   .btnPrimaryMainSliderAbout,
   .btnSecondaryMainSliderAbout {
-    justify-content: center;
     width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
-  
+
   .statsListMainSliderAbout {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+
+  .statDividerMainSliderAbout {
+    display: block;
+    height: 35px;
+  }
+
+  .statNumberMainSliderAbout {
+    font-size: 1.35rem;
+  }
+
+  .statTextMainSliderAbout {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .sectionWrapperMainSliderAbout {
+    min-height: 100svh;
+  }
+
+  .bgImageWrapperMainSliderAbout {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderAbout {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderAbout {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 0.65) 0%,
+      rgba(6, 8, 12, 0.82) 35%,
+      rgba(6, 8, 12, 0.96) 70%,
+      var(--nexzell-bg-base, #06080C) 100%
+    );
+  }
+
+  .containerMainSliderAbout {
+    height: auto;
+    min-height: 100svh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5.5rem;
+    padding-bottom: 3rem;
+    align-items: center;
+  }
+
+  .contentMainSliderAbout {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderAbout {
+    padding: 0.35rem 0.8rem;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderAbout {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderAbout {
+    width: 100%;
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+  }
+
+  .descriptionMainSliderAbout {
+    width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupMainSliderAbout {
+    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    align-items: stretch;
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnPrimaryMainSliderAbout,
+  .btnSecondaryMainSliderAbout {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+    min-height: 46px;
+  }
+
+  .statsListMainSliderAbout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 0.75rem;
+  }
+
+  .statItemMainSliderAbout {
+    gap: 0.2rem;
+    min-width: 0;
+  }
+
+  .statNumberMainSliderAbout {
+    font-size: 1.15rem;
+  }
+
+  .statTextMainSliderAbout {
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 
   .statDividerMainSliderAbout {
     display: none;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+
+  .containerMainSliderAbout {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .headingMainSliderAbout {
+    font-size: 1.85rem;
+  }
+
+  .descriptionMainSliderAbout {
+    font-size: 0.8rem;
+  }
+
+  .btnPrimaryMainSliderAbout,
+  .btnSecondaryMainSliderAbout {
+    min-height: 44px;
+    font-size: 0.82rem;
+  }
+
+  .statsListMainSliderAbout {
+    gap: 0.5rem;
+  }
+
+  .statNumberMainSliderAbout {
+    font-size: 1.05rem;
+  }
+
+  .statTextMainSliderAbout {
+    font-size: 0.62rem;
   }
 }

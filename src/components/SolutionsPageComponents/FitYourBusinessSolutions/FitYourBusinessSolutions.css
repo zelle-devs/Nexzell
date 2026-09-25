@@ -1,0 +1,572 @@
+.sectionWrapperFitYourBusinessSolutions {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerFitYourBusinessSolutions {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeUpAnimFitYourBusinessSolutions {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpFitYourBusinessSolutions {
+  animation: fadeUpAnimFitYourBusinessSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1FitYourBusinessSolutions { opacity: 0; animation: fadeUpAnimFitYourBusinessSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2FitYourBusinessSolutions { opacity: 0; animation: fadeUpAnimFitYourBusinessSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3FitYourBusinessSolutions { opacity: 0; animation: fadeUpAnimFitYourBusinessSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4FitYourBusinessSolutions { opacity: 0; animation: fadeUpAnimFitYourBusinessSolutions 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+.headerFitYourBusinessSolutions {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitleFitYourBusinessSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.titleFitYourBusinessSolutions {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.descFitYourBusinessSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  max-width: 700px;
+}
+
+.gridFitYourBusinessSolutions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardFitYourBusinessSolutions {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.cardFitYourBusinessSolutions:hover {
+  transform: translateY(-5px);
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardTopFitYourBusinessSolutions {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardNumberFitYourBusinessSolutions {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.25rem;
+}
+
+.cardTitleFitYourBusinessSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDescFitYourBusinessSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  min-height: 40px;
+}
+
+.cardFeaturesFitYourBusinessSolutions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.featureItemFitYourBusinessSolutions {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkIconWrapperFitYourBusinessSolutions {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkIconFitYourBusinessSolutions {
+  color: var(--nexzell-bg-base, #06080C);
+}
+
+.featureTextFitYourBusinessSolutions {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.4;
+}
+
+.cardBottomFitYourBusinessSolutions {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.imageWrapperFitYourBusinessSolutions {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: var(--nexzell-radius-md, 12px);
+  overflow: hidden;
+}
+
+.cardImageFitYourBusinessSolutions {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cardFitYourBusinessSolutions:hover .cardImageFitYourBusinessSolutions {
+  transform: scale(1.05);
+}
+
+.imageOverlayFitYourBusinessSolutions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(6, 8, 12, 0.8) 0%, rgba(6, 8, 12, 0) 100%);
+  pointer-events: none;
+}
+
+.cardBtnFitYourBusinessSolutions {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.cardBtnFitYourBusinessSolutions:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.4);
+}
+
+.btnIconFitYourBusinessSolutions {
+  transition: transform 0.3s ease;
+}
+
+.cardBtnFitYourBusinessSolutions:hover .btnIconFitYourBusinessSolutions {
+  transform: translateX(4px);
+}
+
+/* Tablet / Smaller Desktop */
+@media (max-width: 1200px) {
+  .sectionWrapperFitYourBusinessSolutions {
+    padding: 5rem 0;
+  }
+
+  .containerFitYourBusinessSolutions {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .headerFitYourBusinessSolutions {
+    margin-bottom: 3.5rem;
+  }
+
+  .titleFitYourBusinessSolutions {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+
+  .descFitYourBusinessSolutions {
+    max-width: 650px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .gridFitYourBusinessSolutions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cardTopFitYourBusinessSolutions {
+    padding: 1.75rem 1.4rem;
+  }
+
+  .cardTitleFitYourBusinessSolutions {
+    font-size: 1.15rem;
+  }
+
+  .cardDescFitYourBusinessSolutions {
+    font-size: 0.82rem;
+  }
+
+  .featureTextFitYourBusinessSolutions {
+    font-size: 0.82rem;
+  }
+
+  .imageWrapperFitYourBusinessSolutions {
+    height: 180px;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperFitYourBusinessSolutions {
+    padding: 4rem 0;
+  }
+
+  .containerFitYourBusinessSolutions {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .headerFitYourBusinessSolutions {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .subtitleFitYourBusinessSolutions {
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.85rem;
+  }
+
+  .titleFitYourBusinessSolutions {
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descFitYourBusinessSolutions {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .gridFitYourBusinessSolutions {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardTopFitYourBusinessSolutions {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cardNumberFitYourBusinessSolutions {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardTitleFitYourBusinessSolutions {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .cardDescFitYourBusinessSolutions {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .cardFeaturesFitYourBusinessSolutions {
+    gap: 0.75rem;
+  }
+
+  .featureItemFitYourBusinessSolutions {
+    gap: 0.6rem;
+  }
+
+  .checkIconWrapperFitYourBusinessSolutions {
+    width: 17px;
+    height: 17px;
+  }
+
+  .featureTextFitYourBusinessSolutions {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+
+  .cardBottomFitYourBusinessSolutions {
+    padding: 0 0.85rem 0.85rem;
+  }
+
+  .imageWrapperFitYourBusinessSolutions {
+    height: 165px;
+  }
+
+  .cardBtnFitYourBusinessSolutions {
+    bottom: 0.85rem;
+    left: 0.85rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.78rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperFitYourBusinessSolutions {
+    padding: 3.5rem 0;
+  }
+
+  .containerFitYourBusinessSolutions {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .headerFitYourBusinessSolutions {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .subtitleFitYourBusinessSolutions {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+
+  .titleFitYourBusinessSolutions {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .descFitYourBusinessSolutions {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .gridFitYourBusinessSolutions {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardFitYourBusinessSolutions {
+    width: 100%;
+  }
+
+  .cardTopFitYourBusinessSolutions {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .cardNumberFitYourBusinessSolutions {
+    width: 29px;
+    height: 29px;
+    font-size: 0.72rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .cardTitleFitYourBusinessSolutions {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: 0.4rem;
+  }
+
+  .cardDescFitYourBusinessSolutions {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 1.15rem;
+    min-height: auto;
+  }
+
+  .cardFeaturesFitYourBusinessSolutions {
+    gap: 0.7rem;
+  }
+
+  .featureItemFitYourBusinessSolutions {
+    gap: 0.55rem;
+  }
+
+  .checkIconWrapperFitYourBusinessSolutions {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .featureTextFitYourBusinessSolutions {
+    font-size: 0.73rem;
+    line-height: 1.45;
+  }
+
+  .cardBottomFitYourBusinessSolutions {
+    padding: 0 0.8rem 0.8rem;
+  }
+
+  .imageWrapperFitYourBusinessSolutions {
+    height: 180px;
+  }
+
+  .cardBtnFitYourBusinessSolutions {
+    bottom: 0.8rem;
+    left: 0.8rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperFitYourBusinessSolutions {
+    padding: 3rem 0;
+  }
+
+  .containerFitYourBusinessSolutions {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .headerFitYourBusinessSolutions {
+    margin-bottom: 2.25rem;
+  }
+
+  .subtitleFitYourBusinessSolutions {
+    font-size: 0.61rem;
+    letter-spacing: 0.9px;
+  }
+
+  .titleFitYourBusinessSolutions {
+    font-size: 1.65rem;
+    line-height: 1.18;
+  }
+
+  .descFitYourBusinessSolutions {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .gridFitYourBusinessSolutions {
+    gap: 0.9rem;
+  }
+
+  .cardTopFitYourBusinessSolutions {
+    padding: 1.35rem 1.05rem;
+  }
+
+  .cardNumberFitYourBusinessSolutions {
+    width: 27px;
+    height: 27px;
+    font-size: 0.68rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .cardTitleFitYourBusinessSolutions {
+    font-size: 0.92rem;
+  }
+
+  .cardDescFitYourBusinessSolutions {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardFeaturesFitYourBusinessSolutions {
+    gap: 0.65rem;
+  }
+
+  .featureTextFitYourBusinessSolutions {
+    font-size: 0.68rem;
+  }
+
+  .checkIconWrapperFitYourBusinessSolutions {
+    width: 15px;
+    height: 15px;
+  }
+
+  .cardBottomFitYourBusinessSolutions {
+    padding: 0 0.7rem 0.7rem;
+  }
+
+  .imageWrapperFitYourBusinessSolutions {
+    height: 160px;
+  }
+
+  .cardBtnFitYourBusinessSolutions {
+    bottom: 0.7rem;
+    left: 0.7rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.7rem;
+  }
+}
