@@ -3,9 +3,10 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-image: url(../../../../public/AboutSliderMainImage2.jpg);
-  background-position: left;
+  background-image: url(../../../../public/solutionssliderimagenow.png);
+  background-position: right;
  background-size: cover;
+ background-repeat: no-repeat;
   min-height: 85vh;
   display: flex;
   align-items: center;

@@ -59,22 +59,22 @@ function Header() {
             <ul className="navListNexzellHeaderMain">
               <li className="navItemNexzellHeaderMain">
                 <Link href="/product" className="navLinkNexzellHeaderMain">
-                  Product <ChevronDown className="chevronIconNexzellHeaderMain" size={16} />
+                  Product  {/* <ChevronDown className="chevronIconNexzellHeaderMain" size={16} /> */}
                 </Link>
               </li>
               <li className="navItemNexzellHeaderMain">
                 <Link href="/solutions" className="navLinkNexzellHeaderMain">
-                  Solutions <ChevronDown className="chevronIconNexzellHeaderMain" size={16} />
+                  Solutions  {/* <ChevronDown className="chevronIconNexzellHeaderMain" size={16} /> */}
                 </Link>
               </li>
               <li className="navItemNexzellHeaderMain">
-                <Link href="/pricing" className="navLinkNexzellHeaderMain">
+                <Link href="#pricing" className="navLinkNexzellHeaderMain">
                   Pricing
                 </Link>
               </li>
               <li className="navItemNexzellHeaderMain">
-                <Link href="/resources" className="navLinkNexzellHeaderMain">
-                  Resources <ChevronDown className="chevronIconNexzellHeaderMain" size={16} />
+                <Link href="#resources" className="navLinkNexzellHeaderMain">
+                  Resources  {/* <ChevronDown className="chevronIconNexzellHeaderMain" size={16} /> */}
                 </Link>
               </li>
               <li className="navItemNexzellHeaderMain">
@@ -141,12 +141,12 @@ function Header() {
           <ul className="drawerNavListNexzellHeaderMain">
             <li className="drawerNavItemNexzellHeaderMain">
               <Link href="/product" onClick={closeDrawer}>
-                Product <ChevronDown size={16} />
+              Product   {/* <ChevronDown size={16} /> */}
               </Link>
             </li>
             <li className="drawerNavItemNexzellHeaderMain">
               <Link href="/solutions" onClick={closeDrawer}>
-                Solutions <ChevronDown size={16} />
+                Solutions {/* <ChevronDown size={16} /> */}
               </Link>
             </li>
             <li className="drawerNavItemNexzellHeaderMain">
@@ -156,7 +156,7 @@ function Header() {
             </li>
             <li className="drawerNavItemNexzellHeaderMain">
               <Link href="/resources" onClick={closeDrawer}>
-                Resources <ChevronDown size={16} />
+                Resources  {/* <ChevronDown size={16} /> */}
               </Link>
             </li>
             <li className="drawerNavItemNexzellHeaderMain">

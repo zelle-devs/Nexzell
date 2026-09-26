@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import { 
   Package, 
   ShieldCheck, 
@@ -9,8 +10,26 @@ import {
   ArrowRight 
 } from 'lucide-react';
 import './EverythingBusinessStarter.css';
+import ProductSelectionCheck from '../ProductSelectionCheck/ProductSelectionCheck';
 
 function EverythingBusinessStarter() {
+  // 1. Create a state to store the current window width
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1201
+  );
+
+  // 2. Add an event listener to update the state whenever the window is resized
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const features = [
     {
       id: 1,
@@ -92,12 +111,21 @@ function EverythingBusinessStarter() {
         </div>
 
         <div className="rightContentEverythingBusinessStarter animatedFadeInRightEverythingBusinessStarter">
-         
-          <img 
-            src="/EverythingBusinessStarter.jpg" 
-            alt="Nexzell Dashboard Features" 
-            className="showcaseImageEverythingBusinessStarter" 
-          />
+          
+          {/* Condition: Show Image between 300px and 1200px */}
+          {windowWidth >= 300 && windowWidth <= 1200 && (
+            <img 
+              src="/EverythingBusinessStarter.jpg" 
+              alt="Nexzell Dashboard Features" 
+              className="showcaseImageEverythingBusinessStarter" 
+            />
+          )}
+
+          {/* Condition: Show Component greater than 1200px */}
+          {windowWidth > 1200 && (
+            <ProductSelectionCheck />
+          )}
+
         </div>
 
       </div>
