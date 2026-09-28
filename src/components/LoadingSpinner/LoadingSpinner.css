@@ -1,0 +1,488 @@
+/* =========================================================
+   Nexzell Logo Loader  (v2)
+   Built on your global :root tokens.
+   Every class name ends with NexzellLogoLoader
+   ========================================================= */
+
+.overlayNexzellLogoLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: var(--nexzell-padding-x);
+  background:
+    radial-gradient(ellipse at 50% 40%, #0b1017d7 0%, var(--nexzell-bg-base) 70%);
+  font-family: var(--nexzell-font-family);
+  color: var(--nexzell-text-white);
+  overflow: hidden;
+  animation: fadeInNexzellLogoLoader 0.5s ease-out both;
+}
+
+.overlayNexzellLogoLoader.inlineNexzellLogoLoader {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  min-height: 420px;
+  border-radius: var(--nexzell-radius-lg);
+  border: 1px solid var(--nexzell-border-subtle);
+}
+
+/* ---------- Ambient background ---------- */
+
+.auroraNexzellLogoLoader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(900px, 140vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 35% 40%, rgba(0, 230, 153, 0.18), transparent 45%),
+    radial-gradient(circle at 65% 60%, rgba(0, 179, 255, 0.14), transparent 45%);
+  filter: blur(30px);
+  animation: auroraNexzellLogoLoader 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.gridNexzellLogoLoader {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 62%);
+  mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 62%);
+  animation: gridDriftNexzellLogoLoader 6s linear infinite;
+  pointer-events: none;
+}
+
+/* ---------- Stage ---------- */
+
+.stageNexzellLogoLoader {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  z-index: 1;
+  perspective: 700px;
+}
+
+.stageNexzellLogoLoader > * {
+  position: absolute;
+}
+
+/* Corner brackets */
+.bracketNexzellLogoLoader {
+  width: 22px;
+  height: 22px;
+  border: 0 solid var(--nexzell-primary);
+  opacity: 0.85;
+  animation: bracketNexzellLogoLoader 2.6s ease-in-out infinite;
+}
+.bracketTlNexzellLogoLoader { top: 0;    left: 0;  border-top-width: 2px;    border-left-width: 2px;  border-top-left-radius: 6px; }
+.bracketTrNexzellLogoLoader { top: 0;    right: 0; border-top-width: 2px;    border-right-width: 2px; border-top-right-radius: 6px; }
+.bracketBlNexzellLogoLoader { bottom: 0; left: 0;  border-bottom-width: 2px; border-left-width: 2px;  border-bottom-left-radius: 6px; }
+.bracketBrNexzellLogoLoader { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 6px; }
+
+/* Soft core glow */
+.coreGlowNexzellLogoLoader {
+  inset: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 230, 153, 0.35), transparent 70%);
+  filter: blur(14px);
+  animation: coreGlowNexzellLogoLoader 2.4s ease-in-out infinite;
+}
+
+/* 3D orbit rings */
+.orbitPlaneNexzellLogoLoader {
+  inset: 12px;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--ry, 0deg)) rotateX(68deg);
+}
+
+.orbitSpinNexzellLogoLoader {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 230, 153, 0.35);
+  animation: spinNexzellLogoLoader var(--dur, 6s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.orbitDotNexzellLogoLoader {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--dot, var(--nexzell-primary));
+  box-shadow: 0 0 10px var(--dot, var(--nexzell-primary)), 0 0 24px var(--dot, var(--nexzell-primary));
+}
+
+/* Particles bursting outward */
+.particleNexzellLogoLoader {
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  margin: -1.5px 0 0 -1.5px;
+  border-radius: 50%;
+  background: var(--nexzell-gradient-start);
+  box-shadow: 0 0 8px var(--nexzell-gradient-start);
+  opacity: 0;
+  animation: particleNexzellLogoLoader 2.8s ease-out infinite;
+  animation-delay: calc(var(--i) * 0.35s);
+}
+
+/* SVG artwork (hexagon + monogram) */
+.artNexzellLogoLoader {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hexOuterNexzellLogoLoader {
+  fill: none;
+  stroke: var(--nexzell-border-highlight);
+  stroke-width: 1;
+  stroke-dasharray: 4 6;
+  transform-origin: 100px 100px;
+  animation: spinReverseNexzellLogoLoader 24s linear infinite;
+}
+
+.hexTrackNexzellLogoLoader {
+  fill: rgba(14, 18, 24, 0.75);
+  stroke: var(--nexzell-border-subtle);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.hexTraceNexzellLogoLoader {
+  fill: none;
+  stroke: url(#hexGradientNexzellLogoLoader);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 28 72;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 6px rgba(0, 230, 153, 0.9));
+  animation: hexTraceNexzellLogoLoader 2.2s linear infinite;
+}
+
+.markGlowNexzellLogoLoader,
+.markTrackNexzellLogoLoader,
+.markStrokeNexzellLogoLoader {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.markTrackNexzellLogoLoader {
+  stroke: var(--nexzell-border-highlight);
+  stroke-width: 7;
+  opacity: 0.55;
+}
+
+.markStrokeNexzellLogoLoader {
+  stroke: url(#markGradientNexzellLogoLoader);
+  stroke-width: 7;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawNexzellLogoLoader 2.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.markGlowNexzellLogoLoader {
+  stroke: var(--nexzell-primary);
+  stroke-width: 12;
+  opacity: 0.35;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  filter: blur(6px);
+  animation: drawNexzellLogoLoader 2.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.markGroupNexzellLogoLoader {
+  transform-origin: 100px 100px;
+  animation: markBreatheNexzellLogoLoader 2.8s ease-in-out infinite;
+}
+
+/* Scan beam across the hexagon */
+.scanNexzellLogoLoader {
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  top: 50px;
+  background: linear-gradient(90deg, transparent, var(--nexzell-primary), transparent);
+  box-shadow: 0 0 14px var(--nexzell-primary);
+  opacity: 0;
+  animation: scanNexzellLogoLoader 2.8s ease-in-out infinite;
+}
+
+.logoImageNexzellLogoLoader {
+  top: 50%;
+  left: 50%;
+  width: 124px;
+  height: 124px;
+  margin: -62px 0 0 -62px;
+  object-fit: contain;
+  animation: logoPulseNexzellLogoLoader 2.4s ease-in-out infinite;
+}
+
+/* ---------- Wordmark ---------- */
+
+.brandNexzellLogoLoader {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: 0.42em;
+  padding-left: 0.42em;
+  background: linear-gradient(
+    100deg,
+    var(--nexzell-text-gray-500) 0%,
+    var(--nexzell-text-gray-500) 38%,
+    var(--nexzell-gradient-start) 46%,
+    var(--nexzell-text-white) 50%,
+    var(--nexzell-gradient-end) 54%,
+    var(--nexzell-text-gray-500) 62%,
+    var(--nexzell-text-gray-500) 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmerNexzellLogoLoader 2.6s linear infinite;
+}
+
+/* ---------- Progress + status ---------- */
+
+.progressNexzellLogoLoader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.barNexzellLogoLoader {
+  position: relative;
+  width: min(260px, 66vw);
+  height: 4px;
+  border-radius: var(--nexzell-radius-pill);
+  background: var(--nexzell-border-subtle);
+  overflow: hidden;
+}
+
+.barFillNexzellLogoLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
+  box-shadow: 0 0 14px rgba(0, 230, 153, 0.8);
+  animation: slideNexzellLogoLoader 1.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.statusNexzellLogoLoader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 1.2rem;
+  min-width: 220px;
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.06em;
+  color: var(--nexzell-text-gray-300);
+}
+
+.statusDotNexzellLogoLoader {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--nexzell-primary);
+  box-shadow: 0 0 10px var(--nexzell-primary);
+  animation: statusDotNexzellLogoLoader 1.2s ease-in-out infinite;
+}
+
+.statusTextNexzellLogoLoader {
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: statusCycleNexzellLogoLoader 6s ease-in-out infinite both;
+  animation-delay: calc(var(--s) * 2s);
+}
+
+.statusTextWrapNexzellLogoLoader {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.srOnlyNexzellLogoLoader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes fadeInNexzellLogoLoader {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spinNexzellLogoLoader {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverseNexzellLogoLoader {
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes auroraNexzellLogoLoader {
+  0%   { transform: translate(-52%, -50%) scale(0.95) rotate(0deg); opacity: 0.8; }
+  100% { transform: translate(-48%, -50%) scale(1.1) rotate(25deg); opacity: 1; }
+}
+
+@keyframes gridDriftNexzellLogoLoader {
+  to { background-position: 44px 44px; }
+}
+
+@keyframes bracketNexzellLogoLoader {
+  0%, 100% { transform: scale(1);    opacity: 0.5; }
+  50%      { transform: scale(0.86); opacity: 1; }
+}
+
+@keyframes coreGlowNexzellLogoLoader {
+  0%, 100% { transform: scale(0.8); opacity: 0.6; }
+  50%      { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes particleNexzellLogoLoader {
+  0%   { transform: rotate(calc(var(--i) * 45deg)) translateY(-30px) scale(0.4); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: rotate(calc(var(--i) * 45deg)) translateY(-118px) scale(1); opacity: 0; }
+}
+
+@keyframes hexTraceNexzellLogoLoader {
+  to { stroke-dashoffset: -100; }
+}
+
+@keyframes drawNexzellLogoLoader {
+  0%   { stroke-dashoffset: 100; }
+  50%  { stroke-dashoffset: 0; }
+  75%  { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -100; }
+}
+
+@keyframes markBreatheNexzellLogoLoader {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+
+@keyframes scanNexzellLogoLoader {
+  0%   { top: 46px;  opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { top: 184px; opacity: 0; }
+}
+
+@keyframes logoPulseNexzellLogoLoader {
+  0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 8px rgba(0, 230, 153, 0.45)); }
+  50%      { transform: scale(1.08); filter: drop-shadow(0 0 20px rgba(0, 230, 153, 0.9)); }
+}
+
+@keyframes shimmerNexzellLogoLoader {
+  0%   { background-position: 130% 0; }
+  100% { background-position: -130% 0; }
+}
+
+@keyframes slideNexzellLogoLoader {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(240%); }
+}
+
+@keyframes statusDotNexzellLogoLoader {
+  0%, 100% { transform: scale(0.7); opacity: 0.5; }
+  50%      { transform: scale(1.3); opacity: 1; }
+}
+
+@keyframes statusCycleNexzellLogoLoader {
+  0%        { opacity: 0; transform: translate(-50%, 8px); }
+  6%, 28%   { opacity: 1; transform: translate(-50%, 0); }
+  34%, 100% { opacity: 0; transform: translate(-50%, -8px); }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .stageNexzellLogoLoader {
+    width: 190px;
+    height: 190px;
+    zoom: 0.83;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .auroraNexzellLogoLoader,
+  .gridNexzellLogoLoader,
+  .bracketNexzellLogoLoader,
+  .coreGlowNexzellLogoLoader,
+  .orbitSpinNexzellLogoLoader,
+  .particleNexzellLogoLoader,
+  .hexOuterNexzellLogoLoader,
+  .markGroupNexzellLogoLoader,
+  .scanNexzellLogoLoader,
+  .brandNexzellLogoLoader {
+    animation: none;
+  }
+
+  .brandNexzellLogoLoader {
+    -webkit-text-fill-color: var(--nexzell-text-white);
+    color: var(--nexzell-text-white);
+  }
+
+  .markStrokeNexzellLogoLoader,
+  .markGlowNexzellLogoLoader {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .hexTraceNexzellLogoLoader {
+    animation-duration: 6s;
+  }
+
+  .statusTextNexzellLogoLoader:first-child {
+    animation: none;
+    opacity: 1;
+  }
+
+  .statusTextNexzellLogoLoader:not(:first-child) {
+    display: none;
+  }
+}

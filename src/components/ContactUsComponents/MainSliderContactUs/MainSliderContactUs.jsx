@@ -11,7 +11,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import './MainSliderContactUs.css';
-
+import Link from 'next/link';
 function MainSliderContactUs() {
   const cards = [
     {
@@ -108,10 +108,12 @@ function MainSliderContactUs() {
               <p className="cardDescMainSliderContactUs">{card.desc}</p>
               
               <button className="cardBtnMainSliderContactUs">
+                <Link href='consultation'>
                 <div className="cardBtnLeftMainSliderContactUs">
                   {card.btnIcon}
                   <span>{card.btnText}</span>
                 </div>
+                </Link>
                 <ArrowRight size={16} className="btnArrowMainSliderContactUs" />
               </button>
             </div>

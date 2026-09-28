@@ -372,3 +372,28 @@
     width: 120px;
   }
 }
+
+.hideOnScrollNexzellHeaderMain {
+  opacity: 1;
+  max-width: 200px;          /* itna rakhein ke element ki asli width se zyada ho */
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translateX(0);
+  transition:
+    opacity 0.3s ease,
+    max-width 0.4s ease,
+    margin 0.4s ease,
+    padding 0.4s ease,
+    transform 0.3s ease;
+}
+
+.isScrolledNexzellHeaderMain .hideOnScrollNexzellHeaderMain {
+  opacity: 0;
+  max-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+}

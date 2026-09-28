@@ -1,0 +1,51 @@
+.PageTransition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Idle mein koi rendering cost nahi */
+.PageTransition-overlay[data-phase="hidden"] {
+    visibility: hidden;
+}
+
+/* ---------- Simple gradient (clipped by the curved path) ---------- */
+.PageTransition-clip {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 180% 170% at 50% 108%,
+        #00C782 0%,
+        #05664a 10%,
+        #000000 90%
+    );
+    will-change: clip-path;
+}
+/* ---------- Text ---------- */
+.PageTransition-text {
+    position: relative;
+    z-index: 1;
+    color: var(--nexzell-text-white);
+    font-family: var(--font-poppins), serif;
+    font-size: clamp(1rem, 6vw, 3.5rem);
+    letter-spacing: 0.00em;
+    text-align: center;
+    padding: 0 24px;
+    font-weight: 600;
+    white-space: pre;
+}
+
+.PageTransition-letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.PageTransition-letter.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

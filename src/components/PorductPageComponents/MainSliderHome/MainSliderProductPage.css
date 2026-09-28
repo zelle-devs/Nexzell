@@ -155,23 +155,25 @@
 }
 
 .btnPrimaryMainSliderProductPage {
-  display: inline-flex;
+ display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  background-color: var(--nexzell-primary, #00E699);
+  background-color: var(--nexzell-primary);
   color: var(--nexzell-bg-base, #06080C);
   font-family: var(--font-poppins, sans-serif);
   font-size: 1rem;
   font-weight: 600;
   border-radius: var(--nexzell-radius-sm, 12px);
-  border: none;
+  border: 1px solid var(--nexzell-primary);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btnPrimaryMainSliderProductPage:hover {
-  background-color: var(--nexzell-primary-hover, #00C782); 
+  background-color: transparent; 
+  color: var(--nexzell-primary-hover);
+   border: 1px solid var(--nexzell-primary);
 }
 
 .btnIconMainSliderProductPage {

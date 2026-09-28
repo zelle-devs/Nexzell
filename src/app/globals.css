@@ -42,7 +42,7 @@
 
   --nexzell-container-width: 1500px;
   --nexzell-padding-x: 2rem;
-  --nexzell-section-gap: 5rem;
+  --nexzell-section-gap: 3rem;
   --nexzell-radius-sm: 8px;
   --nexzell-radius-md: 12px;
   --nexzell-radius-lg: 24px;
@@ -57,13 +57,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   font-size: var(--nexzell-font-size-base);
   scroll-behavior: smooth;
 }
-
+button, a, input, select, textarea {
+  outline: none;
+}
 body {
   font-family: var(--nexzell-font-family);
   background-color: var(--nexzell-bg-base);

@@ -3,6 +3,7 @@
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
   position: relative;
+  padding-bottom: 8rem;
   overflow: hidden;
 }
 
@@ -280,10 +281,69 @@
 }
 
 @media (max-width: 1024px) {
-  .gridPricingSectionHome {
-    grid-template-columns: repeat(2, 1fr);
+
+  .sectionWrapperPricingSectionHome {
+    padding: 5rem 0 6rem;
   }
-  
+
+  .containerPricingSectionHome {
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .headerPricingSectionHome {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 3.5rem;
+  }
+
+  .headingPricingSectionHome {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionPricingSectionHome {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+
+  .toggleWrapperPricingSectionHome {
+    gap: 0.85rem;
+  }
+
+  .toggleBtnPricingSectionHome {
+    padding: 0.5rem 1.3rem;
+    font-size: 0.86rem;
+  }
+
+  .saveBadgePricingSectionHome {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
+  }
+
+  .gridPricingSectionHome {
+    width: 100%;
+    max-width: 950px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cardPricingSectionHome {
+    width: 100%;
+    min-width: 0;
+    padding: 2.25rem 1.75rem;
+  }
+
+  /*
+    Keep the popular card at the same normal size on tablet.
+    This prevents it from becoming wider than the other cards.
+  */
   .popularCardPricingSectionHome {
     transform: scale(1);
   }
@@ -291,10 +351,461 @@
   .popularCardPricingSectionHome:hover {
     transform: translateY(-8px);
   }
+
+    .gridPricingSectionHome {
+    width: 100%;
+    max-width: 650px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+  }
+
+  .titleRowPricingSectionHome {
+    gap: 0.75rem;
+  }
+
+  .planNamePricingSectionHome {
+    font-size: 1.15rem;
+  }
+
+  .popularBadgePricingSectionHome {
+    font-size: 0.66rem;
+    padding: 0.23rem 0.55rem;
+    white-space: nowrap;
+  }
+
+  .planDescPricingSectionHome {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 1.35rem;
+  }
+
+  .priceWrapperPricingSectionHome {
+    margin-bottom: 1.75rem;
+  }
+
+  .currencyPricingSectionHome {
+    font-size: 1.35rem;
+  }
+
+  .pricePricingSectionHome {
+    font-size: 2.65rem;
+  }
+
+  .periodPricingSectionHome {
+    font-size: 0.78rem;
+  }
+
+  .featuresListPricingSectionHome {
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .featureItemPricingSectionHome {
+    gap: 0.65rem;
+    align-items: flex-start;
+  }
+
+  .featureTextPricingSectionHome {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .btnPricingSectionHome {
+    padding: 0.8rem;
+    font-size: 0.88rem;
+  }
 }
 
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
 @media (max-width: 768px) {
+
+  .sectionWrapperPricingSectionHome {
+    padding: 4rem 0 5rem;
+  }
+
+  .containerPricingSectionHome {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .headerPricingSectionHome {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .headingPricingSectionHome {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionPricingSectionHome {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .toggleWrapperPricingSectionHome {
+    gap: 0.7rem;
+  }
+
+  .toggleContainerPricingSectionHome {
+    padding: 0.2rem;
+  }
+
+  .toggleBtnPricingSectionHome {
+    padding: 0.48rem 1.1rem;
+    font-size: 0.82rem;
+  }
+
+  .saveBadgePricingSectionHome {
+    padding: 0.32rem 0.65rem;
+    font-size: 0.66rem;
+  }
+
+  /*
+    Keep 2 pricing cards per row on tablet.
+    This keeps the pricing-table appearance instead
+    of immediately turning everything into one column.
+  */
   .gridPricingSectionHome {
+    width: 100%;
+    max-width: 650px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.15rem;
+  }
+
+  .cardPricingSectionHome {
+    width: 100%;
+    padding: 1.75rem 1.35rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .titleRowPricingSectionHome {
+    width: 100%;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .planNamePricingSectionHome {
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
+
+  .popularBadgePricingSectionHome {
+    font-size: 0.61rem;
+    padding: 0.22rem 0.5rem;
+  }
+
+  .planDescPricingSectionHome {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .priceWrapperPricingSectionHome {
+    gap: 0.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .currencyPricingSectionHome {
+    font-size: 1.2rem;
+  }
+
+  .pricePricingSectionHome {
+    font-size: 2.25rem;
+  }
+
+  .periodPricingSectionHome {
+    font-size: 0.7rem;
+  }
+
+  .featuresListPricingSectionHome {
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .featureItemPricingSectionHome {
+    width: 100%;
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+
+  .checkIconPricingSectionHome {
+    flex-shrink: 0;
+  }
+
+  .featureTextPricingSectionHome {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+
+  .btnPricingSectionHome {
+    width: 100%;
+    padding: 0.75rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+  .sectionWrapperPricingSectionHome {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .containerPricingSectionHome {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .headerPricingSectionHome {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .headingPricingSectionHome {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.18;
+    margin-bottom: 0.7rem;
+  }
+
+  .descriptionPricingSectionHome {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  /*
+    Keep the billing toggle usable on mobile.
+  */
+  .toggleWrapperPricingSectionHome {
+    width: 100%;
+    justify-content: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  .toggleContainerPricingSectionHome {
+    padding: 0.18rem;
+  }
+
+  .toggleBtnPricingSectionHome {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.76rem;
+  }
+
+  .saveBadgePricingSectionHome {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.61rem;
+  }
+
+  /*
+    Two columns are maintained on mobile so the
+    pricing cards still visually behave like a table.
+  */
+  .gridPricingSectionHome {
+    width: 100%;
+    max-width: 100%;
     grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .cardPricingSectionHome {
+    width: 100%;
+    min-width: 0;
+    padding: 1.35rem 0.95rem;
+    border-radius: var(--nexzell-radius-md, 12px);
+  }
+
+  .standardCardPricingSectionHome:hover,
+  .popularCardPricingSectionHome:hover {
+    transform: translateY(-4px);
+  }
+
+  .titleRowPricingSectionHome {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .planNamePricingSectionHome {
+    font-size: 0.92rem;
+    line-height: 1.25;
+  }
+
+  .popularBadgePricingSectionHome {
+    font-size: 0.56rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .planDescPricingSectionHome {
+    font-size: 0.67rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+
+  .priceWrapperPricingSectionHome {
+    gap: 0.15rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .currencyPricingSectionHome {
+    font-size: 0.95rem;
+  }
+
+  .pricePricingSectionHome {
+    font-size: 1.8rem;
+  }
+
+  .periodPricingSectionHome {
+    font-size: 0.58rem;
+  }
+
+  .featuresListPricingSectionHome {
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .featureItemPricingSectionHome {
+    width: 100%;
+    gap: 0.4rem;
+    align-items: flex-start;
+  }
+
+  .checkIconPricingSectionHome {
+    flex-shrink: 0;
+  }
+
+  .featureTextPricingSectionHome {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+
+  .btnPricingSectionHome {
+    width: 100%;
+    padding: 0.65rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: var(--nexzell-radius-sm, 8px);
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+  .sectionWrapperPricingSectionHome {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .containerPricingSectionHome {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .headerPricingSectionHome {
+    margin-bottom: 2.25rem;
+  }
+
+  .headingPricingSectionHome {
+    font-size: 1.65rem;
+    line-height: 1.18;
+  }
+
+  .descriptionPricingSectionHome {
+    font-size: 0.74rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .toggleWrapperPricingSectionHome {
+    gap: 0.45rem;
+  }
+
+  .toggleBtnPricingSectionHome {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .saveBadgePricingSectionHome {
+    padding: 0.28rem 0.5rem;
+    font-size: 0.56rem;
+  }
+
+  .gridPricingSectionHome {
+    gap: 0.65rem;
+  }
+
+  .cardPricingSectionHome {
+    padding: 1.15rem 0.75rem;
+  }
+
+  .planNamePricingSectionHome {
+    font-size: 0.84rem;
+  }
+
+  .popularBadgePricingSectionHome {
+    font-size: 0.51rem;
+    padding: 0.18rem 0.4rem;
+  }
+
+  .planDescPricingSectionHome {
+    font-size: 0.61rem;
+    line-height: 1.4;
+    margin-bottom: 0.85rem;
+  }
+
+  .currencyPricingSectionHome {
+    font-size: 0.85rem;
+  }
+
+  .pricePricingSectionHome {
+    font-size: 1.55rem;
+  }
+
+  .periodPricingSectionHome {
+    font-size: 0.53rem;
+  }
+
+  .featuresListPricingSectionHome {
+    gap: 0.55rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .featureItemPricingSectionHome {
+    gap: 0.35rem;
+  }
+
+  .featureTextPricingSectionHome {
+    font-size: 0.59rem;
+    line-height: 1.4;
+  }
+
+  .btnPricingSectionHome {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.66rem;
   }
 }

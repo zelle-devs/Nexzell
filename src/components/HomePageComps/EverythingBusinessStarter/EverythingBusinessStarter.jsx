@@ -58,7 +58,7 @@ function EverythingBusinessStarter() {
     {
       id: 5,
       icon: <CreditCard size={22} className="featureIconEverythingBusinessStarter" />,
-      title: "Multiple Payment Options",
+      title: "Multiple Pay Options",
       desc: "Support global and local payment methods."
     },
     {

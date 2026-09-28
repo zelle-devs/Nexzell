@@ -80,6 +80,7 @@
   padding-bottom: 1rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: grab;
 }
 
 .carouselTrackOutTeamSaysAbout::-webkit-scrollbar {

@@ -5,6 +5,9 @@ import './OutTeamSaysAbout.css';
 
 function OutTeamSaysAbout() {
   const scrollRef = useRef(null);
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollStartRef = useRef(0);
 
   const testimonials = [
     {
@@ -40,13 +43,63 @@ function OutTeamSaysAbout() {
     }
   };
 
+  /* ---------- Mouse grab-to-drag ---------- */
+  const handlePointerDown = (e) => {
+    if (e.pointerType !== 'mouse') return; // touch devices keep native scrolling
+
+    const track = scrollRef.current;
+    if (!track) return;
+
+    e.preventDefault(); // stop text selection & native image drag
+    isDraggingRef.current = true;
+    startXRef.current = e.clientX;
+    scrollStartRef.current = track.scrollLeft;
+
+    track.classList.add('isDraggingOutTeamSaysAbout');
+
+    try {
+      track.setPointerCapture(e.pointerId);
+    } catch (err) {
+      /* noop */
+    }
+  };
+
+  const handlePointerMove = (e) => {
+    if (!isDraggingRef.current) return;
+
+    const track = scrollRef.current;
+    if (!track) return;
+
+    const deltaX = e.clientX - startXRef.current;
+    track.scrollLeft = scrollStartRef.current - deltaX;
+  };
+
+  const handlePointerUp = (e) => {
+    if (!isDraggingRef.current) return;
+
+    isDraggingRef.current = false;
+    const track = scrollRef.current;
+
+    if (track) {
+      track.classList.remove('isDraggingOutTeamSaysAbout');
+
+      try {
+        if (track.hasPointerCapture && track.hasPointerCapture(e.pointerId)) {
+          track.releasePointerCapture(e.pointerId);
+        }
+      } catch (err) {
+        /* noop */
+      }
+    }
+  };
+
   return (
     <section className="sectionWrapperOutTeamSaysAbout">
       <div className="containerOutTeamSaysAbout">
-        
+
         <div className="leftColumnOutTeamSaysAbout">
           <h2 className="headingOutTeamSaysAbout">
-           A Place to Do<br />
+            A Place to Do<br />
             Meaningful Work.
           </h2>
           <p className="descriptionOutTeamSaysAbout">
@@ -64,11 +117,19 @@ function OutTeamSaysAbout() {
         </div>
 
         <div className="rightColumnOutTeamSaysAbout">
-          <div className="carouselTrackOutTeamSaysAbout" ref={scrollRef}>
+          <div
+            className="carouselTrackOutTeamSaysAbout"
+            ref={scrollRef}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            onPointerLeave={handlePointerUp}
+          >
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="testimonialCardOutTeamSaysAbout">
                 <p className="quoteTextOutTeamSaysAbout">"{testimonial.quote}"</p>
-                
+
                 <div className="quoteIconWrapperOutTeamSaysAbout">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--nexzell-primary)" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.017 21L16.41 14.904C16.634 14.343 16.75 13.737 16.75 13.111V3H24V13.111C24 16.035 23.003 18.775 21.282 21H14.017ZM0 21L2.394 14.904C2.617 14.343 2.733 13.737 2.733 13.111V3H9.983V13.111C9.983 16.035 8.986 18.775 7.265 21H0Z" />
@@ -76,7 +137,12 @@ function OutTeamSaysAbout() {
                 </div>
 
                 <div className="userInfoOutTeamSaysAbout">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="avatarOutTeamSaysAbout" />
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="avatarOutTeamSaysAbout"
+                    draggable={false}
+                  />
                   <div className="userDetailsOutTeamSaysAbout">
                     <h5 className="userNameOutTeamSaysAbout">{testimonial.name}</h5>
                     <p className="userTitleOutTeamSaysAbout">{testimonial.title}</p>

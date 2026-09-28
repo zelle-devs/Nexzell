@@ -212,7 +212,7 @@
   font-family: var(--font-poppins, sans-serif);
   font-size: 0.85rem;
   font-weight: 600;
-  border-radius: var(--nexzell-radius-md, 8px);
+  border-radius: var(--nexzell-radius-sm, 8px);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;

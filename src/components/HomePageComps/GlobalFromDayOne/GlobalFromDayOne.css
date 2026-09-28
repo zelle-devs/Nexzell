@@ -1,5 +1,5 @@
 .sectionWrapperGlobalFromDayOne {
-  padding: var(--nexzell-section-gap, 5rem) 0;
+  /* padding: var(--nexzell-section-gap, 5rem) 0; */
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
   overflow: hidden;
@@ -184,46 +184,457 @@
   margin: 0;
 }
 
-@media (max-width: 992px) {
-  .containerGlobalFromDayOne {
-    flex-direction: column;
-    gap: 4rem;
-  }
-  
-  .leftColumnGlobalFromDayOne {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .floatingCardGlobalFromDayOne {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -2rem;
-    width: 90%;
-    max-width: 380px;
+@media (max-width: 1024px) {
+
+  .sectionWrapperGlobalFromDayOne {
+    padding: 5rem 0 3rem;
   }
 
+  .containerGlobalFromDayOne {
+    width: 100%;
+    max-width: 900px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* Image Section */
+  .leftColumnGlobalFromDayOne {
+    width: 100%;
+    flex: none;
+    justify-content: center;
+  }
+
+  .imageWrapperGlobalFromDayOne {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .globeImageGlobalFromDayOne {
+    width: 100%;
+    height: auto;
+  }
+
+  .floatingCardGlobalFromDayOne {
+    left: 50%;
+    bottom: -1.5rem;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 360px;
+    padding: 1.5rem;
+  }
+
+  .cardTitleGlobalFromDayOne {
+    font-size: 1rem;
+  }
+
+  .cardDescGlobalFromDayOne {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .flagIconGlobalFromDayOne {
+    width: 29px;
+    height: 29px;
+  }
+
+  /* Content Section */
   .rightColumnGlobalFromDayOne {
     width: 100%;
+    max-width: 750px;
+    flex: none;
     align-items: center;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .badgeGlobalFromDayOne {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.9px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badgeDotGlobalFromDayOne {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingGlobalFromDayOne {
+    width: 100%;
+    max-width: 700px;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
   }
 
   .descriptionGlobalFromDayOne {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.92rem;
+    line-height: 1.65;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2.5rem;
   }
 
   .featuresGridGlobalFromDayOne {
-    text-align: left;
+    width: 100%;
     max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    text-align: left;
+  }
+
+  .featureItemGlobalFromDayOne {
+    gap: 0.8rem;
+  }
+
+  .featureIconBoxGlobalFromDayOne {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+  }
+
+  .featureTitleGlobalFromDayOne {
+    font-size: 0.88rem;
+  }
+
+  .featureDescGlobalFromDayOne {
+    font-size: 0.74rem;
+    line-height: 1.5;
   }
 }
 
-@media (max-width: 600px) {
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperGlobalFromDayOne {
+    padding: 4rem 0 2.5rem;
+  }
+
+  .containerGlobalFromDayOne {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 3.25rem;
+  }
+
+  /* Image */
+  .leftColumnGlobalFromDayOne {
+    width: 100%;
+  }
+
+  .imageWrapperGlobalFromDayOne {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .floatingCardGlobalFromDayOne {
+    width: 88%;
+    max-width: 340px;
+    bottom: -1.25rem;
+    padding: 1.3rem 1.35rem;
+    border-radius: 14px;
+  }
+
+  .cardTitleGlobalFromDayOne {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .cardDescGlobalFromDayOne {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .flagsRowGlobalFromDayOne {
+    gap: 0.5rem;
+  }
+
+  .flagIconGlobalFromDayOne {
+    width: 27px;
+    height: 27px;
+  }
+
+  /* Content */
+  .rightColumnGlobalFromDayOne {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 1rem;
+  }
+
+  .badgeGlobalFromDayOne {
+    gap: 0.45rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotGlobalFromDayOne {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingGlobalFromDayOne {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionGlobalFromDayOne {
+    width: 100%;
+    max-width: 600px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+
   .featuresGridGlobalFromDayOne {
+    width: 100%;
+    max-width: 600px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem 1.25rem;
+  }
+
+  .featureItemGlobalFromDayOne {
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .featureIconBoxGlobalFromDayOne {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .featureTitleGlobalFromDayOne {
+    font-size: 0.84rem;
+    line-height: 1.3;
+  }
+
+  .featureDescGlobalFromDayOne {
+    font-size: 0.72rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 640px) {
+
+  .sectionWrapperGlobalFromDayOne {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .containerGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.75rem;
+  }
+
+  /* Image */
+  .leftColumnGlobalFromDayOne {
+    width: 100%;
+  }
+
+  .imageWrapperGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .globeImageGlobalFromDayOne {
+    width: 100%;
+  }
+
+  .floatingCardGlobalFromDayOne {
+    width: calc(100% - 1.5rem);
+    max-width: 330px;
+    bottom: -1rem;
+    padding: 1.1rem 1.15rem;
+    border-radius: 13px;
+  }
+
+  .cardTitleGlobalFromDayOne {
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .cardDescGlobalFromDayOne {
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 0.85rem;
+  }
+
+  .flagsRowGlobalFromDayOne {
+    gap: 0.4rem;
+  }
+
+  .flagIconGlobalFromDayOne {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Content */
+  .rightColumnGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .badgeGlobalFromDayOne {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotGlobalFromDayOne {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .featuresGridGlobalFromDayOne {
+    width: 100%;
+    max-width: 100%;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+
+  .featureItemGlobalFromDayOne {
+    width: 100%;
+    gap: 0.7rem;
+    text-align: left;
+  }
+
+  .featureIconBoxGlobalFromDayOne {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+  }
+
+  .featureTitleGlobalFromDayOne {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .featureDescGlobalFromDayOne {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+  .sectionWrapperGlobalFromDayOne {
+    padding: 3rem 0 1.75rem;
+  }
+
+  .containerGlobalFromDayOne {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    gap: 2.5rem;
+  }
+
+  .floatingCardGlobalFromDayOne {
+    width: calc(100% - 1rem);
+    max-width: 300px;
+    bottom: -0.85rem;
+    padding: 0.95rem 1rem;
+    border-radius: 12px;
+  }
+
+  .cardTitleGlobalFromDayOne {
+    font-size: 0.82rem;
+  }
+
+  .cardDescGlobalFromDayOne {
+    font-size: 0.66rem;
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+  }
+
+  .flagIconGlobalFromDayOne {
+    width: 23px;
+    height: 23px;
+  }
+
+  .badgeGlobalFromDayOne {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.59rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingGlobalFromDayOne {
+    font-size: 1.65rem;
+    line-height: 1.18;
+    margin-bottom: 0.7rem;
+  }
+
+  .descriptionGlobalFromDayOne {
+    font-size: 0.74rem;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+  }
+
+  .featuresGridGlobalFromDayOne {
+    gap: 1.25rem;
+  }
+
+  .featureItemGlobalFromDayOne {
+    gap: 0.6rem;
+  }
+
+  .featureIconBoxGlobalFromDayOne {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+  }
+
+  .featureTitleGlobalFromDayOne {
+    font-size: 0.75rem;
+  }
+
+  .featureDescGlobalFromDayOne {
+    font-size: 0.65rem;
+    line-height: 1.45;
   }
 }

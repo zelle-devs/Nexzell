@@ -1,4 +1,3 @@
-
 import { BsAmazon } from 'react-icons/bs';
 import { SiShopify, SiAmazon, SiEtsy, SiMeta, SiTiktok } from 'react-icons/si';
 
@@ -16,7 +15,7 @@ export const COLOR_VARIANTS_PRODUCT_SELECTION_CHECK = [
     label: 'Brown',
     swatch: '#5D3C36',
     stock: 14,
-    chart: [38, 54, 34, 68, 92],
+    chart: [6, 9, 20, 30, 62, 45, 58, 68, 100],
     syncChart: [30, 46, 62, 40, 78, 58],
     shoeImage: './ShoeNexzellBrown.png',
     budsImage: './airpodNexzellBrown.png',
@@ -26,7 +25,7 @@ export const COLOR_VARIANTS_PRODUCT_SELECTION_CHECK = [
     label: 'Black',
     swatch: '#2B2B2E',
     stock: 9,
-    chart: [58, 32, 82, 48, 66],
+    chart: [8, 12, 22, 34, 55, 40, 64, 72, 96],
     syncChart: [50, 34, 70, 58, 40, 90],
     shoeImage: './ShoeNexzellBlack.png',
     budsImage: './airpodNexzellBlack.png',
@@ -36,30 +35,30 @@ export const COLOR_VARIANTS_PRODUCT_SELECTION_CHECK = [
     label: 'Gray',
     swatch: '#50555C',
     stock: 21,
-    chart: [46, 74, 40, 86, 56],
+    chart: [5, 10, 18, 28, 66, 48, 54, 74, 100],
     syncChart: [64, 40, 52, 76, 34, 60],
-    shoeImage:'./ShoeNexzellGray.png',
-    budsImage:'./airpodNexzellGray.png',
+    shoeImage: './ShoeNexzellGray.png',
+    budsImage: './airpodNexzellGray.png',
   },
   {
     id: 'peach',
     label: 'Peach',
     swatch: '#F4C2AC',
     stock: 6,
-    chart: [34, 60, 90, 44, 70],
+    chart: [7, 11, 24, 32, 58, 42, 60, 70, 98],
     syncChart: [42, 68, 30, 84, 52, 66],
     shoeImage: './ShoeNexzellPeach.png',
-    budsImage:'./airpodNexzellPeach.png',
+    budsImage: './airpodNexzellPeach.png',
   },
   {
     id: 'white',
     label: 'White',
     swatch: '#DFDEE4',
     stock: 30,
-    chart: [70, 42, 56, 82, 60],
+    chart: [6, 10, 19, 36, 60, 46, 62, 66, 94],
     syncChart: [56, 80, 44, 62, 36, 70],
     shoeImage: './ShoeNexzellWhite.png',
-    budsImage:'./airpodNexzellWhite.png',
+    budsImage: './airpodNexzellWhite.png',
   },
 ];
 

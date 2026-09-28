@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import './OurFutureTogetherSolutions.css';
-
+import Link from 'next/link';
 function OurFutureTogetherSolutions() {
   return (
     <section className="sectionWrapperOurFutureTogetherSolutions">
@@ -19,9 +19,12 @@ function OurFutureTogetherSolutions() {
           </div>
 
           <div className="rightContentOurFutureTogetherSolutions">
+            <Link href='consultation'>
             <button className="btnPrimaryOurFutureTogetherSolutions">
               Book a Free Demo <ArrowRight size={18} className="btnIconOurFutureTogetherSolutions" />
             </button>
+            </Link>
+            
             <p className="subtextOurFutureTogetherSolutions">
               or <a href="#" className="linkOurFutureTogetherSolutions">Talk to an Expert</a>
             </p>

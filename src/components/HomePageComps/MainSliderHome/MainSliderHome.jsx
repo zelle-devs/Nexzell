@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, PlayCircle, Zap, Layers, ShieldCheck } from 'lucide-react';
 import './MainSliderHome.css';
-
+import Link from 'next/link';
 function MainSliderHome() {
   return (
     <section className="sectionWrapperMainSliderHome">
@@ -31,9 +31,12 @@ function MainSliderHome() {
 
           {/* Buttons */}
           <div className="btnGroupMainSliderHome">
+           <Link href='/consultation'>
             <button className="btnPrimaryMainSliderHome">
               Book a Free Demo <ArrowRight size={18} className="btnIconMainSliderHome" />
             </button>
+           </Link>
+           
             <button className="btnSecondaryMainSliderHome">
               <PlayCircle size={20} className="playIconMainSliderHome" /> Watch Video
             </button>

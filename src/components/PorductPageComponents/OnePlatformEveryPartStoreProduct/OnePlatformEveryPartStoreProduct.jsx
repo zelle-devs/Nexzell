@@ -24,7 +24,7 @@ function OnePlatformEveryPartStoreProduct() {
       icon: <Package size={24} className="cardIconOnePlatformEveryPartStoreProduct" fill="var(--nexzell-primary)" color="var(--nexzell-bg-base)" />,
       title: "Products",
       desc: "Manage your entire catalog.",
-      isFilled: true
+      isFilled: false
     },
     {
       id: 3,

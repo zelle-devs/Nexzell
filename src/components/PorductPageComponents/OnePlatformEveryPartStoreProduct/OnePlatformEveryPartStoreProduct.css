@@ -350,7 +350,7 @@
 
   .gridOnePlatformEveryPartStoreProduct {
     width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns:  repeat(2fr, 1fr);
     gap: 1rem;
   }
 

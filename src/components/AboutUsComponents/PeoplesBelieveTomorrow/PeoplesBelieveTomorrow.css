@@ -130,23 +130,24 @@
 }
 
 .btnPrimaryPeoplesBelieveTomorrow {
-  display: inline-flex;
+ display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  background-color: var(--nexzell-primary, #00E699);
-  color: var(--nexzell-bg-base, #06080C);
+  background-color: transparent;
+  color: var(--nexzell-primary, #06080C);
   font-family: var(--font-poppins, sans-serif);
   font-size: 1rem;
   font-weight: 600;
-  border-radius: var(--nexzell-radius-md, 12px);
-  border: none;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-primary);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btnPrimaryPeoplesBelieveTomorrow:hover {
   background-color: var(--nexzell-primary-hover, #00C782); 
+  color: var(--nexzell-bg-base);
 }
 
 .btnIconPeoplesBelieveTomorrow {

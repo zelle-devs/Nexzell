@@ -1,5 +1,6 @@
 .sectionWrapperBuiltBusinessSizesHome {
   padding: var(--nexzell-section-gap, 5rem) 0;
+  padding-top: 6rem;
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
 }

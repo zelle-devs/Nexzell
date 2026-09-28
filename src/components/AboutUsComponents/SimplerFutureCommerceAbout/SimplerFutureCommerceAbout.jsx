@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import './SimplerFutureCommerceAbout.css';
-
+import Link from 'next/link';
 function SimplerFutureCommerceAbout() {
   return (
     <section className="sectionWrapperSimplerFutureCommerceAbout">
@@ -21,9 +21,12 @@ function SimplerFutureCommerceAbout() {
           </p>
           
           <div className="btnGroupSimplerFutureCommerceAbout">
+            <Link href='consultation'>
             <button className="btnPrimarySimplerFutureCommerceAbout">
               Book a Free Demo <ArrowRight size={18} className="btnIconSimplerFutureCommerceAbout" />
             </button>
+            </Link>
+            
             <button className="btnSecondarySimplerFutureCommerceAbout">
               Contact Us
             </button>

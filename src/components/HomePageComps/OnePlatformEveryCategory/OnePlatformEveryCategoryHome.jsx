@@ -34,12 +34,12 @@ function OnePlatformEveryCategoryHome() {
       desc: "Gear up for performance",
       imgSrc: "/ProductGridImageHome.png"
     },
-    // {
-    //   id: 6,
-    //   title: "Toys & Kids",
-    //   desc: "Fun for every age",
-    //   imgSrc: "/toys-cat.png"
-    // }
+    {
+      id: 6,
+      title: "Toys & Kids",
+      desc: "Fun for every age",
+      imgSrc: "/ProductGridImageHome.png"
+    }
   ];
 
   return (

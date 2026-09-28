@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import './MainSliderProductPage.css';
-
+import Link from 'next/link';
 // Number counter animation ke liye custom hook
 const useCounter = (end, duration = 2000, decimals = 0) => {
   const [count, setCount] = useState(0);
@@ -62,9 +62,11 @@ function MainSliderProductPage() {
           </p>
 
           <div className="btnGroupMainSliderProductPage animDelay4">
+            <Link href='/consultation'>
             <button className="btnPrimaryMainSliderProductPage">
             Book a Free Demo <ArrowRight size={18} className="btnIconMainSliderProductPage" />
             </button>
+            </Link>
             <button className="btnSecondaryMainSliderProductPage">
               <PlayCircle size={20} className="playIconMainSliderProductPage" /> Explore Features
             </button>

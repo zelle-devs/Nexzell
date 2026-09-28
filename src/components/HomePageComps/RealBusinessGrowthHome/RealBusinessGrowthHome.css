@@ -80,6 +80,7 @@
   padding-bottom: 1rem;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  cursor: grab;
 }
 
 .carouselTrackRealBusinessGrowthHome::-webkit-scrollbar {
@@ -158,25 +159,291 @@
   margin-top: 0.25rem;
 }
 
-@media (max-width: 1024px) {
+/* ---------- Dots (hidden by default on desktop) ---------- */
+.dotsRealBusinessGrowthHome {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dotRealBusinessGrowthHome {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--nexzell-border-highlight, #334155);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dotRealBusinessGrowthHome:hover {
+  background-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.dotRealBusinessGrowthHome.isActiveRealBusinessGrowthHome {
+  background-color: var(--nexzell-primary, #FFFFFF);
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 1200px) {
+
   .containerRealBusinessGrowthHome {
-    flex-direction: column;
-    align-items: flex-start;
+    max-width: 100%;
+    padding: 0 1.75rem;
     gap: 3rem;
   }
-  
+
+  .leftColumnRealBusinessGrowthHome {
+    flex: 0 0 32%;
+  }
+
+  .headingRealBusinessGrowthHome {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+  }
+
+  .testimonialCardRealBusinessGrowthHome {
+    flex: 0 0 300px;
+    padding: 2.25rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperRealBusinessGrowthHome {
+    padding: 4.5rem 0;
+  }
+
+  .containerRealBusinessGrowthHome {
+    width: 100%;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.75rem;
+  }
+
   .leftColumnRealBusinessGrowthHome {
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
+    flex: none;
   }
-  
+
+  .headingRealBusinessGrowthHome {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionRealBusinessGrowthHome {
+    font-size: 0.95rem;
+    max-width: 680px;
+    margin-bottom: 1.75rem;
+  }
+
+  .rightColumnRealBusinessGrowthHome {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Hide navigation arrows */
+  .navButtonsRealBusinessGrowthHome {
+    display: none;
+  }
+
+  /* Show carousel dots */
+  .dotsRealBusinessGrowthHome {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .carouselTrackRealBusinessGrowthHome {
+    width: 100%;
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .testimonialCardRealBusinessGrowthHome {
+    flex: 0 0 310px;
+    padding: 2rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperRealBusinessGrowthHome {
+    padding: 4rem 0;
+  }
+
+  .containerRealBusinessGrowthHome {
+    padding: 0 1.25rem;
+    gap: 2.25rem;
+  }
+
+  .leftColumnRealBusinessGrowthHome {
+    max-width: 100%;
+  }
+
+  .headingRealBusinessGrowthHome {
+    font-size: clamp(1.8rem, 6vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionRealBusinessGrowthHome {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
   .rightColumnRealBusinessGrowthHome {
     width: 100%;
   }
+
+  .carouselTrackRealBusinessGrowthHome {
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonialCardRealBusinessGrowthHome {
+    flex: 0 0 340px;
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--nexzell-radius-sm, 12px);
+  }
+
+  .quoteIconWrapperRealBusinessGrowthHome {
+    margin-bottom: 1.25rem;
+  }
+
+  .quoteTextRealBusinessGrowthHome {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .userInfoRealBusinessGrowthHome {
+    gap: 0.85rem;
+  }
+
+  .avatarRealBusinessGrowthHome {
+    width: 44px;
+    height: 44px;
+  }
+
+  .userNameRealBusinessGrowthHome {
+    font-size: 0.9rem;
+  }
+
+  .userTitleRealBusinessGrowthHome {
+    font-size: 0.72rem;
+  }
+
+  .dotsRealBusinessGrowthHome {
+    gap: 0.45rem;
+    margin-top: 0.25rem;
+  }
+
 }
 
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
 @media (max-width: 600px) {
-  .testimonialCardRealBusinessGrowthHome {
-    flex: 0 0 85vw;
+
+  .sectionWrapperRealBusinessGrowthHome {
+    padding: 3.5rem 0;
   }
+
+  .containerRealBusinessGrowthHome {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .headingRealBusinessGrowthHome {
+    font-size: clamp(1.7rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionRealBusinessGrowthHome {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+
+  .carouselTrackRealBusinessGrowthHome {
+    gap: 0.85rem;
+    padding-bottom: 0.65rem;
+    scroll-padding-left: 0;
+  }
+
+  .testimonialCardRealBusinessGrowthHome {
+    flex: 0 0 calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .quoteIconWrapperRealBusinessGrowthHome {
+    margin-bottom: 1rem;
+  }
+
+  .quoteTextRealBusinessGrowthHome {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .userInfoRealBusinessGrowthHome {
+    gap: 0.75rem;
+  }
+
+  .avatarRealBusinessGrowthHome {
+    width: 42px;
+    height: 42px;
+  }
+
+  .userNameRealBusinessGrowthHome {
+    font-size: 0.85rem;
+  }
+
+  .userTitleRealBusinessGrowthHome {
+    font-size: 0.7rem;
+  }
+
+  .starsRealBusinessGrowthHome {
+    gap: 0.1rem;
+  }
+
+  .dotsRealBusinessGrowthHome {
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .dotRealBusinessGrowthHome {
+    width: 7px;
+    height: 7px;
+  }
+
 }

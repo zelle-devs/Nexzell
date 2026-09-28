@@ -116,6 +116,7 @@
 .rightColBuildWhatsNextAbout {
   flex: 1;
   width: 100%;
+  min-width: 0;
 }
 
 .timelineContainerBuildWhatsNextAbout {
@@ -157,7 +158,7 @@
 }
 
 .elevatedYearBuildWhatsNextAbout {
-  top: -48px;
+  top: -34px;
 }
 
 .timelineDotBuildWhatsNextAbout {
@@ -199,7 +200,10 @@
   margin: 0;
   max-width: 95%;
 }
-/* Tablet */
+
+/* ============================================================
+   Tablet  (1024px)  — horizontal timeline, fully fluid, no scroll
+   ============================================================ */
 @media (max-width: 1024px) {
 
   .sectionWrapperBuildWhatsNextAbout {
@@ -231,21 +235,15 @@
 
   .rightColBuildWhatsNextAbout {
     width: 100%;
-    overflow-x: auto;
+    min-width: 0;
+    overflow: visible;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .rightColBuildWhatsNextAbout::-webkit-scrollbar {
-    display: none;
   }
 
   .timelineContainerBuildWhatsNextAbout {
     width: 100%;
-    min-width: 800px;
+    min-width: 0;
     padding-top: 50px;
   }
 
@@ -258,8 +256,10 @@
   }
 }
 
-
-/* Small Tablet / Large Mobile */
+/* ============================================================
+   Small Tablet / Large Mobile (768px)
+   Timeline switches to a VERTICAL layout — no horizontal scroll
+   ============================================================ */
 @media (max-width: 768px) {
 
   .sectionWrapperBuildWhatsNextAbout {
@@ -300,13 +300,96 @@
     font-size: 0.9rem;
   }
 
+  /* ---------- vertical timeline ---------- */
+
+  .rightColBuildWhatsNextAbout {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .timelineContainerBuildWhatsNextAbout {
-    min-width: 760px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+    padding-top: 0;
+    gap: 2rem;
+  }
+
+  /* the horizontal line is no longer needed */
+  .timelineLineBuildWhatsNextAbout {
+    display: none;
+  }
+
+  .timelineItemBuildWhatsNextAbout {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+    padding-left: 26px;
+  }
+
+  /* connector line that runs from this dot down to the next dot */
+  .timelineItemBuildWhatsNextAbout::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    width: 1px;
+    height: calc(100% + 2rem - 11px);
+    background-color: var(--nexzell-border-highlight, #334155);
+    z-index: 1;
+  }
+
+  .timelineItemBuildWhatsNextAbout:last-child::before {
+    display: none;
+  }
+
+  /* the year above the line is a duplicate on mobile — hidden */
+  .topYearBuildWhatsNextAbout {
+    display: none;
+  }
+
+  .elevatedYearBuildWhatsNextAbout {
+    display: none;
+  }
+
+  .timelineDotBuildWhatsNextAbout {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    margin-bottom: 0;
+    z-index: 2;
+  }
+
+  .timelineContentBuildWhatsNextAbout {
+    gap: 0.3rem;
+  }
+
+  .bottomYearBuildWhatsNextAbout {
+    font-size: 0.8rem;
+  }
+
+  .timelineTitleBuildWhatsNextAbout {
+    font-size: 1rem;
+  }
+
+  .timelineDescBuildWhatsNextAbout {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-width: 100%;
   }
 }
 
-
-/* Mobile */
+/* ============================================================
+   Mobile (640px)
+   ============================================================ */
 @media (max-width: 640px) {
 
   .sectionWrapperBuildWhatsNextAbout {
@@ -360,39 +443,42 @@
     gap: 0.4rem;
   }
 
+  /* ---------- vertical timeline (kept, just tightened) ---------- */
+
   .rightColBuildWhatsNextAbout {
-    width: calc(100% + 1rem);
-    margin-left: -0.5rem;
-    padding-left: 0.5rem;
-    padding-bottom: 1.25rem;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 0;
   }
 
   .timelineContainerBuildWhatsNextAbout {
-    min-width: 720px;
-    padding-top: 48px;
-  }
-
-  .timelineLineBuildWhatsNextAbout {
-    top: 52px;
+    width: 100%;
+    min-width: 0;
+    padding-top: 0;
+    gap: 1.75rem;
   }
 
   .timelineItemBuildWhatsNextAbout {
-    padding-right: 1rem;
+    padding-left: 22px;
+    padding-right: 0;
   }
 
-  .topYearBuildWhatsNextAbout {
-    top: -34px;
-    font-size: 0.78rem;
-  }
-
-  .elevatedYearBuildWhatsNextAbout {
-    top: -45px;
+  .timelineItemBuildWhatsNextAbout::before {
+    left: 4px;
+    top: 14px;
+    height: calc(100% + 1.75rem - 11px);
   }
 
   .timelineDotBuildWhatsNextAbout {
     width: 9px;
     height: 9px;
-    margin-bottom: 1.25rem;
+    top: 3px;
+    margin-bottom: 0;
+  }
+
+  .timelineContentBuildWhatsNextAbout {
+    gap: 0.25rem;
   }
 
   .bottomYearBuildWhatsNextAbout {
@@ -400,18 +486,19 @@
   }
 
   .timelineTitleBuildWhatsNextAbout {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .timelineDescBuildWhatsNextAbout {
-    font-size: 0.72rem;
-    line-height: 1.5;
-    max-width: 90%;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    max-width: 100%;
   }
 }
 
-
-/* Very Small Mobile */
+/* ============================================================
+   Very Small Mobile (380px)
+   ============================================================ */
 @media (max-width: 380px) {
 
   .sectionWrapperBuildWhatsNextAbout {
@@ -437,14 +524,23 @@
   }
 
   .timelineContainerBuildWhatsNextAbout {
-    min-width: 680px;
+    min-width: 0;
+    gap: 1.5rem;
+  }
+
+  .timelineItemBuildWhatsNextAbout {
+    padding-left: 20px;
+  }
+
+  .timelineItemBuildWhatsNextAbout::before {
+    height: calc(100% + 1.5rem - 11px);
   }
 
   .timelineTitleBuildWhatsNextAbout {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
   }
 
   .timelineDescBuildWhatsNextAbout {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
   }
 }
