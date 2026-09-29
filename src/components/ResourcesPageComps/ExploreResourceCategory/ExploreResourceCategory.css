@@ -1,0 +1,464 @@
+.sectionWrapperExploreResourceCategory {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerExploreResourceCategory {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px); /* Slightly wider for 5 columns */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimExploreResourceCategory {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpExploreResourceCategory {
+  animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1ExploreResourceCategory { opacity: 0; animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2ExploreResourceCategory { opacity: 0; animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3ExploreResourceCategory { opacity: 0; animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4ExploreResourceCategory { opacity: 0; animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5ExploreResourceCategory { opacity: 0; animation: fadeUpAnimExploreResourceCategory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Header --- */
+.headerExploreResourceCategory {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitleExploreResourceCategory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.headingExploreResourceCategory {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.textHighlightExploreResourceCategory {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionExploreResourceCategory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  max-width: 700px;
+}
+
+/* --- Grid & Cards --- */
+.gridExploreResourceCategory {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.cardExploreResourceCategory {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.cardExploreResourceCategory:hover {
+  transform: translateY(-5px);
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardTopExploreResourceCategory {
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.iconBoxExploreResourceCategory {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  background-color: rgba(0, 230, 153, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.cardIconExploreResourceCategory {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardTitleExploreResourceCategory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDescExploreResourceCategory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.cardBtnExploreResourceCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardBtnExploreResourceCategory:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+}
+
+.btnArrowExploreResourceCategory {
+  transition: transform 0.3s ease;
+}
+
+.cardBtnExploreResourceCategory:hover .btnArrowExploreResourceCategory {
+  transform: translateX(3px);
+}
+
+.cardBottomExploreResourceCategory {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+.cardImageExploreResourceCategory {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cardExploreResourceCategory:hover .cardImageExploreResourceCategory {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 1200px) {
+
+  .sectionWrapperExploreResourceCategory {
+    padding: 5.5rem 0;
+  }
+
+  .containerExploreResourceCategory {
+    max-width: 100%;
+    padding: 0 1.75rem;
+  }
+
+  .headerExploreResourceCategory {
+    margin-bottom: 3.5rem;
+  }
+
+  .gridExploreResourceCategory {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardTopExploreResourceCategory {
+    padding: 1.65rem 1.15rem;
+  }
+
+  .cardBottomExploreResourceCategory {
+    padding: 0 1.15rem 1.15rem 1.15rem;
+  }
+
+  .cardImageExploreResourceCategory {
+    height: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperExploreResourceCategory {
+    padding: 5rem 0;
+  }
+
+  .containerExploreResourceCategory {
+    padding: 0 1.5rem;
+  }
+
+  .headerExploreResourceCategory {
+    width: 100%;
+    max-width: 750px;
+    margin-bottom: 3rem;
+  }
+
+  .headingExploreResourceCategory {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .descriptionExploreResourceCategory {
+    max-width: 650px;
+    line-height: 1.6;
+  }
+
+  .gridExploreResourceCategory {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardTopExploreResourceCategory {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cardBottomExploreResourceCategory {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+
+  .cardImageExploreResourceCategory {
+    height: 150px;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperExploreResourceCategory {
+    padding: 4.5rem 0;
+  }
+
+  .containerExploreResourceCategory {
+    padding: 0 1.25rem;
+  }
+
+  .headerExploreResourceCategory {
+    margin-bottom: 2.75rem;
+  }
+
+  .subtitleExploreResourceCategory {
+    font-size: 0.7rem;
+    letter-spacing: 1.35px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingExploreResourceCategory {
+    font-size: clamp(1.85rem, 5.5vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionExploreResourceCategory {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .gridExploreResourceCategory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cardTopExploreResourceCategory {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .iconBoxExploreResourceCategory {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1.1rem;
+  }
+
+  .cardTitleExploreResourceCategory {
+    font-size: 1rem;
+  }
+
+  .cardDescExploreResourceCategory {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 1.35rem;
+  }
+
+  .cardBtnExploreResourceCategory {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.72rem;
+  }
+
+  .cardBottomExploreResourceCategory {
+    padding: 0 1.15rem 1.15rem 1.15rem;
+  }
+
+  .cardImageExploreResourceCategory {
+    height: 135px;
+  }
+
+}
+
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sectionWrapperExploreResourceCategory {
+    padding: 3.75rem 0;
+  }
+
+  .containerExploreResourceCategory {
+    padding: 0 1rem;
+  }
+
+  .headerExploreResourceCategory {
+    width: 100%;
+    margin-bottom: 2.25rem;
+  }
+
+  .subtitleExploreResourceCategory {
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .headingExploreResourceCategory {
+    font-size: clamp(1.65rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionExploreResourceCategory {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .gridExploreResourceCategory {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cardExploreResourceCategory {
+    width: 100%;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .cardTopExploreResourceCategory {
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    align-items: flex-start;
+  }
+
+  .iconBoxExploreResourceCategory {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1rem;
+  }
+
+  .cardTitleExploreResourceCategory {
+    font-size: 0.98rem;
+    line-height: 1.4;
+  }
+
+  .cardDescExploreResourceCategory {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .cardBtnExploreResourceCategory {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.72rem;
+  }
+
+  .cardBottomExploreResourceCategory {
+    width: 100%;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+
+  .cardImageExploreResourceCategory {
+    height: 170px;
+    border-radius: 8px;
+  }
+
+}
+
+.mySwiperExploreResourceCategory {
+  width: 100%;
+  /* Pagination dots ke liye neeche jagah chori hai */
+  padding-bottom: 3.5rem !important; 
+}
+
+.swiperSlideExploreResource {
+  /* Har slide ki height equal karne ke liye */
+  height: auto; 
+}
+
+/* Default Dots Style (Grey) */
+.mySwiperExploreResourceCategory .swiper-pagination-bullet {
+  background-color: var(--nexzell-text-gray-400, #94A3B8) !important;
+  opacity: 0.4 !important;
+  transition: all 0.3s ease;
+}
+
+/* Active Dot Style (Neon Green & pill shape) */
+.mySwiperExploreResourceCategory .swiper-pagination-bullet-active {
+  background-color: var(--nexzell-primary, #00E699) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 12px !important;
+}

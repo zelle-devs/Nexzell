@@ -14,9 +14,10 @@ function PoweringBusinessSoluitons() {
       <div className="containerPoweringBusinessSoluitons">
         
         <div className="leftContentPoweringBusinessSoluitons">
-          <h4 className="subtitlePoweringBusinessSoluitons animFadeUpPoweringBusinessSoluitons">
-            A GLOBAL ECOSYSTEM
-          </h4>
+           <div className="badgeEverythingBusinessStarter animDelay1">
+            <span className="badgeDotEverythingBusinessStarter"></span>
+           A GLOBAL ECOSYSTEM
+          </div>
           
           <h2 className="headingPoweringBusinessSoluitons animDelay1PoweringBusinessSoluitons">
             Powering Businesses<br />

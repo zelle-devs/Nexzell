@@ -1,0 +1,544 @@
+.sectionWrapperToolsResourcesFingertips {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+}
+
+.containerToolsResourcesFingertips {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px); /* Slightly wider for the row layout */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimToolsResourcesFingertips {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpToolsResourcesFingertips {
+  animation: fadeUpAnimToolsResourcesFingertips 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1ToolsResourcesFingertips { opacity: 0; animation: fadeUpAnimToolsResourcesFingertips 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2ToolsResourcesFingertips { opacity: 0; animation: fadeUpAnimToolsResourcesFingertips 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3ToolsResourcesFingertips { opacity: 0; animation: fadeUpAnimToolsResourcesFingertips 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4ToolsResourcesFingertips { opacity: 0; animation: fadeUpAnimToolsResourcesFingertips 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Main Card Layout --- */
+.mainCardToolsResourcesFingertips {
+  position: relative;
+  background-color: rgba(14, 18, 24, 0.8);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 24px);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Abstract/Wave Background Placeholder */
+  background-image: url(../../../../public/ToolsResourcesFingertips.jpg);
+  background-size: cover;
+  background-position:top center;
+}
+
+/* Gradient overlay to ensure left text is readable and blend background */
+.mainCardToolsResourcesFingertips::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(6, 8, 12, 1) 35%, rgba(6, 8, 12, 0.7) 60%, rgba(6, 8, 12, 0.2) 100%);
+  z-index: 1;
+}
+
+.leftContentToolsResourcesFingertips {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 45%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* --- Left Content Styles --- */
+.badgeToolsResourcesFingertips {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.badgeDotToolsResourcesFingertips {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingToolsResourcesFingertips {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightToolsResourcesFingertips {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionToolsResourcesFingertips {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btnPrimaryToolsResourcesFingertips {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryToolsResourcesFingertips:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconToolsResourcesFingertips {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryToolsResourcesFingertips:hover .btnIconToolsResourcesFingertips {
+  transform: translateX(4px);
+}
+
+/* --- Right Content (Mini Cards) --- */
+.rightContentToolsResourcesFingertips {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.miniCardToolsResourcesFingertips {
+  background-color: rgba(6, 8, 12, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 240px;
+  min-height: 200px;
+  transition: all 0.3s ease;
+}
+
+.miniCardToolsResourcesFingertips:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 230, 153, 0.4);
+  background-color: rgba(14, 18, 24, 0.85);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.iconBoxToolsResourcesFingertips {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  background-color: rgba(0, 230, 153, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: auto; /* Pushes the text to the bottom */
+}
+
+.miniCardIconToolsResourcesFingertips {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.miniCardTextWrapperToolsResourcesFingertips {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.miniCardTitleToolsResourcesFingertips {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.miniCardDescToolsResourcesFingertips {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+
+  .sectionWrapperToolsResourcesFingertips {
+    padding: 5.5rem 0;
+  }
+
+  .containerToolsResourcesFingertips {
+    max-width: 100%;
+    padding: 0 1.75rem;
+  }
+
+  .mainCardToolsResourcesFingertips {
+    padding: 3.5rem;
+    gap: 2.5rem;
+    background-position: center right;
+  }
+
+  .mainCardToolsResourcesFingertips::before {
+    background: linear-gradient(
+      to right,
+      rgba(6, 8, 12, 1) 30%,
+      rgba(6, 8, 12, 0.78) 58%,
+      rgba(6, 8, 12, 0.3) 100%
+    );
+  }
+
+  .leftContentToolsResourcesFingertips {
+    flex: 0 0 42%;
+    max-width: 460px;
+  }
+
+  .headingToolsResourcesFingertips {
+    font-size: clamp(2rem, 3.2vw, 2.4rem);
+  }
+
+  .descriptionToolsResourcesFingertips {
+    font-size: 0.9rem;
+  }
+
+  .rightContentToolsResourcesFingertips {
+    gap: 0.85rem;
+  }
+
+  .miniCardToolsResourcesFingertips {
+    max-width: 155px;
+    min-height: 190px;
+    padding: 1.35rem 1.1rem;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperToolsResourcesFingertips {
+    padding: 5rem 0;
+  }
+
+  .containerToolsResourcesFingertips {
+    padding: 0 1.5rem;
+  }
+
+  .mainCardToolsResourcesFingertips {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 3rem 2.5rem;
+    gap: 2.5rem;
+    background-position: center;
+  }
+
+  .mainCardToolsResourcesFingertips::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 1) 12%,
+      rgba(6, 8, 12, 0.9) 42%,
+      rgba(6, 8, 12, 0.55) 72%,
+      rgba(6, 8, 12, 0.35) 100%
+    );
+  }
+
+  .leftContentToolsResourcesFingertips {
+    width: 100%;
+    max-width: 680px;
+    flex: none;
+    margin-bottom: 0;
+  }
+
+  .headingToolsResourcesFingertips {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .descriptionToolsResourcesFingertips {
+    max-width: 650px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .rightContentToolsResourcesFingertips {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    justify-content: stretch;
+  }
+
+  .miniCardToolsResourcesFingertips {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 185px;
+    padding: 1.5rem 1.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperToolsResourcesFingertips {
+    padding: 4.5rem 0;
+  }
+
+  .containerToolsResourcesFingertips {
+    padding: 0 1.25rem;
+  }
+
+  .mainCardToolsResourcesFingertips {
+    padding: 2.75rem 1.75rem;
+    border-radius: var(--nexzell-radius-lg, 24px);
+    gap: 2.25rem;
+    background-position: center;
+  }
+
+  .mainCardToolsResourcesFingertips::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 1) 15%,
+      rgba(6, 8, 12, 0.9) 45%,
+      rgba(6, 8, 12, 0.65) 75%,
+      rgba(6, 8, 12, 0.4) 100%
+    );
+  }
+
+  .leftContentToolsResourcesFingertips {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeToolsResourcesFingertips {
+    font-size: 0.68rem;
+    letter-spacing: 0.9px;
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .headingToolsResourcesFingertips {
+    font-size: clamp(1.85rem, 5.5vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionToolsResourcesFingertips {
+    font-size: 0.87rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnPrimaryToolsResourcesFingertips {
+    padding: 0.75rem 1.3rem;
+    font-size: 0.85rem;
+  }
+
+  .rightContentToolsResourcesFingertips {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.9rem;
+  }
+
+  .miniCardToolsResourcesFingertips {
+    min-height: 175px;
+    min-width: 200px;
+    padding: 1.35rem 0.7rem;
+  }
+
+  .iconBoxToolsResourcesFingertips {
+    width: 34px;
+    height: 34px;
+  }
+
+  .miniCardTextWrapperToolsResourcesFingertips {
+    margin-top: 1.25rem;
+    gap: 0.3rem;
+  }
+
+  .miniCardTitleToolsResourcesFingertips {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .miniCardDescToolsResourcesFingertips {
+    font-size: 0.68rem;
+    line-height: 1.45;
+  }
+
+}
+
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sectionWrapperToolsResourcesFingertips {
+    padding: 3.75rem 0;
+  }
+
+  .containerToolsResourcesFingertips {
+    padding: 0 1rem;
+  }
+
+  .mainCardToolsResourcesFingertips {
+    width: 100%;
+    padding: 2.25rem 1.25rem;
+    border-radius: var(--nexzell-radius-lg, 24px);
+    gap: 2rem;
+    background-position: center;
+  }
+
+  .mainCardToolsResourcesFingertips::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 8, 12, 1) 12%,
+      rgba(6, 8, 12, 0.94) 40%,
+      rgba(6, 8, 12, 0.78) 68%,
+      rgba(6, 8, 12, 0.55) 100%
+    );
+  }
+
+  .leftContentToolsResourcesFingertips {
+    width: 100%;
+  }
+
+  .badgeToolsResourcesFingertips {
+    font-size: 0.64rem;
+    letter-spacing: 0.8px;
+    padding: 0.28rem 0.65rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotToolsResourcesFingertips {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingToolsResourcesFingertips {
+    font-size: clamp(1.65rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionToolsResourcesFingertips {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.4rem;
+  }
+
+  .btnPrimaryToolsResourcesFingertips {
+    width: auto;
+    max-width: 100%;
+    padding: 0.7rem 1.15rem;
+    font-size: 0.8rem;
+  }
+
+  .rightContentToolsResourcesFingertips {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .miniCardToolsResourcesFingertips {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 145px;
+    padding: 1.25rem 1.1rem;
+  }
+
+  .iconBoxToolsResourcesFingertips {
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+  }
+
+  .miniCardTextWrapperToolsResourcesFingertips {
+    margin-top: 1.1rem;
+  }
+
+  .miniCardTitleToolsResourcesFingertips {
+    font-size: 0.84rem;
+  }
+
+  .miniCardDescToolsResourcesFingertips {
+    font-size: 0.67rem;
+    line-height: 1.5;
+  }
+
+}

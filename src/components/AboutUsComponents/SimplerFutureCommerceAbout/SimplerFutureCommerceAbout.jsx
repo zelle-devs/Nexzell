@@ -21,7 +21,7 @@ function SimplerFutureCommerceAbout() {
           </p>
           
           <div className="btnGroupSimplerFutureCommerceAbout">
-            <Link href='consultation'>
+            <Link href='/consultation'>
             <button className="btnPrimarySimplerFutureCommerceAbout">
               Book a Free Demo <ArrowRight size={18} className="btnIconSimplerFutureCommerceAbout" />
             </button>

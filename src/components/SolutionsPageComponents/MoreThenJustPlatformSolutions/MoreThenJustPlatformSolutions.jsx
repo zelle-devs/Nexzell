@@ -41,7 +41,10 @@ function MoreThenJustPlatformSolutions() {
       <div className="containerMoreThenJustPlatformSolutions">
         
         <div className="headerMoreThenJustPlatformSolutions animFadeUpMoreThenJustPlatformSolutions">
-          <h4 className="subtitleMoreThenJustPlatformSolutions">WHY BUSINESSES CHOOSE NEXZELL</h4>
+          <div className="badgeEverythingBusinessStarter animDelay1">
+            <span className="badgeDotEverythingBusinessStarter"></span>
+            WHY BUSINESS CHOOSE NEXZELLE
+          </div>
           <h2 className="titleMoreThenJustPlatformSolutions">More Than Just a Platform</h2>
           <p className="descMoreThenJustPlatformSolutions">
             Everything you need to build, run and grow your ecommerce business — in one place.

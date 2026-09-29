@@ -40,7 +40,7 @@ function Header() {
     { href: '/product', label: 'Product' },
     { href: '/solutions', label: 'Solutions' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '#resources', label: 'Resources' },
+    { href: '/resources', label: 'Resources' },
     { href: '/about-us', label: 'About' },
   ];
 
@@ -89,7 +89,7 @@ function Header() {
             </button>
 
             <Link
-              href="/login"
+              href="#login"
               className="loginBtnNexzellHeaderMain hideOnScrollNexzellHeaderMain"
               onClick={(e) => handleNav(e, '/login', 'Login')}
             >
@@ -159,7 +159,7 @@ function Header() {
 
         <div className="drawerFooterNexzellHeaderMain">
           <Link
-            href="/login"
+            href="#login"
             className="drawerLoginBtnNexzellHeaderMain"
             onClick={(e) => handleNav(e, '/login', 'Login')}
           >

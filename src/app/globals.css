@@ -39,7 +39,7 @@
   --fw-semibold: 600;
   --fw-bold: 700;
   --fw-extrabold: 800;
-
+  --font-size-sm: 10px
   --nexzell-container-width: 1500px;
   --nexzell-padding-x: 2rem;
   --nexzell-section-gap: 3rem;
@@ -50,6 +50,19 @@
   
   --transition-fast: 0.2s ease-in-out;
   --transition-base: 0.3s ease-in-out;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-base: 15px;
+  --font-size-lg: 17px;
+  --font-size-xl: 19px;
+  --font-size-2xl: 22px;
+  --font-size-3xl: 26px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 38px;
+  --font-size-6xl: 46px;
+  --font-size-special: 48px;
+  --font-size-7xl: 52px;
+  --font-size-8xl: 64px;
 }
 
 

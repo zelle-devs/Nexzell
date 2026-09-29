@@ -570,3 +570,31 @@
     font-size: 0.7rem;
   }
 }
+
+.mySwiperFitYourBusinessSolutions {
+  width: 100%;
+  padding-bottom: 3.5rem !important; /* Pagination dots ke liye neeche jagah */
+}
+
+.swiperSlideFitYourBusiness {
+  height: auto; /* Har slide ki height grid layout ki tarah barabar karne ke liye */
+}
+
+/* Default Dots Style (Grey) */
+.mySwiperFitYourBusinessSolutions .swiper-pagination-bullet {
+  background-color: var(--nexzell-text-gray-400, #94A3B8) !important;
+  opacity: 0.4 !important;
+  transition: all 0.3s ease;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+}
+
+/* Active Dot Style (Neon Green & pill shape) */
+.mySwiperFitYourBusinessSolutions .swiper-pagination-bullet-active {
+  background-color: var(--nexzell-primary, #00E699) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 12px !important;
+  transform: scale(1) !important; 
+}

@@ -1,0 +1,475 @@
+.sectionWrapperBuildResourcesGrowNexzell {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerBuildResourcesGrowNexzell {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  padding: 0 var(--nexzell-padding-x, 2rem);
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimBuildResourcesGrowNexzell {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpBuildResourcesGrowNexzell {
+  animation: fadeUpAnimBuildResourcesGrowNexzell 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1BuildResourcesGrowNexzell { opacity: 0; animation: fadeUpAnimBuildResourcesGrowNexzell 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2BuildResourcesGrowNexzell { opacity: 0; animation: fadeUpAnimBuildResourcesGrowNexzell 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3BuildResourcesGrowNexzell { opacity: 0; animation: fadeUpAnimBuildResourcesGrowNexzell 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4BuildResourcesGrowNexzell { opacity: 0; animation: fadeUpAnimBuildResourcesGrowNexzell 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Card Layout --- */
+.cardBuildResourcesGrowNexzell {
+  display: flex;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Abstract wave pattern overlay on the right side */
+.cardBuildResourcesGrowNexzell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../../public/ContactUsPageCtaBackgroun.png);
+  background-size: cover;
+  background-position: right bottom;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+/* --- Left Image Column --- */
+.leftImageColBuildResourcesGrowNexzell {
+  flex: 0 0 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImageBuildResourcesGrowNexzell {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.62;
+}
+
+/* Smooth gradient fade to blend the image into the card background */
+.imageOverlayFadeBuildResourcesGrowNexzell {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  /* background: linear-gradient(to right, transparent, rgba(14, 18, 24, 0.973) 90%, rgba(14, 18, 24, 1) 120%); */
+}
+
+/* --- Right Text Column --- */
+.rightTextColBuildResourcesGrowNexzell {
+  flex: 1;
+  padding: 4.5rem 4rem 4.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.subtitleBuildResourcesGrowNexzell {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.headingBuildResourcesGrowNexzell {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightBuildResourcesGrowNexzell {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionBuildResourcesGrowNexzell {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 2.25rem 0;
+  max-width: 90%;
+}
+
+/* --- Buttons --- */
+.btnGroupBuildResourcesGrowNexzell {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.btnPrimaryBuildResourcesGrowNexzell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryBuildResourcesGrowNexzell:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconBuildResourcesGrowNexzell {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryBuildResourcesGrowNexzell:hover .btnIconBuildResourcesGrowNexzell {
+  transform: translateX(4px);
+}
+
+.btnSecondaryBuildResourcesGrowNexzell {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryBuildResourcesGrowNexzell:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+/* =========================================================
+   RESPONSIVE — 4 BREAKPOINT SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   1. SMALL DESKTOP / LARGE LAPTOP
+   1200px and below
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .sectionWrapperBuildResourcesGrowNexzell {
+    padding: 5.5rem 0;
+  }
+
+  .containerBuildResourcesGrowNexzell {
+    max-width: 100%;
+    padding: 0 1.75rem;
+  }
+
+  .cardBuildResourcesGrowNexzell {
+    min-height: 380px;
+  }
+
+  .leftImageColBuildResourcesGrowNexzell {
+    flex: 0 0 43%;
+  }
+
+  .imageOverlayFadeBuildResourcesGrowNexzell {
+    width: 45%;
+  }
+
+  .rightTextColBuildResourcesGrowNexzell {
+    padding: 3.5rem 3rem 3.5rem 1.75rem;
+  }
+
+  .headingBuildResourcesGrowNexzell {
+    font-size: clamp(2rem, 3.4vw, 2.5rem);
+  }
+
+  .descriptionBuildResourcesGrowNexzell {
+    max-width: 95%;
+    font-size: 0.9rem;
+  }
+
+  .btnGroupBuildResourcesGrowNexzell {
+    gap: 1rem;
+  }
+
+  .btnPrimaryBuildResourcesGrowNexzell,
+  .btnSecondaryBuildResourcesGrowNexzell {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperBuildResourcesGrowNexzell {
+    padding: 5rem 0;
+  }
+
+  .containerBuildResourcesGrowNexzell {
+    padding: 0 1.5rem;
+  }
+
+  .cardBuildResourcesGrowNexzell {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .cardBuildResourcesGrowNexzell::before {
+    width: 100%;
+    height: 100%;
+    top: auto;
+    bottom: 0;
+    background-position: center bottom;
+  }
+
+  .leftImageColBuildResourcesGrowNexzell {
+    flex: none;
+    width: 100%;
+    height: 340px;
+  }
+
+  .cardImageBuildResourcesGrowNexzell {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imageOverlayFadeBuildResourcesGrowNexzell {
+    width: 100%;
+    height: 50%;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      rgba(14, 18, 24, 1) 0%,
+      rgba(14, 18, 24, 0.75) 45%,
+      rgba(14, 18, 24, 0) 100%
+    );
+  }
+
+  .rightTextColBuildResourcesGrowNexzell {
+    width: 100%;
+    padding: 2rem 2.5rem 3.5rem 2.5rem;
+    align-items: flex-start;
+  }
+
+  .subtitleBuildResourcesGrowNexzell {
+    font-size: 0.72rem;
+  }
+
+  .headingBuildResourcesGrowNexzell {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .descriptionBuildResourcesGrowNexzell {
+    max-width: 720px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupBuildResourcesGrowNexzell {
+    gap: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperBuildResourcesGrowNexzell {
+    padding: 4.5rem 0;
+  }
+
+  .containerBuildResourcesGrowNexzell {
+    padding: 0 1.25rem;
+  }
+
+  .cardBuildResourcesGrowNexzell {
+    border-radius: var(--nexzell-radius-lg, 24px);
+  }
+
+  .cardBuildResourcesGrowNexzell::before {
+    height: 100%;
+  }
+
+  .leftImageColBuildResourcesGrowNexzell {
+    height: 300px;
+  }
+
+  .imageOverlayFadeBuildResourcesGrowNexzell {
+    height: 55%;
+    background: linear-gradient(
+      to top,
+      rgba(14, 18, 24, 1) 0%,
+      rgba(14, 18, 24, 0.8) 45%,
+      rgba(14, 18, 24, 0) 100%
+    );
+  }
+
+  .rightTextColBuildResourcesGrowNexzell {
+    padding: 1.75rem 1.75rem 3rem 1.75rem;
+  }
+
+  .subtitleBuildResourcesGrowNexzell {
+    font-size: 0.7rem;
+    letter-spacing: 1.35px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingBuildResourcesGrowNexzell {
+    font-size: clamp(1.85rem, 5.5vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionBuildResourcesGrowNexzell {
+    font-size: 0.87rem;
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupBuildResourcesGrowNexzell {
+    gap: 0.85rem;
+  }
+
+  .btnPrimaryBuildResourcesGrowNexzell,
+  .btnSecondaryBuildResourcesGrowNexzell {
+    padding: 0.75rem 1.35rem;
+    font-size: 0.85rem;
+  }
+
+}
+
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sectionWrapperBuildResourcesGrowNexzell {
+    padding: 3.75rem 0;
+  }
+
+  .containerBuildResourcesGrowNexzell {
+    padding: 0 1rem;
+  }
+
+  .cardBuildResourcesGrowNexzell {
+    width: 100%;
+    border-radius: var(--nexzell-radius-lg, 24px);
+  }
+
+  .cardBuildResourcesGrowNexzell::before {
+    height: 100%;
+    opacity: 0.12;
+  }
+
+  .leftImageColBuildResourcesGrowNexzell {
+    height: 240px;
+  }
+
+  .imageOverlayFadeBuildResourcesGrowNexzell {
+    height: 60%;
+    background: linear-gradient(
+      to top,
+      rgba(14, 18, 24, 1) 0%,
+      rgba(14, 18, 24, 0.82) 45%,
+      rgba(14, 18, 24, 0) 100%
+    );
+  }
+
+  .rightTextColBuildResourcesGrowNexzell {
+    width: 100%;
+    padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+  }
+
+  .subtitleBuildResourcesGrowNexzell {
+    font-size: 0.66rem;
+    letter-spacing: 1.15px;
+    margin-bottom: 0.75rem;
+  }
+
+  .headingBuildResourcesGrowNexzell {
+    font-size: clamp(1.65rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionBuildResourcesGrowNexzell {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnGroupBuildResourcesGrowNexzell {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .btnPrimaryBuildResourcesGrowNexzell,
+  .btnSecondaryBuildResourcesGrowNexzell {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    font-size: 0.8rem;
+  }
+}
