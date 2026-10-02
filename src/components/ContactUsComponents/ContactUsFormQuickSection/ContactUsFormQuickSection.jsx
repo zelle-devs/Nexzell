@@ -1,13 +1,200 @@
-import React from 'react';
-import { ArrowRight, Clock, Plus, ChevronDown } from 'lucide-react';
+import React, { useState, useRef, useEffect, useLayoutEffect, useMemo } from 'react';
+import { ArrowRight, Clock, Plus, ChevronDown, Search } from 'lucide-react';
+import {
+  COUNTRIES,
+  DEFAULT_COUNTRY_ISO,
+  FAQS,
+  getCountryByIso,
+  extractDigits,
+  stripDialCode,
+  formatPhoneNumber,
+  isPhoneComplete,
+  getFullPhoneNumber,
+} from './ContactUsFormQuickSection.js';
 import './ContactUsFormQuickSection.css';
 
+// Options for the "What can we help you with?" dropdown
+const SERVICE_OPTIONS = [
+  { value: 'sales', label: 'Sales Inquiry' },
+  { value: 'support', label: 'Technical Support' },
+  { value: 'partnership', label: 'Partnership' },
+];
+
+// Real flag images (Windows desktop browsers can't render flag emojis)
+function Flag({ country }) {
+  const code = country.iso.toLowerCase();
+  return (
+    <img
+      className="flagImgContactUsFormQuickSection"
+      src={`https://flagcdn.com/w40/${code}.png`}
+      srcSet={`https://flagcdn.com/w80/${code}.png 2x`}
+      alt=""
+      width="20"
+      height="15"
+      loading="lazy"
+      draggable="false"
+      onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
+    />
+  );
+}
+
 function ContactUsFormQuickSection() {
-  const faqs = [
-    "How quickly will I get a response?",
-    "Can I request a demo for my team?",
-    "Do you offer custom solutions for large businesses?"
-  ];
+  /* ---------- form state ---------- */
+  const [service, setService] = useState('');
+  const [serviceOpen, setServiceOpen] = useState(false);
+  const serviceRef = useRef(null);
+
+  /* ---------- phone state ---------- */
+  const [countryIso, setCountryIso] = useState(DEFAULT_COUNTRY_ISO);
+  const [phoneDigits, setPhoneDigits] = useState(''); // raw digits only, no dial code
+  const [phoneTouched, setPhoneTouched] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [query, setQuery] = useState('');
+
+  const phoneRef = useRef(null);
+  const pickerRef = useRef(null);
+  const searchRef = useRef(null);
+  const activeOptionRef = useRef(null);
+  const caretDigits = useRef(null);
+
+  /* ---------- FAQ state ---------- */
+  const [openFaq, setOpenFaq] = useState(null);
+
+  /* ---------- derived phone values ---------- */
+  const country = getCountryByIso(countryIso);
+  const formattedPhone = formatPhoneNumber(phoneDigits, country);
+  const phoneInvalid =
+    phoneTouched && phoneDigits.length > 0 && !isPhoneComplete(phoneDigits, country);
+
+  const filteredCountries = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return COUNTRIES;
+    const qDigits = q.replace(/^\+/, '');
+    const numeric = /^\d+$/.test(qDigits);
+    return COUNTRIES.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        c.iso.toLowerCase() === q ||
+        (numeric && c.dial.slice(1).startsWith(qDigits))
+    );
+  }, [query]);
+
+  /* ---------- phone handlers ---------- */
+  const handlePhoneChange = (e) => {
+    const raw = e.target.value;
+    const caret = e.target.selectionStart ?? raw.length;
+
+    // Handles typing AND pasting numbers like "+92 300 1234567"
+    const digits = stripDialCode(raw, country).slice(0, country.maxDigits);
+
+    caretDigits.current = raw.trim().startsWith('+')
+      ? null
+      : extractDigits(raw.slice(0, caret)).length;
+
+    setPhoneDigits(digits);
+  };
+
+  // Keeps the caret in the right place after the mask re-formats the value
+  useLayoutEffect(() => {
+    const el = phoneRef.current;
+    if (caretDigits.current == null || !el || document.activeElement !== el) return;
+    const target = Math.min(caretDigits.current, phoneDigits.length);
+    let pos = 0;
+    if (target > 0) {
+      let count = 0;
+      for (let i = 0; i < formattedPhone.length; i++) {
+        if (/\d/.test(formattedPhone[i])) count++;
+        if (count === target) {
+          pos = i + 1;
+          break;
+        }
+      }
+    }
+    el.setSelectionRange(pos, pos);
+    caretDigits.current = null;
+  }, [phoneDigits, formattedPhone]);
+
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+    setQuery('');
+  };
+
+  const toggleDropdown = () => {
+    if (dropdownOpen) closeDropdown();
+    else {
+      setServiceOpen(false);
+      setDropdownOpen(true);
+    }
+  };
+
+  const selectCountry = (iso) => {
+    const next = getCountryByIso(iso);
+    setCountryIso(next.iso);
+    setPhoneDigits((d) => d.slice(0, next.maxDigits)); // respect the new country's limit
+    closeDropdown();
+    requestAnimationFrame(() => phoneRef.current && phoneRef.current.focus());
+  };
+
+  // Close on outside click / Escape
+  useEffect(() => {
+    if (!dropdownOpen) return undefined;
+    const onMouseDown = (e) => {
+      if (pickerRef.current && !pickerRef.current.contains(e.target)) closeDropdown();
+    };
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') closeDropdown();
+    };
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [dropdownOpen]);
+
+  // Focus search + scroll the selected country into view when opened
+  useEffect(() => {
+    if (!dropdownOpen) return;
+    if (searchRef.current) searchRef.current.focus();
+    if (activeOptionRef.current) activeOptionRef.current.scrollIntoView({ block: 'nearest' });
+  }, [dropdownOpen]);
+
+  /* ---------- service dropdown ---------- */
+  const selectedService = SERVICE_OPTIONS.find((o) => o.value === service);
+
+  const selectService = (value) => {
+    setService(value);
+    setServiceOpen(false);
+  };
+
+  const handleServiceKeyDown = (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const i = SERVICE_OPTIONS.findIndex((o) => o.value === service);
+      const next = e.key === 'ArrowDown' ? Math.min(i + 1, SERVICE_OPTIONS.length - 1) : Math.max(i - 1, 0);
+      setService(SERVICE_OPTIONS[next].value);
+    }
+  };
+
+  // Close on outside click / Escape
+  useEffect(() => {
+    if (!serviceOpen) return undefined;
+    const onMouseDown = (e) => {
+      if (serviceRef.current && !serviceRef.current.contains(e.target)) setServiceOpen(false);
+    };
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setServiceOpen(false);
+    };
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [serviceOpen]);
+
+  /* ---------- FAQ handler ---------- */
+  const toggleFaq = (index) => setOpenFaq((cur) => (cur === index ? null : index));
 
   return (
     <section className="sectionWrapperContactUsFormQuickSection">
@@ -48,7 +235,7 @@ function ContactUsFormQuickSection() {
 
               <div className="inputGroupContactUsFormQuickSection">
                 <label className="labelContactUsFormQuickSection">
-                  Business Email <span className="requiredContactUsFormQuickSection">*</span>
+                   Email 
                 </label>
                 <input type="email" className="inputContactUsFormQuickSection" placeholder="john@company.com" />
               </div>
@@ -60,36 +247,168 @@ function ContactUsFormQuickSection() {
                 <input type="text" className="inputContactUsFormQuickSection" placeholder="Your Company" />
               </div>
 
-              <div className="inputGroupContactUsFormQuickSection">
-                <label className="labelContactUsFormQuickSection">Phone Number</label>
-                <div className="phoneInputWrapperContactUsFormQuickSection">
-                  <div className="phonePrefixContactUsFormQuickSection">
-                    <span className="flagContactUsFormQuickSection">🇺🇸</span>
-                    <span className="codeContactUsFormQuickSection">+1</span>
-                    <ChevronDown size={14} className="chevronContactUsFormQuickSection" />
-                  </div>
-                  <div className="phoneDividerContactUsFormQuickSection"></div>
-                  <input type="tel" className="inputContactUsFormQuickSection phoneFieldContactUsFormQuickSection" placeholder="(555) 123-4567" />
-                </div>
-              </div>
+            
 
-              <div className="inputGroupContactUsFormQuickSection">
+              {/* <div className="inputGroupContactUsFormQuickSection">
                 <label className="labelContactUsFormQuickSection">
                   What can we help you with? <span className="requiredContactUsFormQuickSection">*</span>
                 </label>
-                <div className="selectWrapperContactUsFormQuickSection">
-                  <select className="inputContactUsFormQuickSection selectContactUsFormQuickSection">
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="sales">Sales Inquiry</option>
-                    <option value="support">Technical Support</option>
-                    <option value="partnership">Partnership</option>
-                  </select>
-                  <ChevronDown size={16} className="selectChevronContactUsFormQuickSection" />
+                <div className="selectWrapperContactUsFormQuickSection" ref={serviceRef}>
+                  <button
+                    type="button"
+                    className={`inputContactUsFormQuickSection selectContactUsFormQuickSection selectTriggerContactUsFormQuickSection${
+                      serviceOpen ? ' selectTriggerOpenContactUsFormQuickSection' : ''
+                    }`}
+                    aria-haspopup="listbox"
+                    aria-expanded={serviceOpen}
+                    onClick={() => {
+                      setDropdownOpen(false);
+                      setServiceOpen((o) => !o);
+                    }}
+                    onKeyDown={handleServiceKeyDown}
+                  >
+                    <span
+                      className={`selectTriggerValueContactUsFormQuickSection${
+                        selectedService ? '' : ' selectTriggerPlaceholderContactUsFormQuickSection'
+                      }`}
+                    >
+                      {selectedService ? selectedService.label : 'Select an option'}
+                    </span>
+                  </button>
+                  <ChevronDown
+                    size={16}
+                    className={`selectChevronContactUsFormQuickSection${
+                      serviceOpen ? ' selectChevronOpenContactUsFormQuickSection' : ''
+                    }`}
+                  />
+                  <input type="hidden" name="service" value={service} />
+
+                  {serviceOpen && (
+                    <div className="countryDropdownContactUsFormQuickSection">
+                      <ul className="countryListContactUsFormQuickSection" role="listbox">
+                        {SERVICE_OPTIONS.map((opt) => {
+                          const isActive = opt.value === service;
+                          return (
+                            <li
+                              key={opt.value}
+                              role="option"
+                              aria-selected={isActive}
+                              className={`countryOptionContactUsFormQuickSection${
+                                isActive ? ' countryOptionActiveContactUsFormQuickSection' : ''
+                              }`}
+                              onClick={() => selectService(opt.value)}
+                            >
+                              <span className="countryOptionNameContactUsFormQuickSection">{opt.label}</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-              </div>
+              </div> */}
 
             </div>
+              {/* ---------- Phone ---------- */}
+              <div className="inputGroupContactUsFormQuickSection fullWidthContactUsFormQuickSection">
+                <label className="labelContactUsFormQuickSection">Phone Number <span className="requiredContactUsFormQuickSection">*</span></label>
+                
+                <div className="phoneFieldOuterContactUsFormQuickSection" ref={pickerRef}>
+                  <div className="phoneInputWrapperContactUsFormQuickSection">
+                    <div
+                      className="phonePrefixContactUsFormQuickSection phonePrefixButtonContactUsFormQuickSection"
+                      role="button"
+                      tabIndex={0}
+                      aria-haspopup="listbox"
+                      aria-expanded={dropdownOpen}
+                      aria-label={`Country: ${country.name} ${country.dial}`}
+                      onClick={toggleDropdown}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+                          e.preventDefault();
+                          if (!dropdownOpen) setDropdownOpen(true);
+                          else if (e.key !== 'ArrowDown') closeDropdown();
+                        }
+                      }}
+                    >
+                      <span className="flagContactUsFormQuickSection"><Flag country={country} /></span>
+                      <span className="codeContactUsFormQuickSection">{country.dial}</span>
+                      <ChevronDown
+                        size={14}
+                        className={`chevronContactUsFormQuickSection${
+                          dropdownOpen ? ' chevronOpenContactUsFormQuickSection' : ''
+                        }`}
+                      />
+                    </div>
+                    <div className="phoneDividerContactUsFormQuickSection"></div>
+                    <input
+                      ref={phoneRef}
+                      type="tel"
+                      inputMode="tel"
+                      autoComplete="tel-national"
+                      className="inputContactUsFormQuickSection phoneFieldContactUsFormQuickSection"
+                      placeholder={country.placeholder}
+                      value={formattedPhone}
+                      onChange={handlePhoneChange}
+                      onBlur={() => setPhoneTouched(true)}
+                      aria-invalid={phoneInvalid}
+                    />
+                    {/* Full international number, e.g. +923001234567 */}
+                    <input
+                      type="hidden"
+                      name="phone"
+                      value={getFullPhoneNumber(phoneDigits, country)}
+                    />
+                  </div>
 
+                  {dropdownOpen && (
+                    <div className="countryDropdownContactUsFormQuickSection">
+                      <div className="countrySearchRowContactUsFormQuickSection">
+                        <Search size={15} className="countrySearchIconContactUsFormQuickSection" />
+                        <input
+                          ref={searchRef}
+                          type="text"
+                          className="countrySearchInputContactUsFormQuickSection"
+                          placeholder="Search country or code"
+                          value={query}
+                          onChange={(e) => setQuery(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' && filteredCountries.length > 0) {
+                              e.preventDefault();
+                              selectCountry(filteredCountries[0].iso);
+                            }
+                          }}
+                        />
+                      </div>
+
+                      <ul className="countryListContactUsFormQuickSection" role="listbox">
+                        {filteredCountries.length === 0 && (
+                          <li className="countryEmptyContactUsFormQuickSection">No countries found</li>
+                        )}
+                        {filteredCountries.map((c) => {
+                          const isActive = c.iso === country.iso;
+                          return (
+                            <li
+                              key={c.iso}
+                              ref={isActive ? activeOptionRef : null}
+                              role="option"
+                              aria-selected={isActive}
+                              className={`countryOptionContactUsFormQuickSection${
+                                isActive ? ' countryOptionActiveContactUsFormQuickSection' : ''
+                              }`}
+                              onClick={() => selectCountry(c.iso)}
+                            >
+                              <span className="countryOptionFlagContactUsFormQuickSection"><Flag country={c} /></span>
+                              <span className="countryOptionNameContactUsFormQuickSection">{c.name}</span>
+                              <span className="countryOptionDialContactUsFormQuickSection">{c.dial}</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
             <div className="inputGroupContactUsFormQuickSection fullWidthContactUsFormQuickSection">
               <label className="labelContactUsFormQuickSection">Tell us more about your business...</label>
               <textarea 
@@ -128,12 +447,41 @@ function ContactUsFormQuickSection() {
           </div>
 
           <div className="faqListContactUsFormQuickSection">
-            {faqs.map((question, index) => (
-              <div key={index} className="faqItemContactUsFormQuickSection">
-                <span className="faqQuestionContactUsFormQuickSection">{question}</span>
-                <Plus size={18} className="faqIconContactUsFormQuickSection" />
-              </div>
-            ))}
+            {FAQS.map((faq, index) => {
+              const isOpen = openFaq === index;
+              return (
+                <div
+                  key={faq.id}
+                  className={`faqItemContactUsFormQuickSection faqItemAccordionContactUsFormQuickSection${
+                    isOpen ? ' faqItemOpenContactUsFormQuickSection' : ''
+                  }`}
+                  onClick={() => toggleFaq(index)}
+                >
+                  <button
+                    type="button"
+                    id={`faq-trigger-${faq.id}`}
+                    className="faqTriggerContactUsFormQuickSection"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${faq.id}`}
+                  >
+                    <span className="faqQuestionContactUsFormQuickSection">{faq.question}</span>
+                    <Plus size={18} className="faqIconContactUsFormQuickSection" />
+                  </button>
+
+                  <div
+                    id={`faq-panel-${faq.id}`}
+                    role="region"
+                    aria-labelledby={`faq-trigger-${faq.id}`}
+                    className="faqAnswerWrapContactUsFormQuickSection"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="faqAnswerInnerContactUsFormQuickSection">
+                      <p className="faqAnswerTextContactUsFormQuickSection">{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
         </div>

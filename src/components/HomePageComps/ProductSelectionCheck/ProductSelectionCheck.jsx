@@ -27,20 +27,15 @@ function ProductSelectionCheck() {
     setImageKey((k) => k + 1);
   };
 
-const glassStyle = {
-    WebkitBackdropFilter: 'blur(0px) ',
-    backdropFilter: 'blur(0px) ',
-    WebkitBackgroundClip: 'padding-box', // Yeh blur ko border ke bahar nikalne se rokega
-    backgroundClip: 'padding-box'
-  };
   return (
     <div className="rootProductSelectionCheck">
       <div className="stageProductSelectionCheck">
         {/* Inventory card */}
         <div 
           className="cardProductSelectionCheck inventoryCardProductSelectionCheck"
-          style={glassStyle}
+         
         >
+          <span className="glassLayerProductSelectionCheck" aria-hidden="true" />
           <p className="cardTitleProductSelectionCheck">Inventory</p>
           <p className="inventoryNumberProductSelectionCheck">1,428</p>
           <span className="inventoryLabelProductSelectionCheck">Products</span>
@@ -58,8 +53,9 @@ const glassStyle = {
         {/* Product Details card */}
         <div 
           className="cardProductSelectionCheck detailsCardProductSelectionCheck"
-          style={glassStyle}
+        
         >
+          <span className="glassLayerProductSelectionCheck" aria-hidden="true" />
           <p className="cardTitleProductSelectionCheck">Product Details</p>
           <div className="imageStageProductSelectionCheck" key={imageKey}>
             <div className="shoeImgWrapProductSelectionCheck">
@@ -92,8 +88,9 @@ const glassStyle = {
         {/* Product ID card */}
         <div 
           className="cardProductSelectionCheck productIdCardProductSelectionCheck"
-          style={glassStyle}
+        
         >
+          <span className="glassLayerProductSelectionCheck" aria-hidden="true" />
           <p className="cardTitleProductSelectionCheck">Product ID:</p>
 
           <div className="fieldProductSelectionCheck">
@@ -171,8 +168,9 @@ const glassStyle = {
         {/* Sync Across All Channels card */}
         <div 
           className="cardProductSelectionCheck syncCardProductSelectionCheck"
-          style={glassStyle}
+         
         >
+          <span className="glassLayerProductSelectionCheck" aria-hidden="true" />
           <p className="cardTitleProductSelectionCheck">
             Sync Across
             <br />

@@ -39,8 +39,8 @@
   --fw-semibold: 600;
   --fw-bold: 700;
   --fw-extrabold: 800;
-  --font-size-sm: 10px
-  --nexzell-container-width: 1500px;
+  --font-size-sm: 10px;
+  --nexzell-container-width: 1590px;
   --nexzell-padding-x: 2rem;
   --nexzell-section-gap: 3rem;
   --nexzell-radius-sm: 8px;
@@ -70,7 +70,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none !important;
+  /* user-select: none !important; */
   -webkit-tap-highlight-color: transparent;
 }
 

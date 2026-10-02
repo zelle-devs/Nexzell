@@ -152,7 +152,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.875rem 1rem;
+  padding: 0 1rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -468,7 +468,7 @@
 
   .formGridContactUsFormQuickSection {
     width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2fr , 1fr);
     gap: 1.1rem;
     margin-bottom: 1.25rem;
   }
@@ -879,4 +879,381 @@
     font-size: 0.7rem;
     line-height: 1.45;
   }
+}
+
+
+/* ---------- Phone: country dropdown ---------- */
+ 
+.phoneFieldOuterContactUsFormQuickSection {
+  position: relative;
+  width: 100%;
+}
+ 
+.phonePrefixButtonContactUsFormQuickSection {
+  user-select: none;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+ 
+.phonePrefixButtonContactUsFormQuickSection:focus-visible {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+ 
+.chevronContactUsFormQuickSection {
+  transition: transform 0.25s ease;
+}
+ 
+.chevronContactUsFormQuickSection.chevronOpenContactUsFormQuickSection {
+  transform: rotate(180deg);
+}
+ 
+@keyframes dropdownInAnimContactUsFormQuickSection {
+  0% { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+ 
+.countryDropdownContactUsFormQuickSection {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  background-color: #0B0F15;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  animation: dropdownInAnimContactUsFormQuickSection 0.2s ease forwards;
+}
+ 
+.countrySearchRowContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--nexzell-border-highlight, #334155);
+}
+ 
+.countrySearchIconContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-500, #64748B);
+  flex-shrink: 0;
+}
+ 
+.countrySearchInputContactUsFormQuickSection {
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+ 
+.countrySearchInputContactUsFormQuickSection::placeholder {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+ 
+.countryListContactUsFormQuickSection {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  max-height: 260px;
+  overflow-y: auto;
+  /* scrollbar-width: thin;              <-- DELETE */
+  /* scrollbar-color: #334155 transparent; <-- DELETE */
+}
+
+.countryListContactUsFormQuickSection::-webkit-scrollbar {
+  width: 12px;
+}
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+.countryOptionContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  transition: background-color 0.2s ease;
+}
+ 
+.countryOptionContactUsFormQuickSection:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+ 
+.countryOptionActiveContactUsFormQuickSection {
+  background-color: rgba(0, 230, 153, 0.08);
+  color: var(--nexzell-primary, #00E699);
+}
+ 
+.countryOptionFlagContactUsFormQuickSection {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+ 
+.countryOptionNameContactUsFormQuickSection {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.countryOptionDialContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  flex-shrink: 0;
+}
+ 
+.countryEmptyContactUsFormQuickSection {
+  padding: 1rem 0.9rem;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  text-align: center;
+}
+ 
+/* ---------- FAQ accordion ---------- */
+ 
+.faqItemContactUsFormQuickSection.faqItemAccordionContactUsFormQuickSection {
+  flex-wrap: wrap;
+  row-gap: 0;
+}
+ 
+.faqItemContactUsFormQuickSection.faqItemOpenContactUsFormQuickSection {
+  border-color: rgba(0, 230, 153, 0.4);
+  background-color: rgba(0, 230, 153, 0.02);
+}
+ 
+.faqTriggerContactUsFormQuickSection {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+ 
+.faqTriggerContactUsFormQuickSection:focus-visible {
+  outline: 2px solid rgba(0, 230, 153, 0.6);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+ 
+.faqItemContactUsFormQuickSection.faqItemOpenContactUsFormQuickSection .faqIconContactUsFormQuickSection {
+  transform: rotate(45deg);
+  color: var(--nexzell-primary, #00E699);
+}
+ 
+.faqIconContactUsFormQuickSection {
+  flex-shrink: 0;
+}
+ 
+.faqAnswerWrapContactUsFormQuickSection {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  cursor: default;
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    visibility 0s linear 0.4s;
+}
+ 
+.faqItemOpenContactUsFormQuickSection .faqAnswerWrapContactUsFormQuickSection {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease 0.05s,
+    visibility 0s linear 0s;
+}
+ 
+.faqAnswerInnerContactUsFormQuickSection {
+  min-height: 0;
+  overflow: hidden;
+}
+ 
+.faqAnswerTextContactUsFormQuickSection {
+  margin: 0;
+  padding-top: 1rem;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+}
+ 
+@media (max-width: 768px) {
+  .countryOptionContactUsFormQuickSection,
+  .countrySearchInputContactUsFormQuickSection {
+    font-size: 0.8rem;
+  }
+ 
+  .faqAnswerTextContactUsFormQuickSection {
+    font-size: 0.8rem;
+    padding-top: 0.85rem;
+  }
+}
+ 
+@media (max-width: 640px) {
+  .countryListContactUsFormQuickSection {
+    max-height: 220px;
+  }
+ 
+  .countryOptionContactUsFormQuickSection {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.76rem;
+  }
+ 
+  .countrySearchRowContactUsFormQuickSection {
+    padding: 0.6rem 0.8rem;
+  }
+ 
+  .faqAnswerTextContactUsFormQuickSection {
+    font-size: 0.74rem;
+    padding-top: 0.75rem;
+  }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  .faqAnswerWrapContactUsFormQuickSection,
+  .faqIconContactUsFormQuickSection,
+  .countryDropdownContactUsFormQuickSection {
+    transition: none;
+    animation: none;
+  }
+}
+ 
+
+.flagContactUsFormQuickSection,
+.countryOptionFlagContactUsFormQuickSection {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+ 
+.flagImgContactUsFormQuickSection {
+  display: block;
+  width: 1.3em;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+ 
+ 
+/* Firefox only */
+@supports not selector(::-webkit-scrollbar) {
+  .countryListContactUsFormQuickSection {
+    scrollbar-width: thin;
+    scrollbar-color: var(--nexzell-primary, #00E699) transparent;
+  }
+}
+
+/* Chrome, Edge, Safari */
+.countryListContactUsFormQuickSection::-webkit-scrollbar {
+  width: 5px;
+}
+
+.countryListContactUsFormQuickSection::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 6px 0;
+}
+
+.countryListContactUsFormQuickSection::-webkit-scrollbar-thumb {
+  background:  var(--nexzell-primary, #00E699);
+  border-radius: 10px;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nexzell-primary, #00E699) 35%, transparent);
+}
+
+.countryListContactUsFormQuickSection::-webkit-scrollbar-thumb:hover {
+  background: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--nexzell-primary, #00E699) 50%, transparent);
+}
+
+/* ---------- Items ---------- */
+.countryOptionContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  transition: all var(--transition-base, 0.3s ease);
+}
+
+.countryOptionContactUsFormQuickSection:hover {
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 10%, transparent);
+  color: var(--nexzell-primary, #00E699);
+}
+
+/* dial code (+92) bhi hover par primary color le */
+.countryOptionContactUsFormQuickSection:hover .countryOptionDialContactUsFormQuickSection {
+  color: var(--nexzell-primary, #00E699);
+}
+
+/* ---------- Selected item ---------- */
+.countryOptionContactUsFormQuickSection.countryOptionActiveContactUsFormQuickSection {
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 10%, transparent);
+  color: var(--nexzell-primary, #00E699);
+}
+
+.countryOptionContactUsFormQuickSection.countryOptionActiveContactUsFormQuickSection:hover {
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 16%, transparent);
+}
+
+.countryOptionActiveContactUsFormQuickSection .countryOptionDialContactUsFormQuickSection {
+  color: var(--nexzell-primary, #00E699);
+}
+
+ 
+.selectTriggerContactUsFormQuickSection {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+ 
+.selectTriggerValueContactUsFormQuickSection {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.selectTriggerPlaceholderContactUsFormQuickSection {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+ 
+.selectTriggerOpenContactUsFormQuickSection {
+  border-color: var(--nexzell-primary, #00E699);
+  background-color: rgba(0, 230, 153, 0.02);
+}
+ 
+.selectChevronContactUsFormQuickSection {
+  transition: transform 0.25s ease;
+}
+ 
+.selectChevronContactUsFormQuickSection.selectChevronOpenContactUsFormQuickSection {
+  transform: translateY(-50%) rotate(180deg);
 }

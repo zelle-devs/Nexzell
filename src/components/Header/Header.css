@@ -12,7 +12,6 @@
   align-items: center;
   backdrop-filter: blur(5px);
   transform-origin: bottom center;
-
   transition:
     top 0.45s cubic-bezier(0.4, 0, 0.2, 1),
     width 0.45s cubic-bezier(0.4, 0, 0.2, 1),
@@ -81,7 +80,7 @@
 .navListNexzellHeaderMain {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -90,35 +89,56 @@
 .navItemNexzellHeaderMain {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+}
+
+/* Nav Link Hover & Active Animation */
+.navLinkNexzellHeaderMain {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.15rem;
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--nexzell-text-gray-100, #E2E8F0);
-  cursor: pointer;
-  transition: color 0.3s ease;
-  font-family: var(--font-poppins), sans-serif;
-}
-
-.navItemNexzellHeaderMain a {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: inherit;
+  color: var(--nexzell-text-gray-100, #94A3B8);
   text-decoration: none;
+  font-family: var(--font-poppins), sans-serif;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navItemNexzellHeaderMain:hover {
+.navLinkIndicator {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2.5px;
+  border-radius: 4px;
+  background: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.65);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+/* Hover state */
+.navLinkNexzellHeaderMain:hover {
   color: var(--nexzell-text-white, #FFFFFF);
 }
 
-.chevronIconNexzellHeaderMain {
-  color: var(--nexzell-text-gray-300, #94A3B8);
-  transition: transform 0.3s ease, color 0.3s ease;
+.navLinkNexzellHeaderMain:hover .navLinkIndicator {
+  transform: translateX(-50%) scaleX(0.7);
+  opacity: 0.8;
 }
 
-.navItemNexzellHeaderMain:hover .chevronIconNexzellHeaderMain {
-  transform: rotate(180deg);
+/* Active state */
+.navLinkNexzellHeaderMain.activeNavLinkNexzell {
   color: var(--nexzell-text-white, #FFFFFF);
+  font-weight: 600;
+}
+
+.navLinkNexzellHeaderMain.activeNavLinkNexzell .navLinkIndicator {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
 }
 
 .rightActionsNexzellHeaderMain {
@@ -289,18 +309,45 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.9rem 0.25rem;
+  padding: 0.9rem 0.5rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--nexzell-text-gray-100, #E2E8F0);
   text-decoration: none;
   border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 6px;
 }
 
 .drawerNavItemNexzellHeaderMain a:hover {
   color: var(--nexzell-primary, #00E699);
-  padding-left: 0.5rem;
+  padding-left: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.drawerActiveBadge {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+/* Active Link inside Drawer */
+.drawerNavItemNexzellHeaderMain a.activeDrawerNavLinkNexzell {
+  color: var(--nexzell-primary, #00E699);
+  font-weight: 600;
+  padding-left: 0.85rem;
+  background-color: rgba(0, 230, 153, 0.08);
+  border-bottom-color: rgba(0, 230, 153, 0.25);
+}
+
+.drawerNavItemNexzellHeaderMain a.activeDrawerNavLinkNexzell .drawerActiveBadge {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .drawerFooterNexzellHeaderMain {
@@ -353,11 +400,9 @@
   .rightActionsNexzellHeaderMain {
     display: none;
   }
-
   .menuBtnNexzellHeaderMain {
     display: flex;
   }
-
   .taglineTextNexzellHeaderMain {
     display: flex;
   }
@@ -367,7 +412,6 @@
   .containerNexzellHeaderMain {
     padding: 0 1.25rem;
   }
-
   .logoImgNexzellHeaderMain {
     width: 120px;
   }
@@ -375,7 +419,7 @@
 
 .hideOnScrollNexzellHeaderMain {
   opacity: 1;
-  max-width: 200px;          /* itna rakhein ke element ki asli width se zyada ho */
+  max-width: 200px;
   overflow: hidden;
   white-space: nowrap;
   transform: translateX(0);
