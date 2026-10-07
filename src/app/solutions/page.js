@@ -1,4 +1,5 @@
 import RealBusinessGrowthHome from '@/components/HomePageComps/RealBusinessGrowthHome/RealBusinessGrowthHome'
+import BuildResourcesGrowNexzell from '@/components/ResourcesPageComps/BuildResourcesGrowNexzell/BuildResourcesGrowNexzell'
 import FitYourBusinessSolutions from '@/components/SolutionsPageComponents/FitYourBusinessSolutions/FitYourBusinessSolutions'
 import MainSliderSolutions from '@/components/SolutionsPageComponents/MainSliderSolutions/MainSliderSolutions'
 import MoreThenJustPlatformSolutions from '@/components/SolutionsPageComponents/MoreThenJustPlatformSolutions/MoreThenJustPlatformSolutions'
@@ -15,6 +16,7 @@ function page() {
         <OurFutureTogetherSolutions/>
         <PoweringBusinessSoluitons/>
         <RealBusinessGrowthHome/>
+        <BuildResourcesGrowNexzell/>
     </div>
   )
 }

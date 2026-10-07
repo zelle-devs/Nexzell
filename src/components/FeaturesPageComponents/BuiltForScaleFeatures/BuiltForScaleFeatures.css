@@ -1,0 +1,439 @@
+.sectionWrapperBuiltForScaleFeatures {
+  position: relative;
+  width: 100%;
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  
+  /* Placeholder Background Image */
+  background-image: url(../../../../public/BuiltForScaleFeatures.png);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Gradient overlay to ensure text readability on the left while revealing the image on the right */
+.bgOverlayBuiltForScaleFeatures {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(6, 8, 12, 1) 0%, rgba(6, 8, 12, 0.9) 40%, rgba(6, 8, 12, 0.4) 100%);
+  z-index: 1;
+}
+
+.containerBuiltForScaleFeatures {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1300px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimBuiltForScaleFeatures {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpBuiltForScaleFeatures {
+  animation: fadeUpAnimBuiltForScaleFeatures 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1BuiltForScaleFeatures { opacity: 0; animation: fadeUpAnimBuiltForScaleFeatures 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay2BuiltForScaleFeatures { opacity: 0; animation: fadeUpAnimBuiltForScaleFeatures 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay3BuiltForScaleFeatures { opacity: 0; animation: fadeUpAnimBuiltForScaleFeatures 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay4BuiltForScaleFeatures { opacity: 0; animation: fadeUpAnimBuiltForScaleFeatures 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Text Content --- */
+.textContentBuiltForScaleFeatures {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeBuiltForScaleFeatures {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotBuiltForScaleFeatures {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingBuiltForScaleFeatures {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionBuiltForScaleFeatures {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* --- Features Row --- */
+.featuresRowBuiltForScaleFeatures {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.featureItemBuiltForScaleFeatures {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Vertical divider line for items except the last one (on desktop) */
+.featureItemBuiltForScaleFeatures:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1.25rem;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.featureIconBoxBuiltForScaleFeatures {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 230, 153, 0.2);
+}
+
+.featureIconBuiltForScaleFeatures {
+  color: var(--nexzell-bg-base, #06080C); /* Dark icon on bright green background */
+}
+
+.featureTextWrapperBuiltForScaleFeatures {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureTitleBuiltForScaleFeatures {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.2rem 0;
+}
+
+.featureDescBuiltForScaleFeatures {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+@media (max-width: 1200px) {
+
+  .sectionWrapperBuiltForScaleFeatures {
+    padding: 5rem 0;
+    background-position: right center;
+  }
+
+  .containerBuiltForScaleFeatures {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+    gap: 3rem;
+  }
+
+  .textContentBuiltForScaleFeatures {
+    max-width: 600px;
+  }
+
+  .headingBuiltForScaleFeatures {
+    font-size: clamp(1.95rem, 3.8vw, 2.6rem);
+  }
+
+  .descriptionBuiltForScaleFeatures {
+    max-width: 95%;
+  }
+
+  .featuresRowBuiltForScaleFeatures {
+    gap: 2rem;
+  }
+
+  .featureItemBuiltForScaleFeatures {
+    gap: 0.85rem;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperBuiltForScaleFeatures {
+    padding: 4.5rem 0;
+    background-position: center center;
+  }
+
+  .bgOverlayBuiltForScaleFeatures {
+    background:
+      linear-gradient(
+        to right,
+        rgba(6, 8, 12, 1) 0%,
+        rgba(6, 8, 12, 0.92) 50%,
+        rgba(6, 8, 12, 0.72) 100%
+      );
+  }
+
+  .containerBuiltForScaleFeatures {
+    max-width: 900px;
+    padding: 0 1.5rem;
+    gap: 2.75rem;
+  }
+
+  .textContentBuiltForScaleFeatures {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeBuiltForScaleFeatures {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingBuiltForScaleFeatures {
+    font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionBuiltForScaleFeatures {
+    max-width: 100%;
+    font-size: 0.93rem;
+  }
+
+  .featuresRowBuiltForScaleFeatures {
+    width: 100%;
+    gap: 1.75rem;
+  }
+
+  .featureItemBuiltForScaleFeatures {
+    gap: 0.8rem;
+  }
+
+  .featureIconBoxBuiltForScaleFeatures {
+    width: 38px;
+    height: 38px;
+  }
+
+  .featureTitleBuiltForScaleFeatures {
+    font-size: 0.9rem;
+  }
+
+  .featureDescBuiltForScaleFeatures {
+    font-size: 0.73rem;
+  }
+
+}
+
+
+@media (max-width: 749px) {
+
+  .sectionWrapperBuiltForScaleFeatures {
+    padding: 4rem 0;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .bgOverlayBuiltForScaleFeatures {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 8, 12, 0.98) 0%,
+        rgba(6, 8, 12, 0.92) 35%,
+        rgba(6, 8, 12, 0.78) 70%,
+        rgba(6, 8, 12, 0.95) 100%
+      );
+  }
+
+  .containerBuiltForScaleFeatures {
+    max-width: 100%;
+    padding: 0 1.25rem;
+    gap: 2.5rem;
+  }
+
+  .textContentBuiltForScaleFeatures {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeBuiltForScaleFeatures {
+    gap: 0.45rem;
+    padding: 0.32rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotBuiltForScaleFeatures {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingBuiltForScaleFeatures {
+    width: 100%;
+    font-size: clamp(1.8rem, 6.5vw, 2.25rem);
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionBuiltForScaleFeatures {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .featuresRowBuiltForScaleFeatures {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .featureItemBuiltForScaleFeatures {
+    width: 100%;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+
+  .featureItemBuiltForScaleFeatures:not(:last-child)::after {
+    display: none;
+  }
+
+  .featureIconBoxBuiltForScaleFeatures {
+    width: 36px;
+    height: 36px;
+  }
+
+  .featureTextWrapperBuiltForScaleFeatures {
+    min-width: 0;
+  }
+
+  .featureTitleBuiltForScaleFeatures {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    margin-bottom: 0.15rem;
+  }
+
+  .featureDescBuiltForScaleFeatures {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .sectionWrapperBuiltForScaleFeatures {
+    padding: 3rem 0;
+    background-position: center center;
+  }
+
+  .bgOverlayBuiltForScaleFeatures {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 8, 12, 0.99) 0%,
+        rgba(6, 8, 12, 0.94) 40%,
+        rgba(6, 8, 12, 0.84) 70%,
+        rgba(6, 8, 12, 0.97) 100%
+      );
+  }
+
+  .containerBuiltForScaleFeatures {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .badgeBuiltForScaleFeatures {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.62rem;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeDotBuiltForScaleFeatures {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingBuiltForScaleFeatures {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionBuiltForScaleFeatures {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .featuresRowBuiltForScaleFeatures {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .featureItemBuiltForScaleFeatures {
+    gap: 0.7rem;
+    align-items: center;
+  }
+
+  .featureIconBoxBuiltForScaleFeatures {
+    width: 34px;
+    height: 34px;
+  }
+
+  .featureTitleBuiltForScaleFeatures {
+    font-size: 0.83rem;
+    line-height: 1.3;
+  }
+
+  .featureDescBuiltForScaleFeatures {
+    font-size: 0.69rem;
+    line-height: 1.35;
+  }
+
+}

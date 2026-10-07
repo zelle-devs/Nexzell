@@ -1,5 +1,6 @@
 .sectionWrapperBetterRelationCheckoutSimpleProduct {
-  padding: 6rem 0;
+  padding: 3rem 0;
+  /* padding-bottom: 0; */
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
 }
@@ -29,7 +30,7 @@
 }
 
 .cardMainBetterRelationCheckoutSimpleProduct {
-  background-color: rgba(14, 18, 24, 0.4);
+  /* background-color: rgba(14, 18, 24, 0.4); */
   border: 1px solid var(--nexzell-border-subtle, #1E293B);
   border-radius: var(--nexzell-radius-lg, 16px);
   padding: 2.5rem;

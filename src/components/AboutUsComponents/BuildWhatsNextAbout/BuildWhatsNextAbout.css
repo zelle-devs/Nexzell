@@ -96,7 +96,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 4rem;
-  align-items: start;
+  align-items: end;
 }
 
 .leftColBuildWhatsNextAbout {
@@ -181,7 +181,7 @@
 }
 
 .descriptionBuildWhatsNextAbout:last-of-type {
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 
 .btnOutlineBuildWhatsNextAbout {

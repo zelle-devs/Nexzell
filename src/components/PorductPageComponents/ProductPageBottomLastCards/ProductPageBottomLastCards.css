@@ -1,0 +1,1549 @@
+/* =====================================================================
+   ProductPageBottomLastCards
+   Every class ends with "ProductPageBottomLastCards" to avoid conflicts.
+   Global variables (--nexzell-*) come from your global css.
+   ===================================================================== */
+
+.sectionProductPageBottomLastCards {
+  /* --card-bg-ProductPageBottomLastCards: linear-gradient(
+    160deg,
+    #0c1519 0%,
+    #090f13 55%,
+    #070b0e 100%
+  ); */
+  --teal-ProductPageBottomLastCards: var(--nexzell-primary, #00e699);
+  /* --teal-soft-ProductPageBottomLastCards: rgba(0, 230, 153, 0.14); */
+  --card-border-ProductPageBottomLastCards: rgba(120, 160, 170, 0.16);
+
+  width: 100%;
+  padding: 24px var(--nexzell-padding-x, 2rem);
+  background: var(--nexzell-bg-base, #06080c);
+  font-family: var(--font-montserrat), var(--nexzell-font-family), sans-serif;
+}
+
+.containerProductPageBottomLastCards {
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 60 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ------------------------------ CARD ------------------------------ */
+.cardProductPageBottomLastCards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+  padding: 22px 22px 22px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border-ProductPageBottomLastCards);
+  background: var(--card-bg-ProductPageBottomLastCards);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: border-color var(--transition-base, 0.3s ease-in-out),
+    box-shadow var(--transition-base, 0.3s ease-in-out),
+    transform var(--transition-base, 0.3s ease-in-out);
+}
+
+/* soft teal glow in the corner */
+.cardProductPageBottomLastCards::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -45% -20%;
+  height: 70%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 230, 153, 0.07),
+    transparent 70%
+  );
+  pointer-events: none;
+  transition: opacity var(--transition-base, 0.3s ease-in-out);
+  opacity: 0.7;
+}
+
+.cardProductPageBottomLastCards > * {
+  position: relative;
+  z-index: 1;
+}
+
+.inViewProductPageBottomLastCards .cardProductPageBottomLastCards {
+  animation: cardInProductPageBottomLastCards 0.7s cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+.inViewProductPageBottomLastCards .cardTwoProductPageBottomLastCards {
+  animation-delay: 0.12s;
+}
+.inViewProductPageBottomLastCards .cardThreeProductPageBottomLastCards {
+  animation-delay: 0.24s;
+}
+
+.cardProductPageBottomLastCards:hover {
+  border-color: rgba(0, 230, 153, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 230, 153, 0.07);
+}
+.cardProductPageBottomLastCards:hover::before {
+  opacity: 1;
+}
+
+@keyframes cardInProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------ BADGE ------------------------------ */
+.badgeProductPageBottomLastCards {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 16px 4px 4px;
+  margin-bottom: 14px;
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  border: 1px solid var(--card-border-ProductPageBottomLastCards);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.badgeNumberProductPageBottomLastCards {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 230, 153, 0.55);
+  background: var(--teal-soft-ProductPageBottomLastCards);
+  color: var(--teal-ProductPageBottomLastCards);
+  font-size: 9px;
+  font-weight: var(--fw-semibold, 600);
+  letter-spacing: 0.02em;
+}
+
+.badgeLabelProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  font-size: 9px;
+  font-weight: var(--fw-medium, 500);
+  letter-spacing: 0.12em;
+}
+
+/* ------------------------------ TEXT ------------------------------ */
+.titleProductPageBottomLastCards {
+  margin: 0 0 8px;
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: var(--font-size-2xl, 22px);
+  font-weight: var(--fw-bold, 700);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.descriptionProductPageBottomLastCards {
+  margin: 0 0 18px;
+  max-width: 340px;
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 11.5px;
+  font-weight: var(--fw-regular, 400);
+  line-height: 1.55;
+}
+
+/* ------------------------------ BUTTON ------------------------------ */
+.buttonProductPageBottomLastCards {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 18px;
+  border: 0;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  background: var(--teal-ProductPageBottomLastCards);
+  color: #04120c;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 11px;
+  font-weight: var(--fw-semibold, 600);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition-fast, 0.2s ease-in-out),
+    transform var(--transition-fast, 0.2s ease-in-out),
+    box-shadow var(--transition-fast, 0.2s ease-in-out);
+}
+
+/* light sweep on hover */
+.buttonProductPageBottomLastCards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.buttonProductPageBottomLastCards:hover {
+  background: var(--nexzell-primary-hover, #00c782);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 230, 153, 0.3);
+}
+.buttonProductPageBottomLastCards:hover::after {
+  left: 130%;
+}
+.buttonProductPageBottomLastCards:active {
+  transform: translateY(0);
+}
+.buttonProductPageBottomLastCards:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.arrowIconProductPageBottomLastCards {
+  transition: transform var(--transition-fast, 0.2s ease-in-out);
+}
+.buttonProductPageBottomLastCards:hover .arrowIconProductPageBottomLastCards {
+  transform: translateX(4px);
+}
+
+/* =====================================================================
+   CARD 1 : PAYMENTS
+   ===================================================================== */
+.paymentRowProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 44px;
+  margin-bottom: 20px;
+}
+
+.paymentLogoProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  min-width: 60px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: transform var(--transition-base, 0.3s ease-in-out),
+    filter var(--transition-base, 0.3s ease-in-out);
+}
+
+.inViewProductPageBottomLastCards .paymentLogoProductPageBottomLastCards {
+  animation: logoInProductPageBottomLastCards 0.5s ease forwards;
+  animation-delay: calc(0.45s + var(--i) * 0.1s);
+}
+
+.paymentLogoProductPageBottomLastCards:hover {
+  transform: translateY(-3px) scale(1.06);
+  filter: drop-shadow(0 4px 10px rgba(0, 230, 153, 0.25));
+}
+
+.paymentLogoProductPageBottomLastCards img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* placeholder shown until you add real logos */
+.placeholderProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  border-radius: 6px;
+  color: var(--nexzell-text-gray-500, #64748b);
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+@keyframes logoInProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================================
+   CARD 2 : MARKETING
+   ===================================================================== */
+.iconTrayProductPageBottomLastCards {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border-ProductPageBottomLastCards);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.iconBoxProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: background var(--transition-fast, 0.2s ease-in-out),
+    transform var(--transition-fast, 0.2s ease-in-out),
+    box-shadow var(--transition-fast, 0.2s ease-in-out);
+}
+
+.inViewProductPageBottomLastCards .iconBoxProductPageBottomLastCards {
+  animation: iconPopProductPageBottomLastCards 0.5s
+      cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    iconFloatProductPageBottomLastCards 3.6s ease-in-out infinite;
+  animation-delay: calc(0.45s + var(--i) * 0.1s),
+    calc(1.2s + var(--i) * 0.35s);
+}
+
+/* .iconBoxActiveProductPageBottomLastCards {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+} */
+
+.iconBoxProductPageBottomLastCards:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 18px rgba(0, 230, 153, 0.25);
+}
+
+.iconBoxProductPageBottomLastCards img {
+  display: block;
+  width: 42px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.iconPlaceholderProductPageBottomLastCards {
+  width: 20px;
+  height: 20px;
+  border: 1px dashed rgba(148, 163, 184, 0.45);
+  border-radius: 5px;
+}
+
+@keyframes iconPopProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes iconFloatProductPageBottomLastCards {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -4px;
+  }
+}
+
+/* =====================================================================
+   CARD 3 : ANALYTICS
+   ===================================================================== */
+.chartWrapProductPageBottomLastCards {
+  position: relative;
+  height: 112px;
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.chartProductPageBottomLastCards {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 78%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gridLinesProductPageBottomLastCards {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gridLinesProductPageBottomLastCards span {
+  display: block;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.14) 0 3px,
+    transparent 3px 7px
+  );
+}
+
+.barsProductPageBottomLastCards {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.barProductPageBottomLastCards {
+  flex: 1;
+  max-width: 8px;
+  height: var(--h);
+  border-radius: 3px 3px 0 0;
+  background: linear-gradient(
+    180deg,
+    var(--teal-ProductPageBottomLastCards) 0%,
+    rgba(0, 230, 153, 0.35) 70%,
+    rgba(0, 230, 153, 0.08) 100%
+  );
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.35);
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.inViewProductPageBottomLastCards .barProductPageBottomLastCards {
+  animation: barGrowProductPageBottomLastCards 0.9s
+      cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    barPulseProductPageBottomLastCards 3.2s ease-in-out infinite;
+  animation-delay: calc(0.5s + var(--i) * 0.06s),
+    calc(1.8s + var(--i) * 0.12s);
+}
+
+@keyframes barGrowProductPageBottomLastCards {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* after growing, each bar breathes a little */
+@keyframes barPulseProductPageBottomLastCards {
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.88);
+    opacity: 0.8;
+  }
+}
+
+/* light that scans across the chart */
+.scanLineProductPageBottomLastCards {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20%;
+  width: 18%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 230, 153, 0.12),
+    transparent
+  );
+  pointer-events: none;
+  opacity: 0;
+}
+.inViewProductPageBottomLastCards .scanLineProductPageBottomLastCards {
+  animation: scanProductPageBottomLastCards 4.5s ease-in-out 2.2s infinite;
+}
+
+@keyframes scanProductPageBottomLastCards {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+
+/* revenue floating box */
+.revenueBoxProductPageBottomLastCards {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 100px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border-ProductPageBottomLastCards);
+  background: rgba(10, 17, 21, 0.92);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+}
+
+.inViewProductPageBottomLastCards .revenueBoxProductPageBottomLastCards {
+  animation: boxInProductPageBottomLastCards 0.6s ease 0.9s forwards,
+    boxFloatProductPageBottomLastCards 4s ease-in-out 1.6s infinite;
+}
+
+@keyframes boxInProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes boxFloatProductPageBottomLastCards {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -3px;
+  }
+}
+
+.revenueLabelProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  font-size: 9px;
+  font-weight: var(--fw-medium, 500);
+}
+
+.revenueValueProductPageBottomLastCards {
+  color: var(--nexzell-text-white, #fff);
+  font-size: 17px;
+  font-weight: var(--fw-bold, 700);
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.revenueTrendProductPageBottomLastCards {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--teal-ProductPageBottomLastCards);
+  font-size: 10px;
+  font-weight: var(--fw-semibold, 600);
+}
+.revenueTrendProductPageBottomLastCards::before {
+  content: "+";
+  margin-right: -2px;
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+
+  .sectionProductPageBottomLastCards {
+    padding: 22px 1.75rem;
+  }
+
+  .containerProductPageBottomLastCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .cardProductPageBottomLastCards {
+    min-height: 265px;
+    padding: 20px;
+  }
+
+  .badgeProductPageBottomLastCards {
+    margin-bottom: 13px;
+  }
+
+  .titleProductPageBottomLastCards {
+    font-size: 21px;
+  }
+
+  .descriptionProductPageBottomLastCards {
+    max-width: 100%;
+    font-size: 11.5px;
+  }
+
+  .paymentRowProductPageBottomLastCards {
+    gap: 18px;
+  }
+
+  .paymentLogoProductPageBottomLastCards {
+    min-width: 56px;
+    height: 50px;
+  }
+
+  .iconTrayProductPageBottomLastCards {
+    gap: 8px;
+    padding: 9px 10px;
+  }
+
+  .iconBoxProductPageBottomLastCards {
+    width: 42px;
+    height: 42px;
+  }
+
+  .chartWrapProductPageBottomLastCards {
+    height: 108px;
+  }
+
+  .revenueBoxProductPageBottomLastCards {
+    min-width: 95px;
+    padding: 9px 12px;
+  }
+
+  .cardThreeProductPageBottomLastCards {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================================
+   1024px - 790px
+   Tablet
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 790px) {
+
+  .sectionProductPageBottomLastCards {
+    padding: 20px 1.5rem;
+  }
+
+  .containerProductPageBottomLastCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cardProductPageBottomLastCards {
+    min-height: 260px;
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+
+  .badgeProductPageBottomLastCards {
+    gap: 8px;
+    padding: 4px 13px 4px 4px;
+    margin-bottom: 13px;
+  }
+
+  .badgeNumberProductPageBottomLastCards {
+    width: 23px;
+    height: 23px;
+  }
+
+  .titleProductPageBottomLastCards {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .descriptionProductPageBottomLastCards {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .buttonProductPageBottomLastCards {
+    gap: 11px;
+    padding: 10px 16px;
+    font-size: 10.5px;
+  }
+
+  .paymentRowProductPageBottomLastCards {
+    gap: 14px;
+    min-height: 42px;
+    margin-bottom: 18px;
+  }
+
+  .paymentLogoProductPageBottomLastCards {
+    height: 48px;
+    min-width: 52px;
+  }
+
+  .iconTrayProductPageBottomLastCards {
+    gap: 8px;
+    padding: 9px 10px;
+    margin-bottom: 18px;
+  }
+
+  .iconBoxProductPageBottomLastCards {
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconBoxProductPageBottomLastCards img {
+    width: 38px;
+    height: 30px;
+  }
+
+  .chartWrapProductPageBottomLastCards {
+    height: 105px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .chartProductPageBottomLastCards {
+    width: 75%;
+  }
+
+  .revenueBoxProductPageBottomLastCards {
+    top: -18px;
+    min-width: 92px;
+    padding: 9px 12px;
+  }
+
+  .revenueValueProductPageBottomLastCards {
+    font-size: 16px;
+  }
+
+  .cardThreeProductPageBottomLastCards {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =========================================================
+   789px - 481px
+   Small Tablet / Large Mobile
+========================================================= */
+
+@media (max-width: 789px) and (min-width: 481px) {
+
+  .sectionProductPageBottomLastCards {
+    padding: 18px 1.25rem;
+  }
+
+.containerProductPageBottomLastCards {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .containerProductPageBottomLastCards .cardThreeProductPageBottomLastCards {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+  }
+
+
+  .cardProductPageBottomLastCards {
+    min-height: 250px;
+    padding: 19px 17px;
+    border-radius: 14px;
+  }
+
+  .cardThreeProductPageBottomLastCards {
+    grid-column: auto;
+  }
+
+  .badgeProductPageBottomLastCards {
+    gap: 8px;
+    padding: 4px 12px 4px 4px;
+    margin-bottom: 12px;
+  }
+
+  .badgeNumberProductPageBottomLastCards {
+    width: 22px;
+    height: 22px;
+    font-size: 8.5px;
+  }
+
+  .badgeLabelProductPageBottomLastCards {
+    font-size: 8.5px;
+  }
+
+  .titleProductPageBottomLastCards {
+    font-size: 20px;
+    line-height: 1.22;
+    margin-bottom: 7px;
+  }
+
+  .descriptionProductPageBottomLastCards {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .buttonProductPageBottomLastCards {
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 10.5px;
+  }
+
+  .paymentRowProductPageBottomLastCards {
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 42px;
+    margin-bottom: 17px;
+  }
+
+  .paymentLogoProductPageBottomLastCards {
+    height: 46px;
+    min-width: 50px;
+  }
+
+  .iconTrayProductPageBottomLastCards {
+    gap: 8px;
+    padding: 8px 10px;
+    margin-bottom: 17px;
+  }
+
+  .iconBoxProductPageBottomLastCards {
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconBoxProductPageBottomLastCards img {
+    width: 38px;
+    height: 30px;
+  }
+
+  .chartWrapProductPageBottomLastCards {
+    height: 105px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .chartProductPageBottomLastCards {
+    width: 78%;
+  }
+
+  .barsProductPageBottomLastCards {
+    gap: 5px;
+  }
+
+  .revenueBoxProductPageBottomLastCards {
+    top: -18px;
+    min-width: 92px;
+    padding: 9px 11px;
+  }
+
+  .revenueLabelProductPageBottomLastCards {
+    font-size: 8.5px;
+  }
+
+  .revenueValueProductPageBottomLastCards {
+    font-size: 16px;
+  }
+
+  .revenueTrendProductPageBottomLastCards {
+    font-size: 9.5px;
+  }
+
+}
+
+
+/* =========================================================
+   480px and Below
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sectionProductPageBottomLastCards {
+    padding: 16px 1rem;
+  }
+
+  .containerProductPageBottomLastCards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cardProductPageBottomLastCards {
+    min-height: 240px;
+    padding: 17px 15px;
+    border-radius: 13px;
+  }
+
+  .cardThreeProductPageBottomLastCards {
+    grid-column: auto;
+  }
+
+  .badgeProductPageBottomLastCards {
+    gap: 7px;
+    padding: 3px 10px 3px 3px;
+    margin-bottom: 11px;
+  }
+
+  .badgeNumberProductPageBottomLastCards {
+    width: 21px;
+    height: 21px;
+    font-size: 8px;
+  }
+
+  .badgeLabelProductPageBottomLastCards {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .titleProductPageBottomLastCards {
+    font-size: 18px;
+    line-height: 1.22;
+    margin-bottom: 7px;
+  }
+
+  .descriptionProductPageBottomLastCards {
+    max-width: 100%;
+    font-size: 10.5px;
+    line-height: 1.55;
+    margin-bottom: 15px;
+  }
+
+  .buttonProductPageBottomLastCards {
+    width: auto;
+    gap: 9px;
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+
+  .paymentRowProductPageBottomLastCards {
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .paymentLogoProductPageBottomLastCards {
+    height: 42px;
+    min-width: 46px;
+  }
+
+  .placeholderProductPageBottomLastCards {
+    padding: 0 7px;
+    font-size: 8px;
+  }
+
+  .iconTrayProductPageBottomLastCards {
+    gap: 7px;
+    padding: 8px 9px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+  }
+
+  .iconBoxProductPageBottomLastCards {
+    width: 37px;
+    height: 37px;
+    border-radius: 7px;
+  }
+
+  .iconBoxProductPageBottomLastCards img {
+    width: 34px;
+    height: 28px;
+  }
+
+  .iconPlaceholderProductPageBottomLastCards {
+    width: 18px;
+    height: 18px;
+  }
+
+  .chartWrapProductPageBottomLastCards {
+    height: 100px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+
+  .chartProductPageBottomLastCards {
+    width: 76%;
+  }
+
+  .barsProductPageBottomLastCards {
+    gap: 4px;
+  }
+
+  .barProductPageBottomLastCards {
+    max-width: 7px;
+  }
+
+  .revenueBoxProductPageBottomLastCards {
+    top: -16px;
+    min-width: 85px;
+    padding: 8px 10px;
+    border-radius: 9px;
+  }
+
+  .revenueLabelProductPageBottomLastCards {
+    font-size: 8px;
+  }
+
+  .revenueValueProductPageBottomLastCards {
+    font-size: 15px;
+  }
+
+  .revenueTrendProductPageBottomLastCards {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   Reduced Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cardProductPageBottomLastCards,
+  .paymentLogoProductPageBottomLastCards,
+  .iconBoxProductPageBottomLastCards,
+  .barProductPageBottomLastCards,
+  .revenueBoxProductPageBottomLastCards {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .scanLineProductPageBottomLastCards {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================================
+   =====================================================================
+   CARD 4 : CUSTOMERS  (NEW - everything below is added, nothing above
+   was changed)
+   =====================================================================
+   ===================================================================== */
+
+/* full-width card on its own row */
+.cardFourProductPageBottomLastCards {
+  grid-column: 1 / -1;
+  min-height: 0;
+  padding: 40px 44px 46px;
+  border-radius: 20px;
+}
+
+.inViewProductPageBottomLastCards .cardFourProductPageBottomLastCards {
+  animation-delay: 0.36s;
+}
+
+/* ------------------------------ BADGE ------------------------------ */
+.customerBadgeProductPageBottomLastCards {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 26px 12px 20px;
+  margin-bottom: 28px;
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.customerDotProductPageBottomLastCards {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--teal-ProductPageBottomLastCards);
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.7);
+}
+
+/* expanding ring on the dot */
+.customerDotProductPageBottomLastCards::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--teal-ProductPageBottomLastCards);
+  opacity: 0;
+}
+
+.inViewProductPageBottomLastCards .customerDotProductPageBottomLastCards::after {
+  animation: dotRingProductPageBottomLastCards 2.4s ease-out 1s infinite;
+}
+
+@keyframes dotRingProductPageBottomLastCards {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+.customerBadgeLabelProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 15px;
+  font-weight: var(--fw-semibold, 600);
+  letter-spacing: 0.08em;
+}
+
+/* ------------------------------ TITLE ------------------------------ */
+.customerTitleProductPageBottomLastCards {
+  margin: 0 0 40px;
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: var(--font-size-5xl, 38px);
+  font-weight: var(--fw-bold, 700);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+/* ------------------------------ BODY ------------------------------ */
+.customerBodyProductPageBottomLastCards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  /* max-width: 800px; change / remove this to let the card stretch wider */
+}
+
+/* ------------------------------ LIST ------------------------------ */
+.customerListProductPageBottomLastCards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.customerListItemProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  opacity: 0;
+  transform: translateX(-18px);
+  transition: translate var(--transition-fast, 0.2s ease-in-out);
+}
+
+.inViewProductPageBottomLastCards .customerListItemProductPageBottomLastCards {
+  animation: listInProductPageBottomLastCards 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(0.55s + var(--i) * 0.1s);
+}
+
+.customerListItemProductPageBottomLastCards:hover {
+  translate: 6px 0;
+}
+
+@keyframes listInProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.customerCheckProductPageBottomLastCards {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--teal-ProductPageBottomLastCards);
+  background: rgba(0, 230, 153, 0.07);
+  box-shadow: 0 0 14px rgba(0, 230, 153, 0.35);
+  transform: scale(0);
+}
+
+.inViewProductPageBottomLastCards .customerCheckProductPageBottomLastCards {
+  animation: checkPopProductPageBottomLastCards 0.5s
+      cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    checkGlowProductPageBottomLastCards 3s ease-in-out infinite;
+  animation-delay: calc(0.75s + var(--i) * 0.1s),
+    calc(1.6s + var(--i) * 0.3s);
+}
+
+@keyframes checkPopProductPageBottomLastCards {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes checkGlowProductPageBottomLastCards {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 230, 153, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 230, 153, 0.6);
+  }
+}
+
+.customerListTextProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-100, #e2e8f0);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 19px;
+  font-weight: var(--fw-regular, 400);
+  line-height: 1.3;
+}
+
+/* ------------------------------ PROFILE CARD ------------------------------ */
+.customerProfileProductPageBottomLastCards {
+  position: relative;
+  padding: 26px 28px 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--nexzell-bg-surface, #0e1218);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: border-color var(--transition-base, 0.3s ease-in-out),
+    box-shadow var(--transition-base, 0.3s ease-in-out);
+}
+
+.inViewProductPageBottomLastCards .customerProfileProductPageBottomLastCards {
+  animation: profileInProductPageBottomLastCards 0.8s
+      cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards,
+    profileFloatProductPageBottomLastCards 5s ease-in-out 1.6s infinite;
+}
+
+.customerProfileProductPageBottomLastCards:hover {
+  border-color: rgba(0, 230, 153, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 36px rgba(0, 230, 153, 0.1);
+}
+
+@keyframes profileInProductPageBottomLastCards {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes profileFloatProductPageBottomLastCards {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -5px;
+  }
+}
+
+/* head */
+.customerProfileHeadProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.customerAvatarProductPageBottomLastCards {
+  position: relative;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1f3b3a, #14283a);
+}
+
+.customerAvatarProductPageBottomLastCards img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.customerAvatarFallbackProductPageBottomLastCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--teal-ProductPageBottomLastCards);
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 18px;
+  font-weight: var(--fw-bold, 700);
+}
+
+/* soft ring around avatar */
+.customerAvatarProductPageBottomLastCards::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.customerIdentityProductPageBottomLastCards {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.customerNameProductPageBottomLastCards {
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 18px;
+  font-weight: var(--fw-semibold, 600);
+  line-height: 1.2;
+}
+
+.customerEmailProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 14px;
+  font-weight: var(--fw-regular, 400);
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* stats */
+.customerStatsProductPageBottomLastCards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.customerStatProductPageBottomLastCards {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customerStatRightProductPageBottomLastCards {
+  align-items: flex-start;
+}
+
+.customerStatLabelProductPageBottomLastCards {
+  color: var(--nexzell-text-gray-500, #64748b);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 14px;
+  font-weight: var(--fw-regular, 400);
+}
+
+.customerStatValueProductPageBottomLastCards {
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 20px;
+  font-weight: var(--fw-semibold, 600);
+  font-variant-numeric: tabular-nums;
+}
+
+/* VIP tag */
+.customerTagProductPageBottomLastCards {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  padding: 9px 14px;
+  border-radius: 6px;
+  background: rgba(0, 230, 153, 0.12);
+  color: var(--teal-ProductPageBottomLastCards);
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 14px;
+  font-weight: var(--fw-semibold, 600);
+  overflow: hidden;
+}
+
+/* shimmer sweep on the tag */
+.customerTagProductPageBottomLastCards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(0, 230, 153, 0.25),
+    transparent
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+
+.inViewProductPageBottomLastCards .customerTagProductPageBottomLastCards::after {
+  animation: tagShimmerProductPageBottomLastCards 4s ease-in-out 2s infinite;
+}
+
+@keyframes tagShimmerProductPageBottomLastCards {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    left: 130%;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   CARD 4 : RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) and (min-width: 790px) {
+  .cardFourProductPageBottomLastCards {
+    padding: 34px 32px 38px;
+  }
+
+  .customerTitleProductPageBottomLastCards {
+    font-size: 34px;
+    margin-bottom: 34px;
+  }
+}
+
+@media (max-width: 789px) {
+  .cardFourProductPageBottomLastCards {
+    grid-column: 1 / -1;
+    padding: 28px 22px 30px;
+    border-radius: 16px;
+  }
+
+  .customerBadgeProductPageBottomLastCards {
+    padding: 10px 20px 10px 16px;
+    margin-bottom: 22px;
+  }
+
+  .customerBadgeLabelProductPageBottomLastCards {
+    font-size: 13px;
+  }
+
+  .customerTitleProductPageBottomLastCards {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .customerBodyProductPageBottomLastCards {
+    gap: 28px;
+  }
+
+  .customerListTextProductPageBottomLastCards {
+    font-size: 17px;
+  }
+
+  .customerListItemProductPageBottomLastCards {
+    padding: 10px 0;
+  }
+
+  .customerProfileProductPageBottomLastCards {
+    padding: 22px 22px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .customerBodyProductPageBottomLastCards {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardFourProductPageBottomLastCards {
+    padding: 22px 16px 24px;
+    border-radius: 13px;
+  }
+
+  .customerBadgeProductPageBottomLastCards {
+    gap: 9px;
+    padding: 8px 16px 8px 13px;
+    margin-bottom: 18px;
+  }
+
+  .customerDotProductPageBottomLastCards {
+    width: 9px;
+    height: 9px;
+  }
+
+  .customerBadgeLabelProductPageBottomLastCards {
+    font-size: 11.5px;
+  }
+
+  .customerTitleProductPageBottomLastCards {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .customerListTextProductPageBottomLastCards {
+    font-size: 15.5px;
+  }
+
+  .customerCheckProductPageBottomLastCards {
+    width: 26px;
+    height: 26px;
+  }
+
+  .customerCheckProductPageBottomLastCards svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .customerProfileProductPageBottomLastCards {
+    padding: 18px 16px 20px;
+  }
+
+  .customerAvatarProductPageBottomLastCards {
+    width: 48px;
+    height: 48px;
+  }
+
+  .customerNameProductPageBottomLastCards {
+    font-size: 16px;
+  }
+
+  .customerEmailProductPageBottomLastCards {
+    font-size: 12.5px;
+  }
+
+  .customerStatsProductPageBottomLastCards {
+    margin-top: 20px;
+  }
+
+  .customerStatLabelProductPageBottomLastCards {
+    font-size: 12.5px;
+  }
+
+  .customerStatValueProductPageBottomLastCards {
+    font-size: 18px;
+  }
+
+  .customerTagProductPageBottomLastCards {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   CARD 4 : Reduced Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .customerListItemProductPageBottomLastCards,
+  .customerCheckProductPageBottomLastCards,
+  .customerProfileProductPageBottomLastCards {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  .customerDotProductPageBottomLastCards::after,
+  .customerTagProductPageBottomLastCards::after {
+    display: none;
+  }
+}

@@ -35,12 +35,16 @@ function BuildResourcesGrowNexzell() {
                         </p>
 
                         <div className="btnGroupBuildResourcesGrowNexzell animDelay4BuildResourcesGrowNexzell">
+                            <a href="/resources">
                             <button className="btnPrimaryBuildResourcesGrowNexzell">
                                 Explore All Resources <ArrowRight size={18} className="btnIconBuildResourcesGrowNexzell" />
                             </button>
+                            </a>
+                            <a href="/contact-us">
                             <button className="btnSecondaryBuildResourcesGrowNexzell">
                                 Contact Us
                             </button>
+                            </a>
                         </div>
                     </div>
 

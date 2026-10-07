@@ -4,11 +4,11 @@ import './OnePlatformEveryCategoryHome.css';
 
 function OnePlatformEveryCategoryHome() {
   const categories = [
-    {
+        {
       id: 1,
-      title: "Electronics",
-      desc: "Phones, gadgets & more",
-      imgSrc: "/ProductGridImageHome.png" 
+      title: "Furniture",
+      desc: "Furniture, decor & essentials",
+      imgSrc: "/ProductGridImageHome.png"
     },
     {
       id: 2,
@@ -16,11 +16,13 @@ function OnePlatformEveryCategoryHome() {
       desc: "Apparel, shoes & accessories",
       imgSrc: "/ProductGridImageHome.png"
     },
+
+
     {
       id: 3,
-      title: "Home & Living",
-      desc: "Furniture, decor & essentials",
-      imgSrc: "/ProductGridImageHome.png"
+      title: "Electronics",
+      desc: "Phones, gadgets & more",
+      imgSrc: "/ProductGridImageHome.png" 
     },
     {
       id: 4,

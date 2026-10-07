@@ -1,5 +1,5 @@
 /* =========================================================
-   Nexzell Case Studies - Filters, Grid & Popup
+   Nexzell Case Studies - Filters, Grid & Detail Page
    Uses the global variables from the global CSS file
 ========================================================= */
 
@@ -14,6 +14,7 @@
   width: 100%;
   max-width: var(--nexzell-container-width);
   margin: 0 auto;
+  margin-top: 70px;
   padding: 0 var(--nexzell-padding-x);
   display: flex;
   flex-direction: column;
@@ -26,26 +27,8 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInAnimNexzellCaseSturidesMainWFilters {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes scaleUpAnimNexzellCaseSturidesMainWFilters {
-  0% { opacity: 0; transform: scale(0.97) translateY(14px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-
 .animFadeUpNexzellCaseSturidesMainWFilters {
   animation: fadeUpAnimNexzellCaseSturidesMainWFilters 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animFadeInNexzellCaseSturidesMainWFilters {
-  animation: fadeInAnimNexzellCaseSturidesMainWFilters 0.3s ease forwards;
-}
-
-.animScaleUpNexzellCaseSturidesMainWFilters {
-  animation: scaleUpAnimNexzellCaseSturidesMainWFilters 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* --- Filter Bar --- */
@@ -115,14 +98,14 @@
 
 .filterBtnNexzellCaseSturidesMainWFilters:focus-visible,
 .cardNexzellCaseSturidesMainWFilters:focus-visible,
-.modalCloseBtnNexzellCaseSturidesMainWFilters:focus-visible,
 .modalNavBtnNexzellCaseSturidesMainWFilters:focus-visible,
-.modalCtaNexzellCaseSturidesMainWFilters:focus-visible {
+.modalCtaNexzellCaseSturidesMainWFilters:focus-visible,
+.detailBackLinkNexzellCaseSturidesMainWFilters:focus-visible {
   outline: 2px solid var(--nexzell-primary);
   outline-offset: 3px;
 }
 
-/* --- Grid & Cards --- */
+/* --- Grid & Cards (cards are <a> links to /case-studies/[slug]) --- */
 .gridNexzellCaseSturidesMainWFilters {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -139,6 +122,8 @@
   overflow: hidden;
   opacity: 0;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
   animation: fadeUpAnimNexzellCaseSturidesMainWFilters 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -226,10 +211,6 @@
   font-weight: var(--fw-bold);
   line-height: 1;
   letter-spacing: -0.02em;
-  /* background: linear-gradient(90deg, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: var(--nexzell-primary);
 }
 
@@ -351,74 +332,38 @@
 }
 
 /* =========================================================
-   Modal Popup
+   Case Study Detail Page (/case-studies/[slug])
 ========================================================= */
-.modalOverlayNexzellCaseSturidesMainWFilters {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(6, 8, 12, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+.detailPageNexzellCaseSturidesMainWFilters {
+  padding: 4rem 0 6rem 0;
+  background-color: var(--nexzell-bg-base);
+  width: 100%;
 }
 
-.modalContentNexzellCaseSturidesMainWFilters {
+.detailBackLinkNexzellCaseSturidesMainWFilters {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--fw-medium);
+  color: var(--nexzell-text-gray-300);
+  text-decoration: none;
+  transition: color var(--transition-base), transform var(--transition-base);
+}
+
+.detailBackLinkNexzellCaseSturidesMainWFilters:hover {
+  color: var(--nexzell-primary);
+  transform: translateX(-3px);
+}
+
+.detailCardNexzellCaseSturidesMainWFilters {
   background-color: var(--nexzell-bg-surface);
   border: 1px solid var(--nexzell-border-highlight);
   border-radius: var(--nexzell-radius-lg);
+  overflow: hidden;
   width: 100%;
-  max-width: 1040px;
-  max-height: 92vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  scrollbar-width: thin;
-  scrollbar-color: var(--nexzell-primary) transparent;
-  overscroll-behavior: contain;
-}
-
-.modalContentNexzellCaseSturidesMainWFilters::-webkit-scrollbar {
-  width: 6px;
-}
-
-.modalContentNexzellCaseSturidesMainWFilters::-webkit-scrollbar-thumb {
-  background-color: var(--nexzell-primary);
-  border-radius: 10px;
-}
-
-.modalCloseBtnNexzellCaseSturidesMainWFilters {
-  position: sticky;
-  top: 1.25rem;
-  float: right;
-  margin: 1.25rem 1.25rem -60px 0;
-  z-index: 10;
-  background-color: rgba(6, 8, 12, 0.7);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--nexzell-text-white);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition-base);
-}
-
-.modalCloseBtnNexzellCaseSturidesMainWFilters:hover {
-  background-color: rgba(239, 68, 68, 0.2);
-  color: #EF4444;
-  border-color: rgba(239, 68, 68, 0.5);
-  transform: rotate(90deg);
 }
 
 /* Hero */
@@ -502,10 +447,6 @@
   font-weight: var(--fw-bold);
   line-height: 1.1;
   letter-spacing: -0.02em;
-  /* background: linear-gradient(90deg, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: var(--nexzell-primary);
 }
 
@@ -767,13 +708,13 @@
   color: var(--nexzell-text-gray-500);
 }
 
-/* Sidebar */
+/* Sidebar (sticky - adjust top to match your navbar height) */
 .modalAsideNexzellCaseSturidesMainWFilters {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   position: sticky;
-  top: 1.5rem;
+  top: 6rem;
 }
 
 .asideCardNexzellCaseSturidesMainWFilters {
@@ -852,7 +793,7 @@
   background-color: var(--nexzell-bg-surface);
 }
 
-/* Footer navigation */
+/* Footer navigation (Previous / CTA / Next are <a> links) */
 .modalFooterNexzellCaseSturidesMainWFilters {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -875,6 +816,7 @@
   color: var(--nexzell-text-gray-300);
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
   font-family: var(--nexzell-font-family);
   transition: color var(--transition-base), transform var(--transition-base);
 }
@@ -942,25 +884,10 @@
   transform: translateY(-2px);
 }
 
-/* Filter bar scrollbar (when it scrolls on small screens) */
-/* .filterContainerNexzellCaseSturidesMainWFilters::-webkit-scrollbar {
-  height: 6px;
-}
-
-.filterContainerNexzellCaseSturidesMainWFilters::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-}
-
-.filterContainerNexzellCaseSturidesMainWFilters::-webkit-scrollbar-thumb {
-  background: var(--nexzell-primary);
-  border-radius: 10px;
-}
-*/
 .filterContainerNexzellCaseSturidesMainWFilters {
   scrollbar-width: none;
   scrollbar-color: var(--nexzell-primary) rgba(255, 255, 255, 0.05);
-} 
+}
 
 /* =========================================================
    1200px and below - Small laptops
@@ -992,10 +919,6 @@
     font-size: var(--font-size-xl);
   }
 
-  .modalContentNexzellCaseSturidesMainWFilters {
-    max-width: 960px;
-  }
-
   .modalLayoutNexzellCaseSturidesMainWFilters {
     grid-template-columns: minmax(0, 1fr) 270px;
     gap: 2.25rem;
@@ -1009,6 +932,10 @@
 
   .sectionWrapperNexzellCaseSturidesMainWFilters {
     padding: 3.5rem 0 6rem 0;
+  }
+
+  .detailPageNexzellCaseSturidesMainWFilters {
+    padding: 3.5rem 0 5rem 0;
   }
 
   .containerNexzellCaseSturidesMainWFilters {
@@ -1034,14 +961,6 @@
   .gridNexzellCaseSturidesMainWFilters {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
-  }
-
-  .modalOverlayNexzellCaseSturidesMainWFilters {
-    padding: 1.5rem;
-  }
-
-  .modalContentNexzellCaseSturidesMainWFilters {
-    max-width: 860px;
   }
 
   .modalHeroNexzellCaseSturidesMainWFilters {
@@ -1083,6 +1002,10 @@
     padding: 3rem 0 5rem 0;
   }
 
+  .detailPageNexzellCaseSturidesMainWFilters {
+    padding: 3rem 0 4rem 0;
+  }
+
   .containerNexzellCaseSturidesMainWFilters {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1106,20 +1029,8 @@
     font-size: var(--font-size-xl);
   }
 
-  .modalOverlayNexzellCaseSturidesMainWFilters {
-    padding: 1rem;
-  }
-
-  .modalContentNexzellCaseSturidesMainWFilters {
-    max-height: 94vh;
+  .detailCardNexzellCaseSturidesMainWFilters {
     border-radius: 20px;
-  }
-
-  .modalCloseBtnNexzellCaseSturidesMainWFilters {
-    top: 1rem;
-    margin: 1rem 1rem -52px 0;
-    width: 36px;
-    height: 36px;
   }
 
   .modalHeroNexzellCaseSturidesMainWFilters {
@@ -1233,6 +1144,10 @@
     padding: 2.5rem 0 4rem 0;
   }
 
+  .detailPageNexzellCaseSturidesMainWFilters {
+    padding: 2rem 0 3rem 0;
+  }
+
   .containerNexzellCaseSturidesMainWFilters {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1282,20 +1197,8 @@
     font-size: var(--font-size-base);
   }
 
-  .modalOverlayNexzellCaseSturidesMainWFilters {
-    padding: 0.5rem;
-  }
-
-  .modalContentNexzellCaseSturidesMainWFilters {
-    max-height: 96vh;
+  .detailCardNexzellCaseSturidesMainWFilters {
     border-radius: 16px;
-  }
-
-  .modalCloseBtnNexzellCaseSturidesMainWFilters {
-    top: 0.75rem;
-    margin: 0.75rem 0.75rem -46px 0;
-    width: 34px;
-    height: 34px;
   }
 
   .modalHeroNexzellCaseSturidesMainWFilters {
@@ -1405,9 +1308,7 @@
 ========================================================= */
 @media (prefers-reduced-motion: reduce) {
 
-  .animFadeUpNexzellCaseSturidesMainWFilters,
-  .animFadeInNexzellCaseSturidesMainWFilters,
-  .animScaleUpNexzellCaseSturidesMainWFilters {
+  .animFadeUpNexzellCaseSturidesMainWFilters {
     animation: none;
     opacity: 1;
   }
@@ -1421,8 +1322,8 @@
   .cardNexzellCaseSturidesMainWFilters:hover,
   .cardNexzellCaseSturidesMainWFilters:hover .cardImageNexzellCaseSturidesMainWFilters,
   .cardNexzellCaseSturidesMainWFilters:hover .readMoreIconNexzellCaseSturidesMainWFilters,
-  .modalCloseBtnNexzellCaseSturidesMainWFilters:hover,
-  .modalCtaNexzellCaseSturidesMainWFilters:hover {
+  .modalCtaNexzellCaseSturidesMainWFilters:hover,
+  .detailBackLinkNexzellCaseSturidesMainWFilters:hover {
     transform: none;
   }
 }

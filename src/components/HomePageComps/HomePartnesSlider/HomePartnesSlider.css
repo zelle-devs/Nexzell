@@ -184,7 +184,7 @@
 @media (max-width: 1024px) {
   .sectionWrapperHomePartnesSlider {
     --logo-height: 32px;
-    --logo-max-width: 120px;
+    --logo-max-width: 140px;
     --logo-gap: 2.25rem;
     padding: 1.4rem 0;
   }
@@ -240,8 +240,8 @@
    ========================================================== */
 @media (max-width: 768px) {
   .sectionWrapperHomePartnesSlider {
-    --logo-height: 28px;
-    --logo-max-width: 105px;
+    --logo-height: 38px;
+    --logo-max-width: 120px;
     --logo-gap: 1.8rem;
     padding: 1.25rem 0;
   }
@@ -275,8 +275,8 @@
    ========================================================== */
 @media (max-width: 640px) {
   .sectionWrapperHomePartnesSlider {
-    --logo-height: 24px;
-    --logo-max-width: 90px;
+    --logo-height: 34px;
+    --logo-max-width: 120px;
     --logo-gap: 1.35rem;
     padding: 1.1rem 0;
   }

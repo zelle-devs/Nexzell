@@ -6,44 +6,7 @@ import { ChevronDown } from 'lucide-react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { usePageTransition } from '@/app/TransitionContext';
-
-const footerLinkGroups = [
-  {
-    id: 'product',
-    heading: 'Product',
-    links: [
-      { label: 'Features', href: '#' },
-      { label: 'Integrations', href: '/integrations' },
-      { label: 'Pricing', href: '/pricing' }, 
-    ],
-  },
-  {
-    id: 'solutions',
-    heading: 'Solutions',
-    links: [
-      { label: 'For Startups', href: '/solutions' },
-      { label: 'For Growing Brands', href: '/solutions' },
-      { label: 'For Enterprises', href: '/solutions' },
-      { label: 'Global Commerce', href: '/solutions' },
-    ],
-  },
-  {
-    id: 'resources',
-    heading: 'Resources',
-    links: [
-      { label: 'Blogs', href: '/blogs' },
-      { label: 'Case Studies', href: '/case-studies' },  
-    ],
-  },
-  {
-    id: 'company',
-    heading: 'Company',
-    links: [
-      { label: 'About Us', href: '/about-us' }, 
-      { label: 'Contact', href: '/contact-us' }, 
-    ],
-  },
-];
+import { footerLinkGroups } from '@/app/navData'; // shared with Header
 
 function Footer() {
   const [openSections, setOpenSections] = useState({});

@@ -25,16 +25,16 @@ function BetterRelationCheckoutSimpleProduct() {
 
                 <div className="cardMainBetterRelationCheckoutSimpleProduct animFadeUpBetterRelationCheckoutSimpleProduct">
                     <div className="cardLeftPanelBetterRelationCheckoutSimpleProduct">
-                         <div className="badgeEverythingBusinessStarter">
-            <span className="badgeDotEverythingBusinessStarter"></span>
-           CUSTOMERS
-          </div>
+                        <div className="badgeEverythingBusinessStarter">
+                            <span className="badgeDotEverythingBusinessStarter"></span>
+                            CUSTOMERS
+                        </div>
                         <h2 className="headingBetterRelationCheckoutSimpleProduct">
                             Know Your Customers.<br />
                             Build Better Relationships.
                         </h2>
                         <div className='CustomerRightMainDownFlexDiv'>
-                            <div style={{display:'flex', width:'100%'}}>
+                            <div style={{ display: 'flex', width: '100%' }}>
                                 <ul className="featureListBetterRelationCheckoutSimpleProduct">
                                     {customerFeatures.map((feature, index) => (
                                         <li key={index} className="featureItemBetterRelationCheckoutSimpleProduct">
@@ -89,14 +89,14 @@ function BetterRelationCheckoutSimpleProduct() {
                 <div className="cardMainBetterRelationCheckoutSimpleProduct animFadeUpDelay1BetterRelationCheckoutSimpleProduct">
                     <div className="cardLeftPanelBetterRelationCheckoutSimpleProduct">
                         <div className="badgeEverythingBusinessStarter">
-            <span className="badgeDotEverythingBusinessStarter"></span>
-           PAYMENTS
-          </div>
+                            <span className="badgeDotEverythingBusinessStarter"></span>
+                            PAYMENTS
+                        </div>
                         <h2 className="headingBetterRelationCheckoutSimpleProduct">
                             Make Checkout Simple.
                         </h2>
                         <div className='CustomerRightMainDownFlexDiv'>
-                            <div style={{display:'flex', width:'100%'}}>
+                            <div style={{ display: 'flex', width: '100%' }}>
                                 <ul className="featureListBetterRelationCheckoutSimpleProduct">
                                     {paymentFeatures.map((feature, index) => (
                                         <li key={index} className="featureItemBetterRelationCheckoutSimpleProduct">
@@ -113,34 +113,34 @@ function BetterRelationCheckoutSimpleProduct() {
                             </div>
                             <div className='mainDivRightSectionBettrealtionProductdivCheckout'>
                                 <div className="paymentWidgetBetterRelationCheckoutSimpleProduct">
-                                <div className="paymentLogoStripeBetterRelationCheckoutSimpleProduct">stripe</div>
-                                <div className="paymentLogoPaypalBetterRelationCheckoutSimpleProduct">
-                                    <span className="paypalP1BetterRelationCheckoutSimpleProduct">Pay</span>
-                                    <span className="paypalP2BetterRelationCheckoutSimpleProduct">Pal</span>
+                                    <div className="paymentLogoStripeBetterRelationCheckoutSimpleProduct">stripe</div>
+                                    <div className="paymentLogoPaypalBetterRelationCheckoutSimpleProduct">
+                                        <span className="paypalP1BetterRelationCheckoutSimpleProduct">Pay</span>
+                                        <span className="paypalP2BetterRelationCheckoutSimpleProduct">Pal</span>
+                                    </div>
+                                    <div className="paymentLogoAppleBetterRelationCheckoutSimpleProduct">
+                                        <Apple size={20} fill="#FFFFFF" color="#FFFFFF" /> Pay
+                                    </div>
+                                    <div className="paymentLogoGoogleBetterRelationCheckoutSimpleProduct">
+                                        <span className="googleGBetterRelationCheckoutSimpleProduct">G</span> Pay
+                                    </div>
+
                                 </div>
-                                <div className="paymentLogoAppleBetterRelationCheckoutSimpleProduct">
-                                    <Apple size={20} fill="#FFFFFF" color="#FFFFFF" /> Pay
-                                </div>
-                                <div className="paymentLogoGoogleBetterRelationCheckoutSimpleProduct">
-                                    <span className="googleGBetterRelationCheckoutSimpleProduct">G</span> Pay
-                                </div>
-                                
-                            </div>
                                 <button className="btnPrimaryBetterRelationCheckoutSimpleProduct">
-                            Explore Payment Integrations <ArrowRight size={16} className="btnIconBetterRelationCheckoutSimpleProduct" />
-                        </button>
+                                    Explore Payment Integrations <ArrowRight size={16} className="btnIconBetterRelationCheckoutSimpleProduct" />
+                                </button>
                             </div>
-                            
-                            
+
+
                         </div>
 
 
 
                     </div>
-                               
-                      
+
+
                 </div>
-                                    
+
             </div>
         </section>
     );

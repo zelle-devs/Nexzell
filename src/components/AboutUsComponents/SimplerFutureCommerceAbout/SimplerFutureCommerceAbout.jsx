@@ -26,10 +26,11 @@ function SimplerFutureCommerceAbout() {
               Book a Free Demo <ArrowRight size={18} className="btnIconSimplerFutureCommerceAbout" />
             </button>
             </Link>
-            
+            <Link href='/contact-us'>
             <button className="btnSecondarySimplerFutureCommerceAbout">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
 

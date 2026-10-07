@@ -1,0 +1,323 @@
+.articleWrapper {
+  background-color: var(--nexzell-bg-base, #06080C);
+  min-height: 100vh;
+  padding-bottom: 6rem;
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+/* --- Hero Section --- */
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 2rem 3rem;
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 0 auto;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(6, 8, 12, 0.3) 0%, rgba(6, 8, 12, 0.8) 60%, var(--nexzell-bg-base, #06080C) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.1);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+}
+
+.title {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 1.5rem 0;
+}
+
+.metaGroup {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+/* --- Content Body --- */
+.contentContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contentBody {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 2.5rem 0 1rem 0;
+}
+
+.list {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.75rem;
+}
+
+.quote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--nexzell-primary, #00E699);
+  border-radius: 0 var(--nexzell-radius-sm, 8px) var(--nexzell-radius-sm, 8px) 0;
+  font-style: italic;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+}
+
+.callout {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.2);
+  border-radius: var(--nexzell-radius-md, 12px);
+}
+
+.calloutTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0 0 0.5rem 0;
+}
+
+.calloutText {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+}
+
+/* --- Author Box --- */
+.authorBox {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--nexzell-bg-surface, #0E1218);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+}
+
+.authorName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.25rem 0;
+}
+
+.authorRole {
+  font-size: 0.85rem;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0 0 1rem 0;
+}
+
+.authorBio {
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- FAQs --- */
+.faqSection {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.faqHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 2rem 0;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faqItem {
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+}
+
+.faqQuestion {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.75rem 0;
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .heroSection {
+    min-height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 3rem 1.5rem 2rem;
+    min-height: 35vh;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .contentContainer {
+    padding: 0 1.5rem;
+  }
+  
+  .contentBody {
+    font-size: 1rem;
+  }
+  
+  .h2 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem 0;
+  }
+  
+  .h3 {
+    font-size: 1.2rem;
+  }
+  
+  .metaGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .heroSection {
+    padding: 2rem 1rem 1.5rem;
+  }
+  
+  .contentContainer {
+    padding: 0 1rem;
+  }
+  
+  .authorBox {
+    padding: 1.5rem;
+  }
+  
+  .faqItem {
+    padding: 1.25rem;
+  }
+}

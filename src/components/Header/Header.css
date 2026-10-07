@@ -10,7 +10,6 @@
   z-index: 100;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(5px);
   transform-origin: bottom center;
   transition:
     top 0.45s cubic-bezier(0.4, 0, 0.2, 1),
@@ -28,14 +27,54 @@
   border-radius: 28px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border: 1px solid var(--nexzell-border-highlight, #334155);
-  border-bottom: 1px solid var(--nexzell-border-highlight, #334155);
-  background-color: #06080c8e;
-  backdrop-filter: blur(18px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  /* border: 1px solid var(--nexzell-border-highlight, #334155); */
+  /* border-bottom: 1px solid var(--nexzell-border-highlight, #334155); */
+  background-color: transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.058);
 }
 
+/* ===== Liquid Glass Background ===== */
+.headerWrapperNexzellHeaderMain::before,
+.headerWrapperNexzellHeaderMain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Tint + inner highlight */
+.headerWrapperNexzellHeaderMain::before {
+  z-index: 0;
+  background-color: transparent;
+  box-shadow: inset 0 0 12px -4px rgba(255, 255, 255, 0.4);
+  transition:
+    background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.headerWrapperNexzellHeaderMain.isScrolledNexzellHeaderMain::before {
+  background-color: #06080c8e; /* original scrolled tint; lower the alpha (8e) for more see-through glass */
+}
+
+/* Backdrop blur + liquid distortion */
+.headerWrapperNexzellHeaderMain::after {
+  z-index: -1;
+  /* fallback for browsers that don't support url() inside backdrop-filter */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  /* liquid effect (Chromium) */
+  backdrop-filter: blur(3px) url(#nexzell-glass-distortion);
+}
+
+.headerWrapperNexzellHeaderMain.isScrolledNexzellHeaderMain::after {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px) url(#nexzell-glass-distortion);
+}
 .containerNexzellHeaderMain {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: var(--nexzell-container-width, 1280px);
   margin: 0 auto;
@@ -127,7 +166,7 @@
 
 .navLinkNexzellHeaderMain:hover .navLinkIndicator {
   transform: translateX(-50%) scaleX(0.7);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Active state */
@@ -440,4 +479,422 @@
   padding-right: 0;
   transform: translateX(10px);
   pointer-events: none;
+}
+
+/* =====================================================
+   DESKTOP DROPDOWN  (modern glass panel)
+   ===================================================== */
+.navItemNexzellHeaderMain {
+  position: relative;
+}
+
+/* --- chevron --- */
+.navChevronNexzellHeaderMain {
+  margin-left: 4px;
+  flex-shrink: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.3s ease;
+}
+
+.hasDropdownNexzellHeaderMain:hover .navChevronNexzellHeaderMain,
+.hasDropdownNexzellHeaderMain:focus-within .navChevronNexzellHeaderMain {
+  transform: rotate(180deg);
+  color: var(--nexzell-primary, #00E699);
+}
+
+/* --- hover bridge / panel wrapper --- */
+/* top padding keeps the cursor able to travel from link -> panel without closing */
+.dropdownWrapNexzellHeaderMain {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  padding-top: 16px;
+  z-index: 300;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(10px) scale(0.96);
+  transform-origin: top center;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.26s ease,
+    transform 0.34s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.34s;
+}
+
+.hasDropdownNexzellHeaderMain:hover .dropdownWrapNexzellHeaderMain,
+.hasDropdownNexzellHeaderMain:focus-within .dropdownWrapNexzellHeaderMain {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0) scale(1);
+  transition:
+    opacity 0.3s ease,
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0s;
+}
+
+/* --- little caret/notch pointing at the parent link --- */
+.dropdownWrapNexzellHeaderMain::before {
+  content: '';
+  position: absolute;
+  top: 9px; /* panel top is at 16px -> diamond center sits exactly on the border */
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px 0 0 0;
+  background: rgba(16, 21, 28, 0.96);
+  border-left: 1px solid rgba(148, 163, 184, 0.16);
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.hasDropdownNexzellHeaderMain:hover .dropdownWrapNexzellHeaderMain::before,
+.hasDropdownNexzellHeaderMain:focus-within .dropdownWrapNexzellHeaderMain::before {
+  opacity: 1;
+}
+
+/* --- top glow line (sits above the panel border) --- */
+.dropdownWrapNexzellHeaderMain::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 26px;
+  right: 26px;
+  height: 1px;
+  border-radius: 2px;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--nexzell-primary, #00E699) 55%, transparent),
+    transparent
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease 0.08s;
+}
+
+.hasDropdownNexzellHeaderMain:hover .dropdownWrapNexzellHeaderMain::after,
+.hasDropdownNexzellHeaderMain:focus-within .dropdownWrapNexzellHeaderMain::after {
+  opacity: 1;
+}
+
+/* --- the glass panel --- */
+.dropdownListNexzellHeaderMain {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  min-width: 232px;
+  max-height: min(320px, 60vh);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(17, 22, 30, 0.9) 0%,
+    rgba(10, 13, 18, 0.94) 100%
+  );
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 16px;
+  box-shadow:
+    0 24px 48px -16px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ===== Dropdown option ===== */
+.dropdownOptionNexzellHeaderMain {
+  position: relative;
+  display: block;
+  padding: 9px 12px 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13.5px;
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.25;
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* staggered reveal — delay only applies while opening */
+.hasDropdownNexzellHeaderMain:hover .dropdownOptionNexzellHeaderMain,
+.hasDropdownNexzellHeaderMain:focus-within .dropdownOptionNexzellHeaderMain {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: var(--dd-stagger, 0ms), var(--dd-stagger, 0ms), 0s, 0s;
+}
+
+.dropdownListNexzellHeaderMain > li:nth-child(1) .dropdownOptionNexzellHeaderMain { --dd-stagger: 0ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(2) .dropdownOptionNexzellHeaderMain { --dd-stagger: 35ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(3) .dropdownOptionNexzellHeaderMain { --dd-stagger: 70ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(4) .dropdownOptionNexzellHeaderMain { --dd-stagger: 105ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(5) .dropdownOptionNexzellHeaderMain { --dd-stagger: 140ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(6) .dropdownOptionNexzellHeaderMain { --dd-stagger: 175ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(7) .dropdownOptionNexzellHeaderMain { --dd-stagger: 210ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(8) .dropdownOptionNexzellHeaderMain { --dd-stagger: 245ms; }
+.dropdownListNexzellHeaderMain > li:nth-child(n + 9) .dropdownOptionNexzellHeaderMain { --dd-stagger: 280ms; }
+
+/* left accent bar */
+.dropdownOptionNexzellHeaderMain::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.5px;
+  height: 0;
+  border-radius: 0 3px 3px 0;
+  background: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--nexzell-primary, #00E699) 70%, transparent);
+  transform: translateY(-50%);
+  opacity: 0;
+  transition:
+    height 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.25s ease;
+}
+
+.dropdownOptionNexzellHeaderMain:hover::before,
+.activeDropdownOptionNexzellHeaderMain::before {
+  height: 58%;
+  opacity: 1;
+}
+
+.dropdownOptionNexzellHeaderMain:hover,
+.activeDropdownOptionNexzellHeaderMain {
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 10%, transparent);
+  color: var(--nexzell-primary, #00E699);
+}
+
+/* ===== Dropdown scrollbar ===== */
+.dropdownListNexzellHeaderMain::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdownListNexzellHeaderMain::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.dropdownListNexzellHeaderMain::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--nexzell-primary, #00E699),
+    var(--nexzell-gradient-end, #00C782)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nexzell-primary, #00E699) 35%, transparent);
+}
+
+.dropdownListNexzellHeaderMain::-webkit-scrollbar-thumb:hover {
+  background: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--nexzell-primary, #00E699) 50%, transparent);
+}
+
+/* =====================================================
+   DRAWER (SIDEBAR) DROPDOWN
+   ===================================================== */
+.drawerRowNexzellHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.drawerRowNexzellHeaderMain > a {
+  flex: 1;
+  min-width: 0;
+  border-bottom: none;
+}
+
+/* --- round toggle button --- */
+.drawerSubToggleNexzellHeaderMain {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(148, 163, 184, 0.07);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.drawerSubToggleNexzellHeaderMain:hover {
+  color: var(--nexzell-primary, #00E699);
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 12%, transparent);
+  border-color: color-mix(in srgb, var(--nexzell-primary, #00E699) 28%, transparent);
+}
+
+.drawerSubToggleNexzellHeaderMain.isOpenNexzellHeaderMain {
+  color: var(--nexzell-primary, #00E699);
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 14%, transparent);
+  border-color: color-mix(in srgb, var(--nexzell-primary, #00E699) 32%, transparent);
+  box-shadow: 0 0 16px -4px color-mix(in srgb, var(--nexzell-primary, #00E699) 55%, transparent);
+}
+
+.drawerSubToggleNexzellHeaderMain svg {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawerSubToggleNexzellHeaderMain.isOpenNexzellHeaderMain svg {
+  transform: rotate(180deg);
+}
+
+/* --- collapsible sub list --- */
+.drawerSubListNexzellHeaderMain {
+  position: relative;
+  list-style: none;
+  margin: 0 0 0 0.5rem;
+  padding: 0 0 0 0.9rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition:
+    max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease,
+    padding 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* vertical accent rail */
+.drawerSubListNexzellHeaderMain::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1.5px;
+  border-radius: 2px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--nexzell-primary, #00E699) 55%, transparent),
+    color-mix(in srgb, var(--nexzell-primary, #00E699) 5%, transparent)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.drawerSubListNexzellHeaderMain.isOpenNexzellHeaderMain {
+  max-height: 320px;
+  opacity: 1;
+  padding: 0.35rem 0 0.5rem 0.9rem;
+  overflow-y: auto;
+}
+
+.drawerSubListNexzellHeaderMain.isOpenNexzellHeaderMain::before {
+  opacity: 1;
+}
+
+/* higher specificity so it overrides ".drawerNavItem a" rules */
+.drawerNavItemNexzellHeaderMain a.drawerSubLinkNexzellHeaderMain {
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-poppins), sans-serif;
+  line-height: 1.25;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  border-bottom: none;
+  border-radius: 10px;
+  background: transparent;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.drawerSubListNexzellHeaderMain.isOpenNexzellHeaderMain a.drawerSubLinkNexzellHeaderMain {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: var(--dd-stagger, 0ms), var(--dd-stagger, 0ms), 0s, 0s;
+}
+
+.drawerSubListNexzellHeaderMain > li:nth-child(1) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 40ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(2) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 75ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(3) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 110ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(4) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 145ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(5) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 180ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(6) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 215ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(7) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 250ms; }
+.drawerSubListNexzellHeaderMain > li:nth-child(n + 8) a.drawerSubLinkNexzellHeaderMain { --dd-stagger: 285ms; }
+
+.drawerNavItemNexzellHeaderMain a.drawerSubLinkNexzellHeaderMain:hover,
+.drawerNavItemNexzellHeaderMain a.activeDrawerSubLinkNexzellHeaderMain {
+  padding-left: 10px;
+  color: var(--nexzell-primary, #00E699);
+  background: color-mix(in srgb, var(--nexzell-primary, #00E699) 10%, transparent);
+}
+
+.drawerSubListNexzellHeaderMain::-webkit-scrollbar {
+  width: 4px;
+}
+
+.drawerSubListNexzellHeaderMain::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 6px 0;
+}
+
+.drawerSubListNexzellHeaderMain::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--nexzell-primary, #00E699),
+    var(--nexzell-gradient-end, #00C782)
+  );
+  border-radius: 10px;
+}
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .dropdownWrapNexzellHeaderMain,
+  .dropdownOptionNexzellHeaderMain,
+  .dropdownWrapNexzellHeaderMain::before,
+  .dropdownWrapNexzellHeaderMain::after,
+  .navChevronNexzellHeaderMain,
+  .drawerSubListNexzellHeaderMain,
+  .drawerSubListNexzellHeaderMain::before,
+  .drawerSubToggleNexzellHeaderMain,
+  .drawerSubToggleNexzellHeaderMain svg,
+  .drawerNavItemNexzellHeaderMain a.drawerSubLinkNexzellHeaderMain {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.hasDropdownNexzellHeaderMain:hover .dropdownWrapNexzellHeaderMain {
+  display: block; /* ya opacity: 1 jo bhi aapne lagaya ho */
 }

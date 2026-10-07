@@ -105,9 +105,9 @@ function BuildWhatsNextAbout() {
               platform that's powerful, flexible and built for the future.
             </p>
 
-            <button className="btnOutlineBuildWhatsNextAbout">
+            {/* <button className="btnOutlineBuildWhatsNextAbout">
               Our Journey <ArrowRight size={16} className="btnIconBuildWhatsNextAbout" />
-            </button>
+            </button> */}
           </div>
         </div>
 

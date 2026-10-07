@@ -1,6 +1,7 @@
 export const caseStudiesData = [
   {
     id: 1,
+    slug: "furniture-mecca",
     category: "E-Commerce",
     title: "Furniture Mecca",
     shortDescription: "Built a high-performing eCommerce platform for a leading furniture store with custom design, inventory management and SEO.",
@@ -44,6 +45,7 @@ export const caseStudiesData = [
   },
   {
     id: 2,
+    slug: "the-furniture-depots",
     category: "Web Development",
     title: "The Furniture Depots",
     shortDescription: "Redesigned the entire website with a modern UI, faster performance and seamless shopping experience.",
@@ -87,6 +89,7 @@ export const caseStudiesData = [
   },
   {
     id: 3,
+    slug: "travel-tourism-brand",
     category: "Digital Marketing",
     title: "Travel & Tourism Brand",
     shortDescription: "Boosted organic traffic by 240% with a complete SEO and content marketing strategy for a travel brand.",
@@ -130,6 +133,7 @@ export const caseStudiesData = [
   },
   {
     id: 4,
+    slug: "zelle-furniture-cloud",
     category: "Web Development",
     title: "Zelle Furniture Cloud",
     shortDescription: "Developed a React-based furniture platform with inventory management, GTIN and Google Merchant Center integration.",
@@ -173,6 +177,7 @@ export const caseStudiesData = [
   },
   {
     id: 5,
+    slug: "e-commerce-product-seo",
     category: "SEO",
     title: "E-commerce Product SEO",
     shortDescription: "Optimized 500+ product pages with keyword strategy, meta data and high-quality content to increase rankings and sales.",
@@ -216,6 +221,7 @@ export const caseStudiesData = [
   },
   {
     id: 6,
+    slug: "cc-monitoring-portal",
     category: "UI/UX Design",
     title: "CC Monitoring Portal",
     shortDescription: "Designed a modern monitoring dashboard with interactive maps, real-time data and smooth user experience.",
@@ -259,6 +265,7 @@ export const caseStudiesData = [
   },
   {
     id: 7,
+    slug: "lumora-skincare-rebrand",
     category: "Branding",
     title: "Lumora Skincare Rebrand",
     shortDescription: "Created a complete visual identity, packaging direction and brand guidelines for a growing skincare label.",
@@ -302,6 +309,7 @@ export const caseStudiesData = [
   },
   {
     id: 8,
+    slug: "home-decor-paid-growth",
     category: "Digital Marketing",
     title: "Home Decor Paid Growth",
     shortDescription: "Scaled paid acquisition across Google and Meta with creative testing and conversion tracking that actually reflects revenue.",
@@ -345,6 +353,7 @@ export const caseStudiesData = [
   },
   {
     id: 9,
+    slug: "fintech-mobile-app-redesign",
     category: "UI/UX Design",
     title: "Fintech Mobile App Redesign",
     shortDescription: "Redesigned a mobile banking experience around clarity, trust and faster first-time setup.",

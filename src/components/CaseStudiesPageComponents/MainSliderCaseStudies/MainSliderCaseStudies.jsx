@@ -30,8 +30,8 @@ const useCounter = (end, duration = 2000, decimals = 0) => {
 
 function MainSliderCaseStudies() {
   // Counters initialize karna
-  const businessesCount = useCounter(12000, 2000);
-  const countriesCount = useCounter(120, 2000);
+  const businessesCount = useCounter(500, 2000);
+  const countriesCount = useCounter(12, 500);
   const uptimeCount = useCounter(99.9, 2000, 1);
 
   return (
@@ -59,14 +59,14 @@ function MainSliderCaseStudies() {
            Discover how we've helped brand like yours grow through the custom web developments, and digital marketing solutions, Real Project, Real Impact
           </p>
 
-          <div className="btnGroupMainSliderCaseStudies animDelay4">
+          {/* <div className="btnGroupMainSliderCaseStudies animDelay4">
             <button className="btnPrimaryMainSliderCaseStudies">
               See What We Do <ArrowRight size={18} className="btnIconMainSliderCaseStudies" />
             </button>
             <button className="btnSecondaryMainSliderCaseStudies">
               <PlayCircle size={20} className="playIconMainSliderCaseStudies" /> Watch Our Story
             </button>
-          </div>
+          </div> */}
 
           <div className="statsListMainSliderCaseStudies animDelay5">
             <div className="statItemMainSliderCaseStudies">

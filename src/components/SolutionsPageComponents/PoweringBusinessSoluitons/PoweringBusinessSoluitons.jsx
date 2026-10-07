@@ -48,8 +48,6 @@ function PoweringBusinessSoluitons() {
 
         <div className="rightContentPoweringBusinessSoluitons animFadeInRightPoweringBusinessSoluitons">
           <div className="mapImageWrapperPoweringBusinessSoluitons">
-           
-            
             <div className="floatingCardPoweringBusinessSoluitons">
               <p className="cardTextPoweringBusinessSoluitons">
                 Global Commerce<br />

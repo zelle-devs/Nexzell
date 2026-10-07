@@ -30,8 +30,8 @@ const useCounter = (end, duration = 2000, decimals = 0) => {
 
 function MainSliderBlogs() {
   // Counters initialize karna
-  const businessesCount = useCounter(12000, 2000);
-  const countriesCount = useCounter(120, 2000);
+  const businessesCount = useCounter(500, 2000);
+  const countriesCount = useCounter(12, 500);
   const uptimeCount = useCounter(99.9, 2000, 1);
 
   return (
@@ -60,14 +60,14 @@ function MainSliderBlogs() {
            Explore the latest trends, expert insights, and practical tips to help you to build grow, and stay ahead in the digital world.
           </p>
 
-          <div className="btnGroupMainSliderBlogs animDelay4">
+          {/* <div className="btnGroupMainSliderBlogs animDelay4">
             <button className="btnPrimaryMainSliderBlogs">
               See What We Do <ArrowRight size={18} className="btnIconMainSliderBlogs" />
             </button>
             <button className="btnSecondaryMainSliderBlogs">
               <PlayCircle size={20} className="playIconMainSliderBlogs" /> Watch Our Story
             </button>
-          </div>
+          </div> */}
 
           <div className="statsListMainSliderBlogs animDelay5">
             <div className="statItemMainSliderBlogs">

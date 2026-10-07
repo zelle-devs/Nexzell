@@ -30,8 +30,8 @@ const useCounter = (end, duration = 2000, decimals = 0) => {
 
 function MainSliderProductPage() {
   // Counters initialize karna
-  const businessesCount = useCounter(12000, 2000);
-  const countriesCount = useCounter(120, 2000);
+  const businessesCount = useCounter(500, 2200);
+  const countriesCount = useCounter(12, 2200);
   const uptimeCount = useCounter(99.9, 2000, 1);
 
   return (
