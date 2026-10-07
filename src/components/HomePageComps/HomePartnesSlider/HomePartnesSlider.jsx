@@ -4,14 +4,16 @@ import './HomePartnesSlider.css';
 function HomePartnesSlider() {
   // Array of logos for the slider. You can replace the src with your actual SVGs or images.
   const logos = [
-    { name: "Nike", text: "NIKE" },
-    { name: "Samsung", text: "SAMSUNG" },
-    { name: "Zara", text: "ZARA" },
-    { name: "Apple", text: "APPLE" },
-    { name: "Lego", text: "LEGO" },
-    { name: "The North Face", text: "THE NORTH FACE" },
-    { name: "Coca-Cola", text: "COCA-COLA" },
-    { name: "Sony", text: "SONY" }
+    { name: "Nike", text: "NIKE", img: '/logo1.png' },
+    { name: "Samsung", text: "SAMSUNG",img: '/logo2.png'  },
+    { name: "Zara", text: "ZARA",img: '/logo3.png'  },
+    { name: "Apple", text: "APPLE",img: '/logo4.png'  },
+    { name: "Lego", text: "LEGO",img: '/logo5.png' },
+    // { name: "The North Face", text: "THE NORTH FACE",img: '/logo5.png'  },
+    { name: "Coca-Cola", text: "COCA-COLA",img: '/logo7.png' },
+    { name: "Sony", text: "SONY",img: '/logo8.png'  },
+    { name: "Sony", text: "SONY",img: '/logo9.png'  },
+    { name: "Sony", text: "SONY",img: '/logo10.png'  }
   ];
 
   return (
@@ -33,7 +35,7 @@ function HomePartnesSlider() {
             <div className="marqueeGroupHomePartnesSlider">
               {logos.map((logo, index) => (
                 <div key={`set1-${index}`} className="logoItemHomePartnesSlider">
-                  <span className="placeholderLogoHomePartnesSlider">{logo.text}</span>
+                  <img className='logoimagehomepartnerslider' src={logo.img}></img>
                   <div className="dividerHomePartnesSlider"></div>
                 </div>
               ))}
@@ -43,7 +45,7 @@ function HomePartnesSlider() {
             <div className="marqueeGroupHomePartnesSlider">
               {logos.map((logo, index) => (
                 <div key={`set2-${index}`} className="logoItemHomePartnesSlider">
-                  <span className="placeholderLogoHomePartnesSlider">{logo.text}</span>
+                  <img className='logoimagehomepartnerslider' src={logo.img}></img>
                   <div className="dividerHomePartnesSlider"></div>
                 </div>
               ))}

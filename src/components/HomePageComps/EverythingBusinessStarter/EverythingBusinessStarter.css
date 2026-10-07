@@ -237,7 +237,7 @@
   }
 
   .featureItemEverythingBusinessStarter {
-    align-items: center; /* Left ki jagah center align kiya reference image ke mutabiq */
+    align-items: start; /* Left ki jagah center align kiya reference image ke mutabiq */
     text-align: center;
     gap: 0.65rem;
     padding: 2rem 1.5rem; /* Item ke andar padding add ki */
@@ -254,7 +254,13 @@
   .featureItemEverythingBusinessStarter:nth-last-child(-n+2) {
     border-bottom: none;
   }
-
+.featureTextEverythingBusinessStarter{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  text-align: left;
+}
   .featureTitleEverythingBusinessStarter {
     font-size: 0.9rem;
   }
@@ -346,7 +352,7 @@
 
   .featureItemEverythingBusinessStarter {
     width: 100%;
-    align-items: center; /* Left ki jagah center align kiya */
+    align-items: start; /* Left ki jagah center align kiya */
     text-align: left;
     gap: 0.6rem;
     padding: 1.5rem 1rem; /* Tablet ke liye thori kam padding */

@@ -1,5 +1,16 @@
-/* Main Section Wrapper */
+/* ==========================================================
+   HomePartnesSlider - COMPLETE CSS
+   Logo size aur spacing sirf 3 variables se control hoti hai:
+   --logo-height, --logo-max-width, --logo-gap
+   ========================================================== */
+
+/* ---------- Main Section Wrapper ---------- */
 .sectionWrapperHomePartnesSlider {
+  /* Default (desktop) tokens */
+  --logo-height: 36px;
+  --logo-max-width: 140px;
+  --logo-gap: 3rem;
+
   background-color: var(--nexzell-bg-base, #06080C);
   border-top: 1px solid var(--nexzell-border-subtle, #1E293B);
   border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
@@ -7,84 +18,128 @@
   width: 100%;
   overflow: hidden;
 }
- 
+
+/* ---------- Container ---------- */
 .containerHomePartnesSlider {
-  width: 100%; 
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--nexzell-padding-x, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  box-sizing: border-box;
 }
- 
+
+/* ---------- Left / Right Static Text ---------- */
 .leftTextHomePartnesSlider,
 .rightTextHomePartnesSlider {
-  flex-shrink: 0;  
+  flex-shrink: 0;
   font-family: var(--font-poppins, sans-serif);
   font-size: 0.7rem;
   font-weight: 600;
   height: fit-content;
   display: flex;
-  justify-content: left;
   flex-direction: column;
-  align-items: left;
+  justify-content: center;
+  align-items: flex-start;
   color: var(--nexzell-text-gray-500, #64748B);
   letter-spacing: 1px;
-  line-height: 10px;
+  line-height: 1.4;
   margin-bottom: 0;
   text-transform: uppercase;
 }
- 
+
+.leftTextHomePartnesSlider p,
+.rightTextHomePartnesSlider p {
+  margin: 0;
+}
+
+/* ---------- Marquee Window ---------- */
 .marqueeWindowHomePartnesSlider {
-  flex-grow: 1;  
-  overflow: hidden;  
+  flex: 1 1 0;
+  min-width: 0; /* flex child ko container se bahar nikalne se rokta hai */
+  overflow: hidden;
   position: relative;
   display: flex;
-  mask-image: linear-gradient(
-    to right, 
-    transparent, 
-    black 10%, 
-    black 90%, 
-    transparent
-  );  
   -webkit-mask-image: linear-gradient(
-    to right, 
-    transparent, 
-    black 10%, 
-    black 90%, 
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
     transparent
   );
 }
- 
+
+/* ---------- Marquee Track (animate hota hai) ---------- */
 .marqueeTrackHomePartnesSlider {
   display: flex;
+  align-items: center;
   width: max-content;
-  animation: scrollLogosHomePartnesSlider 25s linear infinite;
+  animation: scrollLogosHomePartnesSlider 30s linear infinite;
+  will-change: transform;
 }
- 
+
 .marqueeWindowHomePartnesSlider:hover .marqueeTrackHomePartnesSlider {
   animation-play-state: paused;
 }
- 
+
+/* ---------- Group = logos ka ek poora set ---------- */
 .marqueeGroupHomePartnesSlider {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
- 
+
+/* ---------- Item = logo + divider ---------- */
 .logoItemHomePartnesSlider {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
- 
+
+/* ---------- Logo Image ---------- */
+.logoimagehomepartnerslider {
+  display: block;
+  height: var(--logo-height);
+  width: auto;
+  max-width: var(--logo-max-width);
+  object-fit: contain;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* Optional: sab logos ko uniform white/grey dikhane ke liye uncomment karein
+  filter: grayscale(1) brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  */
+}
+
+/* Optional hover (upar wala filter use karein to ye bhi uncomment karein)
+.logoimagehomepartnerslider:hover {
+  opacity: 1;
+}
+*/
+
+/* ---------- Divider (logo ke dono taraf spacing yahin se aati hai) ---------- */
 .dividerHomePartnesSlider {
   width: 1px;
   height: 20px;
+  flex-shrink: 0;
   background-color: var(--nexzell-border-highlight, #334155);
-  margin: 0 3rem;  
+  margin: 0 var(--logo-gap);
   opacity: 0.5;
 }
- 
+
+/* ---------- Fallback text logo (agar kabhi image ki jagah text ho) ---------- */
 .placeholderLogoHomePartnesSlider {
   font-family: var(--font-montserrat, sans-serif);
   font-weight: 700;
@@ -92,18 +147,45 @@
   color: var(--nexzell-text-gray-100, #E2E8F0);
   white-space: nowrap;
 }
- 
+
+/* ---------- Animation ---------- */
 @keyframes scrollLogosHomePartnesSlider {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);  
+  to {
+    transform: translateX(-50%);
   }
 }
- @media (max-width: 1024px) {
 
+/* ---------- Accessibility: kam motion chahne walon ke liye ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrackHomePartnesSlider {
+    animation-duration: 90s;
+  }
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP (1440px+)
+   ========================================================== */
+@media (min-width: 1440px) {
   .sectionWrapperHomePartnesSlider {
+    --logo-height: 42px;
+    --logo-max-width: 160px;
+    --logo-gap: 3.5rem;
+  }
+}
+
+
+/* ==========================================================
+   LAPTOP / SMALL DESKTOP (max 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+  .sectionWrapperHomePartnesSlider {
+    --logo-height: 32px;
+    --logo-max-width: 120px;
+    --logo-gap: 2.25rem;
     padding: 1.4rem 0;
   }
 
@@ -122,16 +204,24 @@
   .marqueeWindowHomePartnesSlider {
     width: 100%;
     flex: 1;
-    mask-image: none;
-    -webkit-mask-image: none;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6%,
+      black 94%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6%,
+      black 94%,
+      transparent
+    );
   }
 
   .marqueeTrackHomePartnesSlider {
-    animation-duration: 22s;
-  }
-
-  .marqueeGroupHomePartnesSlider {
-    gap: 0;
+    animation-duration: 26s;
   }
 
   .logoItemHomePartnesSlider {
@@ -142,21 +232,17 @@
     font-size: 1rem;
     white-space: nowrap;
   }
-
-  .dividerHomePartnesSlider {
-    height: 18px;
-    margin: 0 2.25rem;
-  }
 }
 
 
 /* ==========================================================
-   TABLET
+   TABLET (max 768px)
    ========================================================== */
-
 @media (max-width: 768px) {
-
   .sectionWrapperHomePartnesSlider {
+    --logo-height: 28px;
+    --logo-max-width: 105px;
+    --logo-gap: 1.8rem;
     padding: 1.25rem 0;
   }
 
@@ -171,27 +257,27 @@
   }
 
   .marqueeTrackHomePartnesSlider {
-    animation-duration: 20s;
+    animation-duration: 22s;
+  }
+
+  .dividerHomePartnesSlider {
+    height: 17px;
   }
 
   .placeholderLogoHomePartnesSlider {
     font-size: 0.92rem;
   }
-
-  .dividerHomePartnesSlider {
-    height: 17px;
-    margin: 0 1.8rem;
-  }
 }
 
 
 /* ==========================================================
-   MOBILE
+   MOBILE (max 640px)
    ========================================================== */
-
 @media (max-width: 640px) {
-
   .sectionWrapperHomePartnesSlider {
+    --logo-height: 24px;
+    --logo-max-width: 90px;
+    --logo-gap: 1.35rem;
     padding: 1.1rem 0;
   }
 
@@ -207,27 +293,27 @@
   }
 
   .marqueeTrackHomePartnesSlider {
-    animation-duration: 17s;
+    animation-duration: 18s;
+  }
+
+  .dividerHomePartnesSlider {
+    height: 15px;
   }
 
   .placeholderLogoHomePartnesSlider {
     font-size: 0.82rem;
   }
-
-  .dividerHomePartnesSlider {
-    height: 15px;
-    margin: 0 1.35rem;
-  }
 }
 
 
 /* ==========================================================
-   SMALL MOBILE
+   SMALL MOBILE (max 380px)
    ========================================================== */
-
 @media (max-width: 380px) {
-
   .sectionWrapperHomePartnesSlider {
+    --logo-height: 20px;
+    --logo-max-width: 76px;
+    --logo-gap: 1.1rem;
     padding: 1rem 0;
   }
 
@@ -237,15 +323,14 @@
   }
 
   .marqueeTrackHomePartnesSlider {
-    animation-duration: 15s;
+    animation-duration: 16s;
+  }
+
+  .dividerHomePartnesSlider {
+    height: 13px;
   }
 
   .placeholderLogoHomePartnesSlider {
     font-size: 0.76rem;
-  }
-
-  .dividerHomePartnesSlider {
-    height: 14px;
-    margin: 0 1.1rem;
   }
 }

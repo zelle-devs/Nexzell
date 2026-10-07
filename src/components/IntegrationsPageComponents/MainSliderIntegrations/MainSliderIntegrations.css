@@ -1,0 +1,460 @@
+/* Section Wrapper */
+.sectionWrapperMainSliderIntegrations {
+  padding: 8rem 0 6rem; /* Top padding accounts for fixed header */
+  background-color: var(--nexzell-bg-base, #06080C);
+  position: relative;
+  overflow: hidden;
+    background-image: url('../../../../public/headerimageintegrations.png');
+  background-position: right;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+    width: 100%;
+}
+
+.containerMainSliderIntegrations {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+}
+
+/* Content Container & Animation */
+.contentMainSliderIntegrations {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes fadeUpAnimMainSliderIntegrations {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedFadeUpMainSliderIntegrations {
+  animation: fadeUpAnimMainSliderIntegrations 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.badgeMainSliderIntegrations {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderIntegrations {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+/* Heading */
+.headingMainSliderIntegrations {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(1rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderIntegrations {
+  color: var(--nexzell-primary, #00E699);
+  /* background: linear-gradient(90deg, var(--nexzell-gradient-start), var(--nexzell-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+ 
+.descriptionMainSliderIntegrations {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+ 
+.btnGroupMainSliderIntegrations {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.btnPrimaryMainSliderIntegrations {
+ display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryMainSliderIntegrations:hover {
+  background-color: transparent; 
+  color: var(--nexzell-primary-hover);
+   border: 1px solid var(--nexzell-primary);
+}
+
+.btnIconMainSliderIntegrations {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryMainSliderIntegrations:hover .btnIconMainSliderIntegrations {
+  transform: translateX(4px);
+}
+
+.btnSecondaryMainSliderIntegrations {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryMainSliderIntegrations:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.playIconMainSliderIntegrations {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+ 
+.featuresListMainSliderIntegrations {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.featureItemMainSliderIntegrations {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featureIconMainSliderIntegrations {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.featureTextMainSliderIntegrations {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-weight: 500;
+}
+ /* Tablet */
+@media (max-width: 1024px) {
+  .sectionWrapperMainSliderIntegrations {
+    padding: 7rem 0 5rem;
+    background-position: center right;
+    
+  }
+
+  .containerMainSliderIntegrations {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.75) 58%,
+      transparent 950%,
+      transparent 100%
+    );
+  }
+
+  .contentMainSliderIntegrations {
+    max-width: 650px;
+  }
+
+  .badgeMainSliderIntegrations {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingMainSliderIntegrations {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderIntegrations {
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 90%;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnGroupMainSliderIntegrations {
+    gap: 0.9rem;
+    margin-bottom: 3rem;
+  }
+
+  .btnPrimaryMainSliderIntegrations,
+  .btnSecondaryMainSliderIntegrations {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.92rem;
+  }
+
+  .featuresListMainSliderIntegrations {
+    gap: 2rem;
+  }
+
+  .featureTextMainSliderIntegrations {
+    font-size: 0.82rem;
+  }
+}
+
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .sectionWrapperMainSliderIntegrations {
+    padding: 2.5rem 0 0rem;
+    background-position: 65% center;
+  }
+
+  .containerMainSliderIntegrations {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background: linear-gradient(
+      to bottom,
+      var(--nexzell-bg-base, #06080C) 0%,
+      rgba(6, 8, 12, 0.75) 58%,
+      transparent 950%,
+      transparent 100%
+    );
+    height: 70vh;
+  }
+
+  .contentMainSliderIntegrations {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeMainSliderIntegrations {
+    gap: 0.45rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .badgeDotMainSliderIntegrations {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderIntegrations {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.12;
+    margin-bottom: 1.15rem;
+  }
+
+  .descriptionMainSliderIntegrations {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupMainSliderIntegrations {
+    flex-direction: row;
+    width: fit-content;
+    align-items: stretch;
+    gap: 0.8rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .btnPrimaryMainSliderIntegrations,
+  .btnSecondaryMainSliderIntegrations {
+    justify-content: center;
+    width: 100%;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+    flex: 1;
+  }
+
+  .featuresListMainSliderIntegrations {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .featureItemMainSliderIntegrations {
+    gap: 0.65rem;
+  }
+
+  .featureTextMainSliderIntegrations {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .sectionWrapperMainSliderIntegrations {
+    padding: 4.5rem 0 0rem;
+    background-position: 68% center;
+  }
+
+  .containerMainSliderIntegrations {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+  }
+
+  .contentMainSliderIntegrations {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderIntegrations {
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderIntegrations {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderIntegrations {
+    width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionMainSliderIntegrations {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupMainSliderIntegrations {
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnPrimaryMainSliderIntegrations,
+  .btnSecondaryMainSliderIntegrations {
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.84rem;
+  }
+
+  .featuresListMainSliderIntegrations {
+    width: 100%;
+    gap: 1.1rem;
+  }
+
+  .featureItemMainSliderIntegrations {
+    gap: 0.6rem;
+  }
+
+  .featureTextMainSliderIntegrations {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+}
+
+
+/* Very Small Mobile */
+@media (max-width: 380px) {
+  .sectionWrapperMainSliderIntegrations {
+    padding: 4rem 0 3rem;
+    background-position: 72% center;
+  }
+
+  .containerMainSliderIntegrations {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .badgeMainSliderIntegrations {
+    padding: 0.28rem 0.7rem;
+    font-size: 0.61rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotMainSliderIntegrations {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderIntegrations {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionMainSliderIntegrations {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnGroupMainSliderIntegrations {
+    gap: 0.65rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnPrimaryMainSliderIntegrations,
+  .btnSecondaryMainSliderIntegrations {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .featuresListMainSliderIntegrations {
+    gap: 1rem;
+  }
+
+  .featureItemMainSliderIntegrations {
+    gap: 0.55rem;
+  }
+
+  .featureTextMainSliderIntegrations {
+    font-size: 0.72rem;
+  }
+}

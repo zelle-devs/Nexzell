@@ -5,6 +5,7 @@ import OutTeamSaysAbout from '@/components/AboutUsComponents/OutTeamSaysAbout/Ou
 import PeoplesBelieveTomorrow from '@/components/AboutUsComponents/PeoplesBelieveTomorrow/PeoplesBelieveTomorrow'
 import SimplerFutureCommerceAbout from '@/components/AboutUsComponents/SimplerFutureCommerceAbout/SimplerFutureCommerceAbout'
 import WhatDrivesUsAbout from '@/components/AboutUsComponents/WhatDrivesUsAbout/WhatDrivesUsAbout'
+import RealBusinessGrowthHome from '@/components/HomePageComps/RealBusinessGrowthHome/RealBusinessGrowthHome'
 import React from 'react'
 
 function page() {
@@ -15,7 +16,7 @@ function page() {
         <BuildWhatsNextAbout/>
         <WhatDrivesUsAbout/>
         <PeoplesBelieveTomorrow/>
-        <OutTeamSaysAbout/>
+        <RealBusinessGrowthHome/>
         <SimplerFutureCommerceAbout/>
     </div>
   )

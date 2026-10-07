@@ -28,7 +28,7 @@ function MakeEcommerceSimpler() {
                   <Sparkles size={16} className="cardIconMakeEcommerceSimpler" />
                 </div>
                 <p className="cardTextMakeEcommerceSimpler">
-                  Powering businesses<br />in 120+ countries
+                  Powering businesses<br />in 12+ countries
                 </p>
               </div>
               

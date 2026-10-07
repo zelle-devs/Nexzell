@@ -3,6 +3,7 @@
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
   overflow: hidden;
+  padding-top: 0 !important;
 }
 
 .containerCateglogUnderControlProduct {

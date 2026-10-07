@@ -36,9 +36,11 @@ function BuiltBusinessSizesHome() {
             Whether you're a startup, a growing brand or an established enterprise, 
             Nexzell scales with you. Start small, add more as you grow.
           </p>
-          <button className="btnOutlineBuiltBusinessSizesHome">
+          <a href="/solutions">
+           <button className="btnOutlineBuiltBusinessSizesHome">
             See How It Works <ArrowRight size={16} className="btnIconBuiltBusinessSizesHome" />
-          </button>
+          </button></a>
+         
         </div>
 
         <div className="rightContentBuiltBusinessSizesHome">

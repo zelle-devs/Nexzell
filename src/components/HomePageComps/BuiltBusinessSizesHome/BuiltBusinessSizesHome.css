@@ -125,7 +125,8 @@
 @media (max-width: 1024px) {
 
   .sectionWrapperBuiltBusinessSizesHome {
-    padding: 4rem 0;
+    padding: 4rem 0 !important;
+    padding-bottom: 5px  !important;
   }
 
   .containerBuiltBusinessSizesHome {

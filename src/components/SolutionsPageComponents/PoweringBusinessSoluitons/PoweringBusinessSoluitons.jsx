@@ -26,17 +26,17 @@ function PoweringBusinessSoluitons() {
           
           <p className="descriptionPoweringBusinessSoluitons animDelay2PoweringBusinessSoluitons">
             From local brands to global enterprises, Nexzell helps 
-            businesses in <strong>120+ countries</strong> build and grow their online 
+            businesses in <strong>12+ countries</strong> build and grow their online 
             stores.
           </p>
           
           <div className="statsRowPoweringBusinessSoluitons animDelay3PoweringBusinessSoluitons">
             <div className="statBlockPoweringBusinessSoluitons">
-              <h3 className="statNumPoweringBusinessSoluitons">120+</h3>
+              <h3 className="statNumPoweringBusinessSoluitons">12+</h3>
               <p className="statLabelPoweringBusinessSoluitons">Countries</p>
             </div>
             <div className="statBlockPoweringBusinessSoluitons">
-              <h3 className="statNumPoweringBusinessSoluitons">12,000+</h3>
+              <h3 className="statNumPoweringBusinessSoluitons">500+</h3>
               <p className="statLabelPoweringBusinessSoluitons">Businesses</p>
             </div>
             <div className="statBlockPoweringBusinessSoluitons">

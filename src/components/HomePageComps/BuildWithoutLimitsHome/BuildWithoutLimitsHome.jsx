@@ -23,9 +23,11 @@ function BuildWithoutLimitsHome() {
               Book a Free Demo <ArrowRight size={18} className="btnIconBuildWithoutLimitsHome" />
             </button>
             </Link>
-            <button className="btnSecondaryBuildWithoutLimitsHome">
+            <a href="/contact-us">
+             <button className="btnSecondaryBuildWithoutLimitsHome">
               Talk to an Expert
-            </button>
+            </button></a>
+           
           </div>
         </div>
 

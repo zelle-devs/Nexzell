@@ -67,9 +67,9 @@ function MainSliderProductPage() {
             Book a Free Demo <ArrowRight size={18} className="btnIconMainSliderProductPage" />
             </button>
             </Link>
-            <button className="btnSecondaryMainSliderProductPage">
+            {/* <button className="btnSecondaryMainSliderProductPage">
               <PlayCircle size={20} className="playIconMainSliderProductPage" /> Explore Features
-            </button>
+            </button> */}
           </div>
 
           <div className="statsListMainSliderProductPage animDelay5">

@@ -293,8 +293,8 @@
   }
 
   .btnGroupMainSliderHome {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    width: fit-content;
     align-items: stretch;
     gap: 0.8rem;
     margin-bottom: 2.75rem;
@@ -306,6 +306,7 @@
     width: 100%;
     padding: 0.8rem 1.4rem;
     font-size: 0.9rem;
+    flex: 1;
   }
 
   .featuresListMainSliderHome {

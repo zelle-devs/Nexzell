@@ -1,0 +1,453 @@
+.sectionWrapperCaseStudyOwnSuccessStory {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+   background-image:
+    linear-gradient(
+      90deg,
+      rgba(6, 8, 12, 0.841) 0%,
+      rgba(6, 8, 12, 0.655) 35%,
+      rgba(6, 8, 12, 0.408) 65%,
+      rgba(6, 8, 12, 0.227) 100%
+    ),
+    url('/CaseStudyOwnSuccessStory.jpg');
+
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border-top: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.containerCaseStudyOwnSuccessStory {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUpAnimCaseStudyOwnSuccessStory {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpCaseStudyOwnSuccessStory {
+  animation: fadeUpAnimCaseStudyOwnSuccessStory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeUpDelayCaseStudyOwnSuccessStory {
+  opacity: 0;
+  animation: fadeUpAnimCaseStudyOwnSuccessStory 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+}
+
+.leftContentCaseStudyOwnSuccessStory {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 750px;
+}
+
+.badgeCaseStudyOwnSuccessStory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotCaseStudyOwnSuccessStory {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingCaseStudyOwnSuccessStory {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightCaseStudyOwnSuccessStory {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionCaseStudyOwnSuccessStory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.btnGroupCaseStudyOwnSuccessStory {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.btnPrimaryCaseStudyOwnSuccessStory {
+ display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryCaseStudyOwnSuccessStory:hover {
+  background-color: transparent; 
+  color: var(--nexzell-primary-hover);
+   border: 1px solid var(--nexzell-primary);
+}
+
+.btnIconCaseStudyOwnSuccessStory {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryCaseStudyOwnSuccessStory:hover .btnIconCaseStudyOwnSuccessStory {
+  transform: translateX(4px);
+}
+
+.btnSecondaryCaseStudyOwnSuccessStory {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryCaseStudyOwnSuccessStory:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightContentCaseStudyOwnSuccessStory {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.taglineRightCaseStudyOwnSuccessStory {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.25rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: left;
+}
+/* =========================================================
+   1200px - 1025px
+   Large Tablet / Small Desktop
+========================================================= */
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+
+  .sectionWrapperCaseStudyOwnSuccessStory {
+    padding: 3.5rem 0;
+    background-position: center right;
+  }
+
+  .containerCaseStudyOwnSuccessStory {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    gap: 3rem;
+  }
+
+  .leftContentCaseStudyOwnSuccessStory {
+    max-width: 680px;
+  }
+
+  .headingCaseStudyOwnSuccessStory {
+    font-size: clamp(2rem, 3.5vw, 2.7rem);
+  }
+
+  .descriptionCaseStudyOwnSuccessStory {
+    font-size: 0.98rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnGroupCaseStudyOwnSuccessStory {
+    gap: 1rem;
+  }
+
+  .btnPrimaryCaseStudyOwnSuccessStory,
+  .btnSecondaryCaseStudyOwnSuccessStory {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.94rem;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory {
+    font-size: 1.1rem;
+  }
+
+}
+
+
+/* =========================================================
+   1024px - 790px
+   Tablet
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 790px) {
+
+  .sectionWrapperCaseStudyOwnSuccessStory {
+    padding: 4rem 0;
+    background-position: center right;
+  }
+
+  .containerCaseStudyOwnSuccessStory {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .leftContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .badgeCaseStudyOwnSuccessStory {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingCaseStudyOwnSuccessStory {
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.15;
+  }
+
+  .descriptionCaseStudyOwnSuccessStory {
+    max-width: 700px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnGroupCaseStudyOwnSuccessStory {
+    gap: 1rem;
+  }
+
+  .btnPrimaryCaseStudyOwnSuccessStory,
+  .btnSecondaryCaseStudyOwnSuccessStory {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.92rem;
+  }
+
+  .rightContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory br {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   789px - 481px
+   Small Tablet / Large Mobile
+========================================================= */
+
+@media (max-width: 789px) and (min-width: 481px) {
+
+  .sectionWrapperCaseStudyOwnSuccessStory {
+    padding: 3.5rem 0;
+    background-position: center;
+  }
+
+  .containerCaseStudyOwnSuccessStory {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 2.75rem;
+  }
+
+  .leftContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .badgeCaseStudyOwnSuccessStory {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.15rem;
+  }
+
+  .badgeDotCaseStudyOwnSuccessStory {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingCaseStudyOwnSuccessStory {
+    width: 100%;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.18;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionCaseStudyOwnSuccessStory {
+    width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupCaseStudyOwnSuccessStory {
+    gap: 0.9rem;
+  }
+
+  .btnPrimaryCaseStudyOwnSuccessStory,
+  .btnSecondaryCaseStudyOwnSuccessStory {
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  .rightContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory {
+    width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory br {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   480px and Below
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sectionWrapperCaseStudyOwnSuccessStory {
+    padding: 2.75rem 0;
+    background-position: center;
+  }
+
+  .containerCaseStudyOwnSuccessStory {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 2.5rem;
+  }
+
+  .leftContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .badgeCaseStudyOwnSuccessStory {
+    padding: 0.32rem 0.75rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotCaseStudyOwnSuccessStory {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingCaseStudyOwnSuccessStory {
+    width: 100%;
+    font-size: clamp(1.7rem, 8vw, 2.15rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionCaseStudyOwnSuccessStory {
+    width: 100%;
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupCaseStudyOwnSuccessStory {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .btnPrimaryCaseStudyOwnSuccessStory,
+  .btnSecondaryCaseStudyOwnSuccessStory {
+    justify-content: center;
+    width: 100%;
+    padding: 0.78rem 1.15rem;
+    font-size: 0.86rem;
+  }
+
+  .rightContentCaseStudyOwnSuccessStory {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory {
+    display: block;
+    width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .taglineRightCaseStudyOwnSuccessStory br {
+    display: none;
+  }
+
+}

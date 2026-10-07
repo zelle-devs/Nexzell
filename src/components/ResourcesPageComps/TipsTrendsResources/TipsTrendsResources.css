@@ -212,6 +212,7 @@
 
   .sectionWrapperTipsTrendsResources {
     padding: 5rem 0;
+    padding-bottom: 0 !important;
   }
 
   .containerTipsTrendsResources {

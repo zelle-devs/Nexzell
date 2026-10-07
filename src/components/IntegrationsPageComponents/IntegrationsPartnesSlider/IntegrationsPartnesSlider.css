@@ -1,0 +1,336 @@
+/* ==========================================================
+   IntegrationsPartnesSlider - COMPLETE CSS
+   Logo size aur spacing sirf 3 variables se control hoti hai:
+   --logo-height, --logo-max-width, --logo-gap
+   ========================================================== */
+
+/* ---------- Main Section Wrapper ---------- */
+.sectionWrapperIntegrationsPartnesSlider {
+  /* Default (desktop) tokens */
+  --logo-height: 36px;
+  --logo-max-width: 140px;
+  --logo-gap: 3rem;
+
+  background-color: var(--nexzell-bg-base, #06080C);
+  border-top: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+  padding: 1.5rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---------- Container ---------- */
+.containerIntegrationsPartnesSlider {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+/* ---------- Left / Right Static Text ---------- */
+.leftTextIntegrationsPartnesSlider,
+.rightTextIntegrationsPartnesSlider {
+  flex-shrink: 0;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--nexzell-text-gray-500, #64748B);
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.leftTextIntegrationsPartnesSlider p,
+.rightTextIntegrationsPartnesSlider p {
+  margin: 0;
+}
+
+/* ---------- Marquee Window ---------- */
+.marqueeWindowIntegrationsPartnesSlider {
+  flex: 1 1 0;
+  min-width: 0; /* flex child ko container se bahar nikalne se rokta hai */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* ---------- Marquee Track (animate hota hai) ---------- */
+.marqueeTrackIntegrationsPartnesSlider {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollLogosIntegrationsPartnesSlider 30s linear infinite;
+  will-change: transform;
+}
+
+.marqueeWindowIntegrationsPartnesSlider:hover .marqueeTrackIntegrationsPartnesSlider {
+  animation-play-state: paused;
+}
+
+/* ---------- Group = logos ka ek poora set ---------- */
+.marqueeGroupIntegrationsPartnesSlider {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Item = logo + divider ---------- */
+.logoItemIntegrationsPartnesSlider {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Logo Image ---------- */
+.logoimagehomepartnerslider {
+  display: block;
+  height: var(--logo-height);
+  width: auto;
+  max-width: var(--logo-max-width);
+  object-fit: contain;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* Optional: sab logos ko uniform white/grey dikhane ke liye uncomment karein
+  filter: grayscale(1) brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  */
+}
+
+/* Optional hover (upar wala filter use karein to ye bhi uncomment karein)
+.logoimagehomepartnerslider:hover {
+  opacity: 1;
+}
+*/
+
+/* ---------- Divider (logo ke dono taraf spacing yahin se aati hai) ---------- */
+.dividerIntegrationsPartnesSlider {
+  width: 1px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: var(--nexzell-border-highlight, #334155);
+  margin: 0 var(--logo-gap);
+  opacity: 0.5;
+}
+
+/* ---------- Fallback text logo (agar kabhi image ki jagah text ho) ---------- */
+.placeholderLogoIntegrationsPartnesSlider {
+  font-family: var(--font-montserrat, sans-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  white-space: nowrap;
+}
+
+/* ---------- Animation ---------- */
+@keyframes scrollLogosIntegrationsPartnesSlider {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Accessibility: kam motion chahne walon ke liye ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrackIntegrationsPartnesSlider {
+    animation-duration: 90s;
+  }
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP (1440px+)
+   ========================================================== */
+@media (min-width: 1440px) {
+  .sectionWrapperIntegrationsPartnesSlider {
+    --logo-height: 42px;
+    --logo-max-width: 160px;
+    --logo-gap: 3.5rem;
+  }
+}
+
+
+/* ==========================================================
+   LAPTOP / SMALL DESKTOP (max 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+  .sectionWrapperIntegrationsPartnesSlider {
+    --logo-height: 32px;
+    --logo-max-width: 120px;
+    --logo-gap: 2.25rem;
+    padding: 1.4rem 0;
+  }
+
+  .containerIntegrationsPartnesSlider {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .leftTextIntegrationsPartnesSlider,
+  .rightTextIntegrationsPartnesSlider {
+    display: none;
+  }
+
+  .marqueeWindowIntegrationsPartnesSlider {
+    width: 100%;
+    flex: 1;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6%,
+      black 94%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6%,
+      black 94%,
+      transparent
+    );
+  }
+
+  .marqueeTrackIntegrationsPartnesSlider {
+    animation-duration: 26s;
+  }
+
+  .logoItemIntegrationsPartnesSlider {
+    flex-shrink: 0;
+  }
+
+  .placeholderLogoIntegrationsPartnesSlider {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
+
+
+/* ==========================================================
+   TABLET (max 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+  .sectionWrapperIntegrationsPartnesSlider {
+    --logo-height: 28px;
+    --logo-max-width: 105px;
+    --logo-gap: 1.8rem;
+    padding: 1.25rem 0;
+  }
+
+  .containerIntegrationsPartnesSlider {
+    width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .marqueeWindowIntegrationsPartnesSlider {
+    width: 100%;
+  }
+
+  .marqueeTrackIntegrationsPartnesSlider {
+    animation-duration: 22s;
+  }
+
+  .dividerIntegrationsPartnesSlider {
+    height: 17px;
+  }
+
+  .placeholderLogoIntegrationsPartnesSlider {
+    font-size: 0.92rem;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE (max 640px)
+   ========================================================== */
+@media (max-width: 640px) {
+  .sectionWrapperIntegrationsPartnesSlider {
+    --logo-height: 24px;
+    --logo-max-width: 90px;
+    --logo-gap: 1.35rem;
+    padding: 1.1rem 0;
+  }
+
+  .containerIntegrationsPartnesSlider {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .marqueeWindowIntegrationsPartnesSlider {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marqueeTrackIntegrationsPartnesSlider {
+    animation-duration: 18s;
+  }
+
+  .dividerIntegrationsPartnesSlider {
+    height: 15px;
+  }
+
+  .placeholderLogoIntegrationsPartnesSlider {
+    font-size: 0.82rem;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE (max 380px)
+   ========================================================== */
+@media (max-width: 380px) {
+  .sectionWrapperIntegrationsPartnesSlider {
+    --logo-height: 20px;
+    --logo-max-width: 76px;
+    --logo-gap: 1.1rem;
+    padding: 1rem 0;
+  }
+
+  .containerIntegrationsPartnesSlider {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .marqueeTrackIntegrationsPartnesSlider {
+    animation-duration: 16s;
+  }
+
+  .dividerIntegrationsPartnesSlider {
+    height: 13px;
+  }
+
+  .placeholderLogoIntegrationsPartnesSlider {
+    font-size: 0.76rem;
+  }
+}

@@ -141,6 +141,7 @@
 
   .sectionWrapperWhatDrivesUsAbout {
     padding: 4rem 0;
+    padding-bottom: 0 !important;
   }
 
   .containerWhatDrivesUsAbout {

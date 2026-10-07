@@ -25,7 +25,7 @@ function MoreThenJustPlatformSolutions() {
     {
       id: 4,
       icon: <Settings2 size={24} className="featureIconMoreThenJustPlatformSolutions" />,
-      title: "Flexible & Customizable",
+      title: "Customizable",
       desc: "Adapt to your unique business needs."
     },
     {
@@ -45,6 +45,7 @@ function MoreThenJustPlatformSolutions() {
             <span className="badgeDotEverythingBusinessStarter"></span>
             WHY BUSINESS CHOOSE NEXZELLE
           </div>
+          
           <h2 className="titleMoreThenJustPlatformSolutions">More Than Just a Platform</h2>
           <p className="descMoreThenJustPlatformSolutions">
             Everything you need to build, run and grow your ecommerce business — in one place.

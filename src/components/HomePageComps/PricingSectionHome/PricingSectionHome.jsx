@@ -38,20 +38,24 @@ function PricingSectionHome() {
       isPopular: true
     },
     {
-      id: 3,
-      name: "Enterprise",
-      desc: "For large businesses",
-      monthlyPrice: "199",
-      yearlyPrice: "159",
-      features: [
-        "Custom solutions",
-        "Advanced integrations",
-        "Dedicated account manager",
-        "24/7 support"
-      ],
-      btnText: "Contact Sales",
-      isPopular: false
-    }
+  id: 3,
+  name: "Enterprise",
+  desc: "For large businesses",
+  monthlyPrice: "199",
+  yearlyPrice: "159",
+  features: [
+    "Custom solutions",
+    "Advanced integrations",
+    "Dedicated account manager",
+    "24/7 support",
+    "Custom reporting",
+    "Priority onboarding",
+    "Scalable infrastructure",
+    "Premium security"
+  ],
+  btnText: "Contact Sales",
+  isPopular: false
+}
   ];
 
   return (
@@ -112,10 +116,10 @@ function PricingSectionHome() {
                   </div>
                 ))}
               </div>
-
-              <button className={`btnPricingSectionHome ${plan.isPopular ? 'btnPrimaryPricingSectionHome' : 'btnOutlinePricingSectionHome'}`}>
+              <a href="/consultation"> <button className={`btnPricingSectionHome ${plan.isPopular ? 'btnPrimaryPricingSectionHome' : 'btnOutlinePricingSectionHome'}`}>
                 {plan.btnText}
-              </button>
+              </button></a>
+             
             </div>
           ))}
         </div>

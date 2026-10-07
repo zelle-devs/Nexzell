@@ -1,0 +1,500 @@
+.sectionWrapperCaseStudiesWhyItWorked {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.containerCaseStudiesWhyItWorked {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1300px);
+  padding: 0 var(--nexzell-padding-x, 2rem);
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimCaseStudiesWhyItWorked {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRightAnimCaseStudiesWhyItWorked {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animFadeUpCaseStudiesWhyItWorked {
+  animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeInRightCaseStudiesWhyItWorked {
+  opacity: 0;
+  animation: fadeInRightAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+.animDelay1CaseStudiesWhyItWorked { opacity: 0; animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2CaseStudiesWhyItWorked { opacity: 0; animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3CaseStudiesWhyItWorked { opacity: 0; animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4CaseStudiesWhyItWorked { opacity: 0; animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5CaseStudiesWhyItWorked { opacity: 0; animation: fadeUpAnimCaseStudiesWhyItWorked 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+
+/* --- Main Card Layout --- */
+.mainCardCaseStudiesWhyItWorked {
+  background-color: rgba(14, 18, 24, 0.5);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 24px);
+  display: flex;
+  align-items: stretch;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* --- Left Column --- */
+.leftColCaseStudiesWhyItWorked {
+  flex: 1;
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 0.05); /* Subtle vertical divider */
+}
+
+.badgeCaseStudiesWhyItWorked {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotCaseStudiesWhyItWorked {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingCaseStudiesWhyItWorked {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionCaseStudiesWhyItWorked {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnPrimaryCaseStudiesWhyItWorked {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryCaseStudiesWhyItWorked:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconCaseStudiesWhyItWorked {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryCaseStudiesWhyItWorked:hover .btnIconCaseStudiesWhyItWorked {
+  transform: translateX(4px);
+}
+
+/* --- Middle Column --- */
+.midColCaseStudiesWhyItWorked {
+  flex: 1;
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuresListCaseStudiesWhyItWorked {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.featureItemCaseStudiesWhyItWorked {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.featureIconBoxCaseStudiesWhyItWorked {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  background-color: rgba(0, 230, 153, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureIconCaseStudiesWhyItWorked {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.featureTextWrapperCaseStudiesWhyItWorked {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.featureTitleCaseStudiesWhyItWorked {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.featureDescCaseStudiesWhyItWorked {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* --- Right Column (Image) --- */
+.rightColCaseStudiesWhyItWorked {
+  flex: 0 0 30%;
+  min-width: 300px;
+  position: relative;
+}
+
+.cardImageCaseStudiesWhyItWorked {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+
+  .sectionWrapperCaseStudiesWhyItWorked {
+    padding: 5rem 0;
+  }
+
+  .containerCaseStudiesWhyItWorked {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .mainCardCaseStudiesWhyItWorked {
+    min-height: 380px;
+  }
+
+  .leftColCaseStudiesWhyItWorked {
+    padding: 3.25rem 2.75rem;
+  }
+
+  .midColCaseStudiesWhyItWorked {
+    padding: 3.25rem 2.75rem;
+  }
+
+  .rightColCaseStudiesWhyItWorked {
+    flex: 0 0 30%;
+    min-width: 270px;
+  }
+
+  .headingCaseStudiesWhyItWorked {
+    font-size: clamp(1.9rem, 3.2vw, 2.3rem);
+  }
+
+  .descriptionCaseStudiesWhyItWorked {
+    font-size: 0.9rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .featuresListCaseStudiesWhyItWorked {
+    gap: 1.5rem;
+  }
+
+}
+
+
+/* =========================================================
+   1024px - 790px
+   Tablet
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 790px) {
+
+  .sectionWrapperCaseStudiesWhyItWorked {
+    padding: 4.5rem 0;
+  }
+
+  .containerCaseStudiesWhyItWorked {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .mainCardCaseStudiesWhyItWorked {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .leftColCaseStudiesWhyItWorked {
+    padding: 3rem 2.25rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .midColCaseStudiesWhyItWorked {
+    padding: 3rem 2.25rem;
+  }
+
+  .rightColCaseStudiesWhyItWorked {
+    width: 100%;
+    min-width: 0;
+    height: 330px;
+    flex: none;
+  }
+
+  .headingCaseStudiesWhyItWorked {
+    font-size: clamp(1.85rem, 4vw, 2.3rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionCaseStudiesWhyItWorked {
+    font-size: 0.9rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .featuresListCaseStudiesWhyItWorked {
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureItemCaseStudiesWhyItWorked {
+    gap: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   789px - 481px
+   Small Tablet / Large Mobile
+========================================================= */
+
+@media (max-width: 789px) and (min-width: 481px) {
+
+  .sectionWrapperCaseStudiesWhyItWorked {
+    padding: 3.5rem 0;
+  }
+
+  .containerCaseStudiesWhyItWorked {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .mainCardCaseStudiesWhyItWorked {
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .leftColCaseStudiesWhyItWorked {
+    padding: 2.5rem 1.75rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .midColCaseStudiesWhyItWorked {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .rightColCaseStudiesWhyItWorked {
+    width: 100%;
+    min-width: 0;
+    height: 280px;
+    flex: none;
+  }
+
+  .badgeCaseStudiesWhyItWorked {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingCaseStudiesWhyItWorked {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionCaseStudiesWhyItWorked {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnPrimaryCaseStudiesWhyItWorked {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.88rem;
+  }
+
+  .featuresListCaseStudiesWhyItWorked {
+    gap: 1.35rem;
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureItemCaseStudiesWhyItWorked {
+    gap: 0.9rem;
+  }
+
+  .featureIconBoxCaseStudiesWhyItWorked {
+    width: 40px;
+    height: 40px;
+  }
+
+  .featureTitleCaseStudiesWhyItWorked {
+    font-size: 0.9rem;
+  }
+
+  .featureDescCaseStudiesWhyItWorked {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================================================
+   480px and Below
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sectionWrapperCaseStudiesWhyItWorked {
+    padding: 2.75rem 0;
+  }
+
+  .containerCaseStudiesWhyItWorked {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mainCardCaseStudiesWhyItWorked {
+    flex-direction: column;
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .leftColCaseStudiesWhyItWorked {
+    padding: 2rem 1.25rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .midColCaseStudiesWhyItWorked {
+    padding: 2rem 1.25rem;
+  }
+
+  .rightColCaseStudiesWhyItWorked {
+    width: 100%;
+    min-width: 0;
+    height: 220px;
+    flex: none;
+  }
+
+  .badgeCaseStudiesWhyItWorked {
+    gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.62rem;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotCaseStudiesWhyItWorked {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingCaseStudiesWhyItWorked {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionCaseStudiesWhyItWorked {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnPrimaryCaseStudiesWhyItWorked {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .featuresListCaseStudiesWhyItWorked {
+    gap: 1.25rem;
+  }
+
+  .featureItemCaseStudiesWhyItWorked {
+    gap: 0.75rem;
+  }
+
+  .featureIconBoxCaseStudiesWhyItWorked {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .featureTitleCaseStudiesWhyItWorked {
+    font-size: 0.82rem;
+  }
+
+  .featureDescCaseStudiesWhyItWorked {
+    font-size: 0.74rem;
+    line-height: 1.5;
+  }
+
+}

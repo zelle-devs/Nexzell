@@ -1,5 +1,5 @@
 .sectionWrapperClickToFulfilment {
-  padding: 6rem 0;
+  padding: 0rem 0;
   background-color: var(--nexzell-bg-base, #06080C);
   width: 100%;
   overflow: hidden;
@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 5rem;
+
 }
 
 @keyframes fadeUpAnimClickToFulfilment {
@@ -191,6 +192,7 @@
 @media (max-width: 1024px) {
   .sectionWrapperClickToFulfilment {
     padding: 5rem 0;
+    padding-top: 0 !important;
   }
 
   .containerClickToFulfilment {

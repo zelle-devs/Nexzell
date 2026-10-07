@@ -1,0 +1,615 @@
+.sectionWrapperInsightsDeliverdYourBox {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  /* Apply your background image here as requested */
+  background-image: url('/insightsdeliverdinbox.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Optional: Adds a subtle dark overlay to ensure text readability over the image */
+  box-shadow: inset 0 0 0 2000px rgba(6, 8, 12, 0.296);
+}
+
+.containerInsightsDeliverdYourBox {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimInsightsDeliverdYourBox {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRightAnimInsightsDeliverdYourBox {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animFadeUpInsightsDeliverdYourBox {
+  animation: fadeUpAnimInsightsDeliverdYourBox 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay2InsightsDeliverdYourBox { 
+  opacity: 0; 
+  animation: fadeUpAnimInsightsDeliverdYourBox 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; 
+}
+
+.animFadeInRightDelay1InsightsDeliverdYourBox { 
+  opacity: 0; 
+  animation: fadeInRightAnimInsightsDeliverdYourBox 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; 
+}
+.animFadeInRightDelay2InsightsDeliverdYourBox { 
+  opacity: 0; 
+  animation: fadeInRightAnimInsightsDeliverdYourBox 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; 
+}
+.animFadeInRightDelay3InsightsDeliverdYourBox { 
+  opacity: 0; 
+  animation: fadeInRightAnimInsightsDeliverdYourBox 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; 
+}
+
+/* --- Left Content --- */
+.leftContentInsightsDeliverdYourBox {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeInsightsDeliverdYourBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotInsightsDeliverdYourBox {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingInsightsDeliverdYourBox {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightInsightsDeliverdYourBox {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionInsightsDeliverdYourBox {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 80%;
+}
+
+/* --- Form --- */
+.formWrapperInsightsDeliverdYourBox {
+  display: flex;
+  align-items: center;
+  background-color: rgba(6, 8, 12, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 0.4rem 0.4rem 0.4rem 1.25rem;
+  width: 100%;
+  max-width: 500px;
+  transition: border-color 0.3s ease;
+}
+
+.formWrapperInsightsDeliverdYourBox:focus-within {
+  border-color: rgba(0, 230, 153, 0.5);
+}
+
+.inputGroupInsightsDeliverdYourBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.mailIconInsightsDeliverdYourBox {
+  color: var(--nexzell-text-gray-400, #94A3B8);
+}
+
+.inputInsightsDeliverdYourBox {
+  background: transparent;
+  border: none;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-white, #FFFFFF);
+  width: 100%;
+  outline: none;
+}
+
+.inputInsightsDeliverdYourBox::placeholder {
+  color: var(--nexzell-text-gray-500, #64748B);
+}
+
+.submitBtnInsightsDeliverdYourBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.submitBtnInsightsDeliverdYourBox:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnArrowInsightsDeliverdYourBox {
+  transition: transform 0.3s ease;
+}
+
+.submitBtnInsightsDeliverdYourBox:hover .btnArrowInsightsDeliverdYourBox {
+  transform: translateX(4px);
+}
+
+/* --- Right Content (Floating Cards) --- */
+.rightContentInsightsDeliverdYourBox {
+  flex: 1;
+  position: relative;
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.floatingCardInsightsDeliverdYourBox {
+  position: absolute;
+  background-color: rgba(14, 18, 24, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  min-width: 280px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.floatingCardInsightsDeliverdYourBox:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 230, 153, 0.3);
+}
+
+/* Explicit positioning for the staggered layout */
+.card1InsightsDeliverdYourBox {
+  top: 60;
+  right: 80;
+}
+
+.card2InsightsDeliverdYourBox {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.card2InsightsDeliverdYourBox:hover {
+  transform: translateY(calc(-50% - 5px));
+}
+
+.card3InsightsDeliverdYourBox {
+  bottom: -20;
+  right: 20px;
+}
+
+.cardIconBoxInsightsDeliverdYourBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgba(0, 230, 153, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardIconInsightsDeliverdYourBox {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardTextInsightsDeliverdYourBox {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.4;
+}
+ /* =========================================================
+    RESPONSIVE DESIGN
+    ========================================================= */
+
+/* --- Small Desktop / Large Laptop --- */
+@media (max-width: 1200px) {
+
+  .sectionWrapperInsightsDeliverdYourBox {
+    padding: 5.5rem 0;
+    box-shadow: inset 0 0 0 2000px rgba(6, 8, 12, 0.36);
+  }
+
+  .containerInsightsDeliverdYourBox {
+    max-width: 100%;
+    padding: 0 1.75rem;
+    gap: 3rem;
+  }
+
+  .leftContentInsightsDeliverdYourBox {
+    flex: 0 0 48%;
+  }
+
+  .badgeInsightsDeliverdYourBox {
+    margin-bottom: 1.25rem;
+    font-size: 0.68rem;
+  }
+
+  .headingInsightsDeliverdYourBox {
+    font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+    line-height: 1.2;
+    margin-bottom: 1.1rem;
+  }
+
+  .descriptionInsightsDeliverdYourBox {
+    font-size: 0.9rem;
+    max-width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .formWrapperInsightsDeliverdYourBox {
+    max-width: 480px;
+  }
+
+  .rightContentInsightsDeliverdYourBox {
+    height: 300px;
+    max-width: 460px;
+  }
+
+  .floatingCardInsightsDeliverdYourBox {
+    min-width: 250px;
+    padding: 1.1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .card1InsightsDeliverdYourBox {
+    top: 40px;
+    right: 40px;
+  }
+
+  .card3InsightsDeliverdYourBox {
+    bottom: -10px;
+    right: 0;
+  }
+
+  .cardIconBoxInsightsDeliverdYourBox {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cardTextInsightsDeliverdYourBox {
+    font-size: 0.84rem;
+  }
+}
+
+
+/* --- Tablet Landscape --- */
+@media (max-width: 1024px) {
+
+  .sectionWrapperInsightsDeliverdYourBox {
+    padding: 5rem 0;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(6, 8, 12, 0.42);
+  }
+
+  .containerInsightsDeliverdYourBox {
+    padding: 0 1.5rem;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .leftContentInsightsDeliverdYourBox {
+    width: 100%;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeInsightsDeliverdYourBox {
+    margin-bottom: 1.15rem;
+  }
+
+  .headingInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 800px;
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 720px;
+    font-size: 0.9rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+  }
+
+  .formWrapperInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .rightContentInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .floatingCardInsightsDeliverdYourBox {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 430px;
+    min-width: 0;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .floatingCardInsightsDeliverdYourBox:hover {
+    transform: translateY(-5px) !important;
+  }
+
+  .cardIconBoxInsightsDeliverdYourBox {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cardTextInsightsDeliverdYourBox {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* --- Tablet / Small Screens --- */
+@media (max-width: 768px) {
+
+  .sectionWrapperInsightsDeliverdYourBox {
+    padding: 4.5rem 0;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(6, 8, 12, 0.48);
+  }
+
+  .containerInsightsDeliverdYourBox {
+    padding: 0 1.25rem;
+    gap: 3rem;
+  }
+
+  .badgeInsightsDeliverdYourBox {
+    gap: 0.4rem;
+    padding: 0.28rem 0.75rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotInsightsDeliverdYourBox {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingInsightsDeliverdYourBox {
+    max-width: 650px;
+    font-size: clamp(1.7rem, 6vw, 2.25rem);
+    line-height: 1.22;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionInsightsDeliverdYourBox {
+    max-width: 420px;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .formWrapperInsightsDeliverdYourBox {
+    max-width: 500px;
+    padding-left: 1rem;
+  }
+
+  .inputGroupInsightsDeliverdYourBox {
+    gap: 0.6rem;
+  }
+
+  .inputInsightsDeliverdYourBox {
+    font-size: 0.85rem;
+  }
+
+  .submitBtnInsightsDeliverdYourBox {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.84rem;
+  }
+
+  .rightContentInsightsDeliverdYourBox {
+    max-width: 520px;
+    gap: 1rem;
+  }
+
+  .floatingCardInsightsDeliverdYourBox {
+    max-width: 420px;
+    padding: 1rem 1.1rem;
+    gap: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .cardIconBoxInsightsDeliverdYourBox {
+    width: 38px;
+    height: 38px;
+    border-radius: 7px;
+  }
+
+  .cardTextInsightsDeliverdYourBox {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+
+  .sectionWrapperInsightsDeliverdYourBox {
+    padding: 3.75rem 0;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(6, 8, 12, 0.55);
+  }
+
+  .containerInsightsDeliverdYourBox {
+    padding: 0 1rem;
+    gap: 2.5rem;
+  }
+
+  .badgeInsightsDeliverdYourBox {
+    gap: 0.35rem;
+    padding: 0.26rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeDotInsightsDeliverdYourBox {
+    width: 4px;
+    height: 4px;
+  }
+
+  .headingInsightsDeliverdYourBox {
+    width: 100%;
+    font-size: clamp(1.45rem, 7vw, 1.85rem);
+    line-height: 1.28;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionInsightsDeliverdYourBox {
+    width: 100%;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+  }
+
+  .formWrapperInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.85rem;
+    gap: 0.85rem;
+    border-radius: 12px;
+  }
+
+  .inputGroupInsightsDeliverdYourBox {
+    width: 100%;
+    padding: 0.15rem 0.2rem 0.7rem 0.2rem;
+    gap: 0.55rem;
+    border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+  }
+
+  .mailIconInsightsDeliverdYourBox {
+    flex-shrink: 0;
+  }
+
+  .inputInsightsDeliverdYourBox {
+    font-size: 0.8rem;
+    min-width: 0;
+  }
+
+  .submitBtnInsightsDeliverdYourBox {
+    width: 100%;
+    justify-content: center;
+    padding: 0.72rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 7px;
+  }
+
+  .rightContentInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 100%;
+    gap: 0.85rem;
+  }
+
+  .floatingCardInsightsDeliverdYourBox {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.9rem 1rem;
+    gap: 0.8rem;
+    border-radius: 9px;
+  }
+
+  .floatingCardInsightsDeliverdYourBox:hover {
+    transform: translateY(-3px) !important;
+  }
+
+  .cardIconBoxInsightsDeliverdYourBox {
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
+  }
+
+  .cardTextInsightsDeliverdYourBox {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+}

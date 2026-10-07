@@ -26,7 +26,7 @@ function OurFutureTogetherSolutions() {
             </Link>
             
             <p className="subtextOurFutureTogetherSolutions">
-              or <a href="#" className="linkOurFutureTogetherSolutions">Talk to an Expert</a>
+              or <a href="/contact-us" className="linkOurFutureTogetherSolutions">Talk to an Expert</a>
             </p>
           </div>
 

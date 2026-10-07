@@ -1,0 +1,943 @@
+.sectionWrapperCaseStudiesCustomEcommercePlatform {
+  padding: 0rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.containerCaseStudiesCustomEcommercePlatform {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1300px);
+  padding: 0 var(--nexzell-padding-x, 2rem);
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimCaseStudiesCustomEcommercePlatform {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRightAnimCaseStudiesCustomEcommercePlatform {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatAnimCaseStudiesCustomEcommercePlatform {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animFadeUpCaseStudiesCustomEcommercePlatform {
+  animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animFadeInRightCaseStudiesCustomEcommercePlatform {
+  opacity: 0;
+  animation: fadeInRightAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+}
+
+.floatAnimCaseStudiesCustomEcommercePlatform {
+  animation: floatAnimCaseStudiesCustomEcommercePlatform 6s ease-in-out infinite;
+}
+
+.animDelay1CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+.animDelay6CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
+.animDelay7CaseStudiesCustomEcommercePlatform { opacity: 0; animation: fadeUpAnimCaseStudiesCustomEcommercePlatform 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s; }
+
+/* --- Main Card Layout --- */
+.mainCardCaseStudiesCustomEcommercePlatform {
+  background-color: rgba(14, 18, 24, 0.5);
+  border: 1px solid var(--nexzell-border-highlight, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 24px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* --- Top Section --- */
+.topSectionCaseStudiesCustomEcommercePlatform {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  gap: 4rem;
+}
+
+.leftContentCaseStudiesCustomEcommercePlatform {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeCaseStudiesCustomEcommercePlatform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotCaseStudiesCustomEcommercePlatform {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightCaseStudiesCustomEcommercePlatform {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.subheadingCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.descriptionCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.featuresGridCaseStudiesCustomEcommercePlatform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.featureItemCaseStudiesCustomEcommercePlatform {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.featureIconCaseStudiesCustomEcommercePlatform {
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureTextCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.btnPrimaryCaseStudiesCustomEcommercePlatform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryCaseStudiesCustomEcommercePlatform:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 230, 153, 0.3);
+}
+
+.btnIconCaseStudiesCustomEcommercePlatform {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryCaseStudiesCustomEcommercePlatform:hover .btnIconCaseStudiesCustomEcommercePlatform {
+  transform: translateX(4px);
+}
+
+/* --- Right Content (Image & Widget) --- */
+.rightContentCaseStudiesCustomEcommercePlatform {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imageWrapperCaseStudiesCustomEcommercePlatform {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  border-radius: var(--nexzell-radius-md, 12px);
+}
+
+.mainImageCaseStudiesCustomEcommercePlatform {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--nexzell-primary);
+}
+
+.floatingWidgetCaseStudiesCustomEcommercePlatform {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  background-color: rgba(6, 8, 12, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.widgetIconBoxCaseStudiesCustomEcommercePlatform {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 230, 153, 0.1);
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widgetTextCaseStudiesCustomEcommercePlatform {
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetValueCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+}
+
+.widgetLabelCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.65rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.widgetChartIconCaseStudiesCustomEcommercePlatform {
+  color: var(--nexzell-primary, #00E699);
+  margin-left: 0.5rem;
+}
+
+/* --- Bottom Stats --- */
+.bottomStatsCaseStudiesCustomEcommercePlatform {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 4rem;
+  border-top: 1px solid var(--nexzell-border-highlight, #1E293B);
+  background-color: rgba(6, 8, 12, 0.3);
+}
+
+.statBlockCaseStudiesCustomEcommercePlatform {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.statBlockCaseStudiesCustomEcommercePlatform:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: var(--nexzell-border-highlight, #1E293B);
+}
+
+.statValueCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0 0 0.25rem 0;
+}
+
+.statLabelCaseStudiesCustomEcommercePlatform {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  margin: 0;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+
+  .sectionWrapperCaseStudiesCustomEcommercePlatform {
+    padding: 5rem 0;
+  }
+
+  .containerCaseStudiesCustomEcommercePlatform {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+  }
+
+  .mainCardCaseStudiesCustomEcommercePlatform {
+    border-radius: 22px;
+  }
+
+  .topSectionCaseStudiesCustomEcommercePlatform {
+    padding: 3.25rem;
+    gap: 3rem;
+  }
+
+  .leftContentCaseStudiesCustomEcommercePlatform {
+    flex: 0 0 44%;
+  }
+
+  .badgeCaseStudiesCustomEcommercePlatform {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingCaseStudiesCustomEcommercePlatform {
+    font-size: clamp(2rem, 3.2vw, 2.55rem);
+    line-height: 1.2;
+  }
+
+  .subheadingCaseStudiesCustomEcommercePlatform {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionCaseStudiesCustomEcommercePlatform {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .featuresGridCaseStudiesCustomEcommercePlatform {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .featureItemCaseStudiesCustomEcommercePlatform {
+    gap: 0.65rem;
+  }
+
+  .featureTextCaseStudiesCustomEcommercePlatform {
+    font-size: 0.84rem;
+  }
+
+  .btnPrimaryCaseStudiesCustomEcommercePlatform {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .imageWrapperCaseStudiesCustomEcommercePlatform {
+    max-width: 580px;
+  }
+
+  .mainImageCaseStudiesCustomEcommercePlatform {
+    height: 360px;
+  }
+
+  .floatingWidgetCaseStudiesCustomEcommercePlatform {
+    top: -15px;
+    right: -5px;
+    padding: 0.85rem 1.2rem;
+  }
+
+  .widgetIconBoxCaseStudiesCustomEcommercePlatform {
+    width: 30px;
+    height: 30px;
+  }
+
+  .widgetValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.15rem;
+  }
+
+  .widgetLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.6rem;
+  }
+
+  .bottomStatsCaseStudiesCustomEcommercePlatform {
+    padding: 2rem 3rem;
+  }
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.5rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* =========================================================
+   700px TO 999px
+   Tablet / Small Tablet
+   ========================================================= */
+@media (min-width: 700px) and (max-width: 999px) {
+
+  .sectionWrapperCaseStudiesCustomEcommercePlatform {
+    padding: 0rem 0;
+  }
+
+  .containerCaseStudiesCustomEcommercePlatform {
+    max-width: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .mainCardCaseStudiesCustomEcommercePlatform {
+    border-radius: 20px;
+  }
+
+  .topSectionCaseStudiesCustomEcommercePlatform {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2.75rem 2rem;
+    gap: 2.75rem;
+  }
+
+  .leftContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeCaseStudiesCustomEcommercePlatform {
+    font-size: 0.66rem;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .headingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 700px;
+    font-size: clamp(1.9rem, 4.5vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .subheadingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 680px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 700px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .featuresGridCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    /* max-width: 620px; */
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.25rem;
+    text-align: left;
+  }
+
+  .featureItemCaseStudiesCustomEcommercePlatform {
+    gap: 0.65rem;
+  }
+
+  .featureTextCaseStudiesCustomEcommercePlatform {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryCaseStudiesCustomEcommercePlatform {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .rightContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageWrapperCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .mainImageCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    height: 350px;
+  }
+
+  .floatingWidgetCaseStudiesCustomEcommercePlatform {
+    top: -12px;
+    right: 5px;
+    padding: 0.8rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .widgetIconBoxCaseStudiesCustomEcommercePlatform {
+    width: 29px;
+    height: 29px;
+  }
+
+  .widgetValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.05rem;
+  }
+
+  .widgetLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.58rem;
+  }
+
+  .bottomStatsCaseStudiesCustomEcommercePlatform {
+    padding: 1.75rem 2rem;
+  }
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.4rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.66rem;
+  }
+  .bottomStatsCaseStudiesCustomEcommercePlatform {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    padding: 1.75rem 1.5rem;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .statBlockCaseStudiesCustomEcommercePlatform {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+
+  .statBlockCaseStudiesCustomEcommercePlatform:not(:last-child)::after {
+    display: block;
+  }
+}
+
+
+/* =========================================================
+   400px TO 699px
+   Mobile
+   ========================================================= */
+@media (min-width: 400px) and (max-width: 699px) {
+
+  .sectionWrapperCaseStudiesCustomEcommercePlatform {
+    padding: 0rem 0;
+  }
+
+  .containerCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    padding: 0 0.75rem;
+  }
+
+  .mainCardCaseStudiesCustomEcommercePlatform {
+    border-radius: 17px;
+  }
+
+  .topSectionCaseStudiesCustomEcommercePlatform {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem 1.1rem;
+    gap: 2rem;
+  }
+
+  .leftContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeCaseStudiesCustomEcommercePlatform {
+    font-size: 0.61rem;
+    letter-spacing: 0.8px;
+    padding: 0.32rem 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotCaseStudiesCustomEcommercePlatform {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+  }
+
+  .subheadingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 500px;
+    font-size: 0.83rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .featuresGridCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+    text-align: left;
+    
+  }
+
+  .featureItemCaseStudiesCustomEcommercePlatform {
+    gap: 0.65rem;
+    align-items: center;
+  }
+
+  .featureIconCaseStudiesCustomEcommercePlatform {
+    flex-shrink: 0;
+  }
+
+  .featureTextCaseStudiesCustomEcommercePlatform {
+    font-size: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .btnPrimaryCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.84rem;
+  }
+
+  .rightContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imageWrapperCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mainImageCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    height: 260px;
+    border-radius: 9px;
+  }
+
+  .floatingWidgetCaseStudiesCustomEcommercePlatform {
+    top: -8px;
+    right: 5px;
+    padding: 0.65rem 0.8rem;
+    gap: 0.55rem;
+    border-radius: 10px;
+  }
+
+  .widgetIconBoxCaseStudiesCustomEcommercePlatform {
+    width: 25px;
+    height: 25px;
+  }
+
+  .widgetValueCaseStudiesCustomEcommercePlatform {
+    font-size: 0.9rem;
+  }
+
+  .widgetLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.5rem;
+  }
+
+  .widgetChartIconCaseStudiesCustomEcommercePlatform {
+    display: none;
+  }
+
+    .bottomStatsCaseStudiesCustomEcommercePlatform {
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10;
+
+    padding: 1.5rem 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .statBlockCaseStudiesCustomEcommercePlatform {
+    flex: 0 0 125px;
+    min-width: 125px;
+  }
+
+  .statBlockCaseStudiesCustomEcommercePlatform:not(:last-child)::after {
+    display: none;
+    width: 0px;
+  }
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.25rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.4rem;
+    white-space: normal;
+  } 
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.25rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.6rem;
+  }
+  
+}
+
+
+/* =========================================================
+   0px TO 399px
+   SMALL MOBILE
+   ========================================================= */
+@media (max-width: 399px) {
+
+  .sectionWrapperCaseStudiesCustomEcommercePlatform {
+    padding: 2.25rem 0;
+  }
+
+  .containerCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .mainCardCaseStudiesCustomEcommercePlatform {
+    border-radius: 14px;
+  }
+
+  .topSectionCaseStudiesCustomEcommercePlatform {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem 0.75rem;
+    gap: 1.5rem;
+  }
+
+  .leftContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeCaseStudiesCustomEcommercePlatform {
+    font-size: 0.54rem;
+    letter-spacing: 0.65px;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeDotCaseStudiesCustomEcommercePlatform {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.18;
+    margin-bottom: 0.6rem;
+  }
+
+  .subheadingCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .featuresGridCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    grid-template-columns: 1fr ;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureItemCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+  
+  .featureIconCaseStudiesCustomEcommercePlatform {
+    flex-shrink: 0;
+  }
+
+  .featureTextCaseStudiesCustomEcommercePlatform {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .btnPrimaryCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    padding: 0.72rem 1rem;
+    font-size: 0.78rem;
+  }
+
+  .rightContentCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imageWrapperCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mainImageCaseStudiesCustomEcommercePlatform {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .floatingWidgetCaseStudiesCustomEcommercePlatform {
+    top: -6px;
+    right: 3px;
+    padding: 0.5rem 0.55rem;
+    gap: 0.45rem;
+    border-radius: 8px;
+  }
+
+  .widgetIconBoxCaseStudiesCustomEcommercePlatform {
+    width: 21px;
+    height: 21px;
+  }
+
+  .widgetValueCaseStudiesCustomEcommercePlatform {
+    font-size: 0.78rem;
+  }
+
+  .widgetLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.43rem;
+  }
+
+  .widgetChartIconCaseStudiesCustomEcommercePlatform {
+    display: none;
+  }
+
+  .bottomStatsCaseStudiesCustomEcommercePlatform {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 1.2rem 0.65rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .statBlockCaseStudiesCustomEcommercePlatform {
+    flex: 0 0 145px;
+    min-width: 145px;
+  }
+  
+  .statBlockCaseStudiesCustomEcommercePlatform:not(:last-child)::after {
+    display: block;
+  }
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.1rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.64rem;
+  } 
+
+  .statValueCaseStudiesCustomEcommercePlatform {
+    font-size: 1.1rem;
+  }
+
+  .statLabelCaseStudiesCustomEcommercePlatform {
+    font-size: 0.64rem;
+  }
+}

@@ -1,0 +1,680 @@
+.sectionWrapperIntegrationAllinOne {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerIntegrationAllinOne {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1300px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Animations --- */
+@keyframes fadeUpAnimIntegrationAllinOne {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animFadeUpIntegrationAllinOne {
+  animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animDelay1IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
+.animDelay2IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
+.animDelay3IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
+.animDelay4IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
+.animDelay5IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
+.animDelay6IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
+.animDelay7IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s; }
+.animDelay8IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s; }
+
+/* --- Header Section --- */
+.headerRowIntegrationAllinOne {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0rem;
+  margin-bottom: 4rem;
+}
+
+.headerLeftIntegrationAllinOne {
+  flex: 0 0 50%;
+}
+
+.headerRightIntegrationAllinOne {
+  flex: 1;
+  padding-top: 2.5rem;
+}
+
+.badgeIntegrationAllinOne {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotIntegrationAllinOne {
+  width: 6px;
+  height: 6px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingIntegrationAllinOne {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightIntegrationAllinOne {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionIntegrationAllinOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 550px;
+}
+
+/* --- Grid & Cards --- */
+.gridIntegrationAllinOne {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardIntegrationAllinOne {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.cardIntegrationAllinOne:hover {
+  transform: translateY(-5px);
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cardIconBoxIntegrationAllinOne {
+  margin-bottom: 1.25rem;
+}
+
+/* Icon Colors */
+.googleColorIntegrationAllinOne { color: #4285F4; }
+.metaColorIntegrationAllinOne { color: #1877F2; }
+.whatsappColorIntegrationAllinOne { color: #25D366; }
+.botColorIntegrationAllinOne { color: var(--nexzell-text-white, #FFFFFF); }
+.seoColorIntegrationAllinOne { color: var(--nexzell-primary, #00E699); }
+
+.cardTitleIntegrationAllinOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.75rem 0;
+}
+
+.cardDescIntegrationAllinOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.featureListIntegrationAllinOne {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.featureItemIntegrationAllinOne {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.checkIconIntegrationAllinOne {
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 230, 153, 0.2);
+  margin-top: 2px;
+}
+
+.featureTextIntegrationAllinOne {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.4;
+}
+
+.learnMoreLinkIntegrationAllinOne {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.learnMoreIconIntegrationAllinOne {
+  transition: transform 0.3s ease;
+}
+
+.learnMoreLinkIntegrationAllinOne:hover {
+  color: var(--nexzell-primary-hover, #00C782);
+}
+
+.learnMoreLinkIntegrationAllinOne:hover .learnMoreIconIntegrationAllinOne {
+  transform: translateX(4px);
+}
+
+/* --- 8th Custom Slot --- */
+.customSlotIntegrationAllinOne {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.annotationWrapperIntegrationAllinOne {
+  position: absolute;
+  top: 10px;
+  right: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.annotationTextIntegrationAllinOne {
+  font-family: 'Caveat', 'Comic Sans MS', cursive;
+  font-size: 1.2rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  transform: rotate(-10deg);
+  line-height: 1.1;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.annotationArrowIntegrationAllinOne {
+  margin-right: -15px;
+}
+
+.glowBoxIntegrationAllinOne {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(14, 18, 24, 0.8);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  box-shadow: 0 0 40px rgba(0, 230, 153, 0.2), inset 0 0 20px rgba(0, 230, 153, 0.1);
+}
+
+.glowLetterIntegrationAllinOne {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(0, 230, 153, 0.6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1200px) and (min-width: 1025px) {
+
+  .sectionWrapperIntegrationAllinOne {
+    padding: 5rem 0;
+  }
+
+  .containerIntegrationAllinOne {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .headerRowIntegrationAllinOne {
+    gap: 0rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .headerLeftIntegrationAllinOne {
+    flex: 0 0 48%;
+  }
+
+  .headerRightIntegrationAllinOne {
+    padding-top: 2rem;
+  }
+
+  .headingIntegrationAllinOne {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+  }
+
+  .descriptionIntegrationAllinOne {
+    font-size: 0.92rem;
+    max-width: 520px;
+  }
+
+  .gridIntegrationAllinOne {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardIntegrationAllinOne {
+    padding: 1.75rem 1.35rem;
+  }
+
+  .cardTitleIntegrationAllinOne {
+    font-size: 1.05rem;
+  }
+
+  .cardDescIntegrationAllinOne,
+  .featureTextIntegrationAllinOne {
+    font-size: 0.78rem;
+  }
+
+  .customSlotIntegrationAllinOne {
+    padding: 0.75rem;
+  }
+
+  .annotationWrapperIntegrationAllinOne {
+    right: 55%;
+  }
+
+}
+
+
+/* =========================================================
+   1024px - 790px
+   Tablet
+========================================================= */
+
+@media (max-width: 1024px) and (min-width: 790px) {
+
+  .sectionWrapperIntegrationAllinOne {
+    padding: 4.5rem 0;
+  }
+
+  .containerIntegrationAllinOne {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .headerRowIntegrationAllinOne {
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .headerLeftIntegrationAllinOne {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .headerRightIntegrationAllinOne {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .headingIntegrationAllinOne {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    line-height: 1.18;
+  }
+
+  .descriptionIntegrationAllinOne {
+    max-width: 750px;
+    font-size: 0.92rem;
+  }
+
+  .gridIntegrationAllinOne {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardIntegrationAllinOne {
+    padding: 1.75rem 1.4rem;
+  }
+
+  .cardIconBoxIntegrationAllinOne {
+    margin-bottom: 1.1rem;
+  }
+
+  .cardTitleIntegrationAllinOne {
+    font-size: 1.05rem;
+  }
+
+  .cardDescIntegrationAllinOne {
+    font-size: 0.8rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .featureListIntegrationAllinOne {
+    gap: 0.65rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .featureTextIntegrationAllinOne {
+    font-size: 0.78rem;
+  }
+
+  .customSlotIntegrationAllinOne {
+    min-height: 180px;
+  }
+
+  .annotationWrapperIntegrationAllinOne {
+    right: 52%;
+  }
+
+  .annotationTextIntegrationAllinOne {
+    font-size: 1.1rem;
+  }
+
+  .glowBoxIntegrationAllinOne {
+    width: 110px;
+    height: 110px;
+  }
+
+}
+
+
+/* =========================================================
+   789px - 481px
+   Small Tablet / Large Mobile
+========================================================= */
+
+@media (max-width: 789px) and (min-width: 481px) {
+
+  .sectionWrapperIntegrationAllinOne {
+    padding: 3.75rem 0;
+  }
+
+  .containerIntegrationAllinOne {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .headerRowIntegrationAllinOne {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .headerLeftIntegrationAllinOne,
+  .headerRightIntegrationAllinOne {
+    width: 100%;
+  }
+
+  .headerRightIntegrationAllinOne {
+    padding-top: 0;
+  }
+
+  .badgeIntegrationAllinOne {
+    padding: 0.32rem 0.8rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.15rem;
+  }
+
+  .badgeDotIntegrationAllinOne {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingIntegrationAllinOne {
+    font-size: clamp(1.85rem, 6vw, 2.4rem);
+    line-height: 1.18;
+  }
+
+  .descriptionIntegrationAllinOne {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .gridIntegrationAllinOne {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .cardIntegrationAllinOne {
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+  }
+
+  .cardIconBoxIntegrationAllinOne {
+    margin-bottom: 1rem;
+  }
+
+  .cardTitleIntegrationAllinOne {
+    font-size: 1rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .cardDescIntegrationAllinOne {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureListIntegrationAllinOne {
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureItemIntegrationAllinOne {
+    gap: 0.5rem;
+  }
+
+  .featureTextIntegrationAllinOne {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .learnMoreLinkIntegrationAllinOne {
+    font-size: 0.8rem;
+  }
+
+  .customSlotIntegrationAllinOne {
+    min-height: 180px;
+    padding: 0.75rem;
+  }
+
+  .annotationWrapperIntegrationAllinOne {
+    top: 5px;
+    right: 48%;
+  }
+
+  .annotationTextIntegrationAllinOne {
+    font-size: 1rem;
+  }
+
+  .glowBoxIntegrationAllinOne {
+    width: 100px;
+    height: 100px;
+    bottom: -15px;
+    right: -15px;
+  }
+
+  .glowLetterIntegrationAllinOne {
+    font-size: 3.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   480px and Below
+   Mobile
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .sectionWrapperIntegrationAllinOne {
+    padding: 2.75rem 0;
+  }
+
+  .containerIntegrationAllinOne {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .headerRowIntegrationAllinOne {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .headerLeftIntegrationAllinOne,
+  .headerRightIntegrationAllinOne {
+    width: 100%;
+  }
+
+  .headerRightIntegrationAllinOne {
+    padding-top: 0;
+  }
+
+  .badgeIntegrationAllinOne {
+    padding: 0.3rem 0.7rem;
+    gap: 0.4rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.65px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotIntegrationAllinOne {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingIntegrationAllinOne {
+    width: 100%;
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+    line-height: 1.2;
+  }
+
+  .descriptionIntegrationAllinOne {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .gridIntegrationAllinOne {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .cardIntegrationAllinOne {
+    width: 100%;
+    padding: 1.35rem 1.1rem;
+    border-radius: 10px;
+  }
+
+  .cardIconBoxIntegrationAllinOne {
+    margin-bottom: 0.9rem;
+  }
+
+  .cardTitleIntegrationAllinOne {
+    font-size: 0.98rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cardDescIntegrationAllinOne {
+    font-size: 0.74rem;
+    line-height: 1.55;
+    margin-bottom: 1.15rem;
+  }
+
+  .featureListIntegrationAllinOne {
+    gap: 0.55rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .featureItemIntegrationAllinOne {
+    gap: 0.45rem;
+  }
+
+  .featureTextIntegrationAllinOne {
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+  .learnMoreLinkIntegrationAllinOne {
+    font-size: 0.78rem;
+  }
+
+  .customSlotIntegrationAllinOne {
+    min-height: 190px;
+    padding: 0.5rem;
+  }
+
+  .annotationWrapperIntegrationAllinOne {
+    top: 5px;
+    right: 45%;
+  }
+
+  .annotationTextIntegrationAllinOne {
+    font-size: 0.9rem;
+  }
+
+  .annotationArrowIntegrationAllinOne {
+    margin-right: -10px;
+  }
+
+  .glowBoxIntegrationAllinOne {
+    width: 90px;
+    height: 90px;
+    bottom: -12px;
+    right: -12px;
+    border-radius: 16px 0 0 0;
+  }
+
+  .glowLetterIntegrationAllinOne {
+    font-size: 2.75rem;
+  }
+
+}

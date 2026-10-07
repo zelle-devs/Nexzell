@@ -249,7 +249,8 @@
 @media (max-width: 1024px) {
 
   .sectionWrapperBuildResourcesGrowNexzell {
-    padding: 5rem 0;
+    padding: 4rem 0;
+    padding-top: 0 !important;
   }
 
   .containerBuildResourcesGrowNexzell {
@@ -331,7 +332,7 @@
 @media (max-width: 768px) {
 
   .sectionWrapperBuildResourcesGrowNexzell {
-    padding: 4.5rem 0;
+    padding: 0.5rem 0;
   }
 
   .containerBuildResourcesGrowNexzell {
@@ -404,7 +405,7 @@
 @media (max-width: 600px) {
 
   .sectionWrapperBuildResourcesGrowNexzell {
-    padding: 3.75rem 0;
+    padding: 0rem 0;
   }
 
   .containerBuildResourcesGrowNexzell {

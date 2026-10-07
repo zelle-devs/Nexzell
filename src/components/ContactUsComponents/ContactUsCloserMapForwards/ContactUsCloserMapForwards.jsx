@@ -91,7 +91,7 @@ function ContactUsCloserMapForwards() {
               </h4>
               <p className="floatingDescContactUsCloserMapForwards">
                 Supporting businesses in<br />
-                120+ countries.
+                12+ countries.
               </p>
             </div>
           </div>
@@ -109,10 +109,13 @@ function ContactUsCloserMapForwards() {
               Our team is here to help you explore what's possible<br />
               with Nexzell.
             </p>
-            <button className="btnCtaContactUsCloserMapForwards">
+            <a href="/contact-us">
+             <button className="btnCtaContactUsCloserMapForwards">
               <MessageSquare size={16} className="btnCtaIconContactUsCloserMapForwards" />
               Talk to an Expert <ArrowRight size={16} className="btnCtaArrowContactUsCloserMapForwards" />
             </button>
+            </a>
+           
           </div>
         </div>
 

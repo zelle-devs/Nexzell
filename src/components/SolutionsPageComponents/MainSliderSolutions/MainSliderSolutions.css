@@ -381,7 +381,7 @@
 
   .btnPrimaryMainSliderSolutions,
   .btnSecondaryMainSliderSolutions {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -489,7 +489,7 @@
 
   .btnPrimaryMainSliderSolutions,
   .btnSecondaryMainSliderSolutions {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
     padding: 0.75rem 1.25rem;
     font-size: 0.85rem;
