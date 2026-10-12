@@ -1,0 +1,471 @@
+.sectionWrapperLaunchAndGrowStartups {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle background glow effect behind the grid */
+.sectionWrapperLaunchAndGrowStartups::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 230, 153, 0.03) 0%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.containerLaunchAndGrowStartups {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1350px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Left Content --- */
+.leftContentLaunchAndGrowStartups {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeLaunchAndGrowStartups {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconLaunchAndGrowStartups {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.headingLaunchAndGrowStartups {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightLaunchAndGrowStartups {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionLaunchAndGrowStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnPrimaryLaunchAndGrowStartups {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btnPrimaryLaunchAndGrowStartups:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.btnArrowLaunchAndGrowStartups {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryLaunchAndGrowStartups:hover .btnArrowLaunchAndGrowStartups {
+  transform: translateX(4px);
+}
+
+/* --- Right Grid --- */
+.rightGridLaunchAndGrowStartups {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.serviceCardLaunchAndGrowStartups {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 16px);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.cardIconBoxLaunchAndGrowStartups {
+  margin-bottom: 1.5rem;
+}
+
+.cardIconLaunchAndGrowStartups {
+  color: var(--nexzell-primary, #00E699);
+  /* Optional: Adds a slight glow to the icons matching the design */
+  filter: drop-shadow(0 0 8px rgba(0, 230, 153, 0.3));
+}
+
+.cardTitleLaunchAndGrowStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
+}
+
+.cardDescLaunchAndGrowStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+
+  .sectionWrapperLaunchAndGrowStartups {
+    padding: 5rem 0;
+  }
+
+  .sectionWrapperLaunchAndGrowStartups::before {
+    width: 400px;
+    height: 400px;
+    right: 5%;
+    top: 8%;
+  }
+
+  .containerLaunchAndGrowStartups {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+    gap: 2.5rem;
+  }
+
+  .leftContentLaunchAndGrowStartups {
+    flex: 0 0 36%;
+  }
+
+  .headingLaunchAndGrowStartups {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+  }
+
+  .descriptionLaunchAndGrowStartups {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .btnPrimaryLaunchAndGrowStartups {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .rightGridLaunchAndGrowStartups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+    min-width: 0;
+  }
+
+  .serviceCardLaunchAndGrowStartups {
+    min-width: 0;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cardIconBoxLaunchAndGrowStartups {
+    margin-bottom: 1.25rem;
+  }
+
+  .cardTitleLaunchAndGrowStartups {
+    font-size: 1rem;
+  }
+
+  .cardDescLaunchAndGrowStartups {
+    font-size: 0.78rem;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperLaunchAndGrowStartups {
+    padding: 4.5rem 0;
+  }
+
+  .sectionWrapperLaunchAndGrowStartups::before {
+    width: 350px;
+    height: 350px;
+    right: -5%;
+    top: 5%;
+  }
+
+  .containerLaunchAndGrowStartups {
+    max-width: 900px;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .leftContentLaunchAndGrowStartups {
+    width: 100%;
+    max-width: 750px;
+    flex: none;
+    align-items: center;
+    text-align: center;
+  }
+
+  .badgeLaunchAndGrowStartups {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingLaunchAndGrowStartups {
+    font-size: clamp(2rem, 4.5vw, 2.6rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionLaunchAndGrowStartups {
+    width: 100%;
+    max-width: 650px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnPrimaryLaunchAndGrowStartups {
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .rightGridLaunchAndGrowStartups {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .serviceCardLaunchAndGrowStartups {
+    padding: 1.75rem 1.5rem;
+    border-radius: 14px;
+  }
+
+  .cardIconBoxLaunchAndGrowStartups {
+    margin-bottom: 1.25rem;
+  }
+
+  .cardTitleLaunchAndGrowStartups {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.65rem;
+  }
+
+  .cardDescLaunchAndGrowStartups {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+}
+
+
+@media (max-width: 749px) {
+
+  .sectionWrapperLaunchAndGrowStartups {
+    padding: 4rem 0;
+  }
+
+  .sectionWrapperLaunchAndGrowStartups::before {
+    width: 280px;
+    height: 280px;
+    top: 3%;
+    right: -15%;
+  }
+
+  .containerLaunchAndGrowStartups {
+    max-width: 100%;
+    padding: 0 1.25rem;
+    gap: 2.5rem;
+  }
+
+  .leftContentLaunchAndGrowStartups {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeLaunchAndGrowStartups {
+    gap: 0.45rem;
+    padding: 0.32rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .headingLaunchAndGrowStartups {
+    width: 100%;
+    font-size: clamp(1.8rem, 6.5vw, 2.3rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionLaunchAndGrowStartups {
+    max-width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnPrimaryLaunchAndGrowStartups {
+    max-width: 100%;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+    gap: 0.45rem;
+  }
+
+  .rightGridLaunchAndGrowStartups {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .serviceCardLaunchAndGrowStartups {
+    min-width: 0;
+    padding: 1.5rem 1.1rem;
+    border-radius: 12px;
+  }
+
+  .cardIconBoxLaunchAndGrowStartups {
+    margin-bottom: 1rem;
+  }
+
+  .cardIconLaunchAndGrowStartups {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .cardTitleLaunchAndGrowStartups {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .cardDescLaunchAndGrowStartups {
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .sectionWrapperLaunchAndGrowStartups {
+    padding: 3rem 0;
+  }
+
+  .sectionWrapperLaunchAndGrowStartups::before {
+    width: 220px;
+    height: 220px;
+    top: 2%;
+    right: -20%;
+  }
+
+  .containerLaunchAndGrowStartups {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .badgeLaunchAndGrowStartups {
+    gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingLaunchAndGrowStartups {
+    font-size: 1.65rem;
+    line-height: 1.22;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionLaunchAndGrowStartups {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-bottom: 1.35rem;
+  }
+
+  .btnPrimaryLaunchAndGrowStartups {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    gap: 0.4rem;
+  }
+
+  .rightGridLaunchAndGrowStartups {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .serviceCardLaunchAndGrowStartups {
+    width: 100%;
+    padding: 1.35rem 1.15rem;
+    border-radius: 12px;
+  }
+
+  .cardIconBoxLaunchAndGrowStartups {
+    margin-bottom: 0.85rem;
+  }
+
+  .cardIconLaunchAndGrowStartups {
+    max-width: 28px;
+    max-height: 28px;
+  }
+
+  .cardTitleLaunchAndGrowStartups {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardDescLaunchAndGrowStartups {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+}

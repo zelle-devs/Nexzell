@@ -1,0 +1,477 @@
+.sectionWrapperStartupsThatsTrustUS {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden; 
+}
+
+.containerStartupsThatsTrustUS {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.leftColumnStartupsThatsTrustUS {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headingStartupsThatsTrustUS {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionStartupsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6; 
+  margin-bottom: 30px;
+}
+
+.navButtonsStartupsThatsTrustUS {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBtnStartupsThatsTrustUS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  color: var(--nexzell-text-white, #FFFFFF);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtnStartupsThatsTrustUS:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightColumnStartupsThatsTrustUS {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrackStartupsThatsTrustUS {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.carouselTrackStartupsThatsTrustUS::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonialCardStartupsThatsTrustUS {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonialCardStartupsThatsTrustUS:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+}
+
+.quoteTextStartupsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.quoteIconWrapperStartupsThatsTrustUS {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.userInfoStartupsThatsTrustUS {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarStartupsThatsTrustUS {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nexzell-border-highlight, #334155);
+}
+
+.userDetailsStartupsThatsTrustUS {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.userNameStartupsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.userTitleStartupsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  margin: 0;
+}
+
+.starsStartupsThatsTrustUS {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Dots (hidden by default on desktop) ---------- */
+.dotsStartupsThatsTrustUS {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dotStartupsThatsTrustUS {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--nexzell-border-highlight, #334155);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dotStartupsThatsTrustUS:hover {
+  background-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.dotStartupsThatsTrustUS.isActiveStartupsThatsTrustUS {
+  background-color: var(--nexzell-primary, #FFFFFF);
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 1200px) {
+
+  .containerStartupsThatsTrustUS {
+    max-width: 100%;
+    padding: 0 1.75rem;
+    gap: 3rem;
+  }
+
+  .leftColumnStartupsThatsTrustUS {
+    flex: 0 0 32%;
+  }
+
+  .headingStartupsThatsTrustUS {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+  }
+
+  .testimonialCardStartupsThatsTrustUS {
+    flex: 0 0 300px;
+    padding: 2.25rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperStartupsThatsTrustUS {
+    padding: 4.5rem 0;
+    padding-bottom: 0px !important;
+  }
+
+  .containerStartupsThatsTrustUS {
+    width: 100%;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.75rem;
+  }
+
+  .leftColumnStartupsThatsTrustUS {
+    width: 100%;
+    max-width: 700px;
+    flex: none;
+  }
+
+  .headingStartupsThatsTrustUS {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionStartupsThatsTrustUS {
+    font-size: 0.95rem;
+    max-width: 680px;
+    margin-bottom: 10px;
+  }
+
+  .rightColumnStartupsThatsTrustUS {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Hide navigation arrows */
+  .navButtonsStartupsThatsTrustUS {
+    display: none;
+  }
+
+  /* Show carousel dots */
+  .dotsStartupsThatsTrustUS {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .carouselTrackStartupsThatsTrustUS {
+    width: 100%;
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .testimonialCardStartupsThatsTrustUS {
+    flex: 0 0 310px;
+    padding: 2rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperStartupsThatsTrustUS {
+    padding: 4rem 0;
+  }
+
+  .containerStartupsThatsTrustUS {
+    padding: 0 1.25rem;
+    gap: 2.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .leftColumnStartupsThatsTrustUS {
+    max-width: 100%;
+  }
+
+  .headingStartupsThatsTrustUS {
+    font-size: clamp(1.8rem, 6vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionStartupsThatsTrustUS {
+    font-size: 0.9rem;
+    line-height: 1.65; 
+    margin-bottom: 10px;
+  }
+
+  .rightColumnStartupsThatsTrustUS {
+    width: 100%;
+  }
+
+  .carouselTrackStartupsThatsTrustUS {
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonialCardStartupsThatsTrustUS {
+    flex: 0 0 340px;
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--nexzell-radius-sm, 12px);
+  }
+
+  .quoteIconWrapperStartupsThatsTrustUS {
+    margin-bottom: 1.25rem;
+  }
+
+  .quoteTextStartupsThatsTrustUS {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .userInfoStartupsThatsTrustUS {
+    gap: 0.85rem;
+  }
+
+  .avatarStartupsThatsTrustUS {
+    width: 44px;
+    height: 44px;
+  }
+
+  .userNameStartupsThatsTrustUS {
+    font-size: 0.9rem;
+  }
+
+  .userTitleStartupsThatsTrustUS {
+    font-size: 0.72rem;
+  }
+
+  .dotsStartupsThatsTrustUS {
+    gap: 0.45rem;
+    margin-top: 0.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sectionWrapperStartupsThatsTrustUS {
+    padding: 3.5rem 0;
+  }
+
+  .containerStartupsThatsTrustUS {
+    padding: 0 1rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .headingStartupsThatsTrustUS {
+    font-size: clamp(1.7rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionStartupsThatsTrustUS {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .carouselTrackStartupsThatsTrustUS {
+    gap: 0.85rem;
+    padding-bottom: 0.65rem;
+    scroll-padding-left: 0;
+  }
+
+  .testimonialCardStartupsThatsTrustUS {
+    flex: 0 0 calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .quoteIconWrapperStartupsThatsTrustUS {
+    margin-bottom: 1rem;
+  }
+
+  .quoteTextStartupsThatsTrustUS {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .userInfoStartupsThatsTrustUS {
+    gap: 0.75rem;
+  }
+
+  .avatarStartupsThatsTrustUS {
+    width: 42px;
+    height: 42px;
+  }
+
+  .userNameStartupsThatsTrustUS {
+    font-size: 0.85rem;
+  }
+
+  .userTitleStartupsThatsTrustUS {
+    font-size: 0.7rem;
+  }
+
+  .starsStartupsThatsTrustUS {
+    gap: 0.1rem;
+  }
+
+  .dotsStartupsThatsTrustUS {
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .dotStartupsThatsTrustUS {
+    width: 7px;
+    height: 7px;
+  }
+
+}
+
+.mySwiperStartupsThatsTrustUS {
+  width: 100%;
+  padding-bottom: 3.5rem !important; /* Pagination dots ke liye neeche jagah */
+}
+
+/* Default Dots Style (Grey) */
+.mySwiperStartupsThatsTrustUS .swiper-pagination-bullet {
+  background-color: var(--nexzell-text-gray-400, #94A3B8) !important;
+  opacity: 0.4 !important;
+  transition: all 0.3s ease;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+}
+
+/* Active Dot Style (Neon Green & pill shape) */
+.mySwiperStartupsThatsTrustUS .swiper-pagination-bullet-active {
+  background-color: var(--nexzell-primary, #00E699) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 12px !important;
+  transform: scale(1) !important; /* Pichlay scale effect ko reset karne ke liye */
+}

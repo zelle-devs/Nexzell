@@ -1,0 +1,447 @@
+.sectionWrapperSimpleProcessRealResultsStartups {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerSimpleProcessRealResultsStartups {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Header --- */
+.headerSimpleProcessRealResultsStartups {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeSimpleProcessRealResultsStartups {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconSimpleProcessRealResultsStartups {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.headingSimpleProcessRealResultsStartups {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.descriptionSimpleProcessRealResultsStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Process Timeline Grid (Desktop Layout) --- */
+.processGridSimpleProcessRealResultsStartups {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.stepItemSimpleProcessRealResultsStartups:last-child{
+
+    padding-right: 0;
+    
+}
+.stepItemSimpleProcessRealResultsStartups {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 2rem;
+}
+
+
+.stepVisualsSimpleProcessRealResultsStartups {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1.75rem;
+  width: 100%;
+}
+
+.stepNumberBoxSimpleProcessRealResultsStartups {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid var(--nexzell-primary, #00E699);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 15px rgba(0, 230, 153, 0.15);
+}
+
+/* Horizontal Line Settings */
+.horizontalLineWrapperSimpleProcessRealResultsStartups {
+  position: absolute;
+  top: 50%;
+  left: 65px; 
+  width: calc(100% - 65px); 
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.dashedLineHorizontalSimpleProcessRealResultsStartups {
+  height: 1px;
+  border-bottom: 1.5px dashed rgba(0, 230, 153, 0.4);
+}
+
+.arrowHeadHorizontalSimpleProcessRealResultsStartups {
+  margin-left: -5px; 
+  display: flex;
+  align-items: center;
+}
+
+/* Vertical line hidden on Desktop */
+.verticalLineWrapperSimpleProcessRealResultsStartups {
+  display: none;
+}
+
+/* --- Text Content --- */
+.stepContentSimpleProcessRealResultsStartups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stepTitleSimpleProcessRealResultsStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.4;
+  margin: 0 0 0.75rem 0;
+}
+
+.stepDescSimpleProcessRealResultsStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 250px;
+}
+
+
+@media (max-width: 1200px) {
+  .sectionWrapperSimpleProcessRealResultsStartups {
+    padding: 5rem 0;
+  }
+
+  .containerSimpleProcessRealResultsStartups {
+    padding: 0 1.75rem;
+  }
+
+  .headerSimpleProcessRealResultsStartups {
+    max-width: 750px;
+    margin-bottom: 4rem;
+  }
+
+  .stepItemSimpleProcessRealResultsStartups {
+    padding-right: 1.25rem;
+  }
+
+  .stepNumberBoxSimpleProcessRealResultsStartups {
+    width: 60px;
+    height: 60px;
+    font-size: 1.15rem;
+  }
+
+  .horizontalLineWrapperSimpleProcessRealResultsStartups {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+
+  .stepTitleSimpleProcessRealResultsStartups {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sectionWrapperSimpleProcessRealResultsStartups {
+    padding: 4.5rem 0;
+  }
+
+  .containerSimpleProcessRealResultsStartups {
+    padding: 0 1.5rem;
+  }
+
+  .headerSimpleProcessRealResultsStartups {
+    max-width: 700px;
+    margin-bottom: 3.5rem;
+  }
+
+  .headingSimpleProcessRealResultsStartups {
+    font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+  }
+
+  .processGridSimpleProcessRealResultsStartups {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  .stepItemSimpleProcessRealResultsStartups {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    flex: none;
+    padding: 0 0 3rem;
+  }
+
+  .stepItemSimpleProcessRealResultsStartups:last-child {
+    padding-bottom: 0;
+  }
+
+  .stepVisualsSimpleProcessRealResultsStartups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 65px;
+    width: 65px;
+    margin: 0 1.5rem 0 0;
+    position: relative;
+  }
+
+  .stepNumberBoxSimpleProcessRealResultsStartups {
+    width: 58px;
+    height: 58px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
+  }
+
+  .horizontalLineWrapperSimpleProcessRealResultsStartups {
+    display: none;
+  }
+
+  .verticalLineWrapperSimpleProcessRealResultsStartups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 58px;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .dashedLineVerticalSimpleProcessRealResultsStartups {
+    width: 0;
+    flex: 1;
+    min-height: 0;
+    border-right: 1.5px dashed rgba(0, 230, 153, 0.4);
+  }
+
+  .arrowHeadVerticalSimpleProcessRealResultsStartups {
+    margin-top: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stepContentSimpleProcessRealResultsStartups {
+    flex: 1;
+    min-width: 0;
+    align-items: flex-start;
+    padding-top: 0.5rem;
+  }
+
+  .stepTitleSimpleProcessRealResultsStartups {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stepDescSimpleProcessRealResultsStartups {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .sectionWrapperSimpleProcessRealResultsStartups {
+    padding: 4rem 0;
+  }
+
+  .containerSimpleProcessRealResultsStartups {
+    padding: 0 1.25rem;
+  }
+
+  .headerSimpleProcessRealResultsStartups {
+    margin-bottom: 3rem;
+  }
+
+  .badgeSimpleProcessRealResultsStartups {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingSimpleProcessRealResultsStartups {
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
+  }
+
+  .descriptionSimpleProcessRealResultsStartups {
+    font-size: 0.9rem;
+  }
+
+  .processGridSimpleProcessRealResultsStartups {
+    max-width: 600px;
+  }
+
+  .stepItemSimpleProcessRealResultsStartups {
+    padding-bottom: 2.75rem;
+  }
+
+  .stepVisualsSimpleProcessRealResultsStartups {
+    flex-basis: 58px;
+    width: 58px;
+    margin-right: 1.25rem;
+  }
+
+  .stepNumberBoxSimpleProcessRealResultsStartups {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+  }
+
+  .verticalLineWrapperSimpleProcessRealResultsStartups {
+    top: 52px;
+    bottom: -2.75rem;
+  }
+
+  .stepContentSimpleProcessRealResultsStartups {
+    padding-top: 0.35rem;
+  }
+
+  .stepTitleSimpleProcessRealResultsStartups {
+    font-size: 1rem;
+  }
+
+  .stepDescSimpleProcessRealResultsStartups {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionWrapperSimpleProcessRealResultsStartups {
+    padding: 3rem 0;
+  }
+
+  .containerSimpleProcessRealResultsStartups {
+    padding: 0 1rem;
+  }
+
+  .headerSimpleProcessRealResultsStartups {
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeSimpleProcessRealResultsStartups {
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+    padding: 0.3rem 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .headingSimpleProcessRealResultsStartups {
+    font-size: 1.7rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionSimpleProcessRealResultsStartups {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .processGridSimpleProcessRealResultsStartups {
+    max-width: 100%;
+  }
+
+  .stepItemSimpleProcessRealResultsStartups {
+    padding-bottom: 2.5rem;
+  }
+
+  .stepVisualsSimpleProcessRealResultsStartups {
+    flex-basis: 48px;
+    width: 48px;
+    margin-right: 0.9rem;
+  }
+
+  .stepNumberBoxSimpleProcessRealResultsStartups {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+    border-width: 1.5px;
+  }
+
+  .verticalLineWrapperSimpleProcessRealResultsStartups {
+    top: 44px;
+    bottom: -2.5rem;
+  }
+
+  .stepContentSimpleProcessRealResultsStartups {
+    padding-top: 0.2rem;
+  }
+
+  .stepTitleSimpleProcessRealResultsStartups {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .stepDescSimpleProcessRealResultsStartups {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+}

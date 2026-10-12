@@ -1,0 +1,813 @@
+/* --- Main Wrapper --- */
+.sectionWrapperStrongerBrandsForGrowingBrand {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerStrongerBrandsForGrowingBrand {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT COLUMN: IMAGES & GLASS CARDS
+========================================= */
+.imageColStrongerBrandsForGrowingBrand {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapperStrongerBrandsForGrowingBrand {
+  position: relative;
+  width: 100%;
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  /* Adds a subtle dark glow behind the image container */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.bgImageStrongerBrandsForGrowingBrand {
+  width: 100%;
+  height: 550px;
+  display: block;
+  object-fit: cover;
+  opacity: 0.8; /* Slight dimming for futuristic look */
+}
+
+/* --- Glassmorphism Base Styles for Cards --- */
+[class*="glassCard"][class$="StrongerBrandsForGrowingBrand"] {
+  position: absolute;
+  background: rgba(10, 15, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.4);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 230, 153, 0.05);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Card Positioning */
+.glassCardTopLeftStrongerBrandsForGrowingBrand {
+  top: 10%;
+  left: 5%;
+  min-width: 220px;
+}
+
+.glassCardBottomLeftStrongerBrandsForGrowingBrand {
+  bottom: 20%;
+  left: 8%;
+  min-width: 200px;
+}
+
+.glassCardTopRightStrongerBrandsForGrowingBrand {
+  top: 15%;
+  right: 5%;
+  min-width: 210px;
+}
+
+/* Card Typography & Inner Elements */
+.cardHeaderStrongerBrandsForGrowingBrand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.cardTitleStrongerBrandsForGrowingBrand {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-weight: 500;
+}
+
+.cardIconStrongerBrandsForGrowingBrand {
+  color: var(--nexzell-primary, #00E699);
+  width: 28px;
+  height: 28px;
+}
+
+.iconCircleStrongerBrandsForGrowingBrand {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 230, 153, 0.1);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardValueStrongerBrandsForGrowingBrand {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1;
+}
+
+.cardTrendStrongerBrandsForGrowingBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--nexzell-primary, #00E699);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--nexzell-font-family, sans-serif);
+  background: rgba(0, 230, 153, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+
+/* =========================================
+   RIGHT COLUMN: CONTENT & MODERN LIST
+========================================= */
+.contentColStrongerBrandsForGrowingBrand {
+  display: flex;
+  flex-direction: column;
+}
+
+.badgeStrongerBrandsForGrowingBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8); /* Different from other sections as per image */
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconStrongerBrandsForGrowingBrand {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.headingStrongerBrandsForGrowingBrand {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.highlightTextStrongerBrandsForGrowingBrand {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descStrongerBrandsForGrowingBrand {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.05rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  max-width: 550px;
+}
+
+/* --- Modern Interactive List Items --- */
+.listContainerStrongerBrandsForGrowingBrand {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItemStrongerBrandsForGrowingBrand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--nexzell-radius-md, 12px);
+  transition: all var(--transition-base, 0.3s ease);
+  cursor: default;
+}
+
+.listItemStrongerBrandsForGrowingBrand:hover {
+  background: rgba(0, 230, 153, 0.05);
+  border-color: rgba(0, 230, 153, 0.2);
+  transform: translateX(5px); /* Smooth nudge to the right on hover */
+}
+
+.listIconBoxStrongerBrandsForGrowingBrand {
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 230, 153, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.listItemStrongerBrandsForGrowingBrand:hover .listIconBoxStrongerBrandsForGrowingBrand {
+  transform: scale(1.1);
+}
+
+.listTextStrongerBrandsForGrowingBrand {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  font-weight: 500;
+}
+
+/* --- CTA Button --- */
+.ctaButtonStrongerBrandsForGrowingBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base, 0.3s ease);
+}
+
+.ctaButtonStrongerBrandsForGrowingBrand:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 230, 153, 0.2);
+}
+
+
+/* --- Responsive: Laptop (Max Width: 1200px) --- */
+@media (max-width: 1200px) {
+  .sectionWrapperStrongerBrandsForGrowingBrand {
+    padding: 5.5rem 0;
+  }
+
+  .containerStrongerBrandsForGrowingBrand {
+    padding: 0 1.75rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .imageColStrongerBrandsForGrowingBrand {
+    min-height: 500px;
+  }
+
+  .imageWrapperStrongerBrandsForGrowingBrand {
+    border-radius: 20px;
+  }
+
+  .bgImageStrongerBrandsForGrowingBrand {
+    width: 100%;
+    height: 500px;
+  }
+
+  [class*="glassCard"][class$="StrongerBrandsForGrowingBrand"] {
+    padding: 1rem 1.15rem;
+    gap: 0.45rem;
+  }
+
+  .glassCardTopLeftStrongerBrandsForGrowingBrand {
+    left: 3%;
+    min-width: 190px;
+  }
+
+  .glassCardBottomLeftStrongerBrandsForGrowingBrand {
+    left: 4%;
+    /* bottom: -8%; */
+    min-width: 180px;
+  }
+
+  .glassCardTopRightStrongerBrandsForGrowingBrand {
+    right: 3%;
+    min-width: 185px;
+  }
+
+  .cardTitleStrongerBrandsForGrowingBrand {
+    font-size: 0.8rem;
+  }
+
+  .cardValueStrongerBrandsForGrowingBrand {
+    font-size: 1.55rem;
+  }
+
+  .cardTrendStrongerBrandsForGrowingBrand {
+    font-size: 0.75rem;
+  }
+
+  .contentColStrongerBrandsForGrowingBrand {
+    min-width: 0;
+  }
+
+  .badgeStrongerBrandsForGrowingBrand {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingStrongerBrandsForGrowingBrand {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descStrongerBrandsForGrowingBrand {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerStrongerBrandsForGrowingBrand {
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listIconBoxStrongerBrandsForGrowingBrand {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextStrongerBrandsForGrowingBrand {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonStrongerBrandsForGrowingBrand {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Small Laptop (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+  .sectionWrapperStrongerBrandsForGrowingBrand {
+    padding: 4.5rem 0;
+  }
+
+  .containerStrongerBrandsForGrowingBrand {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .imageColStrongerBrandsForGrowingBrand {
+    width: 100%;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+  }
+
+  .imageWrapperStrongerBrandsForGrowingBrand {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bgImageStrongerBrandsForGrowingBrand {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+  }
+
+  [class*="glassCard"][class$="StrongerBrandsForGrowingBrand"] {
+    padding: 0.9rem 1rem;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .glassCardTopLeftStrongerBrandsForGrowingBrand {
+    top: 8%;
+    left: 2%;
+    min-width: 180px;
+  }
+
+  .glassCardBottomLeftStrongerBrandsForGrowingBrand {
+    bottom: 10%;
+    left: 2%;
+    min-width: 170px;
+  }
+
+  .glassCardTopRightStrongerBrandsForGrowingBrand {
+    top: 12%;
+    right: 2%;
+    min-width: 175px;
+  }
+
+  .cardHeaderStrongerBrandsForGrowingBrand {
+    gap: 0.5rem;
+  }
+
+  .cardTitleStrongerBrandsForGrowingBrand {
+    font-size: 0.78rem;
+  }
+
+  .cardValueStrongerBrandsForGrowingBrand {
+    font-size: 1.45rem;
+  }
+
+  .cardIconStrongerBrandsForGrowingBrand {
+    flex-shrink: 0;
+  }
+
+  .iconCircleStrongerBrandsForGrowingBrand {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .cardTrendStrongerBrandsForGrowingBrand {
+    font-size: 0.72rem;
+  }
+
+  .contentColStrongerBrandsForGrowingBrand {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .badgeStrongerBrandsForGrowingBrand {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .headingStrongerBrandsForGrowingBrand {
+    font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descStrongerBrandsForGrowingBrand {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerStrongerBrandsForGrowingBrand {
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand:hover {
+    transform: translateX(3px);
+  }
+
+  .listIconBoxStrongerBrandsForGrowingBrand {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextStrongerBrandsForGrowingBrand {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonStrongerBrandsForGrowingBrand {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Large Mobile (Max Width: 749px) --- */
+@media (max-width: 749px) {
+  .sectionWrapperStrongerBrandsForGrowingBrand {
+    padding: 3.75rem 0;
+  }
+
+  .containerStrongerBrandsForGrowingBrand {
+    padding: 0 1.25rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .imageColStrongerBrandsForGrowingBrand {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .imageWrapperStrongerBrandsForGrowingBrand {
+    max-width: 600px;
+    border-radius: 16px;
+  }
+
+  .bgImageStrongerBrandsForGrowingBrand {
+    border-radius: 0;
+    height: auto;
+  }
+
+  [class*="glassCard"][class$="StrongerBrandsForGrowingBrand"] {
+    padding: 0.8rem 0.9rem;
+    gap: 0.4rem;
+    transform: scale(0.78);
+  }
+
+  .glassCardTopLeftStrongerBrandsForGrowingBrand {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftStrongerBrandsForGrowingBrand {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightStrongerBrandsForGrowingBrand {
+    top: 8%;
+    right: 5%;
+    min-width: 160px;
+  }
+
+  .cardHeaderStrongerBrandsForGrowingBrand {
+    margin-bottom: 0.15rem;
+  }
+
+  .cardTitleStrongerBrandsForGrowingBrand {
+    font-size: 0.72rem;
+  }
+
+  .cardValueStrongerBrandsForGrowingBrand {
+    font-size: 1.3rem;
+  }
+
+  .cardTrendStrongerBrandsForGrowingBrand {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .iconCircleStrongerBrandsForGrowingBrand {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contentColStrongerBrandsForGrowingBrand {
+    max-width: 600px;
+  }
+
+  .badgeStrongerBrandsForGrowingBrand {
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .headingStrongerBrandsForGrowingBrand {
+    font-size: clamp(1.9rem, 5.5vw, 2.4rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+  }
+
+  .descStrongerBrandsForGrowingBrand {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .listContainerStrongerBrandsForGrowingBrand {
+    gap: 0.65rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand {
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.8rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand:hover {
+    transform: none;
+  }
+
+  .listIconBoxStrongerBrandsForGrowingBrand {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand:hover .listIconBoxStrongerBrandsForGrowingBrand {
+    transform: none;
+  }
+
+  .listTextStrongerBrandsForGrowingBrand {
+    min-width: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonStrongerBrandsForGrowingBrand {
+    gap: 0.45rem;
+    padding: 0.8rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Responsive: Mobile (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .sectionWrapperStrongerBrandsForGrowingBrand {
+    padding: 3rem 0;
+  }
+
+  .containerStrongerBrandsForGrowingBrand {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .imageColStrongerBrandsForGrowingBrand {
+    padding: 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .imageWrapperStrongerBrandsForGrowingBrand {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .bgImageStrongerBrandsForGrowingBrand {
+    width: 100%;
+    height:350px;
+    margin-bottom: 0.5rem;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  [class*="glassCard"][class$="StrongerBrandsForGrowingBrand"] {
+    position: absolute;
+    /* inset: auto; */
+    transform: none;
+    width: auto;
+    /* min-width: auto; */
+    margin: 0;
+    padding: 1rem;
+    gap: 0.1rem;
+    border-radius: 12px;
+    background: rgba(10, 15, 20, 0.727);
+  }
+
+  .glassCardTopLeftStrongerBrandsForGrowingBrand {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftStrongerBrandsForGrowingBrand {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightStrongerBrandsForGrowingBrand {
+    top: 29%;
+    right: 5%;
+    min-width: 10px;
+  }
+
+  .cardHeaderStrongerBrandsForGrowingBrand {
+    gap: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .cardTitleStrongerBrandsForGrowingBrand {
+    font-size: 0.6rem;
+  }
+
+  .cardValueStrongerBrandsForGrowingBrand {
+    font-size: 1.2rem;
+  }
+
+  .cardTrendStrongerBrandsForGrowingBrand {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .cardIconStrongerBrandsForGrowingBrand {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .iconCircleStrongerBrandsForGrowingBrand {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .contentColStrongerBrandsForGrowingBrand {
+    width: 100%;
+    max-width: none;
+  }
+
+  .badgeStrongerBrandsForGrowingBrand {
+    align-self: flex-start;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .headingStrongerBrandsForGrowingBrand {
+    font-size: clamp(1.65rem, 7vw, 1rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+
+  .descStrongerBrandsForGrowingBrand {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .listContainerStrongerBrandsForGrowingBrand {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .listItemStrongerBrandsForGrowingBrand {
+    gap: 0.7rem;
+    padding: 0.75rem;
+    border-radius: 9px;
+  }
+
+  .listIconBoxStrongerBrandsForGrowingBrand {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .listTextStrongerBrandsForGrowingBrand {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonStrongerBrandsForGrowingBrand {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

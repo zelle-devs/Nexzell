@@ -1,0 +1,821 @@
+/* --- Main Wrapper --- */
+.sectionWrapperStoreFrontEveryMarketGlobalCommerce {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerStoreFrontEveryMarketGlobalCommerce {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT COLUMN: IMAGES & GLASS CARDS
+========================================= */
+.imageColStoreFrontEveryMarketGlobalCommerce {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapperStoreFrontEveryMarketGlobalCommerce {
+  position: relative;
+  width: 100%;
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  /* Adds a subtle dark glow behind the image container */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.bgImageStoreFrontEveryMarketGlobalCommerce {
+  width: 100%;
+  height: 550px;
+  display: block;
+  object-fit: cover;
+  object-position: -60px center ;
+  opacity: 0.8; /* Slight dimming for futuristic look */
+}
+
+/* --- Glassmorphism Base Styles for Cards --- */
+[class*="glassCard"][class$="StoreFrontEveryMarketGlobalCommerce"] {
+  position: absolute;
+  background: rgba(10, 15, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.4);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 230, 153, 0.05);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Card Positioning */
+.glassCardTopLeftStoreFrontEveryMarketGlobalCommerce {
+  top: 10%;
+  left: 5%;
+  min-width: 220px;
+}
+
+.glassCardBottomLeftStoreFrontEveryMarketGlobalCommerce {
+  bottom: 20%;
+  left: 8%;
+  min-width: 200px;
+}
+
+.glassCardTopRightStoreFrontEveryMarketGlobalCommerce {
+  top: 15%;
+  right: 5%;
+  min-width: 210px;
+}
+
+/* Card Typography & Inner Elements */
+.cardHeaderStoreFrontEveryMarketGlobalCommerce {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.cardTitleStoreFrontEveryMarketGlobalCommerce {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-weight: 500;
+}
+
+.cardIconStoreFrontEveryMarketGlobalCommerce {
+  color: var(--nexzell-primary, #00E699);
+  width: 28px;
+  height: 28px;
+}
+
+.iconCircleStoreFrontEveryMarketGlobalCommerce {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 230, 153, 0.1);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardValueStoreFrontEveryMarketGlobalCommerce {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1;
+}
+
+.cardTrendStoreFrontEveryMarketGlobalCommerce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--nexzell-primary, #00E699);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--nexzell-font-family, sans-serif);
+  background: rgba(0, 230, 153, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+
+/* =========================================
+   RIGHT COLUMN: CONTENT & MODERN LIST
+========================================= */
+.contentColStoreFrontEveryMarketGlobalCommerce {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.badgeStoreFrontEveryMarketGlobalCommerce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8); /* Different from other sections as per image */
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconStoreFrontEveryMarketGlobalCommerce {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.headingStoreFrontEveryMarketGlobalCommerce {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.highlightTextStoreFrontEveryMarketGlobalCommerce {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descStoreFrontEveryMarketGlobalCommerce {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.05rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  max-width: 550px;
+}
+
+/* --- Modern Interactive List Items --- */
+.listContainerStoreFrontEveryMarketGlobalCommerce {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItemStoreFrontEveryMarketGlobalCommerce {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--nexzell-radius-md, 12px);
+  transition: all var(--transition-base, 0.3s ease);
+  cursor: default;
+}
+
+.listItemStoreFrontEveryMarketGlobalCommerce:hover {
+  background: rgba(0, 230, 153, 0.05);
+  border-color: rgba(0, 230, 153, 0.2);
+  transform: translateX(5px); /* Smooth nudge to the right on hover */
+}
+
+.listIconBoxStoreFrontEveryMarketGlobalCommerce {
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 230, 153, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.listItemStoreFrontEveryMarketGlobalCommerce:hover .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+  transform: scale(1.1);
+}
+
+.listTextStoreFrontEveryMarketGlobalCommerce {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  font-weight: 500;
+}
+
+/* --- CTA Button --- */
+.ctaButtonStoreFrontEveryMarketGlobalCommerce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base, 0.3s ease);
+}
+
+.ctaButtonStoreFrontEveryMarketGlobalCommerce:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 230, 153, 0.2);
+}
+
+
+/* --- Responsive: Laptop (Max Width: 1200px) --- */
+@media (max-width: 1200px) {
+  .sectionWrapperStoreFrontEveryMarketGlobalCommerce {
+    padding: 5.5rem 0;
+  }
+
+  .containerStoreFrontEveryMarketGlobalCommerce {
+    padding: 0 1.75rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .imageColStoreFrontEveryMarketGlobalCommerce {
+    min-height: 500px;
+  }
+
+  .imageWrapperStoreFrontEveryMarketGlobalCommerce {
+    border-radius: 20px;
+  }
+
+  .bgImageStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="StoreFrontEveryMarketGlobalCommerce"] {
+    padding: 1rem 1.15rem;
+    gap: 0.45rem;
+  }
+
+  .glassCardTopLeftStoreFrontEveryMarketGlobalCommerce {
+    left: 3%;
+    min-width: 190px;
+  }
+
+  .glassCardBottomLeftStoreFrontEveryMarketGlobalCommerce {
+    left: 4%;
+    /* bottom: -8%; */
+    min-width: 180px;
+  }
+
+  .glassCardTopRightStoreFrontEveryMarketGlobalCommerce {
+    right: 3%;
+    min-width: 185px;
+  }
+
+  .cardTitleStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.8rem;
+  }
+
+  .cardValueStoreFrontEveryMarketGlobalCommerce {
+    font-size: 1.55rem;
+  }
+
+  .cardTrendStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.75rem;
+  }
+
+  .contentColStoreFrontEveryMarketGlobalCommerce {
+    min-width: 0;
+  }
+
+  .badgeStoreFrontEveryMarketGlobalCommerce {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingStoreFrontEveryMarketGlobalCommerce {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descStoreFrontEveryMarketGlobalCommerce {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonStoreFrontEveryMarketGlobalCommerce {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Small Laptop (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+  .sectionWrapperStoreFrontEveryMarketGlobalCommerce {
+    padding: 4.5rem 0;
+  }
+
+  .containerStoreFrontEveryMarketGlobalCommerce {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .imageColStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+  }
+
+  .imageWrapperStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bgImageStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="StoreFrontEveryMarketGlobalCommerce"] {
+    padding: 0.9rem 1rem;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .glassCardTopLeftStoreFrontEveryMarketGlobalCommerce {
+    top: 8%;
+    left: 2%;
+    min-width: 180px;
+  }
+
+  .glassCardBottomLeftStoreFrontEveryMarketGlobalCommerce {
+    bottom: 10%;
+    left: 2%;
+    min-width: 170px;
+  }
+
+  .glassCardTopRightStoreFrontEveryMarketGlobalCommerce {
+    top: 12%;
+    right: 2%;
+    min-width: 175px;
+  }
+
+  .cardHeaderStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.5rem;
+  }
+
+  .cardTitleStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.78rem;
+  }
+
+  .cardValueStoreFrontEveryMarketGlobalCommerce {
+    font-size: 1.45rem;
+  }
+
+  .cardIconStoreFrontEveryMarketGlobalCommerce {
+    flex-shrink: 0;
+  }
+
+  .iconCircleStoreFrontEveryMarketGlobalCommerce {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .cardTrendStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.72rem;
+  }
+
+  .contentColStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .badgeStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .headingStoreFrontEveryMarketGlobalCommerce {
+    font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descStoreFrontEveryMarketGlobalCommerce {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce:hover {
+    transform: translateX(3px);
+  }
+
+  .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonStoreFrontEveryMarketGlobalCommerce {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Large Mobile (Max Width: 749px) --- */
+@media (max-width: 749px) {
+  .sectionWrapperStoreFrontEveryMarketGlobalCommerce {
+    padding: 3.75rem 0;
+  }
+
+  .containerStoreFrontEveryMarketGlobalCommerce {
+    padding: 0 1.25rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .imageColStoreFrontEveryMarketGlobalCommerce {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .imageWrapperStoreFrontEveryMarketGlobalCommerce {
+    max-width: 600px;
+    border-radius: 16px;
+  }
+
+  .bgImageStoreFrontEveryMarketGlobalCommerce {
+    border-radius: 0;
+    height: auto;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="StoreFrontEveryMarketGlobalCommerce"] {
+    padding: 0.8rem 0.9rem;
+    gap: 0.4rem;
+    transform: scale(0.78);
+  }
+
+  .glassCardTopLeftStoreFrontEveryMarketGlobalCommerce {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftStoreFrontEveryMarketGlobalCommerce {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightStoreFrontEveryMarketGlobalCommerce {
+    top: 8%;
+    right: 5%;
+    min-width: 160px;
+  }
+
+  .cardHeaderStoreFrontEveryMarketGlobalCommerce {
+    margin-bottom: 0.15rem;
+  }
+
+  .cardTitleStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.72rem;
+  }
+
+  .cardValueStoreFrontEveryMarketGlobalCommerce {
+    font-size: 1.3rem;
+  }
+
+  .cardTrendStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .iconCircleStoreFrontEveryMarketGlobalCommerce {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contentColStoreFrontEveryMarketGlobalCommerce {
+    max-width: 600px;
+  }
+
+  .badgeStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .headingStoreFrontEveryMarketGlobalCommerce {
+    font-size: clamp(1.9rem, 5.5vw, 2.4rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+  }
+
+  .descStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .listContainerStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.65rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce {
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.8rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce:hover {
+    transform: none;
+  }
+
+  .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce:hover .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+    transform: none;
+  }
+
+  .listTextStoreFrontEveryMarketGlobalCommerce {
+    min-width: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.45rem;
+    padding: 0.8rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Responsive: Mobile (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .sectionWrapperStoreFrontEveryMarketGlobalCommerce {
+    padding: 3rem 0;
+  }
+
+  .containerStoreFrontEveryMarketGlobalCommerce {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .imageColStoreFrontEveryMarketGlobalCommerce {
+    padding: 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .imageWrapperStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .bgImageStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    height:300px;
+    margin-bottom: 0.5rem;
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: -40px center;
+  }
+
+  [class*="glassCard"][class$="StoreFrontEveryMarketGlobalCommerce"] {
+    position: absolute;
+    /* inset: auto; */
+    transform: none;
+    width: auto;
+    /* min-width: auto; */
+    margin: 0;
+    padding: 1rem;
+    gap: 0.1rem;
+    border-radius: 12px;
+    background: rgba(10, 15, 20, 0.727);
+  }
+
+  .glassCardTopLeftStoreFrontEveryMarketGlobalCommerce {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftStoreFrontEveryMarketGlobalCommerce {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightStoreFrontEveryMarketGlobalCommerce {
+    top: 29%;
+    right: 5%;
+    min-width: 10px;
+  }
+
+  .cardHeaderStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .cardTitleStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.6rem;
+  }
+
+  .cardValueStoreFrontEveryMarketGlobalCommerce {
+    font-size: 1.2rem;
+  }
+
+  .cardTrendStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .cardIconStoreFrontEveryMarketGlobalCommerce {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .iconCircleStoreFrontEveryMarketGlobalCommerce {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .contentColStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    max-width: none;
+  }
+
+  .badgeStoreFrontEveryMarketGlobalCommerce {
+    align-self: flex-start;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .headingStoreFrontEveryMarketGlobalCommerce {
+    font-size: clamp(1.65rem, 7vw, 1rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+
+  .descStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .listContainerStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .listItemStoreFrontEveryMarketGlobalCommerce {
+    gap: 0.7rem;
+    padding: 0.75rem;
+    border-radius: 9px;
+  }
+
+  .listIconBoxStoreFrontEveryMarketGlobalCommerce {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .listTextStoreFrontEveryMarketGlobalCommerce {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonStoreFrontEveryMarketGlobalCommerce {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

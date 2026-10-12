@@ -1,0 +1,402 @@
+/* --- Wrapper & Container --- */
+.sectionWrapperGrowingBrandsGoFurther {
+  padding: 7rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.containerGrowingBrandsGoFurther {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header Area --- */
+.headerGrowingBrandsGoFurther {
+  text-align: center;
+  max-width: 850px;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeGrowingBrandsGoFurther {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05); /* Very subtle primary tint */
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconGrowingBrandsGoFurther {
+  font-size: 0.7rem;
+}
+
+.headingGrowingBrandsGoFurther {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.highlightTextGrowingBrandsGoFurther {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descGrowingBrandsGoFurther {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* --- Features Grid --- */
+.featuresGridGrowingBrandsGoFurther {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.featureItemGrowingBrandsGoFurther {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 105, 84, 0.638) 0px 2px 9px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: 0.5s all !important;
+}
+.featureItemGrowingBrandsGoFurther:hover{
+    /* border: 1px solid var(--nexzell-primary); */
+    /* box-shadow: inset rgba(50, 105, 84, 0.638) 0px 2px 9px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px; */
+    /* transition: 0.9s all; */
+    box-shadow: none;
+
+}
+
+/* Icon Styling matching the glowing circles in the screenshot */
+.iconCircleGrowingBrandsGoFurther {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 230, 153, 0.5); /* Primary border */
+  background-color: rgba(0, 230, 153, 0.03); /* Subtle inner fill */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 1.5rem;
+  /* Optional: Soft glow effect to match the dark neon vibe */
+  box-shadow: 0 0 20px rgba(0, 230, 153, 0.1), inset 0 0 15px rgba(0, 230, 153, 0.05);
+  transition: var(--transition-base, 0.3s ease-in-out);
+}
+
+.featureItemGrowingBrandsGoFurther:hover .iconCircleGrowingBrandsGoFurther {
+  border-color: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 25px rgba(0, 230, 153, 0.2), inset 0 0 20px rgba(0, 230, 153, 0.1);
+  transform: translateY(-5px);
+}
+
+.featureTitleGrowingBrandsGoFurther {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
+}
+
+.featureDescGrowingBrandsGoFurther {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 210px; /* Keeps text wrapped nicely under the icon */
+}
+
+/* --- Responsive: Laptop (Max Width: 1200px) --- */
+@media (max-width: 1200px) {
+  .sectionWrapperGrowingBrandsGoFurther {
+    padding: 6rem 0;
+  }
+
+  .containerGrowingBrandsGoFurther {
+    padding: 0 1.75rem;
+  }
+
+  .headerGrowingBrandsGoFurther {
+    max-width: 800px;
+    margin-bottom: 4rem;
+  }
+
+  .badgeGrowingBrandsGoFurther {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingGrowingBrandsGoFurther {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+  }
+
+  .descGrowingBrandsGoFurther {
+    max-width: 700px;
+    font-size: 1.05rem;
+  }
+
+  .featuresGridGrowingBrandsGoFurther {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+  }
+
+  .featureItemGrowingBrandsGoFurther {
+    padding: 26px 20px;
+  }
+
+  .iconCircleGrowingBrandsGoFurther {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureTitleGrowingBrandsGoFurther {
+    font-size: 1.05rem;
+  }
+
+  .featureDescGrowingBrandsGoFurther {
+    max-width: 240px;
+  }
+}
+
+/* --- Responsive: Tablet / Small Laptop (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+  .sectionWrapperGrowingBrandsGoFurther {
+    padding: 5rem 0;
+  }
+
+  .containerGrowingBrandsGoFurther {
+    padding: 0 1.5rem;
+  }
+
+  .headerGrowingBrandsGoFurther {
+    max-width: 750px;
+    margin-bottom: 3.5rem;
+  }
+
+  .badgeGrowingBrandsGoFurther {
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.15rem;
+  }
+
+  .badgeIconGrowingBrandsGoFurther {
+    font-size: 0.65rem;
+  }
+
+  .headingGrowingBrandsGoFurther {
+    font-size: clamp(2rem, 4.2vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descGrowingBrandsGoFurther {
+    max-width: 650px;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .featuresGridGrowingBrandsGoFurther {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+  }
+
+  .featureItemGrowingBrandsGoFurther {
+    padding: 28px 22px;
+  }
+
+  .iconCircleGrowingBrandsGoFurther {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.25rem;
+  }
+
+  .featureTitleGrowingBrandsGoFurther {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 0.65rem;
+  }
+
+  .featureDescGrowingBrandsGoFurther {
+    max-width: 280px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- Responsive: Tablet / Large Mobile (Max Width: 749px) --- */
+@media (max-width: 749px) {
+  .sectionWrapperGrowingBrandsGoFurther {
+    padding: 4rem 0;
+  }
+
+  .containerGrowingBrandsGoFurther {
+    padding: 0 1.25rem;
+  }
+
+  .headerGrowingBrandsGoFurther {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .badgeGrowingBrandsGoFurther {
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeIconGrowingBrandsGoFurther {
+    font-size: 0.6rem;
+  }
+
+  .headingGrowingBrandsGoFurther {
+    font-size: clamp(1.8rem, 5vw, 2.35rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.9rem;
+  }
+
+  .descGrowingBrandsGoFurther {
+    max-width: 540px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .featuresGridGrowingBrandsGoFurther {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1rem;
+  }
+
+  .featureItemGrowingBrandsGoFurther {
+    padding: 24px 16px;
+    border-radius: 10px;
+  }
+
+  .iconCircleGrowingBrandsGoFurther {
+    width: 58px;
+    height: 58px;
+    border-width: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .featureItemGrowingBrandsGoFurther:hover .iconCircleGrowingBrandsGoFurther {
+    transform: translateY(-3px);
+  }
+
+  .featureTitleGrowingBrandsGoFurther {
+    font-size: 0.98rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .featureDescGrowingBrandsGoFurther {
+    max-width: 260px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- Responsive: Mobile (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .sectionWrapperGrowingBrandsGoFurther {
+    padding: 3rem 0;
+  }
+
+  .containerGrowingBrandsGoFurther {
+    padding: 0 1rem;
+  }
+
+  .headerGrowingBrandsGoFurther {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeGrowingBrandsGoFurther {
+    gap: 0.35rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeIconGrowingBrandsGoFurther {
+    font-size: 0.55rem;
+  }
+
+  .headingGrowingBrandsGoFurther {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+  }
+
+  .descGrowingBrandsGoFurther {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .featuresGridGrowingBrandsGoFurther {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .featureItemGrowingBrandsGoFurther {
+    width: 100%;
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+
+  .iconCircleGrowingBrandsGoFurther {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+  }
+
+  .featureTitleGrowingBrandsGoFurther {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .featureDescGrowingBrandsGoFurther {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}

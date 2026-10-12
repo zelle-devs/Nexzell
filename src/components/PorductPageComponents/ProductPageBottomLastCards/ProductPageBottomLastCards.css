@@ -23,7 +23,7 @@
 
 .containerProductPageBottomLastCards {
   max-width: var(--nexzell-container-width, 1590px);
-  margin: 60 auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;

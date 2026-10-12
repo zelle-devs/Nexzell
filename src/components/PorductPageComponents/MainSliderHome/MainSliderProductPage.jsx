@@ -47,7 +47,7 @@ function MainSliderProductPage() {
           
           <div className="badgeMainSliderProductPage animDelay1">
             <span className="badgeDotMainSliderProductPage"></span>
-            ABOUT NEXZELL
+            PRODUCTS NEXZELL
           </div>
 
           <h1 className="headingMainSliderProductPage animDelay2">

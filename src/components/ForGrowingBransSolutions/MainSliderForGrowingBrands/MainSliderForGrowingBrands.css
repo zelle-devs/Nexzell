@@ -1,0 +1,723 @@
+.sectionWrapperMainSliderForGrowingBrands {
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../../../../public/MainSliderForGrowingBrands.png);
+  background-position: right center;
+ background-size: cover;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+ 
+.bgImageWrapperMainSliderForGrowingBrands {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;  
+  height: 100%;
+  z-index: 0;
+}
+.DivRowMainSliderIconsMainSliderForGrowingBrands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bgImageMainSliderForGrowingBrands {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+ 
+.bgGradientMainSliderForGrowingBrands {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 20%, rgba(6, 8, 12, 0.8) 25%, transparent 100%),
+              linear-gradient(to top, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0) 30%);
+}
+
+.containerMainSliderForGrowingBrands {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0.95) 20%, transparent 100%);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  
+  height: 100vh;
+  align-items: center;
+  position: relative;
+  
+  z-index: 1;
+}
+
+.contentMainSliderForGrowingBrands {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Base Animation Keyframes */
+@keyframes fadeUpStaggerMainSliderForGrowingBrands {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Delay Classes for Elements */
+.animDelay1 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderForGrowingBrands 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+.animDelay2 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderForGrowingBrands 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+.animDelay3 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderForGrowingBrands 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+.animDelay4 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderForGrowingBrands 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+.animDelay5 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderForGrowingBrands 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.badgeMainSliderForGrowingBrands {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderForGrowingBrands {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingMainSliderForGrowingBrands {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(3rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderForGrowingBrands {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionMainSliderForGrowingBrands {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnGroupMainSliderForGrowingBrands {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.btnPrimaryMainSliderForGrowingBrands {
+ display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryMainSliderForGrowingBrands:hover {
+  background-color: transparent; 
+  color: var(--nexzell-primary-hover);
+   border: 1px solid var(--nexzell-primary);
+}
+
+.btnIconMainSliderForGrowingBrands {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryMainSliderForGrowingBrands:hover .btnIconMainSliderForGrowingBrands {
+  transform: translateX(4px);
+}
+
+.btnSecondaryMainSliderForGrowingBrands {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryMainSliderForGrowingBrands:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.playIconMainSliderForGrowingBrands {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.statsListMainSliderForGrowingBrands {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statItemMainSliderForGrowingBrands {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNumberMainSliderForGrowingBrands {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.statTextMainSliderForGrowingBrands {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+}
+
+.statDividerMainSliderForGrowingBrands {
+  width: 1px;
+  height: 40px;
+  background-color: var(--nexzell-border-highlight, #334155);
+  opacity: 0.4;
+}
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* --- Small Desktop / Large Laptop --- */
+@media (max-width: 1200px) {
+
+  .sectionWrapperMainSliderForGrowingBrands {
+    min-height: 85vh;
+  }
+
+  .bgImageWrapperMainSliderForGrowingBrands {
+    width: 62%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderForGrowingBrands {
+    object-position: right center;
+  }
+
+  .bgGradientMainSliderForGrowingBrands {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 15%,
+        rgba(6, 8, 12, 0.9) 30%,
+        rgba(6, 8, 12, 0.45) 65%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 30%
+      );
+  }
+
+  .containerMainSliderForGrowingBrands {
+    height: 85vh;
+    min-height: 680px;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .contentMainSliderForGrowingBrands {
+    max-width: 570px;
+  }
+
+  .badgeMainSliderForGrowingBrands {
+    padding: 0.38rem 0.9rem;
+    font-size: 0.72rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingMainSliderForGrowingBrands {
+    font-size: clamp(2.5rem, 4.5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderForGrowingBrands {
+    font-size: 0.98rem;
+    max-width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupMainSliderForGrowingBrands {
+    gap: 0.85rem;
+    margin-bottom: 3.25rem;
+  }
+
+  .btnPrimaryMainSliderForGrowingBrands,
+  .btnSecondaryMainSliderForGrowingBrands {
+    padding: 0.8rem 1.55rem;
+    font-size: 0.92rem;
+  }
+
+  .statsListMainSliderForGrowingBrands {
+    gap: 1.5rem;
+  }
+
+  .statNumberMainSliderForGrowingBrands {
+    font-size: 1.4rem;
+  }
+
+  .statTextMainSliderForGrowingBrands {
+    font-size: 0.76rem;
+  }
+}
+
+
+/* --- Tablet Landscape --- */
+@media (max-width: 1024px) {
+
+  .sectionWrapperMainSliderForGrowingBrands {
+    min-height: 80vh;
+  }
+
+  .bgImageWrapperMainSliderForGrowingBrands {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderForGrowingBrands {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderForGrowingBrands {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 5%,
+        rgba(6, 8, 12, 0.92) 40%,
+        rgba(6, 8, 12, 0.65) 70%,
+        rgba(6, 8, 12, 0.35) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 35%
+      );
+  }
+
+  .containerMainSliderForGrowingBrands {
+    height: 80vh;
+    min-height: 650px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .contentMainSliderForGrowingBrands {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .badgeMainSliderForGrowingBrands {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .badgeDotMainSliderForGrowingBrands {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderForGrowingBrands {
+    font-size: clamp(2.35rem, 5vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 1.15rem;
+  }
+
+  .descriptionMainSliderForGrowingBrands {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.9rem;
+  }
+
+  .btnGroupMainSliderForGrowingBrands {
+    gap: 0.8rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .btnPrimaryMainSliderForGrowingBrands,
+  .btnSecondaryMainSliderForGrowingBrands {
+    padding: 0.78rem 1.45rem;
+    font-size: 0.9rem;
+  }
+
+  .statsListMainSliderForGrowingBrands {
+    gap: 1.35rem;
+  }
+
+  .statNumberMainSliderForGrowingBrands {
+    font-size: 1.35rem;
+  }
+
+  .statTextMainSliderForGrowingBrands {
+    font-size: 0.74rem;
+  }
+
+  .statDividerMainSliderForGrowingBrands {
+    height: 36px;
+  }
+}
+
+
+/* --- Tablet / Small Screens --- */
+@media (max-width: 768px) {
+
+  .sectionWrapperMainSliderForGrowingBrands {
+    min-height: 78vh;
+  }
+
+  .bgImageWrapperMainSliderForGrowingBrands {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderForGrowingBrands {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderForGrowingBrands {
+    background:
+      linear-gradient(
+        to right,
+        rgba(6, 8, 12, 0.98) 0%,
+        rgba(6, 8, 12, 0.94) 35%,
+        rgba(6, 8, 12, 0.72) 70%,
+        rgba(6, 8, 12, 0.48) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 40%
+      );
+  }
+
+  .containerMainSliderForGrowingBrands {
+    height: auto;
+    min-height: 78vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .contentMainSliderForGrowingBrands {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .badgeMainSliderForGrowingBrands {
+    padding: 0.32rem 0.8rem;
+    gap: 0.4rem;
+    font-size: 0.67rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderForGrowingBrands {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderForGrowingBrands {
+    width: 100%;
+    font-size: clamp(2.1rem, 7vw, 2.7rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionMainSliderForGrowingBrands {
+    width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupMainSliderForGrowingBrands {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnPrimaryMainSliderForGrowingBrands,
+  .btnSecondaryMainSliderForGrowingBrands {
+    width: fit-content;
+    justify-content: center;
+    padding: 0.78rem 1.4rem;
+    font-size: 0.86rem;
+    min-height: 46px;
+  }
+
+  .statsListMainSliderForGrowingBrands {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.15rem;
+  }
+
+  .statItemMainSliderForGrowingBrands {
+    gap: 0.2rem;
+  }
+
+  .statNumberMainSliderForGrowingBrands {
+    font-size: 1.25rem;
+  }
+
+  .statTextMainSliderForGrowingBrands {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .statDividerMainSliderForGrowingBrands {
+    height: 34px;
+  }
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+
+  .sectionWrapperMainSliderForGrowingBrands {
+    min-height: 100svh;
+  }
+
+  .bgImageWrapperMainSliderForGrowingBrands {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderForGrowingBrands {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderForGrowingBrands {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 8, 12, 0.58) 0%,
+        rgba(6, 8, 12, 0.78) 30%,
+        rgba(6, 8, 12, 0.94) 65%,
+        var(--nexzell-bg-base, #06080C) 100%
+      );
+  }
+
+  .DivRowMainSliderIconsMainSliderForGrowingBrands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+  .containerMainSliderForGrowingBrands {
+    height: auto;
+    min-height: 100svh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5.25rem;
+    padding-bottom: 2.75rem;
+    align-items: center;
+  }
+
+  .contentMainSliderForGrowingBrands {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderForGrowingBrands {
+    padding: 0.32rem 0.75rem;
+    gap: 0.35rem;
+    font-size: 0.61rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotMainSliderForGrowingBrands {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingMainSliderForGrowingBrands {
+    width: 100%;
+    font-size: clamp(1.9rem, 9vw, 2.45rem);
+    line-height: 1.13;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.025em;
+  }
+
+  .descriptionMainSliderForGrowingBrands {
+    width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnGroupMainSliderForGrowingBrands {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.65rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnPrimaryMainSliderForGrowingBrands,
+  .btnSecondaryMainSliderForGrowingBrands {
+    width: 100%;
+    justify-content: center;
+    padding: 0.72rem 1.15rem;
+    font-size: 0.82rem;
+    min-height: 44px;
+  }
+
+  .statsListMainSliderForGrowingBrands {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 0.65rem;
+  }
+
+  .statItemMainSliderForGrowingBrands {
+    min-width: 0;
+    gap: 0.15rem;
+  }
+
+  .statNumberMainSliderForGrowingBrands {
+    font-size: 0.8rem;
+  }
+
+  .statTextMainSliderForGrowingBrands {
+    font-size: 0.43rem;
+    line-height: 1.35;
+  }
+
+  .iconMobileClassMainSliderForGrowingBrands{
+    /* font-size: 10px !important; */
+    width: 25px;
+  }
+
+  .statDividerMainSliderForGrowingBrands {
+    display: none;
+  }
+}
+
+
+/* --- Very Small Mobile --- */
+@media (max-width: 380px) {
+
+  .containerMainSliderForGrowingBrands {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    padding-top: 4.75rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .badgeMainSliderForGrowingBrands {
+    font-size: 0.58rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .headingMainSliderForGrowingBrands {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .descriptionMainSliderForGrowingBrands {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .btnPrimaryMainSliderForGrowingBrands,
+  .btnSecondaryMainSliderForGrowingBrands {
+    min-height: 43px;
+    font-size: 0.79rem;
+  }
+
+  .statsListMainSliderForGrowingBrands {
+    gap: 0.45rem;
+  }
+
+  .statNumberMainSliderForGrowingBrands {
+    font-size: 1rem;
+  }
+
+  .statTextMainSliderForGrowingBrands {
+    font-size: 0.58rem;
+  }
+}

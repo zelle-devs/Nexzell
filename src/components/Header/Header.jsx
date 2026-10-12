@@ -177,7 +177,7 @@ function Header() {
           </nav>
 
           <div className="rightActionsNexzellHeaderMain">
-            <button className="searchBtnNexzellHeaderMain hideOnScrollNexzellHeaderMain" aria-label="Search">
+            {/* <button className="searchBtnNexzellHeaderMain hideOnScrollNexzellHeaderMain" aria-label="Search">
               <Search size={20} />
             </button>
 
@@ -187,7 +187,7 @@ function Header() {
               onClick={(e) => handleNav(e, '/login', 'Login')}
             >
               Login
-            </Link>
+            </Link> */}
 
             <button
               className="drawerCtaBtnNexzellHeaderMain"
@@ -298,13 +298,13 @@ function Header() {
         </nav>
 
         <div className="drawerFooterNexzellHeaderMain">
-          <Link
+          {/* <Link
             href="#login"
             className="drawerLoginBtnNexzellHeaderMain"
             onClick={(e) => handleNav(e, '/login', 'Login')}
           >
             Login
-          </Link>
+          </Link> */}
           <button
             className="drawerCtaBtnNexzellHeaderMain"
             onClick={(e) => handleNav(e, '/consultation', 'Book a Free Demo')}

@@ -9,10 +9,10 @@ export const productLinks = [
 ];
 
 export const solutionsLinks = [
-  { label: 'For Startups', href: '/solutions' },
-  { label: 'For Growing Brands', href: '/solutions' },
-  { label: 'For Enterprises', href: '/solutions' },
-  { label: 'Global Commerce', href: '/solutions' },
+  { label: 'For Startups', href: '/for-startups' },
+  { label: 'For Growing Brands', href: '/for-growing-brands' },
+  { label: 'For Enterprises', href: '/global-enterprise' },
+  { label: 'Global Commerce', href: '/global-commerce' },
 ];
 
 export const resourcesLinks = [

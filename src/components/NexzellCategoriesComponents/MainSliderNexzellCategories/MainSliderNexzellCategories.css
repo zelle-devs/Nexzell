@@ -1,0 +1,1102 @@
+.sectionWrapperMainSliderNexzellCategories {
+
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-image: url(../../../../public/MainSliderNexzellCategories.png);
+  background-position: right right;
+ background-size: cover;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+ 
+.bgImageWrapperMainSliderNexzellCategories {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;  
+  height: 100%;
+  z-index: 0;
+}
+.DivRowMainSliderIconsMainSliderNexzellCategories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bgImageMainSliderNexzellCategories {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+ 
+.bgGradientMainSliderNexzellCategories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 20%, rgba(6, 8, 12, 0.8) 25%, transparent 100%),
+              linear-gradient(to top, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0) 30%);
+}
+
+.containerMainSliderNexzellCategories {
+  width: 100%;
+  /* max-width: var(--nexzell-container-width, 1280px); */
+  background: linear-gradient(to right, var(--nexzell-bg-base, #06080C) 0%, rgba(6, 8, 12, 0.95) 20%, transparent 100%);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  
+  height: 100vh;
+  align-items: center;
+  position: relative;
+  
+  z-index: 1;
+}
+
+.contentMainSliderNexzellCategories {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Base Animation Keyframes */
+@keyframes fadeUpStaggerMainSliderNexzellCategories {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Delay Classes for Elements */
+.animDelay1 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+.animDelay2 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+.animDelay3 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+.animDelay4 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+.animDelay5 {
+  opacity: 0;
+  animation: fadeUpStaggerMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
+}
+
+.badgeMainSliderNexzellCategories {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(14, 18, 24, 0.6);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotMainSliderNexzellCategories {
+  width: 8px;
+  height: 8px;
+  background-color: var(--nexzell-primary, #00E699);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingMainSliderNexzellCategories {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(3rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.textHighlightMainSliderNexzellCategories {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionMainSliderNexzellCategories {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin-bottom: 2.5rem;
+  max-width: 95%;
+}
+
+.btnGroupMainSliderNexzellCategories {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.btnPrimaryMainSliderNexzellCategories {
+ display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-sm, 12px);
+  border: 1px solid var(--nexzell-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnPrimaryMainSliderNexzellCategories:hover {
+  background-color: transparent; 
+  color: var(--nexzell-primary-hover);
+   border: 1px solid var(--nexzell-primary);
+}
+
+.btnIconMainSliderNexzellCategories {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryMainSliderNexzellCategories:hover .btnIconMainSliderNexzellCategories {
+  transform: translateX(4px);
+}
+
+.btnSecondaryMainSliderNexzellCategories {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: transparent;
+  color: var(--nexzell-text-white, #FFFFFF);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 12px);
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnSecondaryMainSliderNexzellCategories:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.playIconMainSliderNexzellCategories {
+  color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.statsListMainSliderNexzellCategories {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.statItemMainSliderNexzellCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statNumberMainSliderNexzellCategories {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--nexzell-primary, #00E699);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.statTextMainSliderNexzellCategories {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.8rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  margin: 0;
+}
+
+.statDividerMainSliderNexzellCategories {
+  width: 1px;
+  height: 40px;
+  background-color: var(--nexzell-border-highlight, #334155);
+  opacity: 0.4;
+}
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* --- Small Desktop / Large Laptop --- */
+@media (max-width: 1200px) {
+
+  .sectionWrapperMainSliderNexzellCategories {
+    min-height: 85vh;
+  }
+
+  .bgImageWrapperMainSliderNexzellCategories {
+    width: 62%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderNexzellCategories {
+    object-position: right center;
+  }
+
+  .bgGradientMainSliderNexzellCategories {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 15%,
+        rgba(6, 8, 12, 0.9) 30%,
+        rgba(6, 8, 12, 0.45) 65%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 30%
+      );
+  }
+
+  .containerMainSliderNexzellCategories {
+    height: 85vh;
+    min-height: 680px;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .contentMainSliderNexzellCategories {
+    max-width: 570px;
+  }
+
+  .badgeMainSliderNexzellCategories {
+    padding: 0.38rem 0.9rem;
+    font-size: 0.72rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingMainSliderNexzellCategories {
+    font-size: clamp(2.5rem, 4.5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionMainSliderNexzellCategories {
+    font-size: 0.98rem;
+    max-width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  .btnGroupMainSliderNexzellCategories {
+    gap: 0.85rem;
+    margin-bottom: 3.25rem;
+  }
+
+  .btnPrimaryMainSliderNexzellCategories,
+  .btnSecondaryMainSliderNexzellCategories {
+    padding: 0.8rem 1.55rem;
+    font-size: 0.92rem;
+  }
+
+  .statsListMainSliderNexzellCategories {
+    gap: 1.5rem;
+  }
+
+  .statNumberMainSliderNexzellCategories {
+    font-size: 1.4rem;
+  }
+
+  .statTextMainSliderNexzellCategories {
+    font-size: 0.76rem;
+  }
+}
+
+
+/* --- Tablet Landscape --- */
+@media (max-width: 1024px) {
+
+  .sectionWrapperMainSliderNexzellCategories {
+    min-height: 80vh;
+  }
+
+  .bgImageWrapperMainSliderNexzellCategories {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderNexzellCategories {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderNexzellCategories {
+    background:
+      linear-gradient(
+        to right,
+        var(--nexzell-bg-base, #06080C) 5%,
+        rgba(6, 8, 12, 0.92) 40%,
+        rgba(6, 8, 12, 0.65) 70%,
+        rgba(6, 8, 12, 0.35) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 35%
+      );
+  }
+
+  .containerMainSliderNexzellCategories {
+    height: 80vh;
+    min-height: 650px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .contentMainSliderNexzellCategories {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .badgeMainSliderNexzellCategories {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .badgeDotMainSliderNexzellCategories {
+    width: 7px;
+    height: 7px;
+  }
+
+  .headingMainSliderNexzellCategories {
+    font-size: clamp(2.35rem, 5vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 1.15rem;
+  }
+
+  .descriptionMainSliderNexzellCategories {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.9rem;
+  }
+
+  .btnGroupMainSliderNexzellCategories {
+    gap: 0.8rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .btnPrimaryMainSliderNexzellCategories,
+  .btnSecondaryMainSliderNexzellCategories {
+    padding: 0.78rem 1.45rem;
+    font-size: 0.9rem;
+  }
+
+  .statsListMainSliderNexzellCategories {
+    gap: 1.35rem;
+  }
+
+  .statNumberMainSliderNexzellCategories {
+    font-size: 1.35rem;
+  }
+
+  .statTextMainSliderNexzellCategories {
+    font-size: 0.74rem;
+  }
+
+  .statDividerMainSliderNexzellCategories {
+    height: 36px;
+  }
+}
+
+
+/* --- Tablet / Small Screens --- */
+@media (max-width: 768px) {
+
+  .sectionWrapperMainSliderNexzellCategories {
+    min-height: 78vh;
+  }
+
+  .bgImageWrapperMainSliderNexzellCategories {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderNexzellCategories {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderNexzellCategories {
+    background:
+      linear-gradient(
+        to right,
+        rgba(6, 8, 12, 0.98) 0%,
+        rgba(6, 8, 12, 0.94) 35%,
+        rgba(6, 8, 12, 0.72) 70%,
+        rgba(6, 8, 12, 0.48) 100%
+      ),
+      linear-gradient(
+        to top,
+        var(--nexzell-bg-base, #06080C) 0%,
+        rgba(6, 8, 12, 0) 40%
+      );
+  }
+
+  .containerMainSliderNexzellCategories {
+    height: auto;
+    min-height: 78vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .contentMainSliderNexzellCategories {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .badgeMainSliderNexzellCategories {
+    padding: 0.32rem 0.8rem;
+    gap: 0.4rem;
+    font-size: 0.67rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotMainSliderNexzellCategories {
+    width: 6px;
+    height: 6px;
+  }
+
+  .headingMainSliderNexzellCategories {
+    width: 100%;
+    font-size: clamp(2.1rem, 7vw, 2.7rem);
+    line-height: 1.12;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionMainSliderNexzellCategories {
+    width: 100%;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  .btnGroupMainSliderNexzellCategories {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.7rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btnPrimaryMainSliderNexzellCategories,
+  .btnSecondaryMainSliderNexzellCategories {
+    width: fit-content;
+    justify-content: center;
+    padding: 0.78rem 1.4rem;
+    font-size: 0.86rem;
+    min-height: 46px;
+  }
+
+  .statsListMainSliderNexzellCategories {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.15rem;
+  }
+
+  .statItemMainSliderNexzellCategories {
+    gap: 0.2rem;
+  }
+
+  .statNumberMainSliderNexzellCategories {
+    font-size: 1.25rem;
+  }
+
+  .statTextMainSliderNexzellCategories {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .statDividerMainSliderNexzellCategories {
+    height: 34px;
+  }
+}
+
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+
+  .sectionWrapperMainSliderNexzellCategories {
+    min-height: 100svh;
+  }
+
+  .bgImageWrapperMainSliderNexzellCategories {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bgImageMainSliderNexzellCategories {
+    object-position: center center;
+  }
+
+  .bgGradientMainSliderNexzellCategories {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 8, 12, 0.58) 0%,
+        rgba(6, 8, 12, 0.78) 30%,
+        rgba(6, 8, 12, 0.94) 65%,
+        var(--nexzell-bg-base, #06080C) 100%
+      );
+  }
+
+  .DivRowMainSliderIconsMainSliderNexzellCategories{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+  .containerMainSliderNexzellCategories {
+    height: auto;
+    min-height: 100svh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5.25rem;
+    padding-bottom: 2.75rem;
+    align-items: center;
+  }
+
+  .contentMainSliderNexzellCategories {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .badgeMainSliderNexzellCategories {
+    padding: 0.32rem 0.75rem;
+    gap: 0.35rem;
+    font-size: 0.61rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotMainSliderNexzellCategories {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingMainSliderNexzellCategories {
+    width: 100%;
+    font-size: clamp(1.9rem, 9vw, 2.45rem);
+    line-height: 1.13;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.025em;
+  }
+
+  .descriptionMainSliderNexzellCategories {
+    width: 100%;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .btnGroupMainSliderNexzellCategories {
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.65rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .btnPrimaryMainSliderNexzellCategories,
+  .btnSecondaryMainSliderNexzellCategories {
+    width: 100%;
+    justify-content: center;
+    padding: 0.72rem 1.15rem;
+    font-size: 0.82rem;
+    min-height: 44px;
+  }
+
+  .statsListMainSliderNexzellCategories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 0.65rem;
+  }
+
+  .statItemMainSliderNexzellCategories {
+    min-width: 0;
+    gap: 0.15rem;
+  }
+
+  .statNumberMainSliderNexzellCategories {
+    font-size: 0.8rem;
+  }
+
+  .statTextMainSliderNexzellCategories {
+    font-size: 0.43rem;
+    line-height: 1.35;
+  }
+
+  .iconMobileClassMainSliderNexzellCategories{
+    /* font-size: 10px !important; */
+    width: 25px;
+  }
+
+  .statDividerMainSliderNexzellCategories {
+    display: none;
+  }
+}
+
+
+/* --- Very Small Mobile --- */
+@media (max-width: 380px) {
+
+  .containerMainSliderNexzellCategories {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+    padding-top: 4.75rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .badgeMainSliderNexzellCategories {
+    font-size: 0.58rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .headingMainSliderNexzellCategories {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .descriptionMainSliderNexzellCategories {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .btnPrimaryMainSliderNexzellCategories,
+  .btnSecondaryMainSliderNexzellCategories {
+    min-height: 43px;
+    font-size: 0.79rem;
+  }
+
+  .statsListMainSliderNexzellCategories {
+    gap: 0.45rem;
+  }
+
+  .statNumberMainSliderNexzellCategories {
+    font-size: 1rem;
+  }
+
+  .statTextMainSliderNexzellCategories {
+    font-size: 0.58rem;
+  }
+}
+
+
+/* =========================================================
+   FLOATING CARDS (Global Revenue + Active Markets)
+   ========================================================= */
+
+/* ---- DESKTOP POSITION CONTROLS: edit these numbers to move the cards ---- */
+.cardsLayerMainSliderNexzellCategories {
+  /* --rev-left: 16%;     Revenue card: distance from left of section */
+  --rev-top: 24%;      /* Revenue card: distance from top */
+  /* --mkt-right: 3%;     Markets card: distance from right */
+  /* --mkt-top: -12%;      Markets card: distance from top */
+  right: 260px;
+  top: 100;;
+  position: absolute;
+  /* inset: 0; */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.glassCardMainSliderNexzellCategories {
+  /* everything inside the card is sized in "em" so it scales as one unit */
+  font-size: clamp(10px, 0.9vw, 14px);
+  position: absolute;
+  padding: 1.2em 1.3em;
+  background: linear-gradient(145deg, rgba(14, 28, 30, 0.72), rgba(8, 16, 20, 0.62));
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 230, 153, 0.28);
+  border-radius: 1.2em;
+  box-shadow: 0 0 2.2em rgba(0, 230, 153, 0.12), inset 0 0 1.5em rgba(0, 230, 153, 0.05);
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-poppins, sans-serif);
+  pointer-events: auto;
+  opacity: 0;
+  animation:
+    cardEnterMainSliderNexzellCategories 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    cardFloatMainSliderNexzellCategories 6s ease-in-out 1.6s infinite;
+}
+
+.revenueCardMainSliderNexzellCategories {
+  left: var(--rev-left);
+  
+  top: var(--rev-top);
+  /* width: 18em; */
+  animation-delay: 0.6s, 1.6s;
+}
+
+.marketsCardMainSliderNexzellCategories {
+  right: var(--mkt-right);
+  top: var(--mkt-top);
+  width: 17em;
+  animation-delay: 0.8s, 2.2s;
+}
+
+@keyframes cardEnterMainSliderNexzellCategories {
+  0%   { opacity: 0; transform: translateY(30px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cardFloatMainSliderNexzellCategories {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50%      { opacity: 1; transform: translateY(-8px); }
+}
+
+/* ---- Revenue card ---- */
+.cardLabelMainSliderNexzellCategories {
+  margin: 0 0 0.6em;
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.revenueRowMainSliderNexzellCategories {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.revenueValueMainSliderNexzellCategories {
+  margin: 0;
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: 2.1em;
+  font-weight: 700;
+  min-width: 100px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.revenueGrowthMainSliderNexzellCategories {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 0.4em;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+}
+
+.barsMainSliderNexzellCategories {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.45em;
+  height: 4.6em;
+}
+
+.barMainSliderNexzellCategories {
+  display: block;
+  width: 0.95em;
+  border-radius: 0.25em 0.25em 0.1em 0.1em;
+  background: linear-gradient(to top, rgba(0, 230, 153, 0.55), var(--nexzell-primary, #00E699));
+  box-shadow: 0 0 0.8em rgba(0, 230, 153, 0.35);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: barGrowMainSliderNexzellCategories 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes barGrowMainSliderNexzellCategories {
+  to { transform: scaleY(1); }
+}
+
+/* ---- Markets card ---- */
+.cardTitleMainSliderNexzellCategories {
+  margin: 0 0 0.9em;
+  font-size: 1em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.marketListMainSliderNexzellCategories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.marketItemMainSliderNexzellCategories {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  font-size: 0.98em;
+  font-weight: 500;
+  color: #E2E8F0;
+  opacity: 0;
+  transform: translateX(16px);
+  animation: marketSlideMainSliderNexzellCategories 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes marketSlideMainSliderNexzellCategories {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.flagWrapMainSliderNexzellCategories {
+  flex: 0 0 auto;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+
+.flagWrapMainSliderNexzellCategories svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.marketMoreMainSliderNexzellCategories {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 1em;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.marketMoreMainSliderNexzellCategories:hover {
+  gap: 0.7em;
+}
+
+/* =========================================================
+   CARDS RESPONSIVE
+   ========================================================= */
+
+/* --- Small laptop: tighten spacing a little --- */
+@media (max-width: 1200px) {
+  .cardsLayerMainSliderNexzellCategories {
+    --rev-left: 58%;
+    --rev-top: 22%;
+    --mkt-right: 2%;
+    --mkt-top: 34%;
+  }
+}
+
+/* --- Tablet and below: cards move to a neat row ABOVE the text,
+       so they never overlap the heading/buttons --- */
+@media (max-width: 1024px) {
+  .cardsLayerMainSliderNexzellCategories {
+    inset: auto;
+    top: 5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    max-width: 560px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+
+  .glassCardMainSliderNexzellCategories {
+    position: relative;
+    left: auto;
+    right: -40;
+    top: 40;
+    width: 40% !important;
+    font-size: 12px;
+  }
+
+  .revenueCardMainSliderNexzellCategories,
+  .marketsCardMainSliderNexzellCategories {
+    width: 100%;
+  }
+  .marketsCardMainSliderNexzellCategories{
+    display: none;
+  }
+
+  /* make room at the top of the hero for the cards */
+  .containerMainSliderNexzellCategories {
+    height: auto;
+    min-height: 80vh;
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 640px) {
+  .cardsLayerMainSliderNexzellCategories {
+    top: 4.5rem;
+    left: 1rem;
+    right: 1rem;
+    max-width: none;
+    gap: 0.55rem;
+  }
+
+  .glassCardMainSliderNexzellCategories {
+    font-size: 9.5px;
+    padding: 0.95em 1em;
+  }
+
+  .revenueRowMainSliderNexzellCategories {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6em;
+  }
+
+  .revenueValueMainSliderNexzellCategories {
+    font-size: 2em;
+  }
+  .glassCardMainSliderNexzellCategories {
+    position: relative;
+    left: auto;
+    right: 40;
+    top: 40;
+    width: 60% !important;
+    font-size: 12px;
+  }
+
+  .barsMainSliderNexzellCategories {
+    height: 3.2em;
+  }
+
+  .marketListMainSliderNexzellCategories {
+    gap: 0.6em;
+  }
+
+  .containerMainSliderNexzellCategories {
+    padding-top: 15.5rem;
+  }
+}
+
+/* --- Very small mobile --- */
+@media (max-width: 380px) {
+  .glassCardMainSliderNexzellCategories {
+    font-size: 8.5px;
+  }
+
+  .containerMainSliderNexzellCategories {
+    padding-top: 14.5rem;
+  }
+}
+
+/* Respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  .glassCardMainSliderNexzellCategories,
+  .barMainSliderNexzellCategories,
+  .marketItemMainSliderNexzellCategories {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.glassCardMainSliderNexzellCategories {
+  /* everything inside the card is sized in "em" so it scales as one unit */
+  font-size: clamp(10px, 0.9vw, 14px);
+  position: absolute;
+  padding: 1.3em 1.4em;
+  isolation: isolate;
+  overflow: hidden;
+
+  /* dark liquid glass body */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.01) 40%, rgba(0, 0, 0, 0.30) 100%),
+              rgba(8, 8, 12, 0.38);
+
+  /* Fallback for Safari / Firefox: heavy blur */
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  backdrop-filter: blur(28px) saturate(160%);
+  /* Chrome / Edge: liquid distortion + blur (other browsers ignore this line) */
+  backdrop-filter: url(#liquidGlassMainSlider) blur(24px) saturate(160%) brightness(0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1.9em;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 2em rgba(255, 255, 255, 0.025),
+    0 1.4em 3em rgba(0, 0, 0, 0.5);
+
+  color: var(--nexzell-text-white, #fff);
+  font-family: var(--font-poppins, sans-serif);
+  pointer-events: auto;
+  opacity: 0;
+  animation:
+    cardEnterMainSliderNexzellCategories 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    cardFloatMainSliderNexzellCategories 6s ease-in-out 1.6s infinite;
+}
+
+/* thin glossy edge (bright top-left, fades out) */
+.glassCardMainSliderNexzellCategories::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.05) 28%,
+    rgba(255, 255, 255, 0.02) 65%,
+    rgba(255, 255, 255, 0.14) 100%
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* very soft top-left light spill */
+.glassCardMainSliderNexzellCategories::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 65%);
+  pointer-events: none;
+  z-index: -1;
+}

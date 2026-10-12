@@ -34,8 +34,8 @@ function AllInOneFeaturesPlatform() {
         
         {/* Header Section */}
         <div className="headerAllInOneFeaturesPlatform animFadeUpAllInOneFeaturesPlatform">
-          <div className="badgeMainSliderFeatures animDelay1">
-            <span className="badgeDotMainSliderFeatures"></span>
+          <div className="badgeEverythingBusinessStarter animDelay1">
+            <span className="badgeDotEverythingBusinessStarter"></span>
             THE COMPLETE FEATURE SET
           </div>
           

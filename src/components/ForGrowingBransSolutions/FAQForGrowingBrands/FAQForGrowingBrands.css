@@ -1,0 +1,510 @@
+.sectionWrapperFAQForGrowingBrands {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerFAQForGrowingBrands {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header Styles --- */
+.headerFAQForGrowingBrands {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeFAQForGrowingBrands {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.headingFAQForGrowingBrands {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+.highlightText {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionFAQForGrowingBrands {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Grid Layout --- */
+.gridFAQForGrowingBrands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* --- Left Column: Image & Glass Card --- */
+.imageColumnFAQForGrowingBrands {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.imageWrapperFAQForGrowingBrands {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.coverImageFAQForGrowingBrands {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  object-position: left ;
+  top: 0;
+  left: 0;
+}
+
+/* Glassmorphism Card Matching Screenshot */
+.glassCardFAQForGrowingBrands {
+  position: absolute;
+  bottom: 2rem;
+  right: -2rem; 
+  width: 320px;
+  background: rgba(4, 18, 16, 0.4); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.glassCardTitle {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.glassCardDesc {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.glassCardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.5);
+  color: var(--nexzell-text-white, #FFFFFF);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-base, 0.3s ease-in-out);
+}
+
+.glassCardBtn:hover {
+  background: rgba(0, 230, 153, 0.1);
+  border-color: var(--nexzell-primary, #00E699);
+}
+
+/* --- Right Column: FAQs Accordion --- */
+.accordionColumnFAQForGrowingBrands {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItemStartups {
+  background-color: var(--nexzell-bg-surface, #0E1218);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+  overflow: hidden;
+  transition: border-color var(--transition-base, 0.3s ease-in-out);
+}
+
+.faqItemStartups:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+}
+
+.faqItemStartups.activeFaq {
+  border-color: rgba(0, 230, 153, 0.4);
+  background-color: rgba(14, 18, 24, 0.8);
+}
+
+.faqQuestionArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faqQuestionText {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+  padding-right: 1rem;
+  line-height: 1.4;
+}
+
+.faqIconWrapper {
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.faqAnswerArea {
+  padding: 0 1.5rem;
+}
+
+.faqAnswerText {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .sectionWrapperFAQForGrowingBrands {
+    padding: 5rem 0;
+  }
+
+  .containerFAQForGrowingBrands {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+  }
+
+  .headerFAQForGrowingBrands {
+    max-width: 700px;
+    margin-bottom: 3.5rem;
+  }
+
+  .gridFAQForGrowingBrands {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+    
+  }
+
+  .imageColumnFAQForGrowingBrands {
+    min-height: 450px;
+  }
+
+  .glassCardFAQForGrowingBrands {
+    right: -1rem;
+    width: 290px;
+    padding: 1.75rem;
+  }
+
+  .faqQuestionArea {
+    padding: 1.35rem;
+  }
+
+  .faqQuestionText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sectionWrapperFAQForGrowingBrands {
+    padding: 4.5rem 0;
+  }
+
+  .containerFAQForGrowingBrands {
+    padding: 0 1.5rem;
+  }
+
+  .headerFAQForGrowingBrands {
+    max-width: 650px;
+    margin-bottom: 3rem;
+  }
+
+  .headingFAQForGrowingBrands {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+  }
+
+.gridFAQForGrowingBrands {
+  display: flex;
+  flex-direction: column-reverse; /* Yeh items ko ulta kar dega */
+  gap: 4rem;
+}
+
+  .imageColumnFAQForGrowingBrands {
+    width: 100%;
+    max-width: 700px;
+    min-height: 420px;
+    margin: 0 auto;
+  }
+
+  .imageWrapperFAQForGrowingBrands {
+    min-height: 420px;
+  }
+
+  .glassCardFAQForGrowingBrands {
+    right: -1.5rem;
+    bottom: 2rem;
+    transform: none;
+    width: min(80%, 330px);
+  }
+
+  .accordionColumnFAQForGrowingBrands {
+    width: 100%;
+    gap: 0.9rem;
+  }
+
+  .faqQuestionArea {
+    padding: 1.25rem;
+  }
+
+  .faqAnswerArea {
+    padding: 0 1.25rem;
+  }
+
+  .faqAnswerText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .sectionWrapperFAQForGrowingBrands {
+    padding: 4rem 0;
+  }
+
+  .containerFAQForGrowingBrands {
+    padding: 0 1.25rem;
+  }
+
+  .headerFAQForGrowingBrands {
+    max-width: 600px;
+    margin-bottom: 2.75rem;
+  }
+
+  .badgeFAQForGrowingBrands {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .headingFAQForGrowingBrands {
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
+    line-height: 1.25;
+  }
+
+  .descriptionFAQForGrowingBrands {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .gridFAQForGrowingBrands {
+    gap: 3.5rem;
+  }
+
+  .imageColumnFAQForGrowingBrands {
+    min-height: 350px;
+  }
+
+  .imageWrapperFAQForGrowingBrands {
+    min-height: 350px;
+    border-radius: 16px;
+  }
+
+  .coverImageFAQForGrowingBrands {
+    object-position: center;
+  }
+
+  .glassCardFAQForGrowingBrands {
+    right: -1rem;
+    bottom: 2rem;
+    width: calc(80% - 2rem);
+    max-width: 300px;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .glassCardTitle {
+    font-size: 1.15rem;
+  }
+
+  .glassCardDesc {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .glassCardBtn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .accordionColumnFAQForGrowingBrands {
+    gap: 0.8rem;
+  }
+
+  .faqQuestionArea {
+    padding: 1.1rem;
+    gap: 0.75rem;
+  }
+
+  .faqQuestionText {
+    font-size: 0.95rem;
+    padding-right: 0.25rem;
+    line-height: 1.5;
+  }
+
+  .faqAnswerArea {
+    padding: 0 1.1rem;
+  }
+
+  .faqAnswerText {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    padding-bottom: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionWrapperFAQForGrowingBrands {
+    padding: 3rem 0;
+  }
+
+  .containerFAQForGrowingBrands {
+    padding: 0 1rem;
+  }
+
+  .headerFAQForGrowingBrands {
+    margin-bottom: 2.25rem;
+  }
+
+  .badgeFAQForGrowingBrands {
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .headingFAQForGrowingBrands {
+    font-size: 1.7rem;
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionFAQForGrowingBrands {
+    font-size: 0.85rem;
+  }
+
+  .gridFAQForGrowingBrands {
+    gap: 3rem;
+  }
+
+  .imageColumnFAQForGrowingBrands {
+    min-height: 280px;
+  }
+
+  .imageWrapperFAQForGrowingBrands {
+    min-height: 280px;
+    border-radius: 12px;
+  }
+
+  .glassCardFAQForGrowingBrands {
+    right: -1.5rem;
+    bottom: 2.25rem;
+    width: calc(70% - 1rem);
+    padding: 1.25rem;
+  }
+
+  .glassCardTitle {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .glassCardDesc {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .glassCardBtn {
+    font-size: 0.8rem;
+    padding: 0.55rem 0.9rem;
+  }
+
+  .accordionColumnFAQForGrowingBrands {
+    gap: 0.7rem;
+  }
+
+  .faqItemStartups {
+    border-radius: 10px;
+  }
+
+  .faqQuestionArea {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  .faqQuestionText {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .faqIconWrapper {
+    font-size: 0.9rem;
+  }
+
+  .faqAnswerArea {
+    padding: 0 1rem;
+  }
+
+  .faqAnswerText {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+  }
+}

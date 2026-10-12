@@ -1,0 +1,566 @@
+/* --- Background & Wrapping --- */
+.sectionWrapperFromGrowingToGlobal {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.containerFromGrowingToGlobal {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header Area --- */
+.headerFromGrowingToGlobal {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeFromGrowingToGlobal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05); /* Tint color built for scale */
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 230, 153, 0.1);
+}
+
+.badgeIconFromGrowingToGlobal {
+  font-size: 0.65rem;
+  display: inline-block;
+  transform: translateY(-0.5px);
+}
+
+.headingFromGrowingToGlobal {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.015em;
+}
+
+.descriptionFromGrowingToGlobal {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* --- Interactive Grid Area --- */
+.gridFromGrowingToGlobal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* --- Individual Cards --- */
+.cardFromGrowingToGlobal {
+  background-color: var(--nexzell-bg-surface, #0E1218);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--transition-base, 0.3s ease-in-out),
+              box-shadow var(--transition-base, 0.3s ease-in-out);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Glow Accent on hover */
+.cardFromGrowingToGlobal:hover {
+  border-color: rgba(0, 230, 153, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 230, 153, 0.05), 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Photo Thumbnail & Top overlays */
+.imageContainerFromGrowingToGlobal {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Exact height aspect */
+  overflow: hidden;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.cardImageFromGrowingToGlobal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.85) contrast(1.1); /* Atmospheric overlay look */
+}
+
+.cardFromGrowingToGlobal:hover .cardImageFromGrowingToGlobal {
+  transform: scale(1.05);
+}
+
+.imageOverlayFromGrowingToGlobal {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(6, 8, 12, 0.5) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+/* Tiny floating pill overlay on top thumbnail image corners */
+.overlayBubbleButtonFromGrowingToGlobal {
+  background-color: rgba(6, 8, 12, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  color: var(--nexzell-primary, #00E699);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.cardFromGrowingToGlobal:hover .overlayBubbleButtonFromGrowingToGlobal {
+  transform: scale(1.12);
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+}
+
+/* Content Area bottom-half styling */
+.cardContentFromGrowingToGlobal {
+  padding: 2rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex: 1;
+  gap: 1.25rem;
+}
+
+.contentWrapperFromGrowingToGlobal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 80%;
+}
+
+.cardTitleFromGrowingToGlobal {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.cardTextFromGrowingToGlobal {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.88rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Action button at bottom-right */
+.actionLinkFromGrowingToGlobal {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  transition: all var(--transition-fast, 0.2s ease-in-out);
+  flex-shrink: 0;
+}
+
+.cardFromGrowingToGlobal:hover .actionLinkFromGrowingToGlobal {
+  border-color: var(--nexzell-primary, #00E699);
+  background-color: rgba(0, 230, 153, 0.05);
+  color: var(--nexzell-primary, #00E699);
+}
+/* --- Responsive: Laptop (Max Width: 1200px) --- */
+@media (max-width: 1200px) {
+  .sectionWrapperFromGrowingToGlobal {
+    padding: 5.5rem 0;
+  }
+
+  .containerFromGrowingToGlobal {
+    padding: 0 1.75rem;
+  }
+
+  .headerFromGrowingToGlobal {
+    max-width: 750px;
+    margin-bottom: 4rem;
+  }
+
+  .badgeFromGrowingToGlobal {
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.25rem;
+  }
+
+  .badgeIconFromGrowingToGlobal {
+    font-size: 0.62rem;
+  }
+
+  .headingFromGrowingToGlobal {
+    font-size: clamp(2.1rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionFromGrowingToGlobal {
+    max-width: 680px;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .gridFromGrowingToGlobal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.75rem;
+  }
+
+  .cardFromGrowingToGlobal {
+    min-width: 0;
+    border-radius: 20px;
+  }
+
+  .imageContainerFromGrowingToGlobal {
+    height: 220px;
+  }
+
+  .cardImageFromGrowingToGlobal {
+    width: 100%;
+    height: 100%;
+  }
+
+  .imageOverlayFromGrowingToGlobal {
+    padding: 0.9rem;
+  }
+
+  .overlayBubbleButtonFromGrowingToGlobal {
+    width: 27px;
+    height: 27px;
+  }
+
+  .cardContentFromGrowingToGlobal {
+    padding: 1.5rem 1.35rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .contentWrapperFromGrowingToGlobal {
+    max-width: calc(100% - 48px);
+    gap: 0.65rem;
+    min-width: 0;
+  }
+
+  .cardTitleFromGrowingToGlobal {
+    font-size: 1.08rem;
+    line-height: 1.4;
+  }
+
+  .cardTextFromGrowingToGlobal {
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+
+  .actionLinkFromGrowingToGlobal {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* --- Responsive: Tablet / Small Laptop (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+  .sectionWrapperFromGrowingToGlobal {
+    padding: 4.5rem 0;
+  }
+
+  .containerFromGrowingToGlobal {
+    padding: 0 1.5rem;
+  }
+
+  .headerFromGrowingToGlobal {
+    max-width: 700px;
+    margin-bottom: 3.5rem;
+  }
+
+  .badgeFromGrowingToGlobal {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.1rem;
+  }
+
+  .headingFromGrowingToGlobal {
+    font-size: clamp(2rem, 4.2vw, 2.7rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionFromGrowingToGlobal {
+    max-width: 620px;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .gridFromGrowingToGlobal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cardFromGrowingToGlobal {
+    border-radius: 18px;
+  }
+
+  .imageContainerFromGrowingToGlobal {
+    height: 200px;
+  }
+
+  .cardContentFromGrowingToGlobal {
+    padding: 1.35rem 1.15rem;
+    gap: 0.85rem;
+  }
+
+  .contentWrapperFromGrowingToGlobal {
+    max-width: calc(100% - 44px);
+    gap: 0.6rem;
+  }
+
+  .cardTitleFromGrowingToGlobal {
+    font-size: 1.02rem;
+    line-height: 1.4;
+  }
+
+  .cardTextFromGrowingToGlobal {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .actionLinkFromGrowingToGlobal {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* --- Responsive: Tablet / Large Mobile (Max Width: 749px) --- */
+@media (max-width: 749px) {
+  .sectionWrapperFromGrowingToGlobal {
+    padding: 3.75rem 0;
+  }
+
+  .containerFromGrowingToGlobal {
+    padding: 0 1.25rem;
+  }
+
+  .headerFromGrowingToGlobal {
+    width: 100%;
+    max-width: 580px;
+    margin-bottom: 3rem;
+  }
+
+  .badgeFromGrowingToGlobal {
+    gap: 0.4rem;
+    padding: 0.38rem 0.75rem;
+    font-size: 0.63rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeIconFromGrowingToGlobal {
+    font-size: 0.58rem;
+  }
+
+  .headingFromGrowingToGlobal {
+    font-size: clamp(1.8rem, 5.5vw, 2.3rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionFromGrowingToGlobal {
+    max-width: 540px;
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  .gridFromGrowingToGlobal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardFromGrowingToGlobal {
+    border-radius: 15px;
+  }
+
+  .imageContainerFromGrowingToGlobal {
+    height: 170px;
+  }
+
+  .cardImageFromGrowingToGlobal {
+    object-fit: cover;
+  }
+
+  .imageOverlayFromGrowingToGlobal {
+    padding: 0.75rem;
+  }
+
+  .overlayBubbleButtonFromGrowingToGlobal {
+    width: 26px;
+    height: 26px;
+  }
+
+  .cardContentFromGrowingToGlobal {
+    padding: 1.1rem;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .contentWrapperFromGrowingToGlobal {
+    max-width: calc(100% - 38px);
+    gap: 0.5rem;
+  }
+
+  .cardTitleFromGrowingToGlobal {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .cardTextFromGrowingToGlobal {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .actionLinkFromGrowingToGlobal {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* --- Responsive: Mobile (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .sectionWrapperFromGrowingToGlobal {
+    padding: 3rem 0;
+  }
+
+  .containerFromGrowingToGlobal {
+    padding: 0 1rem;
+  }
+
+  .headerFromGrowingToGlobal {
+    width: 100%;
+    margin-bottom: 2.25rem;
+  }
+
+  .badgeFromGrowingToGlobal {
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeIconFromGrowingToGlobal {
+    font-size: 0.55rem;
+  }
+
+  .headingFromGrowingToGlobal {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionFromGrowingToGlobal {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .gridFromGrowingToGlobal {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cardFromGrowingToGlobal {
+    width: 100%;
+    min-width: 0;
+    border-radius: 14px;
+  }
+
+  .imageContainerFromGrowingToGlobal {
+    height: 190px;
+  }
+
+  .cardImageFromGrowingToGlobal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imageOverlayFromGrowingToGlobal {
+    padding: 0.75rem;
+  }
+
+  .overlayBubbleButtonFromGrowingToGlobal {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cardContentFromGrowingToGlobal {
+    padding: 1.15rem 1rem;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .contentWrapperFromGrowingToGlobal {
+    flex: 1;
+    max-width: none;
+    min-width: 0;
+    gap: 0.5rem;
+  }
+
+  .cardTitleFromGrowingToGlobal {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .cardTextFromGrowingToGlobal {
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .actionLinkFromGrowingToGlobal {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+}

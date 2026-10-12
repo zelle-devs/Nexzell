@@ -1,0 +1,399 @@
+.sectionWrapperScalableProductForStartup {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.containerScalableProductForStartup {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+/* --- Left Column --- */
+.leftColScalableProductForStartup {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.imageWrapperScalableProductForStartup {
+  position: relative;
+  width: 100%;
+  border-radius: var(--nexzell-radius-lg, 16px);
+}
+
+.mainImageScalableProductForStartup {
+  width: 100%;
+  height: auto;
+  border-radius: var(--nexzell-radius-lg, 16px);
+  display: block;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.floatingWidgetScalableProductForStartup {
+  position: absolute;
+  top: 15%;
+  right: -5%;
+  background-color: rgba(6, 8, 12, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.widgetTextScalableProductForStartup {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+}
+
+.widgetIconScalableProductForStartup {
+  color: var(--nexzell-primary, #00E699);
+}
+
+/* --- Right Column --- */
+.rightColScalableProductForStartup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeScalableProductForStartup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-primary, #00E699);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconScalableProductForStartup {
+  color: var(--nexzell-primary, #00E699);
+  fill: var(--nexzell-primary, #00E699);
+}
+
+.headingScalableProductForStartup {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightScalableProductForStartup {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionScalableProductForStartup {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 95%;
+}
+
+.featureListScalableProductForStartup {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.featureItemScalableProductForStartup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow:  2px 2px 1px 1px #00c78163 ;  
+}
+
+.checkIconScalableProductForStartup {
+  flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 230, 153, 0.2);
+}
+
+.featureTextScalableProductForStartup {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.4;
+}
+
+.btnPrimaryScalableProductForStartup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--nexzell-radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btnPrimaryScalableProductForStartup:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  box-shadow: 0 4px 20px rgba(0, 230, 153, 0.3);
+}
+
+.btnArrowScalableProductForStartup {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimaryScalableProductForStartup:hover .btnArrowScalableProductForStartup {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1200px) {
+  .sectionWrapperScalableProductForStartup {
+    padding: 5rem 0;
+  }
+
+  .containerScalableProductForStartup {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+    gap: 3rem;
+  }
+
+  .leftColScalableProductForStartup {
+    flex: 0 0 48%;
+  }
+
+  .headingScalableProductForStartup {
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+  }
+
+  .floatingWidgetScalableProductForStartup {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sectionWrapperScalableProductForStartup {
+    padding: 4.5rem 0;
+  }
+
+  .containerScalableProductForStartup {
+    flex-direction: column-reverse;
+    gap: 3.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .leftColScalableProductForStartup {
+    width: 100%;
+    max-width: 700px;
+    flex: none;
+  }
+
+  .imageWrapperScalableProductForStartup {
+    width: 100%;
+  }
+
+  .rightColScalableProductForStartup {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headingScalableProductForStartup {
+    font-size: clamp(2.1rem, 4vw, 2.75rem);
+  }
+
+  .descriptionScalableProductForStartup {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featureListScalableProductForStartup {
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .floatingWidgetScalableProductForStartup {
+    right: 3%;
+    top: 10%;
+  }
+  .featureItemScalableProductForStartup{
+   /* border: 1px solid var(--nexzell-primary); */
+   padding: 10px; 
+   border-radius: 5px;
+   box-shadow:  2px 2px 1px 1px #00c78163 ;  
+  }
+}
+
+@media (max-width: 749px) {
+  .sectionWrapperScalableProductForStartup {
+    padding: 4rem 0;
+  }
+
+  .containerScalableProductForStartup {
+    padding: 0 1.25rem;
+    gap: 3rem;
+  }
+
+  .leftColScalableProductForStartup {
+    max-width: 600px;
+  }
+
+  .headingScalableProductForStartup {
+    font-size: clamp(1.9rem, 5vw, 2.4rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .badgeScalableProductForStartup {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .descriptionScalableProductForStartup {
+    max-width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureListScalableProductForStartup {
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 0.9rem;
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featureItemScalableProductForStartup {
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .featureTextScalableProductForStartup {
+    font-size: 0.9rem;
+  }
+
+  .floatingWidgetScalableProductForStartup {
+    right: 2%;
+    top: 5%;
+    padding: 0.85rem 1rem;
+    gap: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .widgetTextScalableProductForStartup {
+    font-size: 0.8rem;
+  }
+
+  .btnPrimaryScalableProductForStartup {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionWrapperScalableProductForStartup {
+    padding: 3rem 0;
+  }
+
+  .containerScalableProductForStartup {
+    padding: 0 1rem;
+    gap: 2.5rem;
+  }
+
+  .headingScalableProductForStartup {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .badgeScalableProductForStartup {
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+    padding: 0.3rem 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionScalableProductForStartup {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .featureListScalableProductForStartup {
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+            display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .featureItemScalableProductForStartup {
+    gap: 0.55rem;
+  }
+
+  .featureTextScalableProductForStartup {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .floatingWidgetScalableProductForStartup {
+    right: 2%;
+    top: 3%;
+    padding: 0.65rem 0.75rem;
+    gap: 0.5rem;
+    max-width: 80%;
+  }
+
+  .widgetTextScalableProductForStartup {
+    font-size: 0.7rem;
+  }
+
+  .widgetIconScalableProductForStartup {
+    font-size: 1rem;
+  }
+
+  .btnPrimaryScalableProductForStartup {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}

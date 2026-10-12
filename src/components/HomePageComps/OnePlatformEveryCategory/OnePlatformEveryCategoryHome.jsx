@@ -57,9 +57,11 @@ function OnePlatformEveryCategoryHome() {
             From fashion to electronics, home decor to health & beauty, 
             Nexzell is built to support every type of business.
           </p>
+          <a href="/categories">
           <button className="btnOutlineOnePlatformEveryCategoryHome">
             Explore All Categories <ArrowRight size={16} className="btnIconOnePlatformEveryCategoryHome" />
           </button>
+          </a>
         </div>
 
         <div className="gridOnePlatformEveryCategoryHome">

@@ -1,0 +1,361 @@
+.sectionWrapperTechnologyPartnerStartups {
+  padding: 6rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerTechnologyPartnerStartups {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header --- */
+.headerTechnologyPartnerStartups {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.headingTechnologyPartnerStartups {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.textHighlightTechnologyPartnerStartups {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descriptionTechnologyPartnerStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Grid & Cards --- */
+.gridTechnologyPartnerStartups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.cardTechnologyPartnerStartups {
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-lg, 16px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 280px;
+  /* Sirf color transitions CSS mein, movement Framer Motion mein */
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardIconBoxTechnologyPartnerStartups {
+  margin-bottom: 2rem;
+}
+
+.cardIconTechnologyPartnerStartups {
+  color: var(--nexzell-primary, #00E699);
+  filter: drop-shadow(0 0 8px rgba(0, 230, 153, 0.3));
+}
+
+.cardTitleTechnologyPartnerStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+}
+
+.cardDescTechnologyPartnerStartups {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+
+@media (max-width: 1200px) {
+
+  .sectionWrapperTechnologyPartnerStartups {
+    padding: 5rem 0;
+  }
+
+  .containerTechnologyPartnerStartups {
+    max-width: 1100px;
+    padding: 0 1.75rem;
+  }
+
+  .headerTechnologyPartnerStartups {
+    max-width: 750px;
+    margin-bottom: 3.5rem;
+  }
+
+  .headingTechnologyPartnerStartups {
+    font-size: clamp(2rem, 3.8vw, 2.75rem);
+  }
+
+  .descriptionTechnologyPartnerStartups {
+    font-size: 0.93rem;
+  }
+
+  .gridTechnologyPartnerStartups {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardTechnologyPartnerStartups {
+    min-width: 0;
+    min-height: 270px;
+    padding: 2rem 1.5rem;
+  }
+
+  .cardIconBoxTechnologyPartnerStartups {
+    margin-bottom: 1.75rem;
+  }
+
+  .cardTitleTechnologyPartnerStartups {
+    font-size: 1.05rem;
+  }
+
+  .cardDescTechnologyPartnerStartups {
+    font-size: 0.82rem;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperTechnologyPartnerStartups {
+    padding: 4.5rem 0;
+  }
+
+  .containerTechnologyPartnerStartups {
+    max-width: 900px;
+    padding: 0 1.5rem;
+  }
+
+  .headerTechnologyPartnerStartups {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .badgeTechnologyPartnerStartups {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingTechnologyPartnerStartups {
+    font-size: clamp(1.9rem, 4.5vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionTechnologyPartnerStartups {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .gridTechnologyPartnerStartups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardTechnologyPartnerStartups {
+    min-width: 0;
+    min-height: 250px;
+    padding: 2rem 1.5rem;
+  }
+
+  .cardIconBoxTechnologyPartnerStartups {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardTitleTechnologyPartnerStartups {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .cardDescTechnologyPartnerStartups {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+}
+
+
+@media (max-width: 749px) {
+
+  .sectionWrapperTechnologyPartnerStartups {
+    padding: 4rem 0;
+  }
+
+  .containerTechnologyPartnerStartups {
+    max-width: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .headerTechnologyPartnerStartups {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeTechnologyPartnerStartups {
+    gap: 0.45rem;
+    padding: 0.32rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotTechnologyPartnerStartups {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingTechnologyPartnerStartups {
+    font-size: clamp(1.8rem, 6vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionTechnologyPartnerStartups {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .gridTechnologyPartnerStartups {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cardTechnologyPartnerStartups {
+    min-width: 0;
+    min-height: 230px;
+    padding: 1.5rem 1.15rem;
+    border-radius: 14px;
+  }
+
+  .cardIconBoxTechnologyPartnerStartups {
+    margin-bottom: 1.25rem;
+  }
+
+  .cardIconTechnologyPartnerStartups {
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  .cardTitleTechnologyPartnerStartups {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0.65rem;
+    overflow-wrap: anywhere;
+  }
+
+  .cardDescTechnologyPartnerStartups {
+    font-size: 0.76rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .sectionWrapperTechnologyPartnerStartups {
+    padding: 3rem 0;
+  }
+
+  .containerTechnologyPartnerStartups {
+    padding: 0 1rem;
+  }
+
+  .headerTechnologyPartnerStartups {
+    margin-bottom: 2rem;
+  }
+
+  .badgeTechnologyPartnerStartups {
+    gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.7px;
+    margin-bottom: 0.85rem;
+  }
+
+  .badgeDotTechnologyPartnerStartups {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingTechnologyPartnerStartups {
+    font-size: 1.65rem;
+    line-height: 1.22;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionTechnologyPartnerStartups {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .gridTechnologyPartnerStartups {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardTechnologyPartnerStartups {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .cardIconBoxTechnologyPartnerStartups {
+    margin-bottom: 1rem;
+  }
+
+  .cardIconTechnologyPartnerStartups {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .cardTitleTechnologyPartnerStartups {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .cardDescTechnologyPartnerStartups {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+}

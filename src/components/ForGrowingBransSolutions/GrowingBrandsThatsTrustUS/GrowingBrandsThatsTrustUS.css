@@ -1,0 +1,477 @@
+.sectionWrapperGrowingBrandsThatsTrustUS {
+  padding: var(--nexzell-section-gap, 5rem) 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden; 
+}
+
+.containerGrowingBrandsThatsTrustUS {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.leftColumnGrowingBrandsThatsTrustUS {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.headingGrowingBrandsThatsTrustUS {
+  font-family: var(--font-montserrat, sans-serif);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.descriptionGrowingBrandsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6; 
+  margin-bottom: 30px;
+}
+
+.navButtonsGrowingBrandsThatsTrustUS {
+  display: flex;
+  gap: 1rem;
+}
+
+.navBtnGrowingBrandsThatsTrustUS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--nexzell-border-highlight, #334155);
+  color: var(--nexzell-text-white, #FFFFFF);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navBtnGrowingBrandsThatsTrustUS:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--nexzell-text-white, #FFFFFF);
+}
+
+.rightColumnGrowingBrandsThatsTrustUS {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrackGrowingBrandsThatsTrustUS {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.carouselTrackGrowingBrandsThatsTrustUS::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonialCardGrowingBrandsThatsTrustUS {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background-color: rgba(14, 18, 24, 0.4);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-sm, 12px);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonialCardGrowingBrandsThatsTrustUS:hover {
+  border-color: var(--nexzell-border-highlight, #334155);
+  background-color: rgba(14, 18, 24, 0.6);
+}
+
+.quoteTextGrowingBrandsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.quoteIconWrapperGrowingBrandsThatsTrustUS {
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.userInfoGrowingBrandsThatsTrustUS {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarGrowingBrandsThatsTrustUS {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--nexzell-border-highlight, #334155);
+}
+
+.userDetailsGrowingBrandsThatsTrustUS {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.userNameGrowingBrandsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  margin: 0;
+}
+
+.userTitleGrowingBrandsThatsTrustUS {
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 0.75rem;
+  color: var(--nexzell-text-gray-500, #64748B);
+  margin: 0;
+}
+
+.starsGrowingBrandsThatsTrustUS {
+  display: flex;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Dots (hidden by default on desktop) ---------- */
+.dotsGrowingBrandsThatsTrustUS {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.dotGrowingBrandsThatsTrustUS {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--nexzell-border-highlight, #334155);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dotGrowingBrandsThatsTrustUS:hover {
+  background-color: var(--nexzell-text-gray-300, #94A3B8);
+}
+
+.dotGrowingBrandsThatsTrustUS.isActiveGrowingBrandsThatsTrustUS {
+  background-color: var(--nexzell-primary, #FFFFFF);
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 1200px) {
+
+  .containerGrowingBrandsThatsTrustUS {
+    max-width: 100%;
+    padding: 0 1.75rem;
+    gap: 3rem;
+  }
+
+  .leftColumnGrowingBrandsThatsTrustUS {
+    flex: 0 0 32%;
+  }
+
+  .headingGrowingBrandsThatsTrustUS {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+  }
+
+  .testimonialCardGrowingBrandsThatsTrustUS {
+    flex: 0 0 300px;
+    padding: 2.25rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   2. TABLET LANDSCAPE
+   1024px and below
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .sectionWrapperGrowingBrandsThatsTrustUS {
+    padding: 4.5rem 0;
+    padding-bottom: 0px !important;
+  }
+
+  .containerGrowingBrandsThatsTrustUS {
+    width: 100%;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.75rem;
+  }
+
+  .leftColumnGrowingBrandsThatsTrustUS {
+    width: 100%;
+    max-width: 700px;
+    flex: none;
+  }
+
+  .headingGrowingBrandsThatsTrustUS {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .descriptionGrowingBrandsThatsTrustUS {
+    font-size: 0.95rem;
+    max-width: 680px;
+    margin-bottom: 10px;
+  }
+
+  .rightColumnGrowingBrandsThatsTrustUS {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Hide navigation arrows */
+  .navButtonsGrowingBrandsThatsTrustUS {
+    display: none;
+  }
+
+  /* Show carousel dots */
+  .dotsGrowingBrandsThatsTrustUS {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .carouselTrackGrowingBrandsThatsTrustUS {
+    width: 100%;
+    gap: 1.25rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .testimonialCardGrowingBrandsThatsTrustUS {
+    flex: 0 0 310px;
+    padding: 2rem 1.75rem;
+  }
+
+}
+
+
+/* =========================================================
+   3. TABLET / SMALL SCREEN
+   768px and below
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .sectionWrapperGrowingBrandsThatsTrustUS {
+    padding: 4rem 0;
+  }
+
+  .containerGrowingBrandsThatsTrustUS {
+    padding: 0 1.25rem;
+    gap: 2.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .leftColumnGrowingBrandsThatsTrustUS {
+    max-width: 100%;
+  }
+
+  .headingGrowingBrandsThatsTrustUS {
+    font-size: clamp(1.8rem, 6vw, 2.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.9rem;
+  }
+
+  .descriptionGrowingBrandsThatsTrustUS {
+    font-size: 0.9rem;
+    line-height: 1.65; 
+    margin-bottom: 10px;
+  }
+
+  .rightColumnGrowingBrandsThatsTrustUS {
+    width: 100%;
+  }
+
+  .carouselTrackGrowingBrandsThatsTrustUS {
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonialCardGrowingBrandsThatsTrustUS {
+    flex: 0 0 340px;
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--nexzell-radius-sm, 12px);
+  }
+
+  .quoteIconWrapperGrowingBrandsThatsTrustUS {
+    margin-bottom: 1.25rem;
+  }
+
+  .quoteTextGrowingBrandsThatsTrustUS {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .userInfoGrowingBrandsThatsTrustUS {
+    gap: 0.85rem;
+  }
+
+  .avatarGrowingBrandsThatsTrustUS {
+    width: 44px;
+    height: 44px;
+  }
+
+  .userNameGrowingBrandsThatsTrustUS {
+    font-size: 0.9rem;
+  }
+
+  .userTitleGrowingBrandsThatsTrustUS {
+    font-size: 0.72rem;
+  }
+
+  .dotsGrowingBrandsThatsTrustUS {
+    gap: 0.45rem;
+    margin-top: 0.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   4. MOBILE
+   600px and below
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .sectionWrapperGrowingBrandsThatsTrustUS {
+    padding: 3.5rem 0;
+  }
+
+  .containerGrowingBrandsThatsTrustUS {
+    padding: 0 1rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .headingGrowingBrandsThatsTrustUS {
+    font-size: clamp(1.7rem, 8vw, 2rem);
+    line-height: 1.18;
+    margin-bottom: 0.85rem;
+  }
+
+  .descriptionGrowingBrandsThatsTrustUS {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .carouselTrackGrowingBrandsThatsTrustUS {
+    gap: 0.85rem;
+    padding-bottom: 0.65rem;
+    scroll-padding-left: 0;
+  }
+
+  .testimonialCardGrowingBrandsThatsTrustUS {
+    flex: 0 0 calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .quoteIconWrapperGrowingBrandsThatsTrustUS {
+    margin-bottom: 1rem;
+  }
+
+  .quoteTextGrowingBrandsThatsTrustUS {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .userInfoGrowingBrandsThatsTrustUS {
+    gap: 0.75rem;
+  }
+
+  .avatarGrowingBrandsThatsTrustUS {
+    width: 42px;
+    height: 42px;
+  }
+
+  .userNameGrowingBrandsThatsTrustUS {
+    font-size: 0.85rem;
+  }
+
+  .userTitleGrowingBrandsThatsTrustUS {
+    font-size: 0.7rem;
+  }
+
+  .starsGrowingBrandsThatsTrustUS {
+    gap: 0.1rem;
+  }
+
+  .dotsGrowingBrandsThatsTrustUS {
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .dotGrowingBrandsThatsTrustUS {
+    width: 7px;
+    height: 7px;
+  }
+
+}
+
+.mySwiperGrowingBrandsThatsTrustUS {
+  width: 100%;
+  padding-bottom: 3.5rem !important; /* Pagination dots ke liye neeche jagah */
+}
+
+/* Default Dots Style (Grey) */
+.mySwiperGrowingBrandsThatsTrustUS .swiper-pagination-bullet {
+  background-color: var(--nexzell-text-gray-400, #94A3B8) !important;
+  opacity: 0.4 !important;
+  transition: all 0.3s ease;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+}
+
+/* Active Dot Style (Neon Green & pill shape) */
+.mySwiperGrowingBrandsThatsTrustUS .swiper-pagination-bullet-active {
+  background-color: var(--nexzell-primary, #00E699) !important;
+  opacity: 1 !important;
+  width: 24px !important;
+  border-radius: 12px !important;
+  transform: scale(1) !important; /* Pichlay scale effect ko reset karne ke liye */
+}

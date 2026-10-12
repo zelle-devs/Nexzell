@@ -1,0 +1,357 @@
+
+/* --- Wrapping & Dark Base --- */
+.sectionWrapperGlobalForEnterpriseBrandsMarque {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.containerGlobalForEnterpriseBrandsMarque {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1590px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Top Info Section --- */
+.headerGlobalForEnterpriseBrandsMarque {
+  text-align: center;
+  max-width: 850px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeGlobalForEnterpriseBrandsMarque {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotGlobalForEnterpriseBrandsMarque {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingGlobalForEnterpriseBrandsMarque {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.25;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.015em;
+}
+
+.descriptionGlobalForEnterpriseBrandsMarque {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* --- Continuous Loop Marque --- */
+.marqueeWrapperGlobalForEnterpriseBrandsMarque {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 2.5rem 0;
+  /* Dark borderline separators above and below the logos strip */
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background: linear-gradient(90deg, rgba(14, 18, 24, 0.1) 0%, rgba(6, 8, 12, 0.4) 50%, rgba(14, 18, 24, 0.1) 100%);
+}
+
+.marqueeTrackGlobalForEnterpriseBrandsMarque {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem; /* Spacious separator space between logos */
+  white-space: nowrap;
+  width: max-content;
+}
+
+.marqueeItemGlobalForEnterpriseBrandsMarque {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  transition: transform var(--transition-base, 0.3s ease-in-out);
+}
+
+/* Elevate slightly on user interaction hover */
+.marqueeItemGlobalForEnterpriseBrandsMarque:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.brandLogoImageGlobalForEnterpriseBrandsMarque {
+  height: 62px; /* Uniform optimal height for the logos */
+  width: auto;
+  object-fit: contain;
+  opacity: 0.65; /* Subtle branding grayscale blend like original snapshot */
+  transition: opacity var(--transition-base, 0.3s ease-in-out),
+              filter var(--transition-base, 0.3s ease-in-out);
+}
+
+.brandLogoImageGlobalForEnterpriseBrandsMarque:hover {
+  opacity: 1; /* Highlights partner visual clearly on interactive states */
+}
+
+/* Left & Right gradient edge fades for infinite visual appearance */
+.marqueeFadeOverlayLeftGlobalForEnterpriseBrandsMarque {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--nexzell-bg-base, #06080C) 0%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.marqueeFadeOverlayRightGlobalForEnterpriseBrandsMarque {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(270deg, var(--nexzell-bg-base, #06080C) 0%, transparent 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ============================
+   RESPONSIVE: MAX-WIDTH 1200px
+============================ */
+@media (max-width: 1200px) {
+  .sectionWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 5rem 0;
+  }
+
+  .containerGlobalForEnterpriseBrandsMarque {
+    padding: 0 1.75rem;
+  }
+
+  .headerGlobalForEnterpriseBrandsMarque {
+    max-width: 780px;
+  }
+
+  .headingGlobalForEnterpriseBrandsMarque {
+    font-size: clamp(2.1rem, 3.8vw, 3rem);
+  }
+
+  .descriptionGlobalForEnterpriseBrandsMarque {
+    max-width: 700px;
+  }
+
+  .marqueeTrackGlobalForEnterpriseBrandsMarque {
+    gap: 3.5rem;
+  }
+
+  .brandLogoImageGlobalForEnterpriseBrandsMarque {
+    height: 38px;
+  }
+
+  .marqueeWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 2.25rem 0;
+  }
+}
+
+/* ============================
+   RESPONSIVE: MAX-WIDTH 1024px
+============================ */
+@media (max-width: 1024px) {
+  .sectionWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 4.5rem 0;
+  }
+
+  .containerGlobalForEnterpriseBrandsMarque {
+    padding: 0 1.5rem;
+  }
+
+  .headerGlobalForEnterpriseBrandsMarque {
+    max-width: 720px;
+    margin-bottom: 1.75rem;
+  }
+
+  .badgeGlobalForEnterpriseBrandsMarque {
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingGlobalForEnterpriseBrandsMarque {
+    font-size: clamp(2rem, 4vw, 2.65rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descriptionGlobalForEnterpriseBrandsMarque {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    max-width: 650px;
+  }
+
+  .marqueeWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 2rem 0;
+  }
+
+  .marqueeTrackGlobalForEnterpriseBrandsMarque {
+    gap: 3rem;
+  }
+
+  .brandLogoImageGlobalForEnterpriseBrandsMarque {
+    height: 44px;
+  }
+
+  .marqueeFadeOverlayLeftGlobalForEnterpriseBrandsMarque,
+  .marqueeFadeOverlayRightGlobalForEnterpriseBrandsMarque {
+    width: 12%;
+  }
+}
+
+/* ============================
+   RESPONSIVE: MAX-WIDTH 749px
+============================ */
+@media (max-width: 749px) {
+  .sectionWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 3.75rem 0;
+  }
+
+  .containerGlobalForEnterpriseBrandsMarque {
+    padding: 0 1.25rem;
+  }
+
+  .headerGlobalForEnterpriseBrandsMarque {
+    width: 100%;
+    max-width: 580px;
+    margin-bottom: 1.5rem;
+  }
+
+  .badgeGlobalForEnterpriseBrandsMarque {
+    gap: 0.4rem;
+    font-size: 0.64rem;
+    letter-spacing: 1px;
+    padding: 0.38rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .badgeDotGlobalForEnterpriseBrandsMarque {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingGlobalForEnterpriseBrandsMarque {
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.02em;
+  }
+
+  .descriptionGlobalForEnterpriseBrandsMarque {
+    max-width: 540px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .marqueeWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 1.75rem 0;
+  }
+
+  .marqueeTrackGlobalForEnterpriseBrandsMarque {
+    gap: 2.5rem;
+  }
+
+  .brandLogoImageGlobalForEnterpriseBrandsMarque {
+    height: 40px;
+    max-width: 130px;
+  }
+
+  .marqueeFadeOverlayLeftGlobalForEnterpriseBrandsMarque,
+  .marqueeFadeOverlayRightGlobalForEnterpriseBrandsMarque {
+    width: 10%;
+  }
+}
+
+/* ============================
+   RESPONSIVE: MAX-WIDTH 480px
+============================ */
+@media (max-width: 480px) {
+  .sectionWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 3rem 0;
+  }
+
+  .containerGlobalForEnterpriseBrandsMarque {
+    padding: 0 1rem;
+  }
+
+  .headerGlobalForEnterpriseBrandsMarque {
+    margin-bottom: 1.25rem;
+  }
+
+  .badgeGlobalForEnterpriseBrandsMarque {
+    font-size: 0.58rem;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .headingGlobalForEnterpriseBrandsMarque {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-bottom: 0.8rem;
+  }
+
+  .descriptionGlobalForEnterpriseBrandsMarque {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .marqueeWrapperGlobalForEnterpriseBrandsMarque {
+    padding: 1.4rem 0;
+  }
+
+  .marqueeTrackGlobalForEnterpriseBrandsMarque {
+    gap: 2rem;
+  }
+
+  .brandLogoImageGlobalForEnterpriseBrandsMarque {
+    height: 46px;
+    max-width: 110px;
+  }
+
+  .marqueeFadeOverlayLeftGlobalForEnterpriseBrandsMarque,
+  .marqueeFadeOverlayRightGlobalForEnterpriseBrandsMarque {
+    width: 7%;
+  }
+
+  .marqueeItemGlobalForEnterpriseBrandsMarque:hover {
+    transform: none;
+  }
+}
