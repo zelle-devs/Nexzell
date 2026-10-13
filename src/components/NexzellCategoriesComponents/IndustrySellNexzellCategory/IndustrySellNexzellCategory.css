@@ -1,0 +1,370 @@
+/* --- Wrapper & Container --- */
+.sectionWrapperIndustrySellNexzellCategory {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.containerIndustrySellNexzellCategory {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header Section --- */
+.headerIndustrySellNexzellCategory {
+  text-align: left; /* Aligning left as per screenshot */
+  max-width: 850px;
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeIndustrySellNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeDotIndustrySellNexzellCategory {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+}
+
+.headingIndustrySellNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.descIndustrySellNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* --- 3x2 Grid --- */
+.gridIndustrySellNexzellCategory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* --- Individual Card Design --- */
+.cardIndustrySellNexzellCategory {
+  background-color: var(--nexzell-bg-surface, #0E1218);
+  border: 1px solid var(--nexzell-border-subtle, #1E293B);
+  border-radius: var(--nexzell-radius-md, 12px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-base, 0.3s ease),
+              box-shadow var(--transition-base, 0.3s ease);
+}
+
+.cardIndustrySellNexzellCategory:hover {
+  border-color: rgba(0, 230, 153, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Container */
+.cardImageWrapperIndustrySellNexzellCategory {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--nexzell-border-subtle, #1E293B);
+}
+
+.cardImageIndustrySellNexzellCategory {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: brightness(0.9);
+}
+
+.cardIndustrySellNexzellCategory:hover .cardImageIndustrySellNexzellCategory {
+  transform: scale(1.05); /* Smooth slight zoom on hover */
+}
+
+/* Content Container */
+.cardContentIndustrySellNexzellCategory {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardTitleIndustrySellNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+  margin: 0 0 0.4rem 0;
+}
+
+.cardSubtitleIndustrySellNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.9rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Action Link */
+.cardLinkIndustrySellNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  text-decoration: none;
+  margin-top: auto; /* Pushes the link to the bottom if content varies in height */
+  transition: color var(--transition-base, 0.3s ease);
+}
+
+.cardLinkIndustrySellNexzellCategory:hover {
+  color: var(--nexzell-primary-hover, #00C782);
+}
+
+.cardIconIndustrySellNexzellCategory {
+  transition: transform var(--transition-base, 0.3s ease);
+}
+
+.cardIndustrySellNexzellCategory:hover .cardIconIndustrySellNexzellCategory {
+  transform: translateX(4px); /* Arrow moves to right on card hover */
+}
+
+/* --- Large Desktop: 1200px --- */
+@media (max-width: 1200px) {
+  .containerIndustrySellNexzellCategory {
+    max-width: 100%;
+    padding: 0 1.75rem;
+  }
+
+  .headerIndustrySellNexzellCategory {
+    max-width: 800px;
+    margin-bottom: 3rem;
+  }
+
+  .gridIndustrySellNexzellCategory {
+    gap: 1.25rem;
+  }
+
+  .cardImageWrapperIndustrySellNexzellCategory {
+    height: 210px;
+  }
+
+  .cardContentIndustrySellNexzellCategory {
+    padding: 1.4rem 1.35rem;
+  }
+}
+
+/* --- Tablet: 1024px --- */
+@media (max-width: 1024px) {
+  .sectionWrapperIndustrySellNexzellCategory {
+    padding: 3.5rem 0;
+  }
+
+  .containerIndustrySellNexzellCategory {
+    padding: 0 1.5rem;
+  }
+
+  .headerIndustrySellNexzellCategory {
+    max-width: 750px;
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeIndustrySellNexzellCategory {
+    margin-bottom: 1.25rem;
+  }
+
+  .headingIndustrySellNexzellCategory {
+    font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  }
+
+  .descIndustrySellNexzellCategory {
+    font-size: 0.95rem;
+  }
+
+  .gridIndustrySellNexzellCategory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardImageWrapperIndustrySellNexzellCategory {
+    height: 220px;
+  }
+
+  .cardContentIndustrySellNexzellCategory {
+    padding: 1.35rem;
+  }
+
+  .cardTitleIndustrySellNexzellCategory {
+    font-size: 1.1rem;
+  }
+
+  .cardSubtitleIndustrySellNexzellCategory {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* --- Mobile and Small Tablet: 749px --- */
+@media (max-width: 749px) {
+  .sectionWrapperIndustrySellNexzellCategory {
+    padding: 3rem 0;
+  }
+
+  .containerIndustrySellNexzellCategory {
+    padding: 0 1.25rem;
+  }
+
+  .headerIndustrySellNexzellCategory {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .badgeIndustrySellNexzellCategory {
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+  }
+
+  .headingIndustrySellNexzellCategory {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+  }
+
+  .descIndustrySellNexzellCategory {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .gridIndustrySellNexzellCategory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cardImageWrapperIndustrySellNexzellCategory {
+    height: 180px;
+  }
+
+  .cardContentIndustrySellNexzellCategory {
+    padding: 1.15rem;
+  }
+
+  .cardTitleIndustrySellNexzellCategory {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .cardSubtitleIndustrySellNexzellCategory {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+  }
+
+  .cardLinkIndustrySellNexzellCategory {
+    font-size: 0.9rem;
+    gap: 0.4rem;
+  }
+}
+
+/* --- Small Mobile: 480px --- */
+@media (max-width: 480px) {
+  .sectionWrapperIndustrySellNexzellCategory {
+    padding: 2.5rem 0;
+  }
+
+  .containerIndustrySellNexzellCategory {
+    padding: 0 1rem;
+  }
+
+  .headerIndustrySellNexzellCategory {
+    margin-bottom: 1.75rem;
+  }
+
+  .badgeIndustrySellNexzellCategory {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeDotIndustrySellNexzellCategory {
+    width: 5px;
+    height: 5px;
+  }
+
+  .headingIndustrySellNexzellCategory {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .descIndustrySellNexzellCategory {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .gridIndustrySellNexzellCategory {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .cardImageWrapperIndustrySellNexzellCategory {
+    height: 200px;
+  }
+
+  .cardContentIndustrySellNexzellCategory {
+    padding: 1.15rem 1.1rem;
+  }
+
+  .cardTitleIndustrySellNexzellCategory {
+    font-size: 1.05rem;
+  }
+
+  .cardSubtitleIndustrySellNexzellCategory {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardLinkIndustrySellNexzellCategory {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,825 @@
+/* --- Main Wrapper --- */
+.sectionWrapperConnectedOppsNexzellCategory {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+}
+
+.containerConnectedOppsNexzellCategory {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: row-reverse;
+  grid-template-columns: 1.4fr 0.4fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* =========================================
+   LEFT COLUMN: IMAGES & GLASS CARDS
+========================================= */
+.imageColConnectedOppsNexzellCategory {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 750px;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapperConnectedOppsNexzellCategory {
+  position: relative;
+  width: 100%;
+  border-radius: var(--nexzell-radius-lg, 24px);
+  overflow: hidden;
+  /* Adds a subtle dark glow behind the image container */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  /* border: 1px solid var(--nexzell-border-subtle, #1E293B); */
+}
+
+.bgImageConnectedOppsNexzellCategory {
+  width: 100%;
+  height: 550px;
+  display: block;
+  object-fit: contain;
+  object-position: center center ;
+  opacity: 0.8; /* Slight dimming for futuristic look */
+}
+
+/* --- Glassmorphism Base Styles for Cards --- */
+[class*="glassCard"][class$="ConnectedOppsNexzellCategory"] {
+  position: absolute;
+  background: rgba(10, 15, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 230, 153, 0.4);
+  border-radius: var(--nexzell-radius-md, 12px);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 230, 153, 0.05);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Card Positioning */
+.glassCardTopLeftConnectedOppsNexzellCategory {
+  top: 10%;
+  left: 5%;
+  min-width: 220px;
+}
+
+.glassCardBottomLeftConnectedOppsNexzellCategory {
+  bottom: 20%;
+  left: 8%;
+  min-width: 200px;
+}
+
+.glassCardTopRightConnectedOppsNexzellCategory {
+  top: 15%;
+  right: 5%;
+  min-width: 210px;
+}
+
+/* Card Typography & Inner Elements */
+.cardHeaderConnectedOppsNexzellCategory {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.cardTitleConnectedOppsNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  font-weight: 500;
+}
+
+.cardIconConnectedOppsNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+  width: 28px;
+  height: 28px;
+}
+
+.iconCircleConnectedOppsNexzellCategory {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 230, 153, 0.1);
+  border: 1px solid rgba(0, 230, 153, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nexzell-primary, #00E699);
+}
+
+.cardValueConnectedOppsNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1;
+}
+
+.cardTrendConnectedOppsNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--nexzell-primary, #00E699);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--nexzell-font-family, sans-serif);
+  background: rgba(0, 230, 153, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 0.25rem;
+}
+
+
+/* =========================================
+   RIGHT COLUMN: CONTENT & MODERN LIST
+========================================= */
+.contentColConnectedOppsNexzellCategory {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.badgeConnectedOppsNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--nexzell-text-gray-300, #94A3B8); /* Different from other sections as per image */
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconConnectedOppsNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.headingConnectedOppsNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.15;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.highlightTextConnectedOppsNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+}
+
+.descConnectedOppsNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.05rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  /* max-width: 550px; */
+}
+
+/* --- Modern Interactive List Items --- */
+.listContainerConnectedOppsNexzellCategory {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItemConnectedOppsNexzellCategory {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--nexzell-radius-md, 12px);
+  transition: all var(--transition-base, 0.3s ease);
+  cursor: default;
+}
+
+.listItemConnectedOppsNexzellCategory:hover {
+  background: rgba(0, 230, 153, 0.05);
+  border-color: rgba(0, 230, 153, 0.2);
+  transform: translateX(5px); /* Smooth nudge to the right on hover */
+}
+
+.listIconBoxConnectedOppsNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 230, 153, 0.1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.listItemConnectedOppsNexzellCategory:hover .listIconBoxConnectedOppsNexzellCategory {
+  transform: scale(1.1);
+}
+
+.listTextConnectedOppsNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  color: var(--nexzell-text-gray-100, #E2E8F0);
+  font-weight: 500;
+}
+
+/* --- CTA Button --- */
+.ctaButtonConnectedOppsNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--nexzell-primary, #00E699);
+  color: var(--nexzell-bg-base, #06080C);
+  border: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--nexzell-radius-sm, 8px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base, 0.3s ease);
+}
+
+.ctaButtonConnectedOppsNexzellCategory:hover {
+  background-color: var(--nexzell-primary-hover, #00C782);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 230, 153, 0.2);
+}
+
+
+/* --- Responsive: Laptop (Max Width: 1200px) --- */
+@media (max-width: 1200px) {
+  .sectionWrapperConnectedOppsNexzellCategory {
+    padding: 5.5rem 0;
+  }
+
+  .containerConnectedOppsNexzellCategory {
+    padding: 0 1.75rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .imageColConnectedOppsNexzellCategory {
+    min-height: 500px;
+  }
+
+  .imageWrapperConnectedOppsNexzellCategory {
+    border-radius: 20px;
+  }
+
+  .bgImageConnectedOppsNexzellCategory {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="ConnectedOppsNexzellCategory"] {
+    padding: 1rem 1.15rem;
+    gap: 0.45rem;
+  }
+
+  .glassCardTopLeftConnectedOppsNexzellCategory {
+    left: 3%;
+    min-width: 190px;
+  }
+
+  .glassCardBottomLeftConnectedOppsNexzellCategory {
+    left: 4%;
+    /* bottom: -8%; */
+    min-width: 180px;
+  }
+
+  .glassCardTopRightConnectedOppsNexzellCategory {
+    right: 3%;
+    min-width: 185px;
+  }
+
+  .cardTitleConnectedOppsNexzellCategory {
+    font-size: 0.8rem;
+  }
+
+  .cardValueConnectedOppsNexzellCategory {
+    font-size: 1.55rem;
+  }
+
+  .cardTrendConnectedOppsNexzellCategory {
+    font-size: 0.75rem;
+  }
+
+  .contentColConnectedOppsNexzellCategory {
+    min-width: 0;
+  }
+
+  .badgeConnectedOppsNexzellCategory {
+    align-self: flex-start;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingConnectedOppsNexzellCategory {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descConnectedOppsNexzellCategory {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerConnectedOppsNexzellCategory {
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemConnectedOppsNexzellCategory {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listIconBoxConnectedOppsNexzellCategory {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextConnectedOppsNexzellCategory {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonConnectedOppsNexzellCategory {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Small Laptop (Max Width: 1024px) --- */
+@media (max-width: 1024px) {
+  .sectionWrapperConnectedOppsNexzellCategory {
+    padding: 4.5rem 0;
+  }
+
+  .containerConnectedOppsNexzellCategory {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .imageColConnectedOppsNexzellCategory {
+    width: 100%;
+    min-height: auto;
+    /* padding: 2rem 1.5rem; */
+    justify-content: center;
+  }
+
+  .imageWrapperConnectedOppsNexzellCategory {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bgImageConnectedOppsNexzellCategory {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="ConnectedOppsNexzellCategory"] {
+    padding: 0.9rem 1rem;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .glassCardTopLeftConnectedOppsNexzellCategory {
+    top: 8%;
+    left: 2%;
+    min-width: 180px;
+  }
+
+  .glassCardBottomLeftConnectedOppsNexzellCategory {
+    bottom: 10%;
+    left: 2%;
+    min-width: 170px;
+  }
+
+  .glassCardTopRightConnectedOppsNexzellCategory {
+    top: 12%;
+    right: 2%;
+    min-width: 175px;
+  }
+
+  .cardHeaderConnectedOppsNexzellCategory {
+    gap: 0.5rem;
+  }
+
+  .cardTitleConnectedOppsNexzellCategory {
+    font-size: 0.78rem;
+  }
+
+  .cardValueConnectedOppsNexzellCategory {
+    font-size: 1.45rem;
+  }
+
+  .cardIconConnectedOppsNexzellCategory {
+    flex-shrink: 0;
+  }
+
+  .iconCircleConnectedOppsNexzellCategory {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .cardTrendConnectedOppsNexzellCategory {
+    font-size: 0.72rem;
+  }
+
+  .contentColConnectedOppsNexzellCategory {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .badgeConnectedOppsNexzellCategory {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .headingConnectedOppsNexzellCategory {
+    font-size: clamp(2.1rem, 4.5vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .descConnectedOppsNexzellCategory {
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  .listContainerConnectedOppsNexzellCategory {
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  .listItemConnectedOppsNexzellCategory {
+    gap: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .listItemConnectedOppsNexzellCategory:hover {
+    transform: translateX(3px);
+  }
+
+  .listIconBoxConnectedOppsNexzellCategory {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .listTextConnectedOppsNexzellCategory {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .ctaButtonConnectedOppsNexzellCategory {
+    align-self: flex-start;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Responsive: Tablet / Large Mobile (Max Width: 749px) --- */
+@media (max-width: 749px) {
+  .sectionWrapperConnectedOppsNexzellCategory {
+    padding: 3.75rem 0;
+  }
+
+  .containerConnectedOppsNexzellCategory {
+    padding: 0 1.25rem;
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .imageColConnectedOppsNexzellCategory {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .imageWrapperConnectedOppsNexzellCategory {
+    max-width: 700px;
+    border-radius: 16px;
+  }
+
+  .bgImageConnectedOppsNexzellCategory {
+    border-radius: 0;
+    height: auto;
+    object-position: center center;
+  }
+
+  [class*="glassCard"][class$="ConnectedOppsNexzellCategory"] {
+    padding: 0.8rem 0.9rem;
+    gap: 0.4rem;
+    transform: scale(0.78);
+  }
+
+  .glassCardTopLeftConnectedOppsNexzellCategory {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftConnectedOppsNexzellCategory {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightConnectedOppsNexzellCategory {
+    top: 8%;
+    right: 5%;
+    min-width: 160px;
+  }
+
+  .cardHeaderConnectedOppsNexzellCategory {
+    margin-bottom: 0.15rem;
+  }
+
+  .cardTitleConnectedOppsNexzellCategory {
+    font-size: 0.72rem;
+  }
+
+  .cardValueConnectedOppsNexzellCategory {
+    font-size: 1.3rem;
+  }
+
+  .cardTrendConnectedOppsNexzellCategory {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .iconCircleConnectedOppsNexzellCategory {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contentColConnectedOppsNexzellCategory {
+    max-width: 100%;
+  }
+
+  .badgeConnectedOppsNexzellCategory {
+    gap: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+  }
+
+  .headingConnectedOppsNexzellCategory {
+    font-size: clamp(1.9rem, 5.5vw, 2.4rem);
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+  }
+
+  .descConnectedOppsNexzellCategory {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .listContainerConnectedOppsNexzellCategory {
+    gap: 0.65rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .listItemConnectedOppsNexzellCategory {
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.8rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .listItemConnectedOppsNexzellCategory:hover {
+    transform: none;
+  }
+
+  .listIconBoxConnectedOppsNexzellCategory {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+  }
+
+  .listItemConnectedOppsNexzellCategory:hover .listIconBoxConnectedOppsNexzellCategory {
+    transform: none;
+  }
+
+  .listTextConnectedOppsNexzellCategory {
+    min-width: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonConnectedOppsNexzellCategory {
+    gap: 0.45rem;
+    padding: 0.8rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Responsive: Mobile (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .sectionWrapperConnectedOppsNexzellCategory {
+    padding: 1rem 0;
+  }
+
+  .containerConnectedOppsNexzellCategory {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .imageColConnectedOppsNexzellCategory {
+    padding: 0;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .imageWrapperConnectedOppsNexzellCategory {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .bgImageConnectedOppsNexzellCategory {
+    width: 100%;
+    height:300px;
+    margin-bottom: 0.5rem;
+    border-radius: 14px;
+    padding: 10px;
+    object-fit: contain;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    object-position:  center;
+  }
+
+  [class*="glassCard"][class$="ConnectedOppsNexzellCategory"] {
+    position: absolute;
+    /* inset: auto; */
+    transform: none;
+    width: auto;
+    /* min-width: auto; */
+    margin: 0;
+    padding: 1rem;
+    gap: 0.1rem;
+    border-radius: 12px;
+    background: rgba(10, 15, 20, 0.727);
+  }
+
+  .glassCardTopLeftConnectedOppsNexzellCategory {
+    top: 5%;
+    left: 5%;
+    min-width: 160px;
+  }
+
+  .glassCardBottomLeftConnectedOppsNexzellCategory {
+    bottom: 7%;
+    left: 5%;
+    min-width: 155px;
+  }
+
+  .glassCardTopRightConnectedOppsNexzellCategory {
+    top: 29%;
+    right: 5%;
+    min-width: 10px;
+  }
+
+  .cardHeaderConnectedOppsNexzellCategory {
+    gap: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .cardTitleConnectedOppsNexzellCategory {
+    font-size: 0.6rem;
+  }
+
+  .cardValueConnectedOppsNexzellCategory {
+    font-size: 1.2rem;
+  }
+
+  .cardTrendConnectedOppsNexzellCategory {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .cardIconConnectedOppsNexzellCategory {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .iconCircleConnectedOppsNexzellCategory {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+
+  .contentColConnectedOppsNexzellCategory {
+    width: 100%;
+    max-width: none;
+  }
+
+  .badgeConnectedOppsNexzellCategory {
+    align-self: flex-start;
+    gap: 0.35rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.9rem;
+  }
+
+  .headingConnectedOppsNexzellCategory {
+    font-size: clamp(1.65rem, 7vw, 1rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+
+  .descConnectedOppsNexzellCategory {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .listContainerConnectedOppsNexzellCategory {
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .listItemConnectedOppsNexzellCategory {
+    gap: 0.7rem;
+    padding: 0.75rem;
+    border-radius: 9px;
+  }
+
+  .listIconBoxConnectedOppsNexzellCategory {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .listTextConnectedOppsNexzellCategory {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .ctaButtonConnectedOppsNexzellCategory {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

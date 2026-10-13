@@ -1,0 +1,427 @@
+/* --- Main Wrapper --- */
+.sectionWrapperEveryBusinessModelNexzellCategory {
+  padding: 3rem 0;
+  background-color: var(--nexzell-bg-base, #06080C);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.containerEveryBusinessModelNexzellCategory {
+  width: 100%;
+  max-width: var(--nexzell-container-width, 1400px);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x, 2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   HEADER SECTION
+========================================= */
+.headerEveryBusinessModelNexzellCategory {
+  text-align: left;
+  /* max-width: 900px; */
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badgeEveryBusinessModelNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background-color: rgba(0, 230, 153, 0.05);
+  border: 1px solid rgba(0, 230, 153, 0.25);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.badgeIconEveryBusinessModelNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+  font-size: 0.8rem;
+}
+
+.headingEveryBusinessModelNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 700;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.descEveryBusinessModelNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.1rem;
+  color: var(--nexzell-text-gray-300, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   MODERN CARDS GRID
+========================================= */
+.gridEveryBusinessModelNexzellCategory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+/* 
+  Different Modern Style: 
+  Elevated Neumorphic/Glass hybrid look with pronounced shadows 
+*/
+.cardEveryBusinessModelNexzellCategory {
+  position: relative;
+  background: linear-gradient(145deg, rgba(14, 18, 24, 0.9), rgba(6, 8, 12, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--nexzell-radius-lg, 20px);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* Deep base shadow */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  /* min-height: 320px; */
+  z-index: 1;
+}
+
+/* Hover State for Modern Box */
+.cardEveryBusinessModelNexzellCategory:hover {
+  border-color: rgba(0, 230, 153, 0.3);
+  /* Glowing shadow effect on hover */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 230, 153, 0.1);
+  z-index: 2;
+}
+
+/* Inner decorative glow that becomes visible on hover */
+.cardGlowEveryBusinessModelNexzellCategory {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0, 230, 153, 0.08) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cardEveryBusinessModelNexzellCategory:hover .cardGlowEveryBusinessModelNexzellCategory {
+  opacity: 1;
+}
+
+.iconWrapperEveryBusinessModelNexzellCategory {
+  color: var(--nexzell-primary, #00E699);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  /* Soft glow behind the icon */
+  filter: drop-shadow(0 0 12px rgba(0, 230, 153, 0.3));
+}
+.cardTopEveryBusinessModelNexzellCategory{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cardTitleEveryBusinessModelNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--nexzell-text-white, #FFFFFF);
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+}
+
+.cardDescEveryBusinessModelNexzellCategory {
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 0.95rem;
+  color: var(--nexzell-text-gray-400, #94A3B8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Modern Animated Link */
+.cardLinkEveryBusinessModelNexzellCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--nexzell-font-family, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--nexzell-primary, #00E699);
+  text-decoration: none;
+  margin-top: .5rem;
+  transition: color var(--transition-base, 0.3s ease);
+  width: fit-content;
+}
+
+.linkArrowEveryBusinessModelNexzellCategory {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cardEveryBusinessModelNexzellCategory:hover .linkArrowEveryBusinessModelNexzellCategory {
+  transform: translateX(6px);
+}
+
+/* --- Large Desktop: 1200px --- */
+@media (max-width: 1200px) {
+  .containerEveryBusinessModelNexzellCategory {
+    max-width: 100%;
+    padding: 0 1.75rem;
+  }
+
+  .headerEveryBusinessModelNexzellCategory {
+    margin-bottom: 2.75rem;
+  }
+
+  .headingEveryBusinessModelNexzellCategory {
+    font-size: clamp(2.1rem, 3.5vw, 3rem);
+  }
+
+  .descEveryBusinessModelNexzellCategory {
+    font-size: 1rem;
+  }
+
+  .gridEveryBusinessModelNexzellCategory {
+    gap: 1.5rem;
+  }
+
+  .cardEveryBusinessModelNexzellCategory {
+    padding: 1.75rem 1.75rem;
+  }
+
+  .cardTopEveryBusinessModelNexzellCategory {
+    gap: 16px;
+  }
+
+  .iconWrapperEveryBusinessModelNexzellCategory {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardTitleEveryBusinessModelNexzellCategory {
+    font-size: 1.25rem;
+  }
+}
+
+/* --- Tablet: 1024px --- */
+@media (max-width: 1024px) {
+  .sectionWrapperEveryBusinessModelNexzellCategory {
+    padding: 3.5rem 0;
+  }
+
+  .containerEveryBusinessModelNexzellCategory {
+    padding: 0 1.5rem;
+  }
+
+  .headerEveryBusinessModelNexzellCategory {
+    margin-bottom: 2.5rem;
+  }
+
+  .badgeEveryBusinessModelNexzellCategory {
+    font-size: 0.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .headingEveryBusinessModelNexzellCategory {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+
+  .descEveryBusinessModelNexzellCategory {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .gridEveryBusinessModelNexzellCategory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardEveryBusinessModelNexzellCategory {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .cardTopEveryBusinessModelNexzellCategory {
+    gap: 14px;
+  }
+
+  .iconWrapperEveryBusinessModelNexzellCategory {
+    margin-bottom: 1.5rem;
+  }
+
+  .cardTitleEveryBusinessModelNexzellCategory {
+    font-size: 1.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .cardDescEveryBusinessModelNexzellCategory {
+    font-size: 0.9rem;
+  }
+
+  .cardLinkEveryBusinessModelNexzellCategory {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Mobile and Small Tablet: 749px --- */
+@media (max-width: 749px) {
+  .sectionWrapperEveryBusinessModelNexzellCategory {
+    padding: 3rem 0;
+  }
+
+  .containerEveryBusinessModelNexzellCategory {
+    padding: 0 1.25rem;
+  }
+
+  .headerEveryBusinessModelNexzellCategory {
+    margin-bottom: 2rem;
+  }
+
+  .badgeEveryBusinessModelNexzellCategory {
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+  }
+
+  .badgeIconEveryBusinessModelNexzellCategory {
+    font-size: 0.75rem;
+  }
+
+  .headingEveryBusinessModelNexzellCategory {
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+  }
+
+  .descEveryBusinessModelNexzellCategory {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .gridEveryBusinessModelNexzellCategory {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cardEveryBusinessModelNexzellCategory {
+    padding: 1.5rem 0.85rem;
+    border-radius: 16px;
+  }
+
+  .cardTopEveryBusinessModelNexzellCategory {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .iconWrapperEveryBusinessModelNexzellCategory {
+    margin-bottom: 1.25rem;
+  }
+
+  .cardTitleEveryBusinessModelNexzellCategory {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+
+  .cardDescEveryBusinessModelNexzellCategory {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .cardLinkEveryBusinessModelNexzellCategory {
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+  }
+}
+
+/* --- Small Mobile: 480px --- */
+@media (max-width: 480px) {
+  .sectionWrapperEveryBusinessModelNexzellCategory {
+    padding: 2.5rem 0;
+  }
+
+  .containerEveryBusinessModelNexzellCategory {
+    padding: 0 1rem;
+  }
+
+  .headerEveryBusinessModelNexzellCategory {
+    margin-bottom: 1.75rem;
+  }
+
+  .badgeEveryBusinessModelNexzellCategory {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .badgeIconEveryBusinessModelNexzellCategory {
+    font-size: 0.7rem;
+  }
+
+  .headingEveryBusinessModelNexzellCategory {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  .descEveryBusinessModelNexzellCategory {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .gridEveryBusinessModelNexzellCategory {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardEveryBusinessModelNexzellCategory {
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+  }
+
+  .cardTopEveryBusinessModelNexzellCategory {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .iconWrapperEveryBusinessModelNexzellCategory {
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .cardTitleEveryBusinessModelNexzellCategory {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cardDescEveryBusinessModelNexzellCategory {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .cardLinkEveryBusinessModelNexzellCategory {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+}

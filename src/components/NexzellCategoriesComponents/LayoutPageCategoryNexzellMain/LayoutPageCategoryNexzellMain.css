@@ -1,0 +1,946 @@
+/* ============================================================
+   LayoutPageCategoryNexzellMain.css
+   - Every class ends with "LayoutPageCategoryNexzellMain"
+   - Colors, fonts, radius, spacing, transitions all come from
+     your GLOBAL variables (globals.css :root).
+   - Change --nexzell-primary globally and this whole layout
+     changes color automatically.
+============================================================ */
+
+.wrapperLayoutPageCategoryNexzellMain {
+  /* ---- local tokens (all mapped to your global variables) ---- */
+  --lp-primary: var(--nexzell-primary);
+  --lp-primary-hover: var(--nexzell-primary-hover);
+  --lp-grad-start: var(--nexzell-gradient-start);
+  --lp-grad-end: var(--nexzell-gradient-end);
+
+  --lp-bg: var(--nexzell-bg-base);
+  --lp-surface: var(--nexzell-bg-surface);
+  --lp-surface-hover: var(--nexzell-bg-surface-hover);
+  --lp-panel: var(--nexzell-bg-panel);
+
+  --lp-text: var(--nexzell-text-white);
+  --lp-soft: var(--nexzell-text-gray-100);
+  --lp-muted: var(--nexzell-text-gray-300);
+  --lp-dim: var(--nexzell-text-gray-500);
+
+  /* primary color tints (follow --nexzell-primary automatically) */
+  --lp-primary-soft: color-mix(in srgb, var(--nexzell-primary) 14%, transparent);
+  --lp-line: color-mix(in srgb, var(--nexzell-primary) 22%, transparent);
+  --lp-line-strong: color-mix(in srgb, var(--nexzell-primary) 55%, transparent);
+  --lp-glow: color-mix(in srgb, var(--nexzell-primary) 16%, transparent);
+  --lp-card: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--nexzell-primary) 7%, var(--nexzell-bg-surface)),
+    var(--nexzell-bg-surface)
+  );
+
+  /* semantic colors that must NOT change with brand color */
+  --lp-star: #f5b301;
+  --lp-sale: #b3222a;
+
+  position: relative;
+  font-family: var(--nexzell-font-family);
+  background:
+    radial-gradient(900px 500px at 85% 0%, color-mix(in srgb, var(--nexzell-primary) 8%, transparent), transparent 60%),
+    var(--nexzell-bg-base);
+  color: var(--nexzell-text-white);
+  overflow-x: hidden;
+}
+
+.wrapperLayoutPageCategoryNexzellMain *,
+.wrapperLayoutPageCategoryNexzellMain *::before,
+.wrapperLayoutPageCategoryNexzellMain *::after {
+  box-sizing: border-box;
+}
+
+/* buttons do not inherit the font by default */
+.wrapperLayoutPageCategoryNexzellMain button {
+  font-family: inherit;
+}
+
+.progressBarLayoutPageCategoryNexzellMain {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  z-index: 9999;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--lp-grad-start), var(--lp-grad-end));
+  box-shadow: 0 0 12px var(--lp-primary);
+}
+
+.containerLayoutPageCategoryNexzellMain {
+  width: 100%;
+  max-width: var(--nexzell-container-width);
+  margin: 0 auto;
+  padding: 0 var(--nexzell-padding-x);
+}
+
+.sectionLayoutPageCategoryNexzellMain {
+  padding: calc(var(--nexzell-section-gap) * 2) 0;
+  position: relative;
+}
+
+.accentTextLayoutPageCategoryNexzellMain {
+  color: var(--lp-primary);
+}
+
+/* ---------- badge ---------- */
+.badgeLayoutPageCategoryNexzellMain {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-pill);
+  background: var(--lp-panel);
+  color: var(--lp-soft);
+  font-size: var(--font-size-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  backdrop-filter: blur(6px);
+}
+.badgeDotLayoutPageCategoryNexzellMain {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--lp-primary);
+  box-shadow: 0 0 0 0 var(--lp-primary);
+  animation: dotPulseLayoutPageCategoryNexzellMain 1.8s infinite;
+}
+@keyframes dotPulseLayoutPageCategoryNexzellMain {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--nexzell-primary) 70%, transparent); }
+  70%  { box-shadow: 0 0 0 9px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* ---------- buttons ---------- */
+.btnRowLayoutPageCategoryNexzellMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+.btnPrimaryLayoutPageCategoryNexzellMain,
+.btnGhostLayoutPageCategoryNexzellMain {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--nexzell-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+}
+.btnPrimaryLayoutPageCategoryNexzellMain {
+  background-color: var(--lp-primary);
+  color: var(--nexzell-bg-base);
+}
+.btnPrimaryLayoutPageCategoryNexzellMain::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -80%;
+  width: 50%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  /* animation: shineSweepLayoutPageCategoryNexzellMain 3.6s ease-in-out infinite; */
+}
+@keyframes shineSweepLayoutPageCategoryNexzellMain {
+  0%, 60% { left: -80%; }
+  100%    { left: 150%; }
+}
+.btnPrimaryLayoutPageCategoryNexzellMain:hover {
+  background-color: var(--lp-primary-hover);
+  /* transform: translateY(-3px); */
+  /* box-shadow: 0 10px 28px color-mix(in srgb, var(--nexzell-primary) 35%, transparent); */
+}
+.btnArrowLayoutPageCategoryNexzellMain { transition: transform var(--transition-base); }
+.btnPrimaryLayoutPageCategoryNexzellMain:hover .btnArrowLayoutPageCategoryNexzellMain {
+  transform: translateX(5px);
+}
+.btnGhostLayoutPageCategoryNexzellMain {
+  color: var(--lp-text);
+  background: rgba(0, 0, 0, 0.241);
+  border: 1px solid var(--nexzell-border-highlight);
+}
+.btnGhostLayoutPageCategoryNexzellMain:hover {
+  /* transform: translateY(-3px); */
+  border-color: var(--lp-white);
+  /* background: var(--lp-primary-soft); */
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+.heroSectionLayoutPageCategoryNexzellMain {
+  position: relative;
+  min-height: 640px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--nexzell-border-subtle);
+}
+.heroBgLayoutPageCategoryNexzellMain {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+.heroBgImgLayoutPageCategoryNexzellMain {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.heroOverlayLayoutPageCategoryNexzellMain {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nexzell-bg-base) 97%, transparent) 0%,
+      color-mix(in srgb, var(--nexzell-bg-base) 82%, transparent) 38%,
+      color-mix(in srgb, var(--nexzell-bg-base) 35%, transparent) 70%,
+      color-mix(in srgb, var(--nexzell-bg-base) 55%, transparent) 100%
+    ),
+    linear-gradient(0deg, var(--nexzell-bg-base) 0%, transparent 30%);
+}
+.heroInnerLayoutPageCategoryNexzellMain {
+  position: relative;
+  z-index: 2;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.heroContentLayoutPageCategoryNexzellMain {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+.heroTitleLayoutPageCategoryNexzellMain {
+  margin: 0;
+  font-size: clamp(var(--font-size-4xl), 4.6vw, var(--font-size-7xl));
+  line-height: 1.1;
+  font-weight: var(--fw-extrabold);
+  letter-spacing: -0.02em;
+}
+.heroDescLayoutPageCategoryNexzellMain {
+  margin: 0;
+  max-width: 520px;
+  color: var(--lp-soft);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+.statsRowLayoutPageCategoryNexzellMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.1rem;
+  margin-top: 0.5rem;
+}
+.statItemLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.statIconLayoutPageCategoryNexzellMain {
+  color: var(--lp-primary);
+  filter: drop-shadow(0 0 8px color-mix(in srgb, var(--nexzell-primary) 50%, transparent));
+  display: grid;
+  place-items: center;
+}
+.statValueLayoutPageCategoryNexzellMain {
+  display: block;
+  color: var(--lp-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+}
+.statLabelLayoutPageCategoryNexzellMain {
+  display: block;
+  color: var(--lp-muted);
+  font-size: var(--font-size-xs);
+  margin-top: 3px;
+}
+
+/* floating revenue card */
+.floatWrapRevenueLayoutPageCategoryNexzellMain {
+  position: absolute;
+  top: 124px;
+  left: 52%;
+  z-index: 3;
+}
+.revenueCardLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.4rem;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-md);
+  background: var(--lp-panel);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4), 0 0 24px var(--lp-glow);
+}
+.revenueLabelLayoutPageCategoryNexzellMain {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--lp-muted);
+}
+.revenueValueLayoutPageCategoryNexzellMain {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--fw-bold);
+  margin: 2px 0;
+  min-width: 130px;
+}
+.revenueGrowthLayoutPageCategoryNexzellMain {
+  color: var(--lp-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--fw-bold);
+}
+.revenueBarsLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 46px;
+}
+.revenueBarLayoutPageCategoryNexzellMain {
+  display: block;
+  width: 7px;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--lp-grad-start), var(--lp-grad-end));
+  transform-origin: bottom;
+}
+
+/* top categories panel */
+.catPanelLayoutPageCategoryNexzellMain {
+  position: absolute;
+  right: var(--nexzell-padding-x);
+  top: 50%;
+  transform: translateY(-38%);
+  z-index: 3;
+  min-width: 240px;
+  padding: 1rem 1.15rem 0.75rem;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-md);
+  background: var(--lp-panel);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+}
+.catPanelTitleLayoutPageCategoryNexzellMain {
+  margin: 0 0 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--fw-bold);
+}
+.catListLayoutPageCategoryNexzellMain {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.catItemLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.55rem 0;
+  font-size: var(--font-size-sm);
+  color: var(--lp-soft);
+  cursor: default;
+}
+.catIconLayoutPageCategoryNexzellMain {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  color: var(--lp-primary);
+}
+
+/* ============================================================
+   BUILT FOR
+============================================================ */
+.builtGridLayoutPageCategoryNexzellMain,
+.advGridLayoutPageCategoryNexzellMain {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.builtMediaLayoutPageCategoryNexzellMain,
+.advMediaLayoutPageCategoryNexzellMain {
+  position: relative;
+  min-height: 440px;
+  border-radius: var(--nexzell-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--lp-line);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+.builtImgLayoutPageCategoryNexzellMain {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+.builtMediaLayoutPageCategoryNexzellMain:hover .builtImgLayoutPageCategoryNexzellMain,
+.advMediaLayoutPageCategoryNexzellMain:hover .builtImgLayoutPageCategoryNexzellMain {
+  transform: scale(1.06);
+}
+.builtMediaLayoutPageCategoryNexzellMain::after,
+.advMediaLayoutPageCategoryNexzellMain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, color-mix(in srgb, var(--nexzell-bg-base) 55%, transparent), transparent 55%);
+  pointer-events: none;
+}
+
+/* product card (white card, uses text-white / bg tokens) */
+.productCardLayoutPageCategoryNexzellMain {
+  position: absolute;
+  z-index: 2;
+  right: 8%;
+  top: 11%;
+  width: 240px;
+  padding: 1rem;
+  border-radius: var(--nexzell-radius-md);
+  background: var(--nexzell-text-white);
+  color: var(--nexzell-bg-base);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+.productNameLayoutPageCategoryNexzellMain {
+  margin: 0;
+  color: var(--nexzell-bg-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--fw-semibold);
+}
+.productPriceLayoutPageCategoryNexzellMain {
+  margin: 2px 0 4px;
+  color: var(--nexzell-bg-base);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--fw-extrabold);
+}
+.starsLayoutPageCategoryNexzellMain { display: inline-flex; gap: 2px; color: var(--lp-star); }
+.optLabelLayoutPageCategoryNexzellMain {
+  display: block;
+  margin: 0.75rem 0 0.4rem;
+  font-size: var(--font-size-xs);
+  color: var(--nexzell-text-gray-500);
+}
+.colorRowLayoutPageCategoryNexzellMain,
+.optRowLayoutPageCategoryNexzellMain { display: flex; flex-wrap: wrap; gap: 8px; }
+.colorDotLayoutPageCategoryNexzellMain {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--nexzell-text-white);
+  outline: 1px solid var(--nexzell-text-gray-100);
+  cursor: pointer;
+  padding: 0;
+  transition: outline var(--transition-fast);
+}
+.colorDotActiveLayoutPageCategoryNexzellMain { outline: 2px solid var(--lp-primary-hover); }
+.optBtnLayoutPageCategoryNexzellMain {
+  padding: 0.3rem 0.6rem;
+  font-size: var(--font-size-xs);
+  border: 1px solid var(--nexzell-text-gray-100);
+  border-radius: 4px;
+  background: var(--nexzell-text-white);
+  color: var(--nexzell-bg-base);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.optBtnActiveLayoutPageCategoryNexzellMain {
+  background: var(--nexzell-bg-surface);
+  color: var(--nexzell-text-white);
+  border-color: var(--nexzell-bg-surface);
+}
+.qtyRowLayoutPageCategoryNexzellMain {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0 0.15rem;
+}
+.qtyBtnLayoutPageCategoryNexzellMain {
+  display: grid; place-items: center;
+  width: 24px; height: 24px;
+  border-radius: 5px;
+  border: 1px solid var(--nexzell-bg-surface);
+  background: transparent;
+  color: var(--nexzell-bg-surface);
+  cursor: pointer;
+}
+.qtyValueLayoutPageCategoryNexzellMain {
+  min-width: 14px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--fw-bold);
+  color: var(--nexzell-bg-base);
+}
+.addBtnLayoutPageCategoryNexzellMain {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.7rem;
+  border: 0;
+  border-radius: var(--nexzell-radius-sm);
+  background: var(--nexzell-bg-surface);
+  color: var(--nexzell-text-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+.addBtnLayoutPageCategoryNexzellMain:hover { background: var(--nexzell-bg-surface-hover); }
+.addBtnDoneLayoutPageCategoryNexzellMain,
+.addBtnDoneLayoutPageCategoryNexzellMain:hover {
+  background: var(--lp-primary);
+  color: var(--nexzell-bg-base);
+}
+
+.thumbRowLayoutPageCategoryNexzellMain {
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  bottom: 6%;
+  display: flex;
+  gap: 10px;
+  padding: 0.65rem;
+  border-radius: var(--nexzell-radius-md);
+  border: 1px solid var(--lp-line);
+  background: var(--lp-panel);
+  backdrop-filter: blur(10px);
+}
+.thumbLayoutPageCategoryNexzellMain {
+  width: 58px; height: 58px;
+  padding: 0;
+  border-radius: var(--nexzell-radius-sm);
+  border: 2px solid transparent;
+  overflow: hidden;
+  background: var(--nexzell-text-white);
+  cursor: pointer;
+  transition: border-color var(--transition-base);
+}
+.thumbLayoutPageCategoryNexzellMain img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumbActiveLayoutPageCategoryNexzellMain { border-color: var(--lp-primary); }
+
+.builtContentLayoutPageCategoryNexzellMain,
+.advContentLayoutPageCategoryNexzellMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+.sectionTitleLayoutPageCategoryNexzellMain {
+  margin: 0;
+  font-size: clamp(var(--font-size-3xl), 3.2vw, var(--font-size-5xl));
+  line-height: 1.18;
+  font-weight: var(--fw-extrabold);
+}
+.sectionDescLayoutPageCategoryNexzellMain {
+  margin: 0;
+  color: var(--lp-muted);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+}
+.checkListLayoutPageCategoryNexzellMain {
+  list-style: none;
+  margin: 0.25rem 0 0.4rem; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.checkItemLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--font-size-base);
+  color: var(--lp-soft);
+}
+.checkIconLayoutPageCategoryNexzellMain {
+  display: grid; place-items: center;
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--lp-primary);
+  color: var(--nexzell-bg-base);
+}
+
+/* ============================================================
+   FEATURES
+============================================================ */
+.featSectionLayoutPageCategoryNexzellMain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(700px 300px at 50% 0%, color-mix(in srgb, var(--nexzell-primary) 7%, transparent), transparent 70%);
+  pointer-events: none;
+}
+.featHeadLayoutPageCategoryNexzellMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 2.25rem;
+  text-align: center;
+}
+.featTitleLayoutPageCategoryNexzellMain {
+  margin: 0;
+  max-width: 560px;
+  font-size: clamp(var(--font-size-2xl), 2.8vw, var(--font-size-4xl));
+  line-height: 1.25;
+  font-weight: var(--fw-bold);
+}
+.featArrowsLayoutPageCategoryNexzellMain {
+  position: absolute;
+  right: 0; top: 40px;
+  display: flex;
+  gap: 0.65rem;
+}
+.arrowBtnLayoutPageCategoryNexzellMain {
+  display: grid; place-items: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--lp-primary);
+  background: transparent;
+  color: var(--lp-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+.arrowBtnLayoutPageCategoryNexzellMain:hover {
+  background: var(--lp-primary);
+  color: var(--nexzell-bg-base);
+  transform: scale(1.1);
+}
+.featGridLayoutPageCategoryNexzellMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.featCardLayoutPageCategoryNexzellMain {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-md);
+  background: var(--lp-card);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.featCardLayoutPageCategoryNexzellMain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from var(--lp-angle, 0deg), transparent 0 70%, var(--lp-primary) 85%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+@property --lp-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.featCardActiveLayoutPageCategoryNexzellMain {
+  border-color: var(--lp-line-strong);
+  box-shadow: 0 0 30px var(--lp-glow);
+}
+.featCardActiveLayoutPageCategoryNexzellMain::before {
+  opacity: 1;
+  animation: borderSpinLayoutPageCategoryNexzellMain 4s linear infinite;
+}
+@keyframes borderSpinLayoutPageCategoryNexzellMain {
+  to { --lp-angle: 360deg; }
+}
+.featMediaLayoutPageCategoryNexzellMain,
+.mapBoxLayoutPageCategoryNexzellMain,
+.chartBoxLayoutPageCategoryNexzellMain {
+  position: relative;
+  height: 160px;
+  margin: 0.65rem 0.65rem 0;
+  border-radius: var(--nexzell-radius-sm);
+  overflow: hidden;
+}
+.featImgLayoutPageCategoryNexzellMain {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.featCardLayoutPageCategoryNexzellMain:hover .featImgLayoutPageCategoryNexzellMain { transform: scale(1.1); }
+.promoBadgeLayoutPageCategoryNexzellMain {
+  position: absolute;
+  right: 8px; top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  background: var(--lp-sale);
+  color: var(--nexzell-text-white);
+  line-height: 1;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--lp-sale) 50%, transparent);
+}
+.promoSmallLayoutPageCategoryNexzellMain {
+  font-size: var(--font-size-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+}
+.promoBigLayoutPageCategoryNexzellMain {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--fw-extrabold);
+  margin: 2px 0;
+}
+
+.mapBoxLayoutPageCategoryNexzellMain {
+  background:
+    radial-gradient(circle, color-mix(in srgb, var(--nexzell-primary) 55%, transparent) 1.2px, transparent 1.6px) 0 0 / 11px 11px,
+    var(--nexzell-bg-surface);
+  -webkit-mask: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
+          mask: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
+}
+.mapPinLayoutPageCategoryNexzellMain {
+  position: absolute;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--nexzell-text-white);
+  box-shadow: 0 0 10px var(--lp-primary);
+}
+.mapPingLayoutPageCategoryNexzellMain {
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--lp-primary);
+  border-radius: 50%;
+  animation: pingLayoutPageCategoryNexzellMain 2.2s ease-out infinite;
+}
+@keyframes pingLayoutPageCategoryNexzellMain {
+  0%   { transform: scale(0.4); opacity: 0.9; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+.chartBoxLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  padding: 0.65rem 0.9rem 0;
+  background: linear-gradient(0deg, var(--lp-primary-soft), transparent);
+  border-bottom: 1px solid var(--lp-line);
+}
+.chartBarLayoutPageCategoryNexzellMain {
+  flex: 1;
+  display: block;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(180deg, var(--lp-grad-start), var(--lp-grad-end));
+}
+.featBodyLayoutPageCategoryNexzellMain { padding: 0.9rem 1.15rem 1.25rem; }
+.featNameLayoutPageCategoryNexzellMain {
+  margin: 0 0 0.4rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--fw-bold);
+}
+.featDescLayoutPageCategoryNexzellMain {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.55;
+  color: var(--lp-muted);
+}
+
+/* ============================================================
+   ADVANTAGE
+============================================================ */
+.advStatsLayoutPageCategoryNexzellMain {
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  top: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 210px;
+}
+.advStatInnerLayoutPageCategoryNexzellMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding: 0.9rem 1.15rem;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-md);
+  background: var(--lp-panel);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+.advStatValueLayoutPageCategoryNexzellMain {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+}
+.advStatLabelLayoutPageCategoryNexzellMain {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--lp-muted);
+}
+.advStatIconLayoutPageCategoryNexzellMain { color: var(--lp-primary); }
+
+/* ============================================================
+   TESTIMONIALS
+============================================================ */
+.trustHeadLayoutPageCategoryNexzellMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.1rem;
+  text-align: center;
+}
+.trustTitleLayoutPageCategoryNexzellMain {
+  margin: 0;
+  font-size: clamp(var(--font-size-3xl), 3vw, var(--font-size-4xl));
+  font-weight: var(--fw-extrabold);
+}
+.trustSubLayoutPageCategoryNexzellMain {
+  margin: 0;
+  color: var(--lp-muted);
+  font-size: var(--font-size-base);
+}
+.trustGridLayoutPageCategoryNexzellMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.testiCardLayoutPageCategoryNexzellMain {
+  position: relative;
+  margin: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--lp-line);
+  border-radius: var(--nexzell-radius-md);
+  background: var(--lp-card);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+.testiCardLayoutPageCategoryNexzellMain:hover {
+  border-color: var(--lp-line-strong);
+  box-shadow: 0 16px 40px var(--lp-glow);
+}
+.quoteIconLayoutPageCategoryNexzellMain { color: var(--lp-primary); margin-bottom: 0.5rem; }
+.testiTextLayoutPageCategoryNexzellMain {
+  margin: 0 0 1.1rem;
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+  color: var(--lp-soft);
+}
+.testiUserLayoutPageCategoryNexzellMain { display: flex; align-items: center; gap: 0.75rem; }
+.avatarLayoutPageCategoryNexzellMain {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--lp-line);
+}
+.userNameLayoutPageCategoryNexzellMain {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--lp-text);
+}
+.userRoleLayoutPageCategoryNexzellMain {
+  display: block;
+  margin: 1px 0 4px;
+  font-size: var(--font-size-xs);
+  color: var(--lp-muted);
+}
+
+/* ============================================================
+   CTA
+============================================================ */
+.ctaSectionLayoutPageCategoryNexzellMain {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--nexzell-border-subtle);
+}
+.ctaBgLayoutPageCategoryNexzellMain { position: absolute; inset: 0; }
+.ctaBgLayoutPageCategoryNexzellMain img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ctaFadeLayoutPageCategoryNexzellMain {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--nexzell-bg-base) 0%,
+    color-mix(in srgb, var(--nexzell-bg-base) 92%, transparent) 38%,
+    color-mix(in srgb, var(--nexzell-bg-base) 20%, transparent) 100%
+  );
+}
+.ctaContentLayoutPageCategoryNexzellMain {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.ctaTitleLayoutPageCategoryNexzellMain {
+  margin: 0;
+  max-width: 500px;
+  font-size: clamp(var(--font-size-3xl), 3vw, var(--font-size-4xl));
+  line-height: 1.2;
+  font-weight: var(--fw-extrabold);
+}
+.ctaDescLayoutPageCategoryNexzellMain {
+  margin: 0;
+  max-width: 460px;
+  color: var(--lp-soft);
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 1100px) {
+  .heroInnerLayoutPageCategoryNexzellMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+  .floatWrapRevenueLayoutPageCategoryNexzellMain,
+  .catPanelLayoutPageCategoryNexzellMain {
+    position: relative;
+    top: auto; left: auto; right: auto;
+    transform: none;
+  }
+  .catPanelLayoutPageCategoryNexzellMain { width: 100%; max-width: 360px; }
+  .builtGridLayoutPageCategoryNexzellMain,
+  .advGridLayoutPageCategoryNexzellMain { grid-template-columns: 1fr; gap: 2.4rem; }
+  .featGridLayoutPageCategoryNexzellMain,
+  .trustGridLayoutPageCategoryNexzellMain { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .containerLayoutPageCategoryNexzellMain { padding: 0 1.15rem; }
+  .sectionLayoutPageCategoryNexzellMain { padding: var(--nexzell-section-gap) 0; }
+  .featGridLayoutPageCategoryNexzellMain,
+  .trustGridLayoutPageCategoryNexzellMain { grid-template-columns: 1fr; }
+  .featArrowsLayoutPageCategoryNexzellMain { position: static; }
+  .builtMediaLayoutPageCategoryNexzellMain,
+  .advMediaLayoutPageCategoryNexzellMain { min-height: 520px; }
+  .productCardLayoutPageCategoryNexzellMain { right: 4%; top: 6%; width: 210px; }
+  .thumbRowLayoutPageCategoryNexzellMain { left: 4%; bottom: 4%; }
+  .advStatsLayoutPageCategoryNexzellMain { right: 4%; top: 5%; width: 180px; }
+  .statsRowLayoutPageCategoryNexzellMain { gap: 1.4rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wrapperLayoutPageCategoryNexzellMain *,
+  .wrapperLayoutPageCategoryNexzellMain *::before,
+  .wrapperLayoutPageCategoryNexzellMain *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
