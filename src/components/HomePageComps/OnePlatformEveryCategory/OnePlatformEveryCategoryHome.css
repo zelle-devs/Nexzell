@@ -92,6 +92,8 @@
   transition: all 0.3s ease;
   position: relative;
   cursor: pointer;
+    text-decoration: none;
+  color: inherit;
 }
 
 .cardOnePlatformEveryCategoryHome:hover {
@@ -105,11 +107,14 @@
 .cardImageWrapperOnePlatformEveryCategoryHome {
   position: relative;
   width: 100%;
-  height: 120px; /* Adjust based on your actual images */
-  background-color: #121A20;
-  padding: 10px 0px; /* Subtle background color matching the design */
+  height: 200px;
+  padding: 10px 0px;
+  overflow: hidden; /* keeps the sliding image clipped inside the card */
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, rgba(24, 110, 92, 0.55) 0%, rgba(24, 110, 92, 0) 70%),
+    radial-gradient(ellipse 100% 90% at 20% 0%, rgba(18, 82, 70, 0.55) 0%, rgba(18, 82, 70, 0) 65%),
+    linear-gradient(160deg, #0b2f2a 0%, #071c1a 55%, #05110f 100%);
 }
-
 .cardImagePlaceholderOnePlatformEveryCategoryHome {
   width: 100%;
   height: 100%;
@@ -123,15 +128,47 @@
 .cardOnePlatformEveryCategoryHome:hover .cardImagePlaceholderOnePlatformEveryCategoryHome {
   transform: scale(1.05);
 }
+.cardImageMotionOnePlatformEveryCategoryHome {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.isVisibleOnePlatformEveryCategoryHome .cardImageMotionOnePlatformEveryCategoryHome {
+  animation: imageEnterOnePlatformEveryCategoryHome 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--img-index, 0) * 0.12s + 0.1s);
+}
 
-/* Gradient overlay to smoothly blend the image bottom into the card background */
+@keyframes imageEnterOnePlatformEveryCategoryHome {
+  0% {
+    opacity: 0;
+    transform: translate3d(70px, -80px, 0) rotate(14deg) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardImageMotionOnePlatformEveryCategoryHome {
+    opacity: 1;
+  }
+  .isVisibleOnePlatformEveryCategoryHome .cardImageMotionOnePlatformEveryCategoryHome {
+    animation: none;
+  }
+}
 .cardGradientOverlayOnePlatformEveryCategoryHome {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, transparent, rgba(14, 18, 24, 0.4) 50%, rgba(14, 18, 24, 1));
+  height: 40%;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(14, 18, 24, 0.55) 60%, rgba(14, 18, 24, 1));
 }
 
 /* Card Text */
@@ -198,7 +235,7 @@
   }
 
   .cardImageWrapperOnePlatformEveryCategoryHome {
-    height: 115px;
+    height: 185px;
   }
 
   .cardTextOnePlatformEveryCategoryHome {
@@ -276,7 +313,7 @@
   }
 
   .cardImageWrapperOnePlatformEveryCategoryHome {
-    height: 120px;
+    height: 160px;
   }
 
   .cardTextOnePlatformEveryCategoryHome {
@@ -340,13 +377,13 @@
   .gridOnePlatformEveryCategoryHome {
     width: 100%;
     max-width: 650px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.1rem;
   }
 
   .cardImageWrapperOnePlatformEveryCategoryHome {
      padding: 10px 0px; 
-    height: 125px;
+    height: 195px;
   }
 
   .cardTextOnePlatformEveryCategoryHome {
@@ -429,7 +466,7 @@
 
   .cardImageWrapperOnePlatformEveryCategoryHome {
     width: 100%;
-    height: 115px;
+    height: 155px;
      padding: 10px 0px; 
   }
 

@@ -1,3 +1,4 @@
+import GrowingBrandsThatsTrustUS from "@/components/ForGrowingBransSolutions/GrowingBrandsThatsTrustUS/GrowingBrandsThatsTrustUS";
 import BuildWithoutLimitsHome from "@/components/HomePageComps/BuildWithoutLimitsHome/BuildWithoutLimitsHome";
 import BuiltBusinessSizesHome from "@/components/HomePageComps/BuiltBusinessSizesHome/BuiltBusinessSizesHome";
 import EverythingBusinessStarter from "@/components/HomePageComps/EverythingBusinessStarter/EverythingBusinessStarter";
@@ -18,7 +19,7 @@ export default function Home() {
       <EverythingBusinessStarter/>
       <GlobalFromDayOne/>
       <BuiltBusinessSizesHome/>
-      <RealBusinessGrowthHome/>
+      <GrowingBrandsThatsTrustUS/>
       <PricingSectionHome/>
       <BuildWithoutLimitsHome/>
     </div>

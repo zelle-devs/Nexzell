@@ -157,7 +157,7 @@ const handleBackToModes = () => {
                                             const isPastMonth = currentMonth.getFullYear() === today.getFullYear() && i < today.getMonth();
                                             return (
                                                 <div key={i} className="pill-option" onClick={() => { setCurrentMonth(new Date(currentMonth.getFullYear(), i, 1)); setOpenDropdown(null); }}
-                                                    style={isPastMonth ? { opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' } : {}}>
+                                                    style={isPastMonth ? { display:'none', opacity: 0.4, cursor: 'not-allowed', pointerEvents: 'none' } : {}}>
                                                     {new Date(0, i).toLocaleString('default', { month: 'long' })}
                                                 </div>
                                             );

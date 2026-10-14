@@ -1,8 +1,4 @@
-/* ============================================
-   FormStep.css
-   Nexzell Theme - Modern Booking System
-   All colors mapped to global :root tokens
-   ============================================ */
+
 
 .split-layout-form {
   display: flex;
@@ -521,7 +517,7 @@ textarea.neu-input {
 }
 
 @media (max-width: 768px) {
-  .split-layout-form { width: 98%; }
+  .split-layout-form { width: 98%;}
 
   .form-card { padding: 18px; }
 

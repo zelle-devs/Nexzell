@@ -1,6 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useId, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { geoEquirectangular, geoPath } from "d3-geo";
+import { feature } from "topojson-client";
+import worldLand from "world-atlas/land-110m.json";
 import {
   motion,
   animate,
@@ -86,8 +89,8 @@ function CountUpLayoutPageCategoryNexzellMain({ value, prefix = "", suffix = "",
 
 /* ---------- section badge ---------- */
 const BadgeLayoutPageCategoryNexzellMain = ({ children }) => (
-  <span className="badgeLayoutPageCategoryNexzellMain">
-    <span className="badgeDotLayoutPageCategoryNexzellMain" />
+  <span className="badgeEverythingBusinessStarter">
+    <span className="badgeDotEverythingBusinessStarter" />
     {children}
   </span>
 );
@@ -100,6 +103,111 @@ const StarsLayoutPageCategoryNexzellMain = ({ count = 5 }) => (
   </span>
 );
 
+
+/* ======================================================================
+   MERGED PANEL (tablet + mobile only): revenue + top categories in ONE card
+====================================================================== */
+const mergedBarsLayoutPageCategoryNexzellMain = [40, 62, 50, 85, 100];
+
+function MergedPanelLayoutPageCategoryNexzellMain({ data, variant = "tablet" }) {
+  const reduce = useReducedMotion();
+  const cats = data.topCategories;
+  const [active, setActive] = useState(0);
+
+  // highlight cycles through the categories automatically
+  useEffect(() => {
+    if (reduce) return;
+    const id = setInterval(() => setActive((a) => (a + 1) % cats.length), 2200);
+    return () => clearInterval(id);
+  }, [reduce, cats.length]);
+
+  const variantClass =
+    variant === "tablet"
+      ? "mergedTabletLayoutPageCategoryNexzellMain"
+      : "mergedMobileLayoutPageCategoryNexzellMain";
+
+  return (
+    <motion.section
+      className={`mergedLayoutPageCategoryNexzellMain ${variantClass}`}
+      variants={staggerLayoutPageCategoryNexzellMain(0.12, 0.1)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-40px" }}
+      aria-label="Revenue and top categories"
+    >
+      <span className="mergedGlowLayoutPageCategoryNexzellMain" aria-hidden="true" />
+
+      {/* ---- revenue row ---- */}
+      <motion.div variants={fadeUpLayoutPageCategoryNexzellMain} className="mergedTopLayoutPageCategoryNexzellMain">
+        <div className="mergedRevInfoLayoutPageCategoryNexzellMain">
+          <span className="revenueLabelLayoutPageCategoryNexzellMain">Total Revenue</span>
+          <strong className="mergedValueLayoutPageCategoryNexzellMain">
+            <CountUpLayoutPageCategoryNexzellMain
+              value={data.revenue.value}
+              prefix={data.revenue.prefix}
+              duration={2.2}
+            />
+          </strong>
+          <span className="mergedGrowthLayoutPageCategoryNexzellMain">▲ {data.revenue.growth}</span>
+        </div>
+
+        <div className="mergedBarsLayoutPageCategoryNexzellMain" aria-hidden="true">
+          {mergedBarsLayoutPageCategoryNexzellMain.map((h, i) => (
+            <motion.i
+              key={i}
+              className="revenueBarLayoutPageCategoryNexzellMain"
+              variants={{
+                hidden: { scaleY: 0 },
+                visible: {
+                  scaleY: h / 100,
+                  transition: { delay: 0.5 + i * 0.1, duration: 0.7, ease: EASE },
+                },
+              }}
+            />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* ---- animated divider ---- */}
+      <motion.div
+        className="mergedDividerLayoutPageCategoryNexzellMain"
+        variants={{
+          hidden: { scaleX: 0, opacity: 0 },
+          visible: { scaleX: 1, opacity: 1, transition: { duration: 0.9, ease: EASE } },
+        }}
+      />
+
+      {/* ---- categories ---- */}
+      <motion.div variants={fadeUpLayoutPageCategoryNexzellMain} className="mergedCatHeadLayoutPageCategoryNexzellMain">
+        <h3 className="mergedCatTitleLayoutPageCategoryNexzellMain">Top Categories</h3>
+        <span className="mergedCatCountLayoutPageCategoryNexzellMain">{cats.length} trending</span>
+      </motion.div>
+
+      <motion.ul
+        className="mergedCatListLayoutPageCategoryNexzellMain"
+        variants={staggerLayoutPageCategoryNexzellMain(0.08, 0.1)}
+      >
+        {cats.map((cat, i) => (
+          <motion.li
+            key={cat.label}
+            variants={popLayoutPageCategoryNexzellMain}
+            whileTap={{ scale: 0.95 }}
+            onMouseEnter={() => setActive(i)}
+            onClick={() => setActive(i)}
+            className={`mergedCatItemLayoutPageCategoryNexzellMain ${
+              active === i ? "mergedCatItemActiveLayoutPageCategoryNexzellMain" : ""
+            }`}
+          >
+            <span className="mergedCatIconLayoutPageCategoryNexzellMain">
+              <IconLayoutPageCategoryNexzellMain name={cat.icon} size={variant === "tablet" ? 20 : 16} />
+            </span>
+            <span className="mergedCatLabelLayoutPageCategoryNexzellMain">{cat.label}</span>
+          </motion.li>
+        ))}
+      </motion.ul>
+    </motion.section>
+  );
+}
 /* ======================================================================
    HERO
 ====================================================================== */
@@ -227,6 +335,8 @@ function HeroLayoutPageCategoryNexzellMain({ data, badge }) {
             ))}
           </motion.ul>
         </motion.aside>
+        <MergedPanelLayoutPageCategoryNexzellMain data={data} variant="tablet" />
+        <MergedPanelLayoutPageCategoryNexzellMain data={data} variant="mobile" />
       </div>
     </section>
   );
@@ -381,41 +491,348 @@ function ChecklistLayoutPageCategoryNexzellMain({ items }) {
 /* ======================================================================
    FEATURE CARDS (3 x 2 grid, arrows move the active highlight)
 ====================================================================== */
-const mapPinsLayoutPageCategoryNexzellMain = [
-  { left: "22%", top: "42%" },
-  { left: "63%", top: "70%" },
-  { left: "76%", top: "30%" },
-];
-const chartBarsLayoutPageCategoryNexzellMain = [18, 30, 24, 46, 38, 58, 30, 44, 62, 52, 78, 92];
+
+/* ---------- shared: measure a box ---------- */
+function useBoxSizeLayoutPageCategoryNexzellMain(ref) {
+  const [size, setSize] = useState({ w: 0, h: 0 });
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => setSize({ w: el.clientWidth, h: el.clientHeight });
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [ref]);
+  return size;
+}
+
+/* ---------- MAP (dot-matrix world + blinking pins) ---------- */
+const landGeoLayoutPageCategoryNexzellMain = feature(worldLand, worldLand.objects.land);
+const MAP_CENTER_LAT = 12;
+const MAP_STEP = 5;
+
+function MapMediaLayoutPageCategoryNexzellMain({ pins = [] }) {
+  const boxRef = useRef(null);
+  const canvasRef = useRef(null);
+  const { w, h } = useBoxSizeLayoutPageCategoryNexzellMain(boxRef);
+
+  const projection = useMemo(() => {
+    if (!w || !h) return null;
+    const k = w / (2 * Math.PI);
+    return geoEquirectangular()
+      .scale(k)
+      .translate([w / 2, h / 2 + k * ((MAP_CENTER_LAT * Math.PI) / 180)]);
+  }, [w, h]);
+
+  const points = useMemo(() => {
+    if (!projection) return [];
+    return pins.map((p) => {
+      const [x, y] = projection([p.lon, p.lat]);
+      return { ...p, x, y };
+    });
+  }, [projection, pins]);
+
+  useEffect(() => {
+    if (!projection) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+
+    // 1) rasterize land into an offscreen mask
+    const off = document.createElement("canvas");
+    off.width = w;
+    off.height = h;
+    const octx = off.getContext("2d", { willReadFrequently: true });
+    octx.fillStyle = "#000";
+    octx.beginPath();
+    geoPath(projection, octx)(landGeoLayoutPageCategoryNexzellMain);
+    octx.fill();
+    const mask = octx.getImageData(0, 0, w, h).data;
+
+    // 2) draw one dot per grid cell that sits on land
+    const color =
+      getComputedStyle(canvas).getPropertyValue("--nexzell-primary").trim() || "#00e5a0";
+    ctx.fillStyle = color;
+
+    for (let y = MAP_STEP / 2; y < h; y += MAP_STEP) {
+      for (let x = MAP_STEP / 2; x < w; x += MAP_STEP) {
+        const a = mask[((y | 0) * w + (x | 0)) * 4 + 3];
+        if (a < 100) continue;
+
+        // dots near a pin glow brighter
+        let boost = 0;
+        for (const p of points) {
+          const d = Math.hypot(x - p.x, y - (p.y - 10));
+          boost = Math.max(boost, 1 - d / 70);
+        }
+        boost = Math.max(0, boost);
+
+        ctx.globalAlpha = 0.28 + 0.62 * boost;
+        ctx.beginPath();
+        ctx.arc(x, y, 1 + 0.55 * boost, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }, [projection, points, w, h]);
+
+  return (
+    <div ref={boxRef} className="mapBoxLayoutPageCategoryNexzellMain" role="img" aria-label="World map of selling regions">
+      <canvas ref={canvasRef} className="mapCanvasLayoutPageCategoryNexzellMain" aria-hidden="true" />
+      {points.map((p, i) => (
+        <span
+          key={p.name}
+          className="mapPinLayoutPageCategoryNexzellMain"
+          style={{
+            left: p.x,
+            top: p.y,
+            animationDelay: `${0.2 + i * 0.18}s`,
+            "--pin-delay": `${i * 0.45}s`,
+          }}
+        >
+          <span className="mapRingLayoutPageCategoryNexzellMain" />
+          <span className="mapGroundLayoutPageCategoryNexzellMain" />
+          <svg className="mapPinIconLayoutPageCategoryNexzellMain" viewBox="0 0 24 30" aria-hidden="true">
+            <path
+              d="M12 29.5C12 29.5 2 19 2 12a10 10 0 0 1 20 0c0 7-10 17.5-10 17.5Z"
+              fill="currentColor"
+            />
+            <circle cx="12" cy="12" r="4.2" style={{ fill: "var(--nexzell-text-white)" }} />
+          </svg>
+          <span
+            className={`mapLabelLayoutPageCategoryNexzellMain ${
+              p.x > w * 0.66 ? "mapLabelLeftLayoutPageCategoryNexzellMain" : ""
+            }`}
+          >
+            {p.name}
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/* ---------- CHART (smooth area curve + dots) ---------- */
+const CHART_PAD = { l: 14, r: 14, t: 44, b: 24 };
+
+function monotonePathLayoutPageCategoryNexzellMain(pts) {
+  const n = pts.length;
+  if (n < 2) return "";
+  const dx = [], s = [], m = [];
+  for (let i = 0; i < n - 1; i++) {
+    dx[i] = pts[i + 1].x - pts[i].x;
+    s[i] = (pts[i + 1].y - pts[i].y) / dx[i];
+  }
+  m[0] = s[0];
+  m[n - 1] = s[n - 2];
+  for (let i = 1; i < n - 1; i++) {
+    m[i] = s[i - 1] * s[i] <= 0 ? 0 : (s[i - 1] + s[i]) / 2;
+  }
+  for (let i = 0; i < n - 1; i++) {
+    if (s[i] === 0) {
+      m[i] = 0;
+      m[i + 1] = 0;
+    } else {
+      const a = m[i] / s[i];
+      const b = m[i + 1] / s[i];
+      const hh = a * a + b * b;
+      if (hh > 9) {
+        const t = 3 / Math.sqrt(hh);
+        m[i] = t * a * s[i];
+        m[i + 1] = t * b * s[i];
+      }
+    }
+  }
+  let d = `M${pts[0].x},${pts[0].y}`;
+  for (let i = 0; i < n - 1; i++) {
+    const c1x = pts[i].x + dx[i] / 3;
+    const c1y = pts[i].y + (m[i] * dx[i]) / 3;
+    const c2x = pts[i + 1].x - dx[i] / 3;
+    const c2y = pts[i + 1].y - (m[i + 1] * dx[i]) / 3;
+    d += ` C${c1x},${c1y} ${c2x},${c2y} ${pts[i + 1].x},${pts[i + 1].y}`;
+  }
+  return d;
+}
+
+function ChartMediaLayoutPageCategoryNexzellMain({ chart }) {
+  const boxRef = useRef(null);
+  const { w, h } = useBoxSizeLayoutPageCategoryNexzellMain(boxRef);
+  const uid = useId().replace(/:/g, "");
+  const [hover, setHover] = useState(null);
+
+  const geo = useMemo(() => {
+    if (!w || !h || !chart || !chart.values || chart.values.length < 2) return null;
+    const { values } = chart;
+    const n = values.length;
+    const lo = Math.min(...values);
+    const hi = Math.max(...values);
+    const span = hi - lo || 1;
+    const yMin = lo - span * 0.3;
+    const yMax = hi + span * 0.1;
+    const innerW = w - CHART_PAD.l - CHART_PAD.r;
+    const innerH = h - CHART_PAD.t - CHART_PAD.b;
+    const step = innerW / (n - 1);
+    const baseY = h - CHART_PAD.b;
+    const pts = values.map((v, i) => ({
+      x: CHART_PAD.l + i * step,
+      y: CHART_PAD.t + (1 - (v - yMin) / (yMax - yMin)) * innerH,
+    }));
+    const line = monotonePathLayoutPageCategoryNexzellMain(pts);
+    const area = `${line} L${pts[n - 1].x},${baseY} L${pts[0].x},${baseY} Z`;
+    const grid = [0, 1 / 3, 2 / 3, 1].map((f) => CHART_PAD.t + innerH * f);
+    return { n, pts, line, area, baseY, step, grid };
+  }, [w, h, chart]);
+
+  const handleMove = (e) => {
+    if (!geo) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    const i = Math.round((e.clientX - r.left - CHART_PAD.l) / geo.step);
+    setHover(Math.max(0, Math.min(geo.n - 1, i)));
+  };
+
+  let head = null;
+  if (geo) {
+    const { values, labels = [], prefix = "", suffix = "", title = "" } = chart;
+    const active = hover ?? geo.n - 1;
+    const prev = values[geo.n - 2];
+    const pct = prev ? Math.round(((values[geo.n - 1] - prev) / prev) * 100) : 0;
+    head = (
+      <>
+        <div className="chartHeadLayoutPageCategoryNexzellMain">
+          <span className="chartHeadLabelLayoutPageCategoryNexzellMain">
+            {title}
+            {labels[active] ? ` · ${labels[active]}` : ""}
+          </span>
+          <strong className="chartHeadValueLayoutPageCategoryNexzellMain">
+            {prefix}
+            {values[active]}
+            {suffix}
+          </strong>
+        </div>
+        <span className="chartTrendLayoutPageCategoryNexzellMain">
+          {pct >= 0 ? "▲" : "▼"} {Math.abs(pct)}%
+        </span>
+      </>
+    );
+  }
+
+  return (
+    <div
+      ref={boxRef}
+      className="chartBoxLayoutPageCategoryNexzellMain"
+      onPointerMove={handleMove}
+      onPointerDown={handleMove}
+      onPointerLeave={() => setHover(null)}
+    >
+      {geo && (
+        <>
+          {head}
+          <svg className="chartSvgLayoutPageCategoryNexzellMain" viewBox={`0 0 ${w} ${h}`} aria-hidden="true">
+            <defs>
+              <linearGradient id={`lineGrad${uid}`} x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" style={{ stopColor: "var(--lp-grad-start)" }} />
+                <stop offset="100%" style={{ stopColor: "var(--lp-grad-end)" }} />
+              </linearGradient>
+              <linearGradient id={`areaGrad${uid}`} x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" style={{ stopColor: "var(--lp-primary)", stopOpacity: 0.4 }} />
+                <stop offset="100%" style={{ stopColor: "var(--lp-primary)", stopOpacity: 0 }} />
+              </linearGradient>
+            </defs>
+
+            {geo.grid.map((y, i) => (
+              <line key={i} x1={CHART_PAD.l} x2={w - CHART_PAD.r} y1={y} y2={y} className="chartGridLayoutPageCategoryNexzellMain" />
+            ))}
+
+            <motion.path
+              d={geo.area}
+              style={{ fill: `url(#areaGrad${uid})` }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+            />
+
+            <motion.path
+              d={geo.line}
+              className="chartLineLayoutPageCategoryNexzellMain"
+              style={{ stroke: `url(#lineGrad${uid})` }}
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.6, ease: EASE }}
+            />
+
+            {hover !== null && (
+              <line
+                x1={geo.pts[hover].x}
+                x2={geo.pts[hover].x}
+                y1={CHART_PAD.t - 8}
+                y2={geo.baseY}
+                className="chartGuideLayoutPageCategoryNexzellMain"
+              />
+            )}
+
+            {geo.pts.map((p, i) => {
+              const isLast = i === geo.n - 1;
+              return (
+                <motion.g
+                  key={i}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + (i / (geo.n - 1)) * 1.3, type: "spring", stiffness: 260, damping: 16 }}
+                  style={{ transformBox: "fill-box", transformOrigin: "center" }}
+                >
+                  <circle
+                    cx={p.x}
+                    cy={p.y}
+                    r={4}
+                    className={`chartDotLayoutPageCategoryNexzellMain ${
+                      isLast ? "chartDotLastLayoutPageCategoryNexzellMain" : ""
+                    } ${hover === i ? "chartDotActiveLayoutPageCategoryNexzellMain" : ""}`}
+                  />
+                </motion.g>
+              );
+            })}
+
+            <circle
+              cx={geo.pts[geo.n - 1].x}
+              cy={geo.pts[geo.n - 1].y}
+              r={4}
+              className="chartPulseLayoutPageCategoryNexzellMain"
+            />
+
+            {(chart.labels || []).map((label, i) => (
+              <text
+                key={i}
+                x={geo.pts[i].x}
+                y={h - 8}
+                textAnchor="middle"
+                className="chartAxisTextLayoutPageCategoryNexzellMain"
+              >
+                {label}
+              </text>
+            ))}
+          </svg>
+        </>
+      )}
+    </div>
+  );
+}
 
 function FeatureMediaLayoutPageCategoryNexzellMain({ card }) {
   if (card.type === "map") {
-    return (
-      <div className="mapBoxLayoutPageCategoryNexzellMain">
-        {mapPinsLayoutPageCategoryNexzellMain.map((pin, i) => (
-          <span key={i} className="mapPinLayoutPageCategoryNexzellMain" style={{ left: pin.left, top: pin.top, animationDelay: `${i * 0.6}s` }}>
-            <span className="mapPingLayoutPageCategoryNexzellMain" style={{ animationDelay: `${i * 0.6}s` }} />
-          </span>
-        ))}
-      </div>
-    );
+    return <MapMediaLayoutPageCategoryNexzellMain pins={card.pins} />;
   }
   if (card.type === "chart") {
-    return (
-      <div className="chartBoxLayoutPageCategoryNexzellMain">
-        {chartBarsLayoutPageCategoryNexzellMain.map((h, i) => (
-          <motion.i
-            key={i}
-            className="chartBarLayoutPageCategoryNexzellMain"
-            initial={{ scaleY: 0 }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.07, duration: 0.7, ease: EASE }}
-            style={{ height: `${h}%`, originY: 1 }}
-          />
-        ))}
-      </div>
-    );
+    return <ChartMediaLayoutPageCategoryNexzellMain chart={card.chart} />;
   }
   return (
     <div className="featMediaLayoutPageCategoryNexzellMain">

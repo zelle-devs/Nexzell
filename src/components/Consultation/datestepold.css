@@ -551,7 +551,8 @@
 }
 
 @media (max-width: 1024px) {
-  .step-container { width: 95%; }
+  .step-container { width: 95%;
+  padding: 10px; }
 
   .split-layout {
     flex-direction: column;

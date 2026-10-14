@@ -1,0 +1,275 @@
+/* ==========================================================
+   IntegrationsLinkedChannels
+   Uses only your global :root variables (--nexzell-*)
+   ========================================================== */
+
+.ilc-section {
+  position: relative;
+  width: 100%;
+  margin-top: 80px;
+  background: var(--nexzell-bg-base);
+  font-family: var(--nexzell-font-family);
+  color: var(--nexzell-text-white);
+  padding: var(--nexzell-section-gap) var(--nexzell-padding-x);
+  overflow: hidden;
+}
+
+.ilc-container {
+  width: 100%;
+  max-width: var(--nexzell-container-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Optional header (only renders if props passed) ---------- */
+.ilc-header {
+  text-align: center;
+  max-width: 640px;
+  margin-bottom: var(--nexzell-section-gap);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.ilc-section.is-visible .ilc-header {
+  opacity: 1;
+  transform: none;
+}
+.ilc-title {
+  margin: 0 0 12px;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  color: var(--nexzell-text-white);
+}
+.ilc-description {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--nexzell-text-gray-300);
+}
+
+/* ---------- Stage ---------- */
+.ilc-stage {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: var(--ilc-aspect);
+}
+
+/* ---------- Glow behind Shopify ---------- */
+.ilc-glow {
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  width: 70%;
+  aspect-ratio: 1;
+  transform: translateX(-50%) scale(0.6);
+  background: radial-gradient(
+    circle,
+    rgba(0, 230, 153, 0.18) 0%,
+    rgba(0, 179, 255, 0.07) 45%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  opacity: 0;
+  pointer-events: none;
+}
+.ilc-section.is-visible .ilc-glow {
+  animation:
+    ilc-glow-in 1.2s ease-out 0.1s forwards,
+    ilc-glow-breathe 5s ease-in-out 1.4s infinite;
+}
+
+/* ---------- Shopify bag ---------- */
+.ilc-shopify {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 33%; /* ≈115px of 350px stage */
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.ilc-shopify__inner {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-14px) scale(0.7);
+  transform-origin: 50% 100%;
+}
+.ilc-section.is-visible .ilc-shopify__inner {
+  animation:
+    ilc-bag-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0s forwards,
+    ilc-bag-float 6s ease-in-out 1.2s infinite;
+}
+.ilc-shopify .ilc-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 28px rgba(0, 230, 153, 0.16));
+}
+.ilc-shopify .ilc-fallback {
+  display: block;
+  text-align: center;
+  padding: 40px 0;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--nexzell-primary);
+}
+
+/* ---------- Connector lines ---------- */
+.ilc-lines,
+.ilc-pulses {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.ilc-lines { z-index: 1; }
+.ilc-pulses { z-index: 1; }
+
+.ilc-line {
+  fill: none;
+  stroke: var(--nexzell-border-highlight);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.ilc-section.is-visible .ilc-line {
+  animation: ilc-draw 0.85s cubic-bezier(0.65, 0, 0.35, 1) var(--ilc-delay) forwards;
+}
+
+.ilc-pulse {
+  fill: var(--nexzell-primary);
+  filter: drop-shadow(0 0 4px var(--nexzell-primary));
+}
+
+/* ---------- Channel nodes ---------- */
+.ilc-node {
+  position: absolute;
+  left: var(--ilc-x);
+  top: var(--ilc-y);
+  width: var(--ilc-size);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.ilc-node__float {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.4) translateY(12px);
+}
+.ilc-section.is-visible .ilc-node__float {
+  animation:
+    ilc-node-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--ilc-enter) forwards,
+    ilc-float var(--ilc-float-dur) ease-in-out calc(var(--ilc-enter) + 0.6s + var(--ilc-float-delay)) infinite;
+}
+
+.ilc-node__card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18%;
+  box-sizing: border-box;
+  background: var(--nexzell-bg-surface-hover);
+  border-radius: var(--nexzell-radius-md);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+  cursor: pointer;
+}
+.ilc-node__card:hover {
+  transform: translateY(-4px) scale(1.08);
+  border-color: var(--nexzell-primary);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.45),
+    0 0 0 4px rgba(0, 230, 153, 0.15),
+    0 0 24px rgba(0, 230, 153, 0.3);
+}
+
+.ilc-node__card .ilc-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+.ilc-node__card .ilc-fallback {
+  font-size: var(--font-size-xs);
+  font-weight: var(--fw-semibold);
+  color: #0E1218;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes ilc-bag-in {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes ilc-bag-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1); }
+}
+@keyframes ilc-glow-in {
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+@keyframes ilc-glow-breathe {
+  0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.6; transform: translateX(-50%) scale(1.08); }
+}
+@keyframes ilc-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ilc-node-in {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes ilc-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .ilc-section {
+    padding: var(--nexzell-section-gap) 1rem;
+  }
+  .ilc-title {
+    font-size: var(--font-size-4xl);
+  }
+  .ilc-description {
+    font-size: var(--font-size-base);
+  }
+  .ilc-stage {
+    width: min(100%, 360px);
+  }
+  .ilc-node__card {
+    border-radius: var(--nexzell-radius-sm);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ilc-header,
+  .ilc-glow,
+  .ilc-shopify__inner,
+  .ilc-node__float {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .ilc-glow { transform: translateX(-50%) !important; }
+  .ilc-line {
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+  }
+}

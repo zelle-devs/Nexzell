@@ -12,42 +12,42 @@ const industryData = [
     id: 1,
     title: "Furniture & Home",
     subtitle: "Furniture, decor & essentials",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format&fit=crop",
+    image: "/CategoryImages/NexzellFurnitureHome/FurnitureBusinessNeeds1.png",
     link: "/categories/furniture-home"
   },
   {
     id: 2,
     title: "Fashion & Apparel",
     subtitle: "Apparel, shoes & accessories",
-    image: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=2070&auto=format&fit=crop",
+    image: "/CategoryImages/NexzellFashionAndAppearal/FAACommerceToolBacground.png",
     link: "/categories/fashion-apparel"
   },
   {
     id: 3,
     title: "Electronics & Gadgets",
     subtitle: "Phones, gadgets & more",
-    image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=2070&auto=format&fit=crop",
+    image: "/CategoryImages/NexzellElectronicsAndGadgets/ElectroincsNeeds3.jpg",
     link: "/categories/electronics-gadgets"
   },
   {
     id: 4,
     title: "Beauty & Personal Care",
     subtitle: "Skincare, makeup & more",
-    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1974&auto=format&fit=crop",
+    image: "/CategoryImages/NexzellBeauty/NexzellBeautyGrowthPartner.png",
     link: "/categories/beauty-personal-care"
   },
   {
     id: 5,
     title: "Sports & Outdoors",
     subtitle: "Gear up for performance",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop",
+    image: "/CategoryImages/NexzellSportsAndFintess/EveryThingNeedSportFintess1.jpg",
     link: "/categories/sports-outdoors"
   },
   {
     id: 6,
     title: "Toys & Kids",
     subtitle: "Fun for every age",
-    image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=2070&auto=format&fit=crop",
+    image: "/CategoryImages/ToysAndKidsNexzellCategory/ToysAndKidsNexzellCommerceTools.png",
     link: "/categories/toys-kids"
   }
 ];
