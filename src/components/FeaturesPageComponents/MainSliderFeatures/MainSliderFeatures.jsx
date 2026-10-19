@@ -65,9 +65,9 @@ function MainSliderFeatures() {
            <a href="/consultation"> <button className="btnPrimaryMainSliderFeatures">
              Book a Freee Demo <ArrowRight size={18} className="btnIconMainSliderFeatures" />
             </button></a>
-            <button className="btnSecondaryMainSliderFeatures">
+            {/* <button className="btnSecondaryMainSliderFeatures">
               Explore All Features
-            </button>
+            </button> */}
           </div>
 
           {/* <div className="statsListMainSliderFeatures animDelay5">

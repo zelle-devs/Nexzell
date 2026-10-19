@@ -55,9 +55,9 @@ function EcommerceDataBetterDecision() {
             ))}
           </ul> */}
 
-          <button className="btnPrimaryEcommerceDataBetterDecision animDelay6EcommerceDataBetterDecision">
+          {/* <button className="btnPrimaryEcommerceDataBetterDecision animDelay6EcommerceDataBetterDecision">
             Explore Product Management <ArrowRight size={18} className="btnIconEcommerceDataBetterDecision" />
-          </button>
+          </button> */}
         </div>
 
       </div>

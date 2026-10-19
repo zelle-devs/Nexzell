@@ -88,9 +88,11 @@ export default function FAQForGrowingBrands() {
                 <p className="glassCardDesc">
                   Talk to our team and get personalized guidance for your startup idea.
                 </p>
+                <a href="/contact-us">
                 <button className="glassCardBtn">
                   Contact Us <ArrowRight size={16} />
                 </button>
+                </a>
               </motion.div>
             </div>
           </motion.div>

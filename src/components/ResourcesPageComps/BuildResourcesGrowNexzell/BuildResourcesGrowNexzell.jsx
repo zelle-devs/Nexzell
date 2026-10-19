@@ -19,8 +19,8 @@ function BuildResourcesGrowNexzell() {
                     </div>
 
                     <div className="rightTextColBuildResourcesGrowNexzell">
-                        <div className="badgeMainSliderResources animDelay1" style={{width:'fit-content'}}>
-                            <span className="badgeDotMainSliderResources"></span>
+                        <div className="badgeEverythingBusinessStarter animDelay1" style={{width:'fit-content'}}>
+                            <span className="badgeDotEverythingBusinessStarter"></span>
                             RESOURCES FOR A SMARTER TOMORROW
                         </div>
 

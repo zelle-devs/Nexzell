@@ -37,9 +37,9 @@ function MainSliderIntegrations() {
             </button>
            </Link>
            
-            <button className="btnSecondaryMainSliderIntegrations">
+            {/* <button className="btnSecondaryMainSliderIntegrations">
               <PlayCircle size={20} className="playIconMainSliderIntegrations" /> Watch Video
-            </button>
+            </button> */}
           </div>
 
           {/* Features List */}

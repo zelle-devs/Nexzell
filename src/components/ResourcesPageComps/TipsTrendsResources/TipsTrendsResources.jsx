@@ -6,35 +6,39 @@ function TipsTrendsResources() {
   const blogPosts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
-      category: "Development",
-      title: "10 Essential Web Development Trends for 2025",
-      date: "Sep 25, 2025",
-      readTime: "5 min read"
-    },
-   {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
       category: "Business",
-      title: "How to Build a Scalable Ecommerce Business",
-      date: "Sep 22, 2025",
-      readTime: "6 min read"
+      title: "How to Build a Scalable E-commerce Website in 2025",
+      date: "Apr 28, 2025",
+      readTime: "8 min read",
+      link: "/blogs/how-to-build-a-scalable-ecommerce-website-in-2025"
+    },
+    {
+      id: 2,
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop",
+      category: "Technology",
+      title: "The Rise of AI Chatbots: Transforming Customer Support",
+      date: "Apr 25, 2025",
+      readTime: "9 min read",
+      link: "/blogs/the-rise-of-ai-chatbots-transforming-customer-support"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop",
-      category: "Digital Marketing",
-      title: "Proven SEO Strategies to Boost Your Traffic",
-      date: "Sep 18, 2025",
-      readTime: "4 min read"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+      category: "Marketing",
+      title: "SEO Trends to Watch in 2025",
+      date: "Apr 22, 2025",
+      readTime: "7 min read",
+      link: "/blogs/seo-trends-to-watch-in-2025"
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop",
-      category: "Technology",
-      title: "The Future of AI in Ecommerce",
-      date: "Sep 14, 2025",
-      readTime: "5 min read"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
+      category: "Development",
+      title: "Full-Stack Development Roadmap for 2025",
+      date: "Apr 18, 2025",
+      readTime: "10 min read",
+      link: "/blogs/full-stack-development-roadmap-for-2025"
     }
   ];
 
@@ -85,7 +89,9 @@ function TipsTrendsResources() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <ArrowRight size={16} className="cardActionIconTipsTrendsResources" />
+                  <a href={post.link} style={{ display: 'flex', alignItems: 'center', color: 'inherit' }}>
+                    <ArrowRight size={16} className="cardActionIconTipsTrendsResources" />
+                  </a>
                 </div>
               </div>
             </div>

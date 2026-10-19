@@ -48,9 +48,9 @@ function CreateStorefrontConverts() {
             ))}
           </ul>
 
-          <button className="btnPrimaryCreateStorefrontConverts animDelay6CreateStorefrontConverts">
+          {/* <button className="btnPrimaryCreateStorefrontConverts animDelay6CreateStorefrontConverts">
             Explore Storefront Features <ArrowRight size={18} className="btnIconCreateStorefrontConverts" />
-          </button>
+          </button> */}
         </div>
 
         {/* Right Content (Background Image Placeholder) */}

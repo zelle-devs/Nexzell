@@ -77,9 +77,9 @@ function ExploreResourceCategory() {
                 <h3 className="cardTitleExploreResourceCategory">{category.title}</h3>
                 <p className="cardDescExploreResourceCategory">{category.desc}</p>
 
-                <button className="cardBtnExploreResourceCategory">
+                {/* <button className="cardBtnExploreResourceCategory">
                     View Resources <ArrowRight size={14} className="btnArrowExploreResourceCategory" />
-                </button>
+                </button> */}
             </div>
 
             <div className="cardBottomExploreResourceCategory">

@@ -62,9 +62,11 @@ function MainSliderSolutions() {
           </p>
 
           <div className="btnGroupMainSliderSolutions animDelay4">
+            <a href="/consultation">
             <button className="btnPrimaryMainSliderSolutions">
-              Find Your Solution <ArrowRight size={18} className="btnIconMainSliderSolutions" />
+              Book a Free Demo  <ArrowRight size={18} className="btnIconMainSliderSolutions" />
             </button>
+            </a>
           </div>
 
           {/* <div className="statsListMainSliderSolutions animDelay5">

@@ -6,13 +6,13 @@ import './GlobalForEnterpriseBrandsMarque.css'; // Suffix-consistent style link
 // Public/assets path list for logo 1 to logo 9
 const logosList = [
   "/logo1.png",
-  "/logo2.png",
-  "/logo3.png",
-  "/logo4.png",
-  "/logo5.png",
+  // "/logo2.png",
+  // "/logo3.png",
+  // "/logo4.png",
+  // "/logo5.png",
   "/logo6.png",
-  "/logo7.png",
-  "/logo8.png",
+  // "/logo7.png",
+  // "/logo8.png",
   "/logo9.png"
 ];
 

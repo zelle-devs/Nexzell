@@ -14,7 +14,7 @@ function BuildWithoutLimitsHome() {
           </h2>
           <p className="descriptionBuildWithoutLimitsHome">
             Join thousands of businesses growing with Nexzell.<br />
-            Book a free demo and see how it can work for you.
+            Book a Free Demo and see how it can work for you.
           </p>
           <div className="btnGroupBuildWithoutLimitsHome">
             <Link href='/consultation'>

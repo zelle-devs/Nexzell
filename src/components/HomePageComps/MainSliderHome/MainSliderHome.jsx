@@ -37,9 +37,9 @@ function MainSliderHome() {
             </button>
            </Link>
            
-            <button className="btnSecondaryMainSliderHome">
+            {/* <button className="btnSecondaryMainSliderHome">
               <PlayCircle size={20} className="playIconMainSliderHome" /> Watch Video
-            </button>
+            </button> */}
           </div>
 
           {/* Features List */}

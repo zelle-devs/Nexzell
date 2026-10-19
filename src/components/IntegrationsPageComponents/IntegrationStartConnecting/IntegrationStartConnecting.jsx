@@ -26,10 +26,12 @@ function IntegrationStartConnecting() {
               Book a Free Demo <ArrowRight size={18} className="btnIconIntegrationStartConnecting" />
             </button>
             </Link>
-            
+            <a href="/contact-us">
             <button className="btnSecondaryIntegrationStartConnecting">
               Contact Us
+              
             </button>
+            </a>
           </div>
         </div>
 

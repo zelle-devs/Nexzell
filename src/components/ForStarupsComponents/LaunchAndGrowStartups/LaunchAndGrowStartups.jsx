@@ -117,14 +117,15 @@ function LaunchAndGrowStartups() {
             we provide complete technology solutions tailored 
             for startups.
           </p>
-          
+          <a href="/contact">
           <motion.button 
             className="btnPrimaryLaunchAndGrowStartups"
             whileHover={{ scale: 1.02, translateY: -2 }}
             whileTap={{ scale: 0.98 }}
           >
-            Explore Our Services <ArrowRight size={18} className="btnArrowLaunchAndGrowStartups" />
+            Grow With This <ArrowRight size={18} className="btnArrowLaunchAndGrowStartups" />
           </motion.button>
+          </a>
         </motion.div>
 
         {/* Right Content (Grid) */}

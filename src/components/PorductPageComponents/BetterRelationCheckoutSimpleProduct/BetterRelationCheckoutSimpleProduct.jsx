@@ -126,9 +126,11 @@ function BetterRelationCheckoutSimpleProduct() {
                                     </div>
 
                                 </div>
+                                <a href="/integrations">
                                 <button className="btnPrimaryBetterRelationCheckoutSimpleProduct">
                                     Explore Payment Integrations <ArrowRight size={16} className="btnIconBetterRelationCheckoutSimpleProduct" />
                                 </button>
+                                </a>
                             </div>
 
 

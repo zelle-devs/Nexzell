@@ -37,10 +37,12 @@ function PeoplesBelieveTomorrow() {
             thinkers and doers who are passionate about 
             commerce and the businesses behind it.
           </p>
-
+          <a href="/contact">
           <button className="btnPrimaryPeoplesBelieveTomorrow">
             Join Our Team <ArrowRight size={18} className="btnIconPeoplesBelieveTomorrow" />
           </button>
+          </a>
+          
         </div>
 
        

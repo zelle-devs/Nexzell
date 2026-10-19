@@ -26,10 +26,11 @@ function CaseStudyOwnSuccessStory() {
               Book a Free Demo <ArrowRight size={18} className="btnIconCaseStudyOwnSuccessStory" />
             </button>
             </Link>
-            
+             <a href="/contact-us">
             <button className="btnSecondaryCaseStudyOwnSuccessStory">
               Contact Us
             </button>
+            </a>
           </div>
         </div>
 

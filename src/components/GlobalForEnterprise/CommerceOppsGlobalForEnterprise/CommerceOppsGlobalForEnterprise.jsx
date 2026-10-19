@@ -166,9 +166,9 @@ export default function CommerceOppsGlobalForEnterprise() {
               ))}
             </motion.ul>
 
-            <motion.button variants={itemFadeUp} className="ctaButtonCommerceOppsGlobalForEnterprise">
+            {/* <motion.button variants={itemFadeUp} className="ctaButtonCommerceOppsGlobalForEnterprise">
               Explore Growth Features <ArrowRight size={18} />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
 

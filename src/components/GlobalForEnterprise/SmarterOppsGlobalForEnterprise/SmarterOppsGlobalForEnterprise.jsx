@@ -166,9 +166,9 @@ export default function SmarterOppsGlobalForEnterprise() {
               ))}
             </motion.ul>
 
-            <motion.button variants={itemFadeUp} className="ctaButtonSmarterOppsGlobalForEnterprise">
+            {/* <motion.button variants={itemFadeUp} className="ctaButtonSmarterOppsGlobalForEnterprise">
               Explore Growth Features <ArrowRight size={18} />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
 

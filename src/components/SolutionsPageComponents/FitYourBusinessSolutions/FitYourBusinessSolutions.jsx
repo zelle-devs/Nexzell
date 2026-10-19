@@ -104,9 +104,9 @@ function FitYourBusinessSolutions() {
         <div className="imageWrapperFitYourBusinessSolutions">
           <img src={card.img} alt={card.title} className="cardImageFitYourBusinessSolutions" />
           <div className="imageOverlayFitYourBusinessSolutions"></div>
-          <button className="cardBtnFitYourBusinessSolutions">
+          {/* <button className="cardBtnFitYourBusinessSolutions">
             Learn More <ArrowRight size={16} className="btnIconFitYourBusinessSolutions" />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

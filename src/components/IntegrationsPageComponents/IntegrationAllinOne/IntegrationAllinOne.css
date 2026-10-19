@@ -1,105 +1,201 @@
+/* =========================================================
+   IntegrationAllinOne
+   Uses global :root variables (with safe fallbacks)
+========================================================= */
+
 .sectionWrapperIntegrationAllinOne {
+  position: relative;
   padding: 6rem 0;
-  background-color: var(--nexzell-bg-base, #06080C);
+  background-color: var(--nexzell-bg-base, #06080c);
   width: 100%;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .containerIntegrationAllinOne {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  max-width: var(--nexzell-container-width, 1300px);
+  max-width: var(--nexzell-container-width, 1590px);
   margin: 0 auto;
   padding: 0 var(--nexzell-padding-x, 2rem);
   display: flex;
   flex-direction: column;
 }
 
-/* --- Animations --- */
-@keyframes fadeUpAnimIntegrationAllinOne {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+/* ---------------------------------------------------------
+   Ambient background
+--------------------------------------------------------- */
+.bgGlowOneIntegrationAllinOne,
+.bgGlowTwoIntegrationAllinOne {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.animFadeUpIntegrationAllinOne {
-  animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.bgGlowOneIntegrationAllinOne {
+  top: -140px;
+  left: -120px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(circle, rgba(0, 230, 153, 0.16), transparent 70%);
+  animation: floatOneIntegrationAllinOne 14s ease-in-out infinite;
 }
 
-.animDelay1IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.1s; }
-.animDelay2IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s; }
-.animDelay3IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s; }
-.animDelay4IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s; }
-.animDelay5IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s; }
-.animDelay6IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s; }
-.animDelay7IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.7s; }
-.animDelay8IntegrationAllinOne { opacity: 0; animation: fadeUpAnimIntegrationAllinOne 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s; }
+.bgGlowTwoIntegrationAllinOne {
+  bottom: -160px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(0, 179, 255, 0.13), transparent 70%);
+  animation: floatTwoIntegrationAllinOne 18s ease-in-out infinite;
+}
 
-/* --- Header Section --- */
+/* .bgGridIntegrationAllinOne {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 100%);
+} */
+
+@keyframes floatOneIntegrationAllinOne {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(60px, 40px); }
+}
+
+@keyframes floatTwoIntegrationAllinOne {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-60px, -40px); }
+}
+
+/* ---------------------------------------------------------
+   Entrance sequence (runs once when section is in view)
+--------------------------------------------------------- */
+.revealIntegrationAllinOne {
+  opacity: 0;
+  transform: translateY(32px);
+  filter: blur(6px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color var(--transition-base, 0.3s ease-in-out),
+    background-color var(--transition-base, 0.3s ease-in-out),
+    box-shadow var(--transition-base, 0.3s ease-in-out);
+  transition-delay: calc(var(--i, 0) * 0.09s), calc(var(--i, 0) * 0.09s), calc(var(--i, 0) * 0.09s), 0s, 0s, 0s;
+}
+
+.isVisibleIntegrationAllinOne .revealIntegrationAllinOne {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* After the entrance finishes, drop stagger delays so hover is instant */
+.isSettledIntegrationAllinOne .revealIntegrationAllinOne {
+  transition-delay: 0s;
+}
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
 .headerRowIntegrationAllinOne {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 0rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
 .headerLeftIntegrationAllinOne {
-  flex: 0 0 50%;
+  flex: 0 1 55%;
 }
 
 .headerRightIntegrationAllinOne {
-  flex: 1;
-  padding-top: 2.5rem;
+  flex: 0 1 38%;
+  padding-bottom: 0.4rem;
 }
 
 .badgeIntegrationAllinOne {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
-  background-color: rgba(0, 230, 153, 0.05);
+  gap: 0.55rem;
+  padding: 0.4rem 0.95rem;
+  background-color: rgba(0, 230, 153, 0.06);
   border: 1px solid rgba(0, 230, 153, 0.3);
   border-radius: var(--nexzell-radius-pill, 9999px);
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--nexzell-primary, #00E699);
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 0.72rem;
+  font-weight: var(--fw-semibold, 600);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--nexzell-primary, #00e699);
   margin-bottom: 1.5rem;
 }
 
 .badgeDotIntegrationAllinOne {
+  position: relative;
   width: 6px;
   height: 6px;
-  background-color: var(--nexzell-primary, #00E699);
+  background-color: var(--nexzell-primary, #00e699);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--nexzell-primary, #00E699);
+  box-shadow: 0 0 8px var(--nexzell-primary, #00e699);
+}
+
+.badgeDotIntegrationAllinOne::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--nexzell-primary, #00e699);
+  animation: pulseIntegrationAllinOne 2s ease-out infinite;
+}
+
+@keyframes pulseIntegrationAllinOne {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
 }
 
 .headingIntegrationAllinOne {
-  font-family: var(--font-montserrat, sans-serif);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 700;
-  color: var(--nexzell-text-white, #FFFFFF);
-  line-height: 1.2;
+  font-family: var(--font-montserrat, var(--nexzell-font-family, sans-serif));
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: var(--fw-bold, 700);
+  color: var(--nexzell-text-white, #fff);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   margin: 0;
-  letter-spacing: -0.01em;
 }
 
 .textHighlightIntegrationAllinOne {
-  color: var(--nexzell-primary, #00E699);
+ 
+  color: var(--nexzell-primary);
+  animation: shimmerIntegrationAllinOne 6s linear infinite;
+}
+
+@keyframes shimmerIntegrationAllinOne {
+  to { background-position: 200% center; }
 }
 
 .descriptionIntegrationAllinOne {
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 0.95rem;
-  color: var(--nexzell-text-gray-300, #94A3B8);
-  line-height: 1.6;
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 0.98rem;
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  line-height: 1.7;
   margin: 0;
-  max-width: 550px;
+  max-width: 520px;
 }
 
-/* --- Grid & Cards --- */
+/* ---------------------------------------------------------
+   Grid
+--------------------------------------------------------- */
 .gridIntegrationAllinOne {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -107,402 +203,504 @@
   width: 100%;
 }
 
+/* ---------------------------------------------------------
+   Card
+--------------------------------------------------------- */
 .cardIntegrationAllinOne {
-  background-color: rgba(14, 18, 24, 0.4);
-  border: 1px solid var(--nexzell-border-subtle, #1E293B);
-  border-radius: var(--nexzell-radius-md, 12px);
-  padding: 2rem 1.5rem;
+  --accent: var(--nexzell-primary, #00e699);
+  --mx: 50%;
+  --my: 0%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  padding: 1.75rem 1.5rem 1.6rem;
+  background-color: var(--nexzell-bg-panel, rgba(14, 18, 24, 0.6));
+  border: 1px solid var(--nexzell-border-subtle, #1e293b);
+  border-radius: var(--nexzell-radius-md, 12px);
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 
-.cardIntegrationAllinOne:hover {
-  transform: translateY(-5px);
-  border-color: var(--nexzell-border-highlight, #334155);
-  background-color: rgba(14, 18, 24, 0.7);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+/* hover state only after entrance is complete (needs .isVisible) */
+.isVisibleIntegrationAllinOne .cardIntegrationAllinOne:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--nexzell-border-subtle, #1e293b));
+  background-color: var(--nexzell-bg-surface, #0e1218);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);
+  transition-delay: 0s;
 }
 
+/* Cursor-following spotlight */
+.cardSpotlightIntegrationAllinOne {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    260px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--accent) 18%, transparent),
+    transparent 70%
+  );
+}
+
+.cardIntegrationAllinOne:hover .cardSpotlightIntegrationAllinOne {
+  opacity: 1;
+}
+
+/* Accent line that draws across the top */
+.cardTopLineIntegrationAllinOne {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cardIntegrationAllinOne:hover .cardTopLineIntegrationAllinOne {
+  transform: scaleX(1);
+}
+
+.cardHeadIntegrationAllinOne {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+/* Icon tile */
 .cardIconBoxIntegrationAllinOne {
-  margin-bottom: 1.25rem;
+  position: relative;
+  width: 56px;
+  height: 56px;
 }
 
-/* Icon Colors */
-.googleColorIntegrationAllinOne { color: #4285F4; }
-.metaColorIntegrationAllinOne { color: #1877F2; }
-.whatsappColorIntegrationAllinOne { color: #25D366; }
-.botColorIntegrationAllinOne { color: var(--nexzell-text-white, #FFFFFF); }
-.seoColorIntegrationAllinOne { color: var(--nexzell-primary, #00E699); }
+.cardIconInnerIntegrationAllinOne {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, var(--nexzell-bg-surface, #0e1218));
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 14px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
 
+.cardIconRingIntegrationAllinOne {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cardIntegrationAllinOne:hover .cardIconInnerIntegrationAllinOne {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.cardIntegrationAllinOne:hover .cardIconRingIntegrationAllinOne {
+  animation: ringIntegrationAllinOne 1.4s ease-out infinite;
+}
+
+@keyframes ringIntegrationAllinOne {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.cardTagIntegrationAllinOne {
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: var(--font-size-xs, 11px);
+  font-weight: var(--fw-medium, 500);
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--nexzell-border-subtle, #1e293b);
+  border-radius: var(--nexzell-radius-pill, 9999px);
+  background: rgba(255, 255, 255, 0.02);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.cardIntegrationAllinOne:hover .cardTagIntegrationAllinOne {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Text */
 .cardTitleIntegrationAllinOne {
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--nexzell-text-white, #FFFFFF);
-  margin: 0 0 0.75rem 0;
+  position: relative;
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 1.15rem;
+  font-weight: var(--fw-semibold, 600);
+  color: var(--nexzell-text-white, #fff);
+  margin: 0 0 0.7rem 0;
 }
 
 .cardDescIntegrationAllinOne {
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 0.8rem;
-  color: var(--nexzell-text-gray-400, #94A3B8);
-  line-height: 1.5;
-  margin: 0 0 1.5rem 0;
+  position: relative;
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 0.85rem;
+  color: var(--nexzell-text-gray-300, #94a3b8);
+  line-height: 1.6;
+  margin: 0 0 1.4rem 0;
   flex-grow: 1;
 }
 
+/* Feature list */
 .featureListIntegrationAllinOne {
+  position: relative;
   list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
+  padding: 1.2rem 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.7rem;
+  border-top: 1px solid var(--nexzell-border-subtle, #1e293b);
 }
 
 .featureItemIntegrationAllinOne {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--fi, 0) * 0.05s);
+}
+
+.cardIntegrationAllinOne:hover .featureItemIntegrationAllinOne {
+  transform: translateX(4px);
 }
 
 .checkIconIntegrationAllinOne {
   flex-shrink: 0;
+  margin-top: 2px;
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(0, 230, 153, 0.2);
-  margin-top: 2px;
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: calc(0.9s + var(--i, 0) * 0.09s + var(--fi, 0) * 0.12s);
+}
+
+/* checks pop in after their card has appeared */
+.isVisibleIntegrationAllinOne .checkIconIntegrationAllinOne {
+  transform: scale(1);
+}
+
+.featureItemIntegrationAllinOne .checkIconIntegrationAllinOne {
+  transition-delay: calc(0.5s + var(--i, 0) * 0.09s + var(--fi, 0) * 0.12s);
 }
 
 .featureTextIntegrationAllinOne {
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 0.8rem;
-  color: var(--nexzell-text-gray-300, #94A3B8);
-  line-height: 1.4;
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 0.82rem;
+  color: var(--nexzell-text-gray-100, #e2e8f0);
+  line-height: 1.45;
 }
 
-.learnMoreLinkIntegrationAllinOne {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: var(--font-poppins, sans-serif);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--nexzell-primary, #00E699);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: auto;
+/* ---------------------------------------------------------
+   8th slot: CTA card
+--------------------------------------------------------- */
+.ctaCardIntegrationAllinOne {
+  justify-content: center;
+  align-items: flex-start;
+  background:
+    linear-gradient(160deg, rgba(0, 230, 153, 0.09), rgba(0, 179, 255, 0.04) 60%, transparent),
+    var(--nexzell-bg-panel, rgba(14, 18, 24, 0.6));
+  border-style: dashed;
+  border-color: rgba(0, 230, 153, 0.3);
 }
 
-.learnMoreIconIntegrationAllinOne {
-  transition: transform 0.3s ease;
+.ctaCardIntegrationAllinOne .cardDescIntegrationAllinOne {
+  flex-grow: 0;
 }
 
-.learnMoreLinkIntegrationAllinOne:hover {
-  color: var(--nexzell-primary-hover, #00C782);
-}
-
-.learnMoreLinkIntegrationAllinOne:hover .learnMoreIconIntegrationAllinOne {
-  transform: translateX(4px);
-}
-
-/* --- 8th Custom Slot --- */
-.customSlotIntegrationAllinOne {
+.ctaIconIntegrationAllinOne {
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 1rem;
-}
-
-.annotationWrapperIntegrationAllinOne {
-  position: absolute;
-  top: 10px;
-  right: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.annotationTextIntegrationAllinOne {
-  font-family: 'Caveat', 'Comic Sans MS', cursive;
-  font-size: 1.2rem;
-  color: var(--nexzell-text-gray-100, #E2E8F0);
-  transform: rotate(-10deg);
-  line-height: 1.1;
-  text-align: right;
-  margin-bottom: 5px;
-}
-
-.annotationArrowIntegrationAllinOne {
-  margin-right: -15px;
-}
-
-.glowBoxIntegrationAllinOne {
-  width: 120px;
-  height: 120px;
-  background-color: rgba(14, 18, 24, 0.8);
-  border: 1px solid rgba(0, 230, 153, 0.3);
-  border-radius: 20px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  box-shadow: 0 0 40px rgba(0, 230, 153, 0.2), inset 0 0 20px rgba(0, 230, 153, 0.1);
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.3rem;
+  border-radius: 14px;
+  color: var(--nexzell-bg-base, #06080c);
+  background: linear-gradient(135deg, var(--nexzell-gradient-start, #00e699), var(--nexzell-gradient-end, #00b3ff));
+  box-shadow: 0 0 28px rgba(0, 230, 153, 0.35);
+  animation: bobIntegrationAllinOne 3.2s ease-in-out infinite;
 }
 
-.glowLetterIntegrationAllinOne {
-  font-family: var(--font-montserrat, sans-serif);
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.1);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(0, 230, 153, 0.6));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@keyframes bobIntegrationAllinOne {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(6deg); }
 }
 
-@media (max-width: 1200px) and (min-width: 1025px) {
+.ctaLinkIntegrationAllinOne {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-poppins, var(--nexzell-font-family, sans-serif));
+  font-size: 0.88rem;
+  font-weight: var(--fw-semibold, 600);
+  color: var(--nexzell-primary, #00e699);
+  text-decoration: none;
+  padding-bottom: 2px;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0% 1px no-repeat;
+  transition: background-size 0.35s ease, color 0.3s ease;
+}
 
+.ctaLinkIntegrationAllinOne:hover,
+.ctaLinkIntegrationAllinOne:focus-visible {
+  color: var(--nexzell-primary-hover, #00c782);
+  background-size: 100% 1px;
+}
+
+.ctaLinkIntegrationAllinOne:focus-visible {
+  outline: 2px solid var(--nexzell-primary, #00e699);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.ctaLinkIconIntegrationAllinOne {
+  transition: transform 0.3s ease;
+}
+
+.ctaLinkIntegrationAllinOne:hover .ctaLinkIconIntegrationAllinOne {
+  transform: translate(3px, -3px);
+}
+@media (max-width: 1200px) {
   .sectionWrapperIntegrationAllinOne {
     padding: 5rem 0;
   }
 
   .containerIntegrationAllinOne {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding: 0 1.75rem;
   }
 
   .headerRowIntegrationAllinOne {
-    gap: 0rem;
-    margin-bottom: 1.5rem;
+    gap: 2rem;
+    margin-bottom: 3.25rem;
   }
 
   .headerLeftIntegrationAllinOne {
-    flex: 0 0 48%;
+    flex-basis: 55%;
   }
 
   .headerRightIntegrationAllinOne {
-    padding-top: 2rem;
+    flex-basis: 40%;
   }
 
   .headingIntegrationAllinOne {
-    font-size: clamp(2rem, 3.2vw, 2.5rem);
+    font-size: clamp(2rem, 3.4vw, 2.75rem);
   }
 
   .descriptionIntegrationAllinOne {
-    font-size: 0.92rem;
-    max-width: 520px;
+    font-size: 0.95rem;
   }
 
   .gridIntegrationAllinOne {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
   }
 
   .cardIntegrationAllinOne {
-    padding: 1.75rem 1.35rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .ctaCardIntegrationAllinOne {
+    grid-column: span 2;
   }
 
   .cardTitleIntegrationAllinOne {
-    font-size: 1.05rem;
-  }
-
-  .cardDescIntegrationAllinOne,
-  .featureTextIntegrationAllinOne {
-    font-size: 0.78rem;
-  }
-
-  .customSlotIntegrationAllinOne {
-    padding: 0.75rem;
-  }
-
-  .annotationWrapperIntegrationAllinOne {
-    right: 55%;
-  }
-
-}
-
-
-/* =========================================================
-   1024px - 790px
-   Tablet
-========================================================= */
-
-@media (max-width: 1024px) and (min-width: 790px) {
-
-  .sectionWrapperIntegrationAllinOne {
-    padding: 4.5rem 0;
-  }
-
-  .containerIntegrationAllinOne {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .headerRowIntegrationAllinOne {
-    flex-direction: column;
-    gap: 1.75rem;
-    margin-bottom: 3rem;
-  }
-
-  .headerLeftIntegrationAllinOne {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-
-  .headerRightIntegrationAllinOne {
-    width: 100%;
-    padding-top: 0;
-  }
-
-  .headingIntegrationAllinOne {
-    font-size: clamp(2rem, 5vw, 2.6rem);
-    line-height: 1.18;
-  }
-
-  .descriptionIntegrationAllinOne {
-    max-width: 750px;
-    font-size: 0.92rem;
-  }
-
-  .gridIntegrationAllinOne {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-
-  .cardIntegrationAllinOne {
-    padding: 1.75rem 1.4rem;
-  }
-
-  .cardIconBoxIntegrationAllinOne {
-    margin-bottom: 1.1rem;
-  }
-
-  .cardTitleIntegrationAllinOne {
-    font-size: 1.05rem;
-  }
-
-  .cardDescIntegrationAllinOne {
-    font-size: 0.8rem;
-    margin-bottom: 1.35rem;
-  }
-
-  .featureListIntegrationAllinOne {
-    gap: 0.65rem;
-    margin-bottom: 1.35rem;
-  }
-
-  .featureTextIntegrationAllinOne {
-    font-size: 0.78rem;
-  }
-
-  .customSlotIntegrationAllinOne {
-    min-height: 180px;
-  }
-
-  .annotationWrapperIntegrationAllinOne {
-    right: 52%;
-  }
-
-  .annotationTextIntegrationAllinOne {
     font-size: 1.1rem;
   }
 
-  .glowBoxIntegrationAllinOne {
-    width: 110px;
-    height: 110px;
+  .cardDescIntegrationAllinOne {
+    font-size: 0.83rem;
   }
-
 }
 
-
-/* =========================================================
-   789px - 481px
-   Small Tablet / Large Mobile
-========================================================= */
-
-@media (max-width: 789px) and (min-width: 481px) {
-
+/* --- Tablet: 1024px --- */
+@media (max-width: 1024px) {
   .sectionWrapperIntegrationAllinOne {
-    padding: 3.75rem 0;
+    padding: 4rem 0;
   }
 
   .containerIntegrationAllinOne {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 1.5rem;
   }
 
   .headerRowIntegrationAllinOne {
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 1.25rem;
     margin-bottom: 2.75rem;
   }
 
   .headerLeftIntegrationAllinOne,
   .headerRightIntegrationAllinOne {
+    flex: 0 0 auto;
     width: 100%;
-  }
-
-  .headerRightIntegrationAllinOne {
-    padding-top: 0;
+    max-width: 100%;
+    padding-bottom: 0;
   }
 
   .badgeIntegrationAllinOne {
-    padding: 0.32rem 0.8rem;
-    font-size: 0.66rem;
-    letter-spacing: 0.8px;
-    margin-bottom: 1.15rem;
-  }
-
-  .badgeDotIntegrationAllinOne {
-    width: 6px;
-    height: 6px;
+    margin-bottom: 1.25rem;
   }
 
   .headingIntegrationAllinOne {
-    font-size: clamp(1.85rem, 6vw, 2.4rem);
-    line-height: 1.18;
+    font-size: clamp(2rem, 4.5vw, 2.75rem);
+    line-height: 1.2;
   }
 
   .descriptionIntegrationAllinOne {
-    width: 100%;
-    max-width: 100%;
-    font-size: 0.88rem;
+    max-width: 700px;
+    font-size: 0.95rem;
+  }
+
+  .gridIntegrationAllinOne {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .cardIntegrationAllinOne {
+    padding: 1.5rem;
+  }
+
+  .ctaCardIntegrationAllinOne {
+    grid-column: span 2;
+  }
+
+  .cardHeadIntegrationAllinOne {
+    margin-bottom: 1.2rem;
+  }
+
+  .cardIconBoxIntegrationAllinOne {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+  }
+
+  .cardTitleIntegrationAllinOne {
+    font-size: 1.1rem;
+  }
+
+  .cardDescIntegrationAllinOne {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .featureListIntegrationAllinOne {
+    padding-top: 1rem;
+    gap: 0.65rem;
+  }
+
+  .featureTextIntegrationAllinOne {
+    font-size: 0.8rem;
+  }
+
+  .bgGlowOneIntegrationAllinOne {
+    width: 380px;
+    height: 380px;
+  }
+
+  .bgGlowTwoIntegrationAllinOne {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* --- Small Tablet and Large Mobile: 749px --- */
+@media (max-width: 749px) {
+  .sectionWrapperIntegrationAllinOne {
+    padding: 3.5rem 0;
+  }
+
+  .containerIntegrationAllinOne {
+    padding: 0 1.25rem;
+  }
+
+  .headerRowIntegrationAllinOne {
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .badgeIntegrationAllinOne {
+    gap: 0.45rem;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .headingIntegrationAllinOne {
+    font-size: clamp(1.8rem, 5.5vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .descriptionIntegrationAllinOne {
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 
   .gridIntegrationAllinOne {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
   .cardIntegrationAllinOne {
-    padding: 1.5rem 1.2rem;
-    border-radius: 10px;
+    padding: 1.35rem 1.15rem;
+  }
+
+  .ctaCardIntegrationAllinOne {
+    grid-column: span 2;
+  }
+
+  .cardHeadIntegrationAllinOne {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .cardIconBoxIntegrationAllinOne {
-    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+
+  .cardIconInnerIntegrationAllinOne,
+  .cardIconRingIntegrationAllinOne {
+    border-radius: 12px;
+  }
+
+  .cardTagIntegrationAllinOne {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
   }
 
   .cardTitleIntegrationAllinOne {
     font-size: 1rem;
-    margin-bottom: 0.65rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
   }
 
   .cardDescIntegrationAllinOne {
-    font-size: 0.76rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
+    font-size: 0.82rem;
+    margin-bottom: 1.1rem;
   }
 
   .featureListIntegrationAllinOne {
+    padding-top: 0.9rem;
     gap: 0.6rem;
-    margin-bottom: 1.25rem;
   }
 
   .featureItemIntegrationAllinOne {
@@ -510,96 +708,75 @@
   }
 
   .featureTextIntegrationAllinOne {
-    font-size: 0.75rem;
-    line-height: 1.4;
+    font-size: 0.78rem;
+    line-height: 1.5;
   }
 
-  .learnMoreLinkIntegrationAllinOne {
-    font-size: 0.8rem;
+  .ctaIconIntegrationAllinOne {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
   }
 
-  .customSlotIntegrationAllinOne {
-    min-height: 180px;
-    padding: 0.75rem;
+  .ctaLinkIntegrationAllinOne {
+    font-size: 0.85rem;
   }
 
-  .annotationWrapperIntegrationAllinOne {
-    top: 5px;
-    right: 48%;
+  .bgGlowOneIntegrationAllinOne,
+  .bgGlowTwoIntegrationAllinOne {
+    width: 300px;
+    height: 300px;
+    filter: blur(75px);
   }
 
-  .annotationTextIntegrationAllinOne {
-    font-size: 1rem;
+  .bgGlowOneIntegrationAllinOne {
+    top: -100px;
+    left: -100px;
   }
 
-  .glowBoxIntegrationAllinOne {
-    width: 100px;
-    height: 100px;
-    bottom: -15px;
-    right: -15px;
+  .bgGlowTwoIntegrationAllinOne {
+    bottom: -100px;
+    right: -100px;
   }
-
-  .glowLetterIntegrationAllinOne {
-    font-size: 3.25rem;
-  }
-
 }
 
-
-/* =========================================================
-   480px and Below
-   Mobile
-========================================================= */
-
+/* --- Mobile: 480px --- */
 @media (max-width: 480px) {
-
   .sectionWrapperIntegrationAllinOne {
     padding: 2.75rem 0;
   }
 
   .containerIntegrationAllinOne {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
   }
 
   .headerRowIntegrationAllinOne {
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-bottom: 2.25rem;
-  }
-
-  .headerLeftIntegrationAllinOne,
-  .headerRightIntegrationAllinOne {
-    width: 100%;
-  }
-
-  .headerRightIntegrationAllinOne {
-    padding-top: 0;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
   }
 
   .badgeIntegrationAllinOne {
-    padding: 0.3rem 0.7rem;
     gap: 0.4rem;
+    padding: 0.3rem 0.7rem;
     font-size: 0.6rem;
-    letter-spacing: 0.65px;
-    margin-bottom: 1rem;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.9rem;
   }
 
   .badgeDotIntegrationAllinOne {
     width: 5px;
     height: 5px;
+    flex-shrink: 0;
   }
 
   .headingIntegrationAllinOne {
-    width: 100%;
-    font-size: clamp(1.65rem, 8vw, 2.1rem);
-    line-height: 1.2;
+    font-size: clamp(1.6rem, 7.5vw, 2.1rem);
+    line-height: 1.22;
+    letter-spacing: -0.02em;
   }
 
   .descriptionIntegrationAllinOne {
-    width: 100%;
-    max-width: 100%;
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     line-height: 1.65;
   }
 
@@ -609,72 +786,122 @@
   }
 
   .cardIntegrationAllinOne {
-    width: 100%;
     padding: 1.35rem 1.1rem;
     border-radius: 10px;
   }
 
+  .ctaCardIntegrationAllinOne {
+    grid-column: auto;
+  }
+
+  .cardHeadIntegrationAllinOne {
+    margin-bottom: 1rem;
+  }
+
   .cardIconBoxIntegrationAllinOne {
-    margin-bottom: 0.9rem;
+    width: 46px;
+    height: 46px;
+  }
+
+  .cardIconInnerIntegrationAllinOne,
+  .cardIconRingIntegrationAllinOne {
+    border-radius: 11px;
+  }
+
+  .cardTagIntegrationAllinOne {
+    font-size: 0.63rem;
+    padding: 0.25rem 0.5rem;
   }
 
   .cardTitleIntegrationAllinOne {
-    font-size: 0.98rem;
-    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
   }
 
   .cardDescIntegrationAllinOne {
-    font-size: 0.74rem;
-    line-height: 1.55;
-    margin-bottom: 1.15rem;
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .featureListIntegrationAllinOne {
-    gap: 0.55rem;
-    margin-bottom: 1.15rem;
+    padding-top: 0.9rem;
+    gap: 0.65rem;
   }
 
   .featureItemIntegrationAllinOne {
-    gap: 0.45rem;
+    gap: 0.5rem;
   }
 
   .featureTextIntegrationAllinOne {
-    font-size: 0.72rem;
-    line-height: 1.45;
+    font-size: 0.8rem;
+    line-height: 1.5;
   }
 
-  .learnMoreLinkIntegrationAllinOne {
-    font-size: 0.78rem;
+  .checkIconIntegrationAllinOne {
+    margin-top: 2px;
   }
 
-  .customSlotIntegrationAllinOne {
-    min-height: 190px;
-    padding: 0.5rem;
+  .ctaIconIntegrationAllinOne {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
   }
 
-  .annotationWrapperIntegrationAllinOne {
-    top: 5px;
-    right: 45%;
+  .ctaLinkIntegrationAllinOne {
+    font-size: 0.84rem;
   }
 
-  .annotationTextIntegrationAllinOne {
-    font-size: 0.9rem;
+  .bgGlowOneIntegrationAllinOne,
+  .bgGlowTwoIntegrationAllinOne {
+    width: 240px;
+    height: 240px;
+    filter: blur(60px);
   }
 
-  .annotationArrowIntegrationAllinOne {
-    margin-right: -10px;
+  .bgGlowOneIntegrationAllinOne {
+    top: -70px;
+    left: -90px;
   }
 
-  .glowBoxIntegrationAllinOne {
-    width: 90px;
-    height: 90px;
-    bottom: -12px;
-    right: -12px;
-    border-radius: 16px 0 0 0;
+  .bgGlowTwoIntegrationAllinOne {
+    bottom: -70px;
+    right: -90px;
+  }
+}
+
+/* --- Touch Devices: Prevent Sticky Hover Effects --- */
+@media (hover: none) {
+  .isVisibleIntegrationAllinOne .cardIntegrationAllinOne:hover {
+    transform: none;
   }
 
-  .glowLetterIntegrationAllinOne {
-    font-size: 2.75rem;
+  .cardSpotlightIntegrationAllinOne {
+    display: none;
+  }
+}
+
+/* --- Reduced Motion Accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+  .bgGlowOneIntegrationAllinOne,
+  .bgGlowTwoIntegrationAllinOne,
+  .badgeDotIntegrationAllinOne::after,
+  .textHighlightIntegrationAllinOne,
+  .ctaIconIntegrationAllinOne,
+  .cardIntegrationAllinOne:hover .cardIconRingIntegrationAllinOne {
+    animation: none;
   }
 
+  .revealIntegrationAllinOne {
+    transition: opacity 0.3s ease;
+    transform: none;
+    filter: none;
+    transition-delay: 0s;
+  }
+
+  .checkIconIntegrationAllinOne {
+    transform: scale(1);
+    transition: none;
+  }
 }

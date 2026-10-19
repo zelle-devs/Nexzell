@@ -61,9 +61,11 @@ function PricingPageSlider() {
           </p>
 
           <div className="btnGroupPricingPageSlider animDelay4">
+            <a href="/consultation">
             <button className="btnPrimaryPricingPageSlider">
-              Find Your Solution <ArrowRight size={18} className="btnIconPricingPageSlider" />
+              Book a Free Demo <ArrowRight size={18} className="btnIconPricingPageSlider" />
             </button>
+            </a>
           </div>
 
          

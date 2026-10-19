@@ -129,7 +129,8 @@ function ScalableProductForStartup() {
               </motion.li>
             ))}
           </motion.ul>
-
+          
+          <a href="/consultation">
           <motion.button 
             variants={itemVariants}
             className="btnPrimaryScalableProductForStartup"
@@ -138,6 +139,7 @@ function ScalableProductForStartup() {
           >
             Start Your Startup Journey <ArrowRight size={18} className="btnArrowScalableProductForStartup" />
           </motion.button>
+          </a>
         </motion.div>
 
       </div>

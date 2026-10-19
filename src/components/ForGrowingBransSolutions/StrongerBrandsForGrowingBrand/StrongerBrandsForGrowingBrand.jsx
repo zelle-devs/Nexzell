@@ -170,10 +170,11 @@ export default function StrongerBrandsForGrowingBrand() {
                 </motion.li>
               ))}
             </motion.ul>
-
-            <motion.button variants={itemFadeUp} className="ctaButtonStrongerBrandsForGrowingBrand">
+             <a href="/features">  
+            {/* <motion.button variants={itemFadeUp} className="ctaButtonStrongerBrandsForGrowingBrand">
               Explore Growth Features <ArrowRight size={18} />
-            </motion.button>
+            </motion.button> */}
+            </a> 
           </motion.div>
         </div>
 

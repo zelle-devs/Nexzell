@@ -63,12 +63,14 @@ function MainSliderAbout() {
           </p>
 
           <div className="btnGroupMainSliderAbout animDelay4">
+            <a href="/consultation">
             <button className="btnPrimaryMainSliderAbout">
-              See What We Do <ArrowRight size={18} className="btnIconMainSliderAbout" />
+             Book a Free Demo <ArrowRight size={18} className="btnIconMainSliderAbout" />
             </button>
-            <button className="btnSecondaryMainSliderAbout">
+            </a>
+            {/* <button className="btnSecondaryMainSliderAbout">
               <PlayCircle size={20} className="playIconMainSliderAbout" /> Watch Our Story
-            </button>
+            </button> */}
           </div>
 
           <div className="statsListMainSliderAbout animDelay5">

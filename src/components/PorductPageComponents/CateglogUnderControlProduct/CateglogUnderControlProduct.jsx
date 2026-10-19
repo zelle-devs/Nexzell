@@ -57,9 +57,9 @@ function CateglogUnderControlProduct() {
             ))}
           </ul>
 
-          <button className="btnPrimaryCateglogUnderControlProduct animDelay6CateglogUnderControlProduct">
+          {/* <button className="btnPrimaryCateglogUnderControlProduct animDelay6CateglogUnderControlProduct">
             Explore Product Management <ArrowRight size={18} className="btnIconCateglogUnderControlProduct" />
-          </button>
+          </button> */}
         </div>
 
       </div>
