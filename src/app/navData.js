@@ -21,7 +21,7 @@ export const resourcesLinks = [
 ];
 
 export const companyLinks = [
-  { label: 'About Us', href: '/about-us' },
+  // { label: 'About Us', href: '/about-us' },
   { label: 'Contact', href: '/contact-us' },
 ];
 
@@ -29,7 +29,7 @@ export const companyLinks = [
 export const navLinks = [
   { href: '/product', label: 'Product', children: productLinks },
   { href: '/solutions', label: 'Solutions', children: solutionsLinks },
-  { href: '/pricing', label: 'Pricing' },
+  // { href: '/pricing', label: 'Pricing' },
   { href: '/resources', label: 'Resources', children: resourcesLinks },
   { href: '/about-us', label: 'About', children: companyLinks },
 ];
