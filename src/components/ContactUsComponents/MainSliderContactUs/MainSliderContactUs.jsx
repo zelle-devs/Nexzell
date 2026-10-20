@@ -8,35 +8,31 @@ import {
   Calendar, 
   BookOpen, 
   Briefcase,
-  ArrowRight
+  ArrowRight,
+  Mail, // Naya icon add kiya
+  Send  // Naya icon add kiya
 } from 'lucide-react';
 import './MainSliderContactUs.css';
 import Link from 'next/link';
 function MainSliderContactUs() {
-  const cards = [
+ const cards = [
     {
       id: 1,
       icon: <Users size={24} className="cardIconMainSliderContactUs" />,
       title: "Talk to Sales",
       desc: "Want to see Nexzell in action or discuss the right solution for your business?",
       btnIcon: <Calendar size={16} />,
-      btnText: "Book a Free Demo"
+      btnText: "Book a Free Demo",
+      href: "/consultation" // <-- Add your specific link here
     },
     {
-      id: 2,
-      icon: <Headset size={24} className="cardIconMainSliderContactUs" />,
-      title: "Get Support",
-      desc: "Already using Nexzell? Find answers in our Help Center or contact our support team.",
-      btnIcon: <BookOpen size={16} />,
-      btnText: "Visit Help Center"
-    },
-    {
-      id: 3,
-      icon: <Handshake size={24} className="cardIconMainSliderContactUs" />,
-      title: "Partnerships",
-      desc: "Interested in integrating, partnering, or growing together with Nexzell?",
-      btnIcon: <Briefcase size={16} />,
-      btnText: "Explore Partner Program"
+      id: 3, // Agar aapne Partner card delete kar diya hai, toh id 3 rakhein
+      icon: <Mail size={24} className="cardIconMainSliderContactUs" />,
+      title: "Email Us",
+      desc: "Have a general inquiry or need detailed information? Send us a direct email and our team will get back to you.",
+      btnIcon: <Send size={16} />,
+      btnText: "Send an Email",
+      href: "mailto:support@nexzell.com" // Yahan apni asli email address likhein
     }
   ];
 
@@ -107,15 +103,14 @@ function MainSliderContactUs() {
               
               <p className="cardDescMainSliderContactUs">{card.desc}</p>
               
-              <button className="cardBtnMainSliderContactUs">
-                <Link href='consultation'>
+              {/* Replace the button wrapper with the Link component */}
+              <Link href={card.href} className="cardBtnMainSliderContactUs">
                 <div className="cardBtnLeftMainSliderContactUs">
                   {card.btnIcon}
                   <span>{card.btnText}</span>
                 </div>
-                </Link>
                 <ArrowRight size={16} className="btnArrowMainSliderContactUs" />
-              </button>
+              </Link>
             </div>
           ))}
         </div>

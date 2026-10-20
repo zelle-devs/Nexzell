@@ -103,10 +103,11 @@ function EverythingBusinessStarter() {
               </div>
             ))}
           </div>
-
+            <a href="/features">
           <button className="btnOutlineEverythingBusinessStarter">
             View All Features <ArrowRight size={16} className="btnIconEverythingBusinessStarter" />
           </button>
+          </a>
 
         </div>
 

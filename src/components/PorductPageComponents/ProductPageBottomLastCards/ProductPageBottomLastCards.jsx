@@ -193,12 +193,10 @@ function ProductPageBottomLastCards() {
 
             <div className="containerProductPageBottomLastCards">
                 <article className="cardProductPageBottomLastCards cardFourProductPageBottomLastCards">
-                    <div className="customerBadgeProductPageBottomLastCards">
-                        <span className="customerDotProductPageBottomLastCards" />
-                        <span className="customerBadgeLabelProductPageBottomLastCards">
+                   <div className="badgeEverythingBusinessStarter" style={{width:'fit-content'}}>
+                            <span className="badgeDotEverythingBusinessStarter"></span>
                             CUSTOMERS
-                        </span>
-                    </div>
+                        </div>
 
                     <h3 className="customerTitleProductPageBottomLastCards">
                         Know Your Customers.

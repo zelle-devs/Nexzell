@@ -96,9 +96,9 @@ export default function EveryBusinessModelNexzellCategory() {
                                 <div>
                                     <h3 className="cardTitleEveryBusinessModelNexzellCategory">{model.title}</h3>
                                     <p className="cardDescEveryBusinessModelNexzellCategory">{model.description}</p>
-                                    <a href={model.link} className="cardLinkEveryBusinessModelNexzellCategory">
+                                    {/* <a href={model.link} className="cardLinkEveryBusinessModelNexzellCategory">
                                         Learn More <ArrowRight size={18} className="linkArrowEveryBusinessModelNexzellCategory" />
-                                    </a>
+                                    </a> */}
                                 </div>
 
 

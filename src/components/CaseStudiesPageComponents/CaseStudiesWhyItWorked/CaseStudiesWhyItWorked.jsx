@@ -50,9 +50,9 @@ function CaseStudiesWhyItWorked() {
               for Furniture Mecca.
             </p>
             
-            <button className="btnPrimaryCaseStudiesWhyItWorked animDelay4CaseStudiesWhyItWorked">
+            {/* <button className="btnPrimaryCaseStudiesWhyItWorked animDelay4CaseStudiesWhyItWorked">
               Explore More Case Studies <ArrowRight size={18} className="btnIconCaseStudiesWhyItWorked" />
-            </button>
+            </button> */}
           </div>
 
           {/* Middle Column: Features List */}

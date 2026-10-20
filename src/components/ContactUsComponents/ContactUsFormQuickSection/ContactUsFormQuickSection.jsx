@@ -223,21 +223,21 @@ function ContactUsFormQuickSection() {
                 <label className="labelContactUsFormQuickSection">
                   First Name <span className="requiredContactUsFormQuickSection">*</span>
                 </label>
-                <input type="text" className="inputContactUsFormQuickSection" placeholder="John" />
+                <input type="text" className="inputContactUsFormQuickSection" placeholder="Richard" />
               </div>
 
               <div className="inputGroupContactUsFormQuickSection">
                 <label className="labelContactUsFormQuickSection">
                   Last Name <span className="requiredContactUsFormQuickSection">*</span>
                 </label>
-                <input type="text" className="inputContactUsFormQuickSection" placeholder="Doe" />
+                <input type="text" className="inputContactUsFormQuickSection" placeholder="Anderson" />
               </div>
 
               <div className="inputGroupContactUsFormQuickSection">
                 <label className="labelContactUsFormQuickSection">
                    Email 
                 </label>
-                <input type="email" className="inputContactUsFormQuickSection" placeholder="john@company.com" />
+                <input type="email" className="inputContactUsFormQuickSection" placeholder="richard@company.com" />
               </div>
 
               <div className="inputGroupContactUsFormQuickSection">

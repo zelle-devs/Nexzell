@@ -61,9 +61,9 @@ function CaseStudiesCustomEcommercePlatform() {
                             </div>
                             
 
-                            <button className="btnPrimaryCaseStudiesCustomEcommercePlatform animDelay6CaseStudiesCustomEcommercePlatform">
+                            {/* <button className="btnPrimaryCaseStudiesCustomEcommercePlatform animDelay6CaseStudiesCustomEcommercePlatform">
                                 View Live Project <ArrowRight size={18} className="btnIconCaseStudiesCustomEcommercePlatform" />
-                            </button>
+                            </button> */}
                         </div>
 
                         {/* Right Content (Image) */}

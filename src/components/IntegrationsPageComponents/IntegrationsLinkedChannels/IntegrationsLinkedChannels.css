@@ -1,36 +1,87 @@
 /* ==========================================================
-   IntegrationsLinkedChannels
-   Uses only your global :root variables (--nexzell-*)
+   IntegrationsLinkedChannels  (hero version, refined)
+   Stage is a 1983 x 793 canvas. Everything inside is sized
+   with container units (cqw = 1% of stage width) so the whole
+   scene scales as ONE piece.
    ========================================================== */
-
 .ilc-section {
+  --ilc-bg: var(--nexzell-bg-base, #05080b);
+  --ilc-teal: #2fe0b8;
+  --ilc-teal-rgb: 0, 230, 180;
+  --ilc-line: var(--nexzell-border-highlight, rgba(120, 165, 175, 0.38));
+
   position: relative;
   width: 100%;
-  margin-top: 80px;
-  background: var(--nexzell-bg-base);
-  font-family: var(--nexzell-font-family);
-  color: var(--nexzell-text-white);
-  padding: var(--nexzell-section-gap) var(--nexzell-padding-x);
+  background-color: #05080b;
+  background-image:
+    linear-gradient(
+      to bottom,
+      #05080b 0%,
+      rgba(5, 8, 11, 0) 14%,
+      rgba(5, 8, 11, 0) 86%,
+      #05080b 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 8, 11, 0.7) 0%,
+      rgba(5, 8, 11, 0) 22%,
+      rgba(5, 8, 11, 0) 78%,
+      rgba(5, 8, 11, 0.7) 100%
+    ),
+    radial-gradient(
+      ellipse 42% 55% at 50% 30%,
+      rgba(8, 36, 30, 0.2) 0%,
+      rgba(0, 179, 255, 0.05) 45%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse 30% 40% at 50% 62%,
+      rgba(5, 8, 11, 0.55) 0%,
+      transparent 100%
+    ),
+    url('../../../../public/IntegrationLinkChannelsBackground.png');
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: var(--nexzell-font-family, inherit);
+  color: var(--nexzell-text-white, #fff);
   overflow: hidden;
+  isolation: isolate;
+}
+.ilc-section::before,
+.ilc-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+.ilc-section::before {
+  background:
+    radial-gradient(ellipse 75% 85% at 50% 45%, transparent 55%, var(--ilc-bg) 100%);
+}
+.ilc-section::after {
+  background: linear-gradient(
+    to bottom,
+    var(--ilc-bg) 0%,
+    transparent 10%,
+    transparent 88%,
+    var(--ilc-bg) 100%
+  );
 }
 
-.ilc-container {
-  width: 100%;
-  max-width: var(--nexzell-container-width);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ---------- Optional header (only renders if props passed) ---------- */
+/* ---------- Optional header ---------- */
 .ilc-header {
+  position: relative;
+  z-index: 11;
   text-align: center;
-  max-width: 640px;
-  margin-bottom: var(--nexzell-section-gap);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--nexzell-section-gap, 64px) 1rem 0;
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 .ilc-section.is-visible .ilc-header {
   opacity: 1;
@@ -38,100 +89,223 @@
 }
 .ilc-title {
   margin: 0 0 12px;
-  font-size: var(--font-size-5xl);
-  font-weight: var(--fw-bold);
+  font-size: var(--font-size-5xl, 3rem);
+  font-weight: var(--fw-bold, 700);
   line-height: 1.15;
-  color: var(--nexzell-text-white);
 }
 .ilc-description {
   margin: 0;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-lg, 1.125rem);
   line-height: 1.6;
-  color: var(--nexzell-text-gray-300);
+  color: var(--nexzell-text-gray-300, #b6c2c9);
 }
 
-/* ---------- Stage ---------- */
+/* ---------- Viewport / Stage ---------- */
+.ilc-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 .ilc-stage {
   position: relative;
-  width: min(100%, 520px);
-  aspect-ratio: var(--ilc-aspect);
-}
-
-/* ---------- Glow behind Shopify ---------- */
-.ilc-glow {
-  position: absolute;
-  top: -4%;
   left: 50%;
-  width: 70%;
-  aspect-ratio: 1;
-  transform: translateX(-50%) scale(0.6);
-  background: radial-gradient(
-    circle,
-    rgba(0, 230, 153, 0.18) 0%,
-    rgba(0, 179, 255, 0.07) 45%,
-    transparent 70%
-  );
-  filter: blur(20px);
-  opacity: 0;
-  pointer-events: none;
-}
-.ilc-section.is-visible .ilc-glow {
-  animation:
-    ilc-glow-in 1.2s ease-out 0.1s forwards,
-    ilc-glow-breathe 5s ease-in-out 1.4s infinite;
-}
-
-/* ---------- Shopify bag ---------- */
-.ilc-shopify {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 33%; /* ≈115px of 350px stage */
   transform: translateX(-50%);
-  z-index: 2;
-}
-.ilc-shopify__inner {
-  width: 100%;
-  opacity: 0;
-  transform: translateY(-14px) scale(0.7);
-  transform-origin: 50% 100%;
-}
-.ilc-section.is-visible .ilc-shopify__inner {
-  animation:
-    ilc-bag-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0s forwards,
-    ilc-bag-float 6s ease-in-out 1.2s infinite;
-}
-.ilc-shopify .ilc-logo-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 12px 28px rgba(0, 230, 153, 0.16));
-}
-.ilc-shopify .ilc-fallback {
-  display: block;
-  text-align: center;
-  padding: 40px 0;
-  font-size: var(--font-size-2xl);
-  font-weight: var(--fw-bold);
-  color: var(--nexzell-primary);
+  width: max(100%, 1000px);
+  aspect-ratio: 1983 / 793;
+  container-type: inline-size;
 }
 
-/* ---------- Connector lines ---------- */
-.ilc-lines,
-.ilc-pulses {
+/* ---------- SVG layers ---------- */
+.ilc-bg,
+.ilc-lines {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: visible;
+  pointer-events: none;
 }
-.ilc-lines { z-index: 1; }
-.ilc-pulses { z-index: 1; }
+.ilc-bg { z-index: 1; }
+.ilc-lines { z-index: 3; }
 
+/* ---------- Ambient light ---------- */
+.ilc-ambient {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 30%;
+  width: 46%;
+  aspect-ratio: 1.4;
+  transform: translate(-50%, -50%) scale(0.7);
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--ilc-teal-rgb), 0.2) 0%,
+    rgba(0, 179, 255, 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(30px);
+  opacity: 0;
+  pointer-events: none;
+}
+.ilc-section.is-visible .ilc-ambient {
+  animation:
+    ilc-ambient-in 1.4s ease-out 0.1s forwards,
+    ilc-ambient-breathe 6s ease-in-out 1.5s infinite;
+}
+
+/* slow rotating light ring behind the logo */
+/* .ilc-halo {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 28.4%;
+  width: 24cqw;
+  aspect-ratio: 1;
+  margin: -12cqw 0 0 -12cqw;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(var(--ilc-teal-rgb), 0.22) 50deg,
+    transparent 110deg,
+    transparent 190deg,
+    rgba(0, 179, 255, 0.14) 250deg,
+    transparent 310deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 46%, #000 47%, #000 49%, transparent 66%);
+  mask: radial-gradient(circle, transparent 46%, #000 47%, #000 49%, transparent 66%);
+  opacity: 0;
+  pointer-events: none;
+} */
+/* .ilc-section.is-visible .ilc-halo {
+  animation:
+    ilc-fade-half 2s ease-out 0.6s forwards,
+    ilc-spin 28s linear 0.6s infinite;
+} */
+
+/* soft light pool under the node tree */
+.ilc-floor {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 88%;
+  width: 40%;
+  aspect-ratio: 6;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse,
+    rgba(var(--ilc-teal-rgb), 0.16) 0%,
+    transparent 68%
+  );
+  filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+}
+.ilc-section.is-visible .ilc-floor {
+  animation: ilc-floor-breathe 7s ease-in-out 1.5s infinite;
+}
+
+/* ripples that expand from the logo */
+/* .ilc-ripples {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 31%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+} */
+.ilc-ripple {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 13cqw;
+  aspect-ratio: 2.3;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--ilc-teal-rgb), 0.5);
+  box-shadow: 0 0 1.2cqw rgba(var(--ilc-teal-rgb), 0.18);
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+}
+.ilc-section.is-visible .ilc-ripple {
+  animation: ilc-ripple 6s cubic-bezier(0.2, 0.6, 0.3, 1) var(--rd, 1.2s) infinite;
+}
+
+/* ---------- Rings ---------- */
+.ilc-ring {
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.ilc-section.is-visible .ilc-ring {
+  animation: ilc-draw 2.2s cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0.4s) forwards;
+}
+
+/* ---------- Orbs ---------- */
+.ilc-orb {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.ilc-section.is-visible .ilc-orb {
+  animation:
+    ilc-orb-in 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d, 1s) forwards,
+    ilc-orb-drift var(--dur, 9s) ease-in-out calc(var(--d, 1s) + 0.9s) infinite alternate;
+}
+
+/* ---------- Dust ---------- */
+.ilc-dust {
+  fill: var(--ilc-teal);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.ilc-section.is-visible .ilc-dust {
+  animation: ilc-twinkle var(--dur, 4s) ease-in-out var(--d, 0s) infinite;
+}
+
+/* ---------- Central logo ---------- */
+.ilc-logo {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 28.4%;
+  width: 11.4%;
+  transform: translate(-50%, -50%);
+}
+.ilc-logo__inner {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.75);
+}
+.ilc-section.is-visible .ilc-logo__inner {
+  animation:
+    ilc-logo-in 1s cubic-bezier(0.34, 1.4, 0.64, 1) 0s forwards,
+    ilc-logo-float 7s ease-in-out 1.2s infinite;
+}
+.ilc-logo .ilc-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter:
+    drop-shadow(0 0 18px rgba(var(--ilc-teal-rgb), 0.55))
+    drop-shadow(0 0 50px rgba(var(--ilc-teal-rgb), 0.28));
+  animation: ilc-logo-glow 4.5s ease-in-out 1.2s infinite;
+}
+.ilc-fallback {
+  display: block;
+  text-align: center;
+  font-weight: var(--fw-bold, 700);
+  color: var(--ilc-teal);
+  font-size: 2.4cqw;
+}
+
+/* ---------- Connector lines ---------- */
 .ilc-line {
   fill: none;
-  stroke: var(--nexzell-border-highlight);
+  stroke: url(#ilc-line-grad);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -139,25 +313,72 @@
   stroke-dashoffset: 1;
 }
 .ilc-section.is-visible .ilc-line {
-  animation: ilc-draw 0.85s cubic-bezier(0.65, 0, 0.35, 1) var(--ilc-delay) forwards;
+  animation: ilc-draw 0.95s cubic-bezier(0.65, 0, 0.35, 1) var(--ilc-delay) forwards;
+}
+/* .ilc-hub-dot {
+  fill: var(--ilc-teal);
+  filter: drop-shadow(0 0 5px var(--ilc-teal));
+  opacity: 0;
+}
+.ilc-section.is-visible .ilc-hub-dot {
+  animation: ilc-fade-in 0.5s ease-out 0.7s forwards;
+} */
+/* .ilc-hub-ring {
+  fill: none;
+  stroke: var(--ilc-teal);
+  stroke-width: 1;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+} */
+.ilc-section.is-visible .ilc-hub-ring {
+  animation: ilc-hub-ping 3s ease-out var(--hd, 1s) infinite;
+}
+.ilc-end-dot {
+  fill: var(--ilc-teal);
+  opacity: 0;
+}
+.ilc-section.is-visible .ilc-end-dot {
+  animation: ilc-fade-dim 0.6s ease-out var(--ilc-delay) forwards;
 }
 
-.ilc-pulse {
-  fill: var(--nexzell-primary);
-  filter: drop-shadow(0 0 4px var(--nexzell-primary));
+/* ---------- Comets: continuous light pulses (pure CSS, never stop) ----------
+   Each comet is a short dash travelling along a path with pathLength=1.
+   --len  = dash length, --o0 / --o1 = start / end dash offsets,
+   --cdur = cycle duration, --cdelay = start delay.                         */
+.ilc-comet {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: var(--len) 2;
+  stroke-dashoffset: var(--o0);
+  opacity: 0;
+}
+.ilc-comet--tail {
+  stroke: rgba(var(--ilc-teal-rgb), 0.55);
+  stroke-width: 2.2;
+}
+.ilc-comet--head {
+  stroke: #c9fff3;
+  stroke-width: 3.6;
+  filter: drop-shadow(0 0 5px var(--ilc-teal)) drop-shadow(0 0 10px rgba(var(--ilc-teal-rgb), 0.6));
+}
+.ilc-section.is-visible .ilc-comet {
+  animation: ilc-comet var(--cdur, 3.6s) linear var(--cdelay, 2s) infinite;
 }
 
 /* ---------- Channel nodes ---------- */
 .ilc-node {
   position: absolute;
+  z-index: 4;
   left: var(--ilc-x);
   top: var(--ilc-y);
-  width: var(--ilc-size);
+  width: 3.93cqw;
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  z-index: 3;
 }
 .ilc-node__float {
+  position: relative;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -168,35 +389,37 @@
     ilc-node-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) var(--ilc-enter) forwards,
     ilc-float var(--ilc-float-dur) ease-in-out calc(var(--ilc-enter) + 0.6s + var(--ilc-float-delay)) infinite;
 }
-
 .ilc-node__card {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18%;
+  padding: 19%;
   box-sizing: border-box;
-  background: var(--nexzell-bg-surface-hover);
-  border-radius: var(--nexzell-radius-md);
-  border: 1px solid transparent;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  transition:
-    transform var(--transition-base),
-    box-shadow var(--transition-base),
-    border-color var(--transition-base);
+  background: linear-gradient(160deg, #161d25 0%, #0b1015 100%);
+  border-radius: 0.8cqw;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 0.5cqw 1.2cqw rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
 }
-.ilc-node__card:hover {
-  transform: translateY(-4px) scale(1.08);
-  border-color: var(--nexzell-primary);
-  box-shadow:
-    0 10px 26px rgba(0, 0, 0, 0.45),
-    0 0 0 4px rgba(0, 230, 153, 0.15),
-    0 0 24px rgba(0, 230, 153, 0.3);
+.ilc-node--idle .ilc-node__card {
+  opacity: 0.78;
 }
-
-.ilc-node__card .ilc-logo-img {
+/* .ilc-node__card:hover {
+  transform: translateY(-4px) scale(1.1);
+  border-color: var(--ilc-teal);
+  opacity: 1;
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.5),
+    0 0 0 4px rgba(var(--ilc-teal-rgb), 0.14),
+    0 0 26px rgba(var(--ilc-teal-rgb), 0.35);
+} */
+.ilc-node__card .ilc-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -204,31 +427,221 @@
   user-select: none;
 }
 .ilc-node__card .ilc-fallback {
-  font-size: var(--font-size-xs);
-  font-weight: var(--fw-semibold);
-  color: #0E1218;
-  text-align: center;
-  line-height: 1.1;
+  font-size: 0.7cqw;
+  color: #dfe7ec;
+}
+/* the pulse "lands" on the node: a ring flashes in sync with the comet */
+.ilc-node__card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid var(--ilc-teal);
+  box-shadow: 0 0 1.1cqw rgba(var(--ilc-teal-rgb), 0.55);
+  opacity: 0;
+  pointer-events: none;
+}
+.ilc-section.is-visible .ilc-node--live .ilc-node__card::after {
+  animation: ilc-arrive 3.6s linear var(--ilc-pd) infinite;
+}
+/* live status LED */
+/* .ilc-node__led {
+  position: absolute;
+  top: -0.22cqw;
+  right: -0.22cqw;
+  width: 0.55cqw;
+  height: 0.55cqw;
+  border-radius: 50%;
+  background: var(--ilc-teal);
+  box-shadow: 0 0 0.6cqw var(--ilc-teal);
+  z-index: 2;
+  pointer-events: none;
+}
+.ilc-node__led::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--ilc-teal);
+  animation: ilc-led-ping 2.6s ease-out var(--ilc-led-delay, 0s) infinite;
+} */
+
+/* ---------- Floating glass cards ---------- */
+.ilc-card {
+  position: absolute;
+  z-index: 4;
+  left: var(--ilc-x);
+  top: var(--ilc-y);
+  width: var(--ilc-size);
+  aspect-ratio: 1;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+.ilc-card__parallax {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(
+    calc(var(--px, 0) * var(--depth, 1) * 1.1cqw),
+    calc(var(--py, 0) * var(--depth, 1) * 0.8cqw),
+    0
+  );
+  transition: transform 0.35s ease-out;
+}
+.ilc-card__float {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.5) translateY(30px);
+}
+.ilc-section.is-visible .ilc-card__float {
+  animation:
+    ilc-card-in 0.9s cubic-bezier(0.34, 1.45, 0.64, 1) var(--ilc-enter) forwards,
+    ilc-card-float var(--ilc-float-dur) ease-in-out calc(var(--ilc-enter) + 0.9s) infinite alternate;
+}
+.ilc-card__glass {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22%;
+  transform: perspective(700px) rotateY(var(--ilc-ry, 0deg)) rotateZ(var(--ilc-rot, 0deg));
+  background:
+    linear-gradient(145deg, rgba(70, 150, 140, 0.26) 0%, rgba(14, 38, 40, 0.72) 45%, rgba(6, 16, 18, 0.9) 100%);
+  border: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 0 1.6cqw rgba(var(--ilc-teal-rgb), 0.08),
+    0 1.6cqw 2.8cqw rgba(0, 0, 0, 0.6),
+    0 0 2.4cqw rgba(var(--ilc-teal-rgb), 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: box-shadow 0.35s ease;
+}
+/* gradient hairline border */
+.ilc-card__glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(var(--ilc-teal-rgb), 0.06) 42%,
+    rgba(var(--ilc-teal-rgb), 0.4)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: ilc-card-edge 5s ease-in-out var(--ilc-sheen-delay, 2s) infinite;
+}
+
+.ilc-card__glass::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 45%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.13), transparent);
+  transform: rotate(18deg);
+  animation: ilc-sheen 7s ease-in-out var(--ilc-sheen-delay, 2s) infinite;
+  pointer-events: none;
+}
+.ilc-card__icon {
+  width: 52%;
+  height: 52%;
+  color: var(--ilc-teal);
+  filter: drop-shadow(0 0 0.5cqw rgba(var(--ilc-teal-rgb), 0.6));
+  animation: ilc-icon-glow 4s ease-in-out var(--ilc-sheen-delay, 2s) infinite;
 }
 
 /* ---------- Keyframes ---------- */
-@keyframes ilc-bag-in {
+@keyframes ilc-fade-in { to { opacity: 1; } }
+@keyframes ilc-fade-half { to { opacity: 0.8; } }
+@keyframes ilc-fade-dim { to { opacity: 0.55; } }
+@keyframes ilc-draw { to { stroke-dashoffset: 0; } }
+@keyframes ilc-spin { to { transform: rotate(360deg); } }
+
+@keyframes ilc-ambient-in {
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes ilc-ambient-breathe {
+  0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.65; transform: translate(-50%, -50%) scale(1.1); }
+}
+@keyframes ilc-floor-breathe {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes ilc-ripple {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+  12% { opacity: 0.55; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(3.1); }
+}
+
+@keyframes ilc-orb-in {
+  from { opacity: 0; transform: scale(0.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes ilc-orb-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--ox, 10px), var(--oy, -14px), 0); }
+}
+
+@keyframes ilc-twinkle {
+  0%, 100% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(-14px); }
+}
+
+@keyframes ilc-logo-in {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
-@keyframes ilc-bag-float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-5px) scale(1); }
+@keyframes ilc-logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
 }
-@keyframes ilc-glow-in {
-  to { opacity: 1; transform: translateX(-50%) scale(1); }
+@keyframes ilc-logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(var(--ilc-teal-rgb), 0.5))
+            drop-shadow(0 0 46px rgba(var(--ilc-teal-rgb), 0.24));
+  }
+  50% {
+    filter: drop-shadow(0 0 26px rgba(var(--ilc-teal-rgb), 0.8))
+            drop-shadow(0 0 70px rgba(var(--ilc-teal-rgb), 0.4));
+  }
 }
-@keyframes ilc-glow-breathe {
-  0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
-  50% { opacity: 0.6; transform: translateX(-50%) scale(1.08); }
+
+@keyframes ilc-hub-ping {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 0; transform: scale(5); }
 }
-@keyframes ilc-draw {
-  to { stroke-dashoffset: 0; }
+
+/* comet: travels, fades out as it lands, rests, repeats forever */
+@keyframes ilc-comet {
+  0% { stroke-dashoffset: var(--o0); opacity: 0; }
+  6% { opacity: 1; }
+  68% { opacity: 1; }
+  76% { stroke-dashoffset: var(--o1); opacity: 0; }
+  100% { stroke-dashoffset: var(--o1); opacity: 0; }
 }
+/* node flash, peaks when the comet lands (~74% of the 3.6s cycle) */
+@keyframes ilc-arrive {
+  0%, 64% { opacity: 0; transform: scale(1); }
+  74% { opacity: 1; transform: scale(1.03); }
+  92%, 100% { opacity: 0; transform: scale(1.14); }
+}
+@keyframes ilc-led-ping {
+  0% { opacity: 0.9; transform: scale(1); }
+  100% { opacity: 0; transform: scale(3.2); }
+}
+
 @keyframes ilc-node-in {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
@@ -237,39 +650,316 @@
   50% { transform: translateY(-5px); }
 }
 
+@keyframes ilc-card-in {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes ilc-card-float {
+  from { transform: translate3d(0, 0, 0) rotate(0deg); }
+  to { transform: translate3d(0, -1.1cqw, 0) rotate(2.2deg); }
+}
+@keyframes ilc-card-edge {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes ilc-icon-glow {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+@keyframes ilc-sheen {
+  0%, 55% { left: -80%; }
+  80%, 100% { left: 160%; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  .ilc-section {
-    padding: var(--nexzell-section-gap) 1rem;
+  .ilc-title { font-size: var(--font-size-4xl, 2.25rem); }
+  .ilc-description { font-size: var(--font-size-base, 1rem); }
+  .ilc-card__glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
+}
+/* ==========================================================
+   IntegrationsLinkedChannels — Responsive CSS
+   Preserves the original stage proportions, container-based
+   scaling, SVG connections, and animation behavior.
+   ========================================================== */
+
+/* ---------- Large laptops and smaller desktops ---------- */
+@media (max-width: 1200px) {
+  .ilc-header {
+    max-width: 640px;
+    padding-top: clamp(3rem, 5vw, 4rem);
+  }
+
   .ilc-title {
-    font-size: var(--font-size-4xl);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
   }
+
   .ilc-description {
-    font-size: var(--font-size-base);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
+
   .ilc-stage {
-    width: min(100%, 360px);
+    width: max(100%, 900px);
   }
-  .ilc-node__card {
-    border-radius: var(--nexzell-radius-sm);
+
+  .ilc-logo .ilc-img {
+    filter:
+      drop-shadow(0 0 14px rgba(var(--ilc-teal-rgb), 0.5))
+      drop-shadow(0 0 36px rgba(var(--ilc-teal-rgb), 0.25));
+  }
+
+  .ilc-card__glass {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
 }
 
-/* ---------- Reduced motion ---------- */
+/* ---------- Tablets and compact laptops ---------- */
+@media (max-width: 1024px) {
+  .ilc-header {
+    max-width: 600px;
+    padding: 3.5rem 1.5rem 0;
+  }
+
+  .ilc-title {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.2;
+  }
+
+  .ilc-description {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .ilc-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ilc-stage {
+    width: max(100%, 820px);
+    aspect-ratio: 1983 / 793;
+  }
+
+  .ilc-node__card {
+    border-radius: 0.9cqw;
+  }
+
+  .ilc-card__glass {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .ilc-card__parallax {
+    transform: none;
+  }
+
+  .ilc-card__glass::before {
+    animation-duration: 6s;
+  }
+
+  .ilc-card__glass::after {
+    animation-duration: 8s;
+  }
+}
+
+/* ---------- Tablets and large mobile screens ---------- */
+@media (max-width: 749px) {
+  .ilc-header {
+    max-width: 540px;
+    padding: 3rem 1.25rem 0;
+  }
+
+  .ilc-title {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    line-height: 1.2;
+  }
+
+  .ilc-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .ilc-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ilc-stage {
+    width: max(100%, 1060px);
+    aspect-ratio: 1983 / 793;
+  }
+
+  .ilc-logo .ilc-img {
+    filter:
+      drop-shadow(0 0 10px rgba(var(--ilc-teal-rgb), 0.45))
+      drop-shadow(0 0 26px rgba(var(--ilc-teal-rgb), 0.2));
+  }
+  .ilc-card{
+    display: none;
+  }
+
+  .ilc-card__glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .ilc-card__parallax {
+    transform: none;
+    transition: none;
+  }
+
+  .ilc-card__glass::before {
+    animation-duration: 7s;
+  }
+
+  .ilc-card__glass::after {
+    animation-duration: 9s;
+  }
+
+  .ilc-ambient {
+    filter: blur(20px);
+  }
+
+  .ilc-floor {
+    filter: blur(12px);
+  }
+}
+
+/* ---------- Mobile screens ---------- */
+@media (max-width: 480px) {
+  .ilc-section {
+    background-position: center;
+  }
+
+  .ilc-header {
+    max-width: 100%;
+    padding: 2.5rem 1rem 0;
+  }
+
+  .ilc-title {
+    margin-bottom: 0.625rem;
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+    line-height: 1.25;
+  }
+
+  .ilc-description {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  .ilc-viewport {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ilc-stage {
+    width: max(100%, 1080px);
+    aspect-ratio: 1983 / 793;
+  }
+
+  .ilc-logo .ilc-img {
+    filter:
+      drop-shadow(0 0 8px rgba(var(--ilc-teal-rgb), 0.4))
+      drop-shadow(0 0 20px rgba(var(--ilc-teal-rgb), 0.18));
+  }
+
+  .ilc-card__glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .ilc-card__parallax {
+    transform: none;
+    transition: none;
+  }
+
+  .ilc-ambient {
+    filter: blur(14px);
+  }
+
+  .ilc-floor {
+    filter: blur(10px);
+  }
+
+  .ilc-ripple {
+    border-width: 1px;
+  }
+}
+
+/* ---------- Touch devices: prevent hover-dependent behavior ---------- */
+@media (hover: none) {
+  .ilc-card__parallax {
+    transform: none;
+  }
+
+  .ilc-card__glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* ---------- Reduced motion accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
   .ilc-header,
-  .ilc-glow,
-  .ilc-shopify__inner,
-  .ilc-node__float {
+  .ilc-ambient,
+  .ilc-logo__inner,
+  .ilc-orb,
+  .ilc-node__float,
+  .ilc-card__float {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
     transition: none !important;
   }
-  .ilc-glow { transform: translateX(-50%) !important; }
-  .ilc-line {
+
+  .ilc-ambient {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .ilc-floor {
+    opacity: 0.8 !important;
+    animation: none !important;
+  }
+
+  .ilc-ripple,
+  .ilc-comet,
+  .ilc-hub-ring,
+  .ilc-node__led::after,
+  .ilc-node__card::after {
+    display: none !important;
+    animation: none !important;
+  }
+
+  .ilc-logo .ilc-img,
+  .ilc-card__glass::before,
+  .ilc-card__glass::after,
+  .ilc-card__icon {
+    animation: none !important;
+  }
+
+  .ilc-line,
+  .ilc-ring {
     stroke-dashoffset: 0 !important;
     animation: none !important;
   }
+
+  .ilc-end-dot {
+    opacity: 0.55 !important;
+    animation: none !important;
+  }
+
+  .ilc-dust {
+    opacity: 0.4 !important;
+    animation: none !important;
+  }
+
+  .ilc-card__parallax {
+    transform: none !important;
+  }
 }
+
+
